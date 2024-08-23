@@ -1,0 +1,7 @@
+package: notification_external
+output: notification_external/generated.go
+generate:
+  models: true
+  client: true
+compatibility:
+  circular-reference-limit: 40

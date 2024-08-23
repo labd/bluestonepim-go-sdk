@@ -1,0 +1,19 @@
+version: '3'
+
+tasks:
+  generate:
+    cmds:
+      - go generate generate.go
+
+  format:
+    cmds:
+      - go fmt ./...
+
+  test:
+    cmds:
+      - go test -v ./...
+
+  coverage:
+    cmds:
+      - go test -race -coverprofile=coverage.txt -covermode=atomic -coverpkg=./... ./...
+      - go tool cover -func=coverage.txt

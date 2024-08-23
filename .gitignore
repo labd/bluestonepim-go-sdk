@@ -1,0 +1,12 @@
+vendor/
+generated/
+run.sh
+code-generate/code-generate
+
+# IDE
+.vscode
+.idea
+
+# Test files
+coverage.txt
+debug.test
