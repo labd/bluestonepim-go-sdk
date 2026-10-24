@@ -3,6 +3,9 @@ generated/
 run.sh
 code-generate/code-generate
 
+# OpenAPI specs, downloaded with `task download-specs`
+specs/
+
 # IDE
 .vscode
 .idea

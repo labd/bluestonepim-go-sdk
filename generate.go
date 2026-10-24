@@ -1,5 +1,7 @@
 package bluestonepim_go_sdk
 
-//go:generate oapi-codegen -config pim/config.yaml https://docs.api.bluestonepim.com/openapi/66557c17ba1fbb0011cf1af6
-//go:generate oapi-codegen -config notification_external/config.yaml https://mapi.bluestonepim.com/notification-external/v2/api-docs
-//go:generate oapi-codegen -config global_settings/config.yaml https://docs.api.bluestonepim.com/openapi/66558009ac2b390018a0bcb6
+// Generates the clients from the specs in specs/. Run `task generate`, which
+// downloads the specs first (see tools/fixspec for how they are prepared).
+//go:generate go run github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen -config pim/config.yaml specs/pim.json
+//go:generate go run github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen -config notification_external/config.yaml specs/notification-external.json
+//go:generate go run github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen -config global_settings/config.yaml specs/global-settings.json

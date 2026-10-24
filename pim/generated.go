@@ -66,8 +66,8 @@ const (
 
 // Defines values for CategoryFullResponseState.
 const (
-	CategoryFullResponseStateACTIVE   CategoryFullResponseState = "ACTIVE"
-	CategoryFullResponseStateARCHIVED CategoryFullResponseState = "ARCHIVED"
+	ACTIVE   CategoryFullResponseState = "ACTIVE"
+	ARCHIVED CategoryFullResponseState = "ARCHIVED"
 )
 
 // Defines values for DictionaryAttributeFilterDtoType.
@@ -82,148 +82,16 @@ const (
 	PARENTVALUEIDIN DictionaryValueFilterDtoType = "PARENT_VALUE_ID_IN"
 )
 
-// Defines values for GridAssetFilterDtoType.
-const (
-	ASSIGNEDTOALL GridAssetFilterDtoType = "ASSIGNED_TO_ALL"
-	ASSIGNEDTOANY GridAssetFilterDtoType = "ASSIGNED_TO_ANY"
-	HAVEANY       GridAssetFilterDtoType = "HAVE_ANY"
-	HAVELABEL     GridAssetFilterDtoType = "HAVE_LABEL"
-	HAVELESSTHAN  GridAssetFilterDtoType = "HAVE_LESS_THAN"
-	HAVEMORETHAN  GridAssetFilterDtoType = "HAVE_MORE_THAN"
-	HAVENONE      GridAssetFilterDtoType = "HAVE_NONE"
-	NOTHAVELABEL  GridAssetFilterDtoType = "NOT_HAVE_LABEL"
-)
-
-// Defines values for GridAttributeFilterDtoType.
-const (
-	GridAttributeFilterDtoTypeASSOCIATED    GridAttributeFilterDtoType = "ASSOCIATED"
-	GridAttributeFilterDtoTypeCONTAINS      GridAttributeFilterDtoType = "CONTAINS"
-	GridAttributeFilterDtoTypeDOESHAVEALL   GridAttributeFilterDtoType = "DOES_HAVE_ALL"
-	GridAttributeFilterDtoTypeDOESHAVESOME  GridAttributeFilterDtoType = "DOES_HAVE_SOME"
-	GridAttributeFilterDtoTypeDOESNTHAVEALL GridAttributeFilterDtoType = "DOESNT_HAVE_ALL"
-	GridAttributeFilterDtoTypeDOESNTHAVEANY GridAttributeFilterDtoType = "DOESNT_HAVE_ANY"
-	GridAttributeFilterDtoTypeEMPTY         GridAttributeFilterDtoType = "EMPTY"
-	GridAttributeFilterDtoTypeEQUALS        GridAttributeFilterDtoType = "EQUALS"
-	GridAttributeFilterDtoTypeNOTASSOCIATED GridAttributeFilterDtoType = "NOT_ASSOCIATED"
-	GridAttributeFilterDtoTypeNOTCONTAINS   GridAttributeFilterDtoType = "NOT_CONTAINS"
-	GridAttributeFilterDtoTypeNOTEMPTY      GridAttributeFilterDtoType = "NOT_EMPTY"
-	GridAttributeFilterDtoTypeNOTEQUALS     GridAttributeFilterDtoType = "NOT_EQUALS"
-)
-
-// Defines values for GridCategoryFilterDtoType.
-const (
-	INANYCHILD      GridCategoryFilterDtoType = "IN_ANY_CHILD"
-	INCATEGORY      GridCategoryFilterDtoType = "IN_CATEGORY"
-	WITHOUTCATEGORY GridCategoryFilterDtoType = "WITHOUT_CATEGORY"
-)
-
-// Defines values for GridLabelFilterDtoType.
-const (
-	GridLabelFilterDtoTypeALL   GridLabelFilterDtoType = "ALL"
-	GridLabelFilterDtoTypeEMPTY GridLabelFilterDtoType = "EMPTY"
-	GridLabelFilterDtoTypeNOT   GridLabelFilterDtoType = "NOT"
-	GridLabelFilterDtoTypeSOME  GridLabelFilterDtoType = "SOME"
-)
-
-// Defines values for GridProductBaseFilterDtoType.
-const (
-	GridProductBaseFilterDtoTypeDESCRIPTIONCONTAINS    GridProductBaseFilterDtoType = "DESCRIPTION_CONTAINS"
-	GridProductBaseFilterDtoTypeDESCRIPTIONENDSWITH    GridProductBaseFilterDtoType = "DESCRIPTION_ENDS_WITH"
-	GridProductBaseFilterDtoTypeDESCRIPTIONIS          GridProductBaseFilterDtoType = "DESCRIPTION_IS"
-	GridProductBaseFilterDtoTypeDESCRIPTIONNOTCONTAINS GridProductBaseFilterDtoType = "DESCRIPTION_NOT_CONTAINS"
-	GridProductBaseFilterDtoTypeDESCRIPTIONSTARTSWITH  GridProductBaseFilterDtoType = "DESCRIPTION_STARTS_WITH"
-	GridProductBaseFilterDtoTypeIDIN                   GridProductBaseFilterDtoType = "ID_IN"
-	GridProductBaseFilterDtoTypeNAMECONTAINS           GridProductBaseFilterDtoType = "NAME_CONTAINS"
-	GridProductBaseFilterDtoTypeNAMEENDSWITH           GridProductBaseFilterDtoType = "NAME_ENDS_WITH"
-	GridProductBaseFilterDtoTypeNAMEIS                 GridProductBaseFilterDtoType = "NAME_IS"
-	GridProductBaseFilterDtoTypeNAMENOTCONTAINS        GridProductBaseFilterDtoType = "NAME_NOT_CONTAINS"
-	GridProductBaseFilterDtoTypeNAMESTARTSWITH         GridProductBaseFilterDtoType = "NAME_STARTS_WITH"
-	GridProductBaseFilterDtoTypeNUMBERCONTAINS         GridProductBaseFilterDtoType = "NUMBER_CONTAINS"
-	GridProductBaseFilterDtoTypeNUMBERENDSWITH         GridProductBaseFilterDtoType = "NUMBER_ENDS_WITH"
-	GridProductBaseFilterDtoTypeNUMBERIN               GridProductBaseFilterDtoType = "NUMBER_IN"
-	GridProductBaseFilterDtoTypeNUMBERIS               GridProductBaseFilterDtoType = "NUMBER_IS"
-	GridProductBaseFilterDtoTypeNUMBERNOTCONTAINS      GridProductBaseFilterDtoType = "NUMBER_NOT_CONTAINS"
-	GridProductBaseFilterDtoTypeNUMBERSTARTSWITH       GridProductBaseFilterDtoType = "NUMBER_STARTS_WITH"
-)
-
-// Defines values for GridProductCreateDateFilterDtoType.
-const (
-	GridProductCreateDateFilterDtoTypeGREATEREQUAL GridProductCreateDateFilterDtoType = "GREATER_EQUAL"
-	GridProductCreateDateFilterDtoTypeLESSEQUAL    GridProductCreateDateFilterDtoType = "LESS_EQUAL"
-)
-
-// Defines values for GridProductLastUpdateFilterDtoType.
-const (
-	GridProductLastUpdateFilterDtoTypeGREATEREQUAL GridProductLastUpdateFilterDtoType = "GREATER_EQUAL"
-	GridProductLastUpdateFilterDtoTypeLESSEQUAL    GridProductLastUpdateFilterDtoType = "LESS_EQUAL"
-)
-
-// Defines values for GridProductTypeFilterDtoType.
-const (
-	GridProductTypeFilterDtoTypeBUNDLE  GridProductTypeFilterDtoType = "BUNDLE"
-	GridProductTypeFilterDtoTypeGROUP   GridProductTypeFilterDtoType = "GROUP"
-	GridProductTypeFilterDtoTypeSINGLE  GridProductTypeFilterDtoType = "SINGLE"
-	GridProductTypeFilterDtoTypeVARIANT GridProductTypeFilterDtoType = "VARIANT"
-)
-
-// Defines values for GridPublishStateFilterDtoType.
-const (
-	IN GridPublishStateFilterDtoType = "IN"
-)
-
-// Defines values for GridRelationsFilterDtoType.
-const (
-	EMPTY GridRelationsFilterDtoType = "EMPTY"
-	HAVE  GridRelationsFilterDtoType = "HAVE"
-	NOT   GridRelationsFilterDtoType = "NOT"
-)
-
-// Defines values for GridScoreFilterDtoType.
-const (
-	BETWEEN GridScoreFilterDtoType = "BETWEEN"
-)
-
-// Defines values for GridScoreRequirementResultFilterDtoType.
-const (
-	NOTMEETALL GridScoreRequirementResultFilterDtoType = "NOT_MEET_ALL"
-)
-
-// Defines values for PolicyRequestReadOnly.
-const (
-	False PolicyRequestReadOnly = false
-)
-
-// Defines values for ProductAllContextStates.
-const (
-	ProductAllContextStatesARCHIVED        ProductAllContextStates = "ARCHIVED"
-	ProductAllContextStatesCONNECTED       ProductAllContextStates = "CONNECTED"
-	ProductAllContextStatesNOTCONNECTED    ProductAllContextStates = "NOT_CONNECTED"
-	ProductAllContextStatesPLAYGROUNDONLY  ProductAllContextStates = "PLAYGROUND_ONLY"
-	ProductAllContextStatesTOBEARCHIVED    ProductAllContextStates = "TO_BE_ARCHIVED"
-	ProductAllContextStatesTOBEPUBLISHED   ProductAllContextStates = "TO_BE_PUBLISHED"
-	ProductAllContextStatesTOBEUNPUBLISHED ProductAllContextStates = "TO_BE_UNPUBLISHED"
-)
-
 // Defines values for ProductAllRelatedProductsRelationSortingOrderSource.
 const (
 	ProductAllRelatedProductsRelationSortingOrderSourcePRODUCT            ProductAllRelatedProductsRelationSortingOrderSource = "PRODUCT"
 	ProductAllRelatedProductsRelationSortingOrderSourceRELATIONDEFINITION ProductAllRelatedProductsRelationSortingOrderSource = "RELATION_DEFINITION"
 )
 
-// Defines values for ProductAllState.
-const (
-	ProductAllStateARCHIVED        ProductAllState = "ARCHIVED"
-	ProductAllStateCONNECTED       ProductAllState = "CONNECTED"
-	ProductAllStateNOTCONNECTED    ProductAllState = "NOT_CONNECTED"
-	ProductAllStatePLAYGROUNDONLY  ProductAllState = "PLAYGROUND_ONLY"
-	ProductAllStateTOBEARCHIVED    ProductAllState = "TO_BE_ARCHIVED"
-	ProductAllStateTOBEPUBLISHED   ProductAllState = "TO_BE_PUBLISHED"
-	ProductAllStateTOBEUNPUBLISHED ProductAllState = "TO_BE_UNPUBLISHED"
-)
-
 // Defines values for ProductAllType.
 const (
 	ProductAllTypeBUNDLE  ProductAllType = "BUNDLE"
+	ProductAllTypeFAMILY  ProductAllType = "FAMILY"
 	ProductAllTypeGROUP   ProductAllType = "GROUP"
 	ProductAllTypeSINGLE  ProductAllType = "SINGLE"
 	ProductAllTypeVARIANT ProductAllType = "VARIANT"
@@ -235,28 +103,6 @@ const (
 	ProductConnectionInfoResponseDirectionsREVERSE ProductConnectionInfoResponseDirections = "REVERSE"
 )
 
-// Defines values for ProductConnectionMetadataContextStates.
-const (
-	ProductConnectionMetadataContextStatesARCHIVED        ProductConnectionMetadataContextStates = "ARCHIVED"
-	ProductConnectionMetadataContextStatesCONNECTED       ProductConnectionMetadataContextStates = "CONNECTED"
-	ProductConnectionMetadataContextStatesNOTCONNECTED    ProductConnectionMetadataContextStates = "NOT_CONNECTED"
-	ProductConnectionMetadataContextStatesPLAYGROUNDONLY  ProductConnectionMetadataContextStates = "PLAYGROUND_ONLY"
-	ProductConnectionMetadataContextStatesTOBEARCHIVED    ProductConnectionMetadataContextStates = "TO_BE_ARCHIVED"
-	ProductConnectionMetadataContextStatesTOBEPUBLISHED   ProductConnectionMetadataContextStates = "TO_BE_PUBLISHED"
-	ProductConnectionMetadataContextStatesTOBEUNPUBLISHED ProductConnectionMetadataContextStates = "TO_BE_UNPUBLISHED"
-)
-
-// Defines values for ProductConnectionMetadataState.
-const (
-	ProductConnectionMetadataStateARCHIVED        ProductConnectionMetadataState = "ARCHIVED"
-	ProductConnectionMetadataStateCONNECTED       ProductConnectionMetadataState = "CONNECTED"
-	ProductConnectionMetadataStateNOTCONNECTED    ProductConnectionMetadataState = "NOT_CONNECTED"
-	ProductConnectionMetadataStatePLAYGROUNDONLY  ProductConnectionMetadataState = "PLAYGROUND_ONLY"
-	ProductConnectionMetadataStateTOBEARCHIVED    ProductConnectionMetadataState = "TO_BE_ARCHIVED"
-	ProductConnectionMetadataStateTOBEPUBLISHED   ProductConnectionMetadataState = "TO_BE_PUBLISHED"
-	ProductConnectionMetadataStateTOBEUNPUBLISHED ProductConnectionMetadataState = "TO_BE_UNPUBLISHED"
-)
-
 // Defines values for ProductCreateRequestRelatedProductsRelationSortingOrderSource.
 const (
 	ProductCreateRequestRelatedProductsRelationSortingOrderSourcePRODUCT            ProductCreateRequestRelatedProductsRelationSortingOrderSource = "PRODUCT"
@@ -265,21 +111,10 @@ const (
 
 // Defines values for ProductCreateRequestType.
 const (
-	ProductCreateRequestTypeBUNDLE  ProductCreateRequestType = "BUNDLE"
-	ProductCreateRequestTypeGROUP   ProductCreateRequestType = "GROUP"
-	ProductCreateRequestTypeSINGLE  ProductCreateRequestType = "SINGLE"
-	ProductCreateRequestTypeVARIANT ProductCreateRequestType = "VARIANT"
-)
-
-// Defines values for ProductMetadataViewDtoContextStates.
-const (
-	ProductMetadataViewDtoContextStatesARCHIVED        ProductMetadataViewDtoContextStates = "ARCHIVED"
-	ProductMetadataViewDtoContextStatesCONNECTED       ProductMetadataViewDtoContextStates = "CONNECTED"
-	ProductMetadataViewDtoContextStatesNOTCONNECTED    ProductMetadataViewDtoContextStates = "NOT_CONNECTED"
-	ProductMetadataViewDtoContextStatesPLAYGROUNDONLY  ProductMetadataViewDtoContextStates = "PLAYGROUND_ONLY"
-	ProductMetadataViewDtoContextStatesTOBEARCHIVED    ProductMetadataViewDtoContextStates = "TO_BE_ARCHIVED"
-	ProductMetadataViewDtoContextStatesTOBEPUBLISHED   ProductMetadataViewDtoContextStates = "TO_BE_PUBLISHED"
-	ProductMetadataViewDtoContextStatesTOBEUNPUBLISHED ProductMetadataViewDtoContextStates = "TO_BE_UNPUBLISHED"
+	ProductCreateRequestTypeBUNDLE ProductCreateRequestType = "BUNDLE"
+	ProductCreateRequestTypeFAMILY ProductCreateRequestType = "FAMILY"
+	ProductCreateRequestTypeGROUP  ProductCreateRequestType = "GROUP"
+	ProductCreateRequestTypeSINGLE ProductCreateRequestType = "SINGLE"
 )
 
 // Defines values for ProductMetadataViewDtoRelatedProductsRelationSortingOrderSource.
@@ -288,20 +123,10 @@ const (
 	ProductMetadataViewDtoRelatedProductsRelationSortingOrderSourceRELATIONDEFINITION ProductMetadataViewDtoRelatedProductsRelationSortingOrderSource = "RELATION_DEFINITION"
 )
 
-// Defines values for ProductMetadataViewDtoState.
-const (
-	ARCHIVED        ProductMetadataViewDtoState = "ARCHIVED"
-	CONNECTED       ProductMetadataViewDtoState = "CONNECTED"
-	NOTCONNECTED    ProductMetadataViewDtoState = "NOT_CONNECTED"
-	PLAYGROUNDONLY  ProductMetadataViewDtoState = "PLAYGROUND_ONLY"
-	TOBEARCHIVED    ProductMetadataViewDtoState = "TO_BE_ARCHIVED"
-	TOBEPUBLISHED   ProductMetadataViewDtoState = "TO_BE_PUBLISHED"
-	TOBEUNPUBLISHED ProductMetadataViewDtoState = "TO_BE_UNPUBLISHED"
-)
-
 // Defines values for ProductMetadataViewDtoType.
 const (
 	ProductMetadataViewDtoTypeBUNDLE  ProductMetadataViewDtoType = "BUNDLE"
+	ProductMetadataViewDtoTypeFAMILY  ProductMetadataViewDtoType = "FAMILY"
 	ProductMetadataViewDtoTypeGROUP   ProductMetadataViewDtoType = "GROUP"
 	ProductMetadataViewDtoTypeSINGLE  ProductMetadataViewDtoType = "SINGLE"
 	ProductMetadataViewDtoTypeVARIANT ProductMetadataViewDtoType = "VARIANT"
@@ -327,10 +152,25 @@ const (
 	ProductValidationIssueResponseStatusSUCCESSFUL ProductValidationIssueResponseStatus = "SUCCESSFUL"
 )
 
+// Defines values for ProductViewsByTypeRequestTypes.
+const (
+	ProductViewsByTypeRequestTypesBUNDLE  ProductViewsByTypeRequestTypes = "BUNDLE"
+	ProductViewsByTypeRequestTypesFAMILY  ProductViewsByTypeRequestTypes = "FAMILY"
+	ProductViewsByTypeRequestTypesGROUP   ProductViewsByTypeRequestTypes = "GROUP"
+	ProductViewsByTypeRequestTypesSINGLE  ProductViewsByTypeRequestTypes = "SINGLE"
+	ProductViewsByTypeRequestTypesVARIANT ProductViewsByTypeRequestTypes = "VARIANT"
+)
+
+// Defines values for RelationDirectionUpdateRequestDirection.
+const (
+	ONEWAY RelationDirectionUpdateRequestDirection = "ONE_WAY"
+	TWOWAY RelationDirectionUpdateRequestDirection = "TWO_WAY"
+)
+
 // Defines values for RelationFilterType.
 const (
-	IDIN     RelationFilterType = "ID_IN"
-	NUMBERIN RelationFilterType = "NUMBER_IN"
+	RelationFilterTypeIDIN     RelationFilterType = "ID_IN"
+	RelationFilterTypeNUMBERIN RelationFilterType = "NUMBER_IN"
 )
 
 // Defines values for SimpleAttributeDefinitionRequestDataType.
@@ -351,17 +191,6 @@ const (
 	SimpleAttributeDefinitionRequestDataTypeSingleSelect  SimpleAttributeDefinitionRequestDataType = "single_select"
 	SimpleAttributeDefinitionRequestDataTypeText          SimpleAttributeDefinitionRequestDataType = "text"
 	SimpleAttributeDefinitionRequestDataTypeTime          SimpleAttributeDefinitionRequestDataType = "time"
-)
-
-// Defines values for UpdateProductStateRequestAction.
-const (
-	UpdateProductStateRequestActionARCHIVE    UpdateProductStateRequestAction = "ARCHIVE"
-	UpdateProductStateRequestActionCONNECT    UpdateProductStateRequestAction = "CONNECT"
-	UpdateProductStateRequestActionDISCONNECT UpdateProductStateRequestAction = "DISCONNECT"
-	UpdateProductStateRequestActionPUBLISH    UpdateProductStateRequestAction = "PUBLISH"
-	UpdateProductStateRequestActionSYNC       UpdateProductStateRequestAction = "SYNC"
-	UpdateProductStateRequestActionUNARCHIVE  UpdateProductStateRequestAction = "UNARCHIVE"
-	UpdateProductStateRequestActionUNPUBLISH  UpdateProductStateRequestAction = "UNPUBLISH"
 )
 
 // Defines values for ValueValidationIssueStatusCode.
@@ -527,36 +356,96 @@ const (
 	REVERSE UpdateOrderProductConnectionsParamsDirection = "REVERSE"
 )
 
-// Defines values for ChangeStatusParamsAction.
-const (
-	ChangeStatusParamsActionARCHIVE    ChangeStatusParamsAction = "ARCHIVE"
-	ChangeStatusParamsActionCONNECT    ChangeStatusParamsAction = "CONNECT"
-	ChangeStatusParamsActionDISCONNECT ChangeStatusParamsAction = "DISCONNECT"
-	ChangeStatusParamsActionPUBLISH    ChangeStatusParamsAction = "PUBLISH"
-	ChangeStatusParamsActionSYNC       ChangeStatusParamsAction = "SYNC"
-	ChangeStatusParamsActionUNARCHIVE  ChangeStatusParamsAction = "UNARCHIVE"
-	ChangeStatusParamsActionUNPUBLISH  ChangeStatusParamsAction = "UNPUBLISH"
-)
-
 // Defines values for DeletePolicyForRelationParamsPolicyType.
 const (
 	DeletePolicyForRelationParamsPolicyTypeREAD  DeletePolicyForRelationParamsPolicyType = "READ"
 	DeletePolicyForRelationParamsPolicyTypeWRITE DeletePolicyForRelationParamsPolicyType = "WRITE"
 )
 
-// AllProductMetadataUpdateRequest defines model for AllProductMetadataUpdateRequest.
-type AllProductMetadataUpdateRequest struct {
-	Description *string `json:"description,omitempty"`
-	Name        *string `json:"name,omitempty"`
-	Number      *string `json:"number,omitempty"`
+// AddProductVariantsRequest defines model for AddProductVariantsRequest.
+type AddProductVariantsRequest struct {
+	// ProductIds Specifies the set of product IDs to be assigned to the specified variant group.
+	//
+	//
+	//  **Example:**
+	//  ```
+	//  "productIds": [
+	//    "667a6c664d59943c1504c738",
+	//    "67958a6c664d59943c1504c7"
+	// ]
+	// ```
+	ProductIds []string `json:"productIds"`
+
+	// VariantGroupId Specifies the ID of the variant group to which products will be assigned.
+	//
+	//
+	//  **Example:**
+	//  ```
+	//  "variantGroupId": "667a6c664d59943c1504c738"
+	// ```
+	VariantGroupId string `json:"variantGroupId"`
+}
+
+// AppendDictionaryValueRequest defines model for AppendDictionaryValueRequest.
+type AppendDictionaryValueRequest struct {
+	AttributeDefinitionId ObjectId   `json:"attributeDefinitionId"`
+	DictionaryValueIds    []ObjectId `json:"dictionaryValueIds"`
+	ProductIds            []ObjectId `json:"productIds"`
+}
+
+// AppendSelectValuesToProductsAttributeRequest defines model for AppendSelectValuesToProductsAttributeRequest.
+type AppendSelectValuesToProductsAttributeRequest struct {
+	AttributeDefinitionId ObjectId   `json:"attributeDefinitionId"`
+	ProductIds            []ObjectId `json:"productIds"`
+	SelectValueIds        []ObjectId `json:"selectValueIds"`
 }
 
 // AssetIdListViewsRequestDto defines model for AssetIdListViewsRequestDto.
 type AssetIdListViewsRequestDto struct {
-	AssetIds []string                                 `json:"assetIds"`
-	Page     *int32                                   `json:"page,omitempty"`
-	PageSize *int32                                   `json:"pageSize,omitempty"`
-	Views    *[]AssetIdListViewsRequestDto_Views_Item `json:"views,omitempty"`
+	// AssetIds Specifies a list of asset IDs to retrieve products linked to those given assets. This field is mandatory.
+	//
+	//
+	//  **Example:**
+	//  ```
+	//  assetIds: [
+	//    "ff1df72b-8d79-4b32-a7e4-579caa589ade",
+	//    "ff1df72b-8d79-4b32-a7e4-579caa589adf"
+	// ]
+	// ```
+	AssetIds []string `json:"assetIds"`
+
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0`
+	// will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
+	Page *int32 `json:"page,omitempty"`
+
+	// PageSize The number of items to return in each block. If omitted, the default value `100` will be used. This parameter
+	// works with the `page` parameter to paginate the result set, allowing you to control the size of each page of
+	// results. The value must be between 1 and 100.
+	//
+	// **Default value:** `100`
+	PageSize *int32 `json:"pageSize,omitempty"`
+
+	// Views Specifies the list of entity views\* to be included in the response.
+	//
+	// \*A view is a subset of product data, like `METADATA`, `ATTRIBUTES`, `ASSETS` and `CATEGORIES`, to be included
+	// in the response, if no views are specified in the request, only product IDs will be returned.
+	//
+	// **Example:**
+	// ```
+	// "views": [
+	//   {
+	//     "type": "ASSETS"
+	//   },///   {
+	//     "type": "ATTRIBUTES",
+	//     "definitionIds": [
+	//       "664cc90da825236207yt01a7"
+	//     ]
+	//   }
+	// ]
+	// ```
+	Views *[]AssetIdListViewsRequestDto_Views_Item `json:"views,omitempty"`
 }
 
 // AssetIdListViewsRequestDto_Views_Item defines model for AssetIdListViewsRequestDto.views.Item.
@@ -564,123 +453,264 @@ type AssetIdListViewsRequestDto_Views_Item struct {
 	union json.RawMessage
 }
 
-// AssetsFilteringViewsDto <p>Views mapping</p><table><tr><th>View type</th><th>View dto</th></tr><tr><td>ASSETS</td><td>AssetsFilteringViewsDto</td></tr><tr><td>ATTRIBUTES</td><td>AttributesFilteringViewsDto</td></tr><tr><td>METADATA</td><td>MetadataFilteringViewsDto</td></tr><tr><td>CATEGORIES</td><td>CategoriesFilteringViewsDto</td></tr><tr><td>BUNDLES</td><td>BundlesFilteringViewsDto</td></tr><tr><td>LABELS</td><td>LabelsFilteringViewsDto</td></tr><tr><td>VARIANTS</td><td>VariantsFilteringViewsDto</td></tr><tr><td>RELATED_PRODUCTS</td><td>RelatedProductsFilteringViewsDto</td></tr><tr><td>RELATED_CATEGORIES</td><td>RelatedCategoriesFilteringViewsDto</td></tr></table>
-type AssetsFilteringViewsDto = FilteringViewsDto
+// AssetsFilteringViewsDto defines model for AssetsFilteringViewsDto.
+type AssetsFilteringViewsDto struct {
+	Type string `json:"type"`
+}
 
 // AssignProductsToCategoryRequest defines model for AssignProductsToCategoryRequest.
 type AssignProductsToCategoryRequest struct {
-	CategoryId *string   `json:"categoryId,omitempty"`
+	// CategoryId Specifies the ID of the category to which products will be assigned.
+	//
+	//
+	//  **Example:**
+	//  ```
+	//  "categoryId": "667a6c664d59943c1504c738"
+	// ```
+	CategoryId *string `json:"categoryId,omitempty"`
+
+	// ProductIds Specifies the set of product IDs to be assigned to the specified category.
+	//
+	//
+	// **Example:**
+	// ```
+	// "productIds": [
+	//   "667a6c664d59943c1504c738",
+	//   "67958a6c664d59943c1504c7"
+	// ]
+	// ```
 	ProductIds *[]string `json:"productIds,omitempty"`
 }
 
 // AssociateProductAssetsRequest defines model for AssociateProductAssetsRequest.
 type AssociateProductAssetsRequest struct {
+	// Assets The IDs of the existing media-bank assets to attach to the product. Must contain 1 to 100 IDs, and each asset
+	// must already exist. These are added to any assets the product already has, not replacing them.
 	Assets *[]string `json:"assets,omitempty"`
 }
 
 // AttributeDefinitionDeleteResponse defines model for AttributeDefinitionDeleteResponse.
 type AttributeDefinitionDeleteResponse struct {
+	// NumberOfAlteredCompoundAttributeDefinitions Number of altered compound attribute definitions.
 	NumberOfAlteredCompoundAttributeDefinitions *int64 `json:"numberOfAlteredCompoundAttributeDefinitions,omitempty"`
-	NumberOfDeletedCategoryLevelAttributes      *int64 `json:"numberOfDeletedCategoryLevelAttributes,omitempty"`
-	NumberOfDeletedProductAttributes            *int64 `json:"numberOfDeletedProductAttributes,omitempty"`
+
+	// NumberOfDeletedCategoryLevelAttributes Number of deleted category level attributes (CLA).
+	NumberOfDeletedCategoryLevelAttributes *int64 `json:"numberOfDeletedCategoryLevelAttributes,omitempty"`
+
+	// NumberOfDeletedProductAttributes Number of deleted product attributes.
+	NumberOfDeletedProductAttributes *int64 `json:"numberOfDeletedProductAttributes,omitempty"`
 }
 
 // AttributeDefinitionFilterDto defines model for AttributeDefinitionFilterDto.
 type AttributeDefinitionFilterDto struct {
-	Type   *AttributeDefinitionFilterDtoType `json:"type,omitempty"`
-	Values *[]string                         `json:"values,omitempty"`
+	// Type Specifies the type of attribute definition filter. Available values are `NUMBER_IN`, `ID_IN`.
+	Type *AttributeDefinitionFilterDtoType `json:"type,omitempty"`
+
+	// Values Specifies the set of values. The input of this field is used for filtering attribute definitions based on the
+	// selected filter type.
+	Values *[]string `json:"values,omitempty"`
 }
 
-// AttributeDefinitionFilterDtoType defines model for AttributeDefinitionFilterDto.Type.
+// AttributeDefinitionFilterDtoType Specifies the type of attribute definition filter. Available values are `NUMBER_IN`, `ID_IN`.
 type AttributeDefinitionFilterDtoType string
 
 // AttributeDefinitionFilteringRequestDto defines model for AttributeDefinitionFilteringRequestDto.
 type AttributeDefinitionFilteringRequestDto struct {
-	Filters  *[]AttributeDefinitionFilterDto `json:"filters,omitempty"`
-	Page     *int32                          `json:"page,omitempty"`
-	PageSize *int32                          `json:"pageSize,omitempty"`
+	// Filters Specifies the list of attribute definition filters. This field is used for filtering attribute definitions based
+	// on various criteria.
+	Filters *[]AttributeDefinitionFilterDto `json:"filters,omitempty"`
+
+	// Page The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter
+	// works with the `page` parameter to paginate the result set, allowing you to control the size of each page of
+	// results. The value must be between 1 and 1000.
+	//
+	// **Default value:** `1000`
+	Page *int32 `json:"page,omitempty"`
+
+	// PageSize A number sequence representing a block of items to return as a result set. If omitted, the default value `0`
+	// will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
+	PageSize *int32 `json:"pageSize,omitempty"`
 }
 
 // AttributeDefinitionIdDto defines model for AttributeDefinitionIdDto.
 type AttributeDefinitionIdDto struct {
+	// Id A unique ID used to define attribute definition in Bluestone PIM. This value is automatically generated by the
+	// system.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
 	Id *string `json:"id,omitempty"`
 }
 
 // AttributeDefinitionMetadataUpdateRequest defines model for AttributeDefinitionMetadataUpdateRequest.
 type AttributeDefinitionMetadataUpdateRequest struct {
-	Description    *PropertyUpdateString `json:"description,omitempty"`
-	ExternalSource *bool                 `json:"externalSource,omitempty"`
-	Internal       *bool                 `json:"internal,omitempty"`
-	Name           *PropertyUpdateString `json:"name,omitempty"`
-	Number         *PropertyUpdateString `json:"number,omitempty"`
+	Description *PropertyUpdateString `json:"description,omitempty"`
+
+	// ExternalSource Specifies whether the origin of the attribute is managed in an external source like ERP systems and hence should
+	// be read-only for the editors in the Bluestone PIM UI. Note that the value still can be modified via the
+	// Management API.
+	ExternalSource *bool `json:"externalSource,omitempty"`
+
+	// Internal Indicates that the attribute is for internal use only within Bluestone PIM, meaning this value is not visible in
+	// the Public API (PAPI) or accessible outside the system; for example, attributes for system configuration or
+	// internal categorization.
+	Internal *bool                 `json:"internal,omitempty"`
+	Name     *PropertyUpdateString `json:"name,omitempty"`
+	Number   *PropertyUpdateString `json:"number,omitempty"`
 }
 
 // AttributeDefinitionResponse defines model for AttributeDefinitionResponse.
 type AttributeDefinitionResponse struct {
-	Charset                  *string                              `json:"charset,omitempty"`
-	ContentType              *string                              `json:"contentType,omitempty"`
-	DataType                 *AttributeDefinitionResponseDataType `json:"dataType,omitempty"`
-	Description              *string                              `json:"description,omitempty"`
-	ExternalSource           *bool                                `json:"externalSource,omitempty"`
-	FilterParentDefinitionId *string                              `json:"filterParentDefinitionId,omitempty"`
-	Group                    *string                              `json:"group,omitempty"`
-	GroupId                  *string                              `json:"groupId,omitempty"`
-	Id                       *string                              `json:"id,omitempty"`
-	Internal                 *bool                                `json:"internal,omitempty"`
-	IsCompound               *bool                                `json:"isCompound,omitempty"`
-	Name                     string                               `json:"name"`
-	Number                   *string                              `json:"number,omitempty"`
-	Restrictions             *RestrictionsDto                     `json:"restrictions,omitempty"`
-	SelectedValuesLimit      *int32                               `json:"selectedValuesLimit,omitempty"`
-	ToBeRemoved              *bool                                `json:"toBeRemoved,omitempty"`
-	Unit                     *string                              `json:"unit,omitempty"`
+	// Charset Character and symbol used for encoding text for the attribute definition.
+	Charset *string `json:"charset,omitempty"`
+
+	// ContentType Format of the attribute's content such as text/markdown
+	ContentType *string `json:"contentType,omitempty"`
+
+	// ContextAware Indicates whether the attribute is context aware.
+	ContextAware *bool `json:"contextAware,omitempty"`
+
+	// DataType Format of data that an attribute can hold. It determines how the data is stored, displayed and used within the
+	// system.
+	DataType *AttributeDefinitionResponseDataType `json:"dataType,omitempty"`
+
+	// Description Details of the attribute definition.
+	Description *string `json:"description,omitempty"`
+
+	// DictionaryMetadataType Specifies the type of metadata associated with a dictionary attribute definition, providing additional context
+	DictionaryMetadataType *string `json:"dictionaryMetadataType,omitempty"`
+	ExternalSource         *bool   `json:"externalSource,omitempty"`
+
+	// FilterParentDefinitionId Unique ID for the parent definition of a dictionary attribute, applicable only to attributes that belong to a
+	// child dictionary.
+	FilterParentDefinitionId *string `json:"filterParentDefinitionId,omitempty"`
+
+	// Group Name of the group that the attribute definition belongs to.
+	Group   *string `json:"group,omitempty"`
+	GroupId *string `json:"groupId,omitempty"`
+
+	// Id Attribute definition ID. This value is automatically generated by the system.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	Id       *string `json:"id,omitempty"`
+	Internal *bool   `json:"internal,omitempty"`
+
+	// IsCompound Indicates whether the attribute is a compound attribute, if the value is TRUE, it means the attribute consists
+	// of multiple attribute values. Otherwise, it represents a single attribute value. In Bluestone PIM, a compound
+	// attribute is often used to represent more complex data structures, such as a full address that includes
+	// sub-attributes like street, city, and postcode, or a product dimension that includes length, width, and height.
+	// For more details, please refer to [Compound attribute type](https://help.bluestonepim.com/attribute-types-1#compound)
+	IsCompound *bool   `json:"isCompound,omitempty"`
+	Name       *string `json:"name,omitempty"`
+	Number     *string `json:"number,omitempty"`
+
+	// ReadOnly Specifies that the current user has read-only access to this attribute definition.
+	ReadOnly     *bool            `json:"readOnly,omitempty"`
+	Restrictions *RestrictionsDto `json:"restrictions,omitempty"`
+
+	// SelectedValuesLimit The maximum number of selections allowed per product. This field will be included in the response if the
+	// attribute type is `Dictionary`.
+	SelectedValuesLimit *int32 `json:"selectedValuesLimit,omitempty"`
+
+	// ToBeRemoved Indicates whether the attribute is scheduled for removal.
+	ToBeRemoved *bool `json:"toBeRemoved,omitempty"`
+
+	// Unit Shows the measurement unit for the attribute definition. This field will be included in the response if the
+	// attribute type is `integer` or `decimal`. Omitted when value is not specified.
+	Unit *string `json:"unit,omitempty"`
 }
 
-// AttributeDefinitionResponseDataType defines model for AttributeDefinitionResponse.DataType.
+// AttributeDefinitionResponseDataType Format of data that an attribute can hold. It determines how the data is stored, displayed and used within the
+// system.
 type AttributeDefinitionResponseDataType string
 
 // AttributeDefinitionUpdateResponse defines model for AttributeDefinitionUpdateResponse.
 type AttributeDefinitionUpdateResponse struct {
+	// NumberOfAlteredCategoriesWithColumnAttributes Number of categories with altered column attributes. This field helps track changes in column attributes at the
+	// category level.
 	NumberOfAlteredCategoriesWithColumnAttributes *int64 `json:"numberOfAlteredCategoriesWithColumnAttributes,omitempty"`
+
+	// NumberOfAlteredCategoriesWithMatrixAttributes Number of categories with altered matrix attributes. This field helps track changes in matrix attributes at the
+	// category level.
 	NumberOfAlteredCategoriesWithMatrixAttributes *int64 `json:"numberOfAlteredCategoriesWithMatrixAttributes,omitempty"`
+
+	// NumberOfAlteredCategoriesWithSelectAttributes Number of categories with altered select attributes. This field helps track changes in select attributes at the
+	// category level.
 	NumberOfAlteredCategoriesWithSelectAttributes *int64 `json:"numberOfAlteredCategoriesWithSelectAttributes,omitempty"`
-	NumberOfAlteredProductWithColumnAttributes    *int64 `json:"numberOfAlteredProductWithColumnAttributes,omitempty"`
-	NumberOfAlteredProductWithMatrixAttributes    *int64 `json:"numberOfAlteredProductWithMatrixAttributes,omitempty"`
-	NumberOfAlteredProductWithSelectAttributes    *int64 `json:"numberOfAlteredProductWithSelectAttributes,omitempty"`
+
+	// NumberOfAlteredProductWithColumnAttributes Number of products with altered column attributes. This field helps track changes in column attributes at the
+	// product level.
+	NumberOfAlteredProductWithColumnAttributes *int64 `json:"numberOfAlteredProductWithColumnAttributes,omitempty"`
+
+	// NumberOfAlteredProductWithMatrixAttributes Number of products with altered matrix attributes. This field helps track changes in matrix attributes at the
+	// product level.
+	NumberOfAlteredProductWithMatrixAttributes *int64 `json:"numberOfAlteredProductWithMatrixAttributes,omitempty"`
+
+	// NumberOfAlteredProductWithSelectAttributes Number of products with altered select attributes. This field helps track changes in select attributes at the
+	// product level.
+	NumberOfAlteredProductWithSelectAttributes *int64 `json:"numberOfAlteredProductWithSelectAttributes,omitempty"`
 }
 
 // AttributeGroupRequest defines model for AttributeGroupRequest.
 type AttributeGroupRequest struct {
-	Name   string  `json:"name"`
+	// Name Specifies the attribute group name. This value must be unique across all attribute groups, it helps users
+	// understand what the attribute is and how it is used within the system.
+	Name string `json:"name"`
+
+	// Number Specifies the attribute group number. This value must be unique across all attribute group. If not specified,
+	// the system will use the attribute group ID, generated by the system, as the default attribute group number.
 	Number *string `json:"number,omitempty"`
 }
 
 // AttributeGroupResponse defines model for AttributeGroupResponse.
 type AttributeGroupResponse struct {
-	Id          *string `json:"id,omitempty"`
-	Name        string  `json:"name"`
-	Number      *string `json:"number,omitempty"`
-	OrderByName *bool   `json:"orderByName,omitempty"`
+	// Id Unique ID for the attribute group. This value is automatically generated by the system.
+	//
+	// **Example:** `5be16d624cedfd000b2e75ff`
+	Id *string `json:"id,omitempty"`
+
+	// Name The name given to the attribute group, it is unique across all attribute groups in Bluestone PIM.
+	Name string `json:"name"`
+
+	// Number The number given to the attribute group. This value distinguishes the attribute within the system, if not
+	// specified, the system will use the attribute group ID, generated by the system, as the default attribute group
+	// number.
+	Number *string `json:"number,omitempty"`
+
+	// OrderByName Indicates if the attribute group is sorted by name alphabetically.
+	OrderByName *bool `json:"orderByName,omitempty"`
 }
 
 // AttributeValidationData defines model for AttributeValidationData.
 type AttributeValidationData struct {
-	Id     *string                        `json:"id,omitempty"`
-	Issues *[]AttributeValidationIssue    `json:"issues,omitempty"`
+	// Id Unique ID for attribute definition. This value is automatically generated by the system.
+	//
+	// **Example:** `5be16d624cedfd000b2e75ff`
+	Id *string `json:"id,omitempty"`
+
+	// Issues Array of validation issues found during the validation process. Each validation issue object contains its code,
+	// details and, message.
+	Issues *[]AttributeValidationIssue `json:"issues,omitempty"`
+
+	// Status Status of the validation process, indicating whether it was successful or failed.
 	Status *AttributeValidationDataStatus `json:"status,omitempty"`
 }
 
-// AttributeValidationDataStatus defines model for AttributeValidationData.Status.
+// AttributeValidationDataStatus Status of the validation process, indicating whether it was successful or failed.
 type AttributeValidationDataStatus string
 
 // AttributeValidationIssue defines model for AttributeValidationIssue.
 type AttributeValidationIssue struct {
+	// Code Code representing the type of validation issue. Possible values: `DUPLICATED_SELECT_VALUE` and `NOT_FOUND`
 	Code    *AttributeValidationIssueCode    `json:"code,omitempty"`
 	Details *AttributeValidationIssueDetails `json:"details,omitempty"`
-	Message *string                          `json:"message,omitempty"`
+
+	// Message Simple text to describe the issue found during validation.
+	Message *string `json:"message,omitempty"`
 }
 
-// AttributeValidationIssueCode defines model for AttributeValidationIssue.Code.
+// AttributeValidationIssueCode Code representing the type of validation issue. Possible values: `DUPLICATED_SELECT_VALUE` and `NOT_FOUND`
 type AttributeValidationIssueCode string
 
 // AttributeValidationIssueDetails defines model for AttributeValidationIssueDetails.
@@ -690,39 +720,109 @@ type AttributeValidationIssueDetails struct {
 
 // AttributeValidationRequest defines model for AttributeValidationRequest.
 type AttributeValidationRequest struct {
+	// Definitions Specifies a list of the unique ID for attribute definition that are subject to validation. The minimum number
+	// of definition IDs is 1, and the maximum allowed is 100.
+	//
+	// **Example:**
+	// ```
+	// definitions: [
+	//   {
+	//     "id": "5be16d624cedfd000b2e75ff"
+	//   },
+	//   {
+	//     "id": "5be16d624cedfd000b2e7599"
+	//   }
 	Definitions *[]AttributeDefinitionIdDto `json:"definitions,omitempty"`
 }
 
 // AttributeValidationResponse defines model for AttributeValidationResponse.
 type AttributeValidationResponse struct {
+	// Data Array of validation data objects, each containing details about the validation results for specific attributes.
 	Data *[]AttributeValidationData `json:"data,omitempty"`
 }
 
 // AttributeValueAll defines model for AttributeValueAll.
 type AttributeValueAll struct {
-	Column       *map[string]string            `json:"column,omitempty"`
-	DefinitionId *string                       `json:"definitionId,omitempty"`
-	Dictionary   *[]string                     `json:"dictionary,omitempty"`
-	Matrix       *map[string]map[string]string `json:"matrix,omitempty"`
-	Values       *[]string                     `json:"values,omitempty"`
+	// Column Values for column attributes associated with the product.
+	Column *map[string]string `json:"column,omitempty"`
+
+	// DefinitionId ID of the attribute definition for the given value.
+	DefinitionId *string `json:"definitionId,omitempty"`
+
+	// Dictionary Values for dictionary attributes associated with the product.
+	Dictionary *[]string `json:"dictionary,omitempty"`
+
+	// Matrix Values for matrix attributes associated with the product.
+	Matrix *map[string]map[string]string `json:"matrix,omitempty"`
+
+	// Values Set of attribute values associated with the product.
+	//
+	// **Note**: For a simple attribute type like `text` that only have one value, only the first string in the list will be used for the value.
+	Values *[]string `json:"values,omitempty"`
 }
 
 // AttributeValueFull defines model for AttributeValueFull.
 type AttributeValueFull struct {
-	Column             *map[string]string            `json:"column,omitempty"`
-	Copy               *bool                         `json:"copy,omitempty"`
-	DefiningAttributes *bool                         `json:"definingAttributes,omitempty"`
-	DefinitionId       string                        `json:"definitionId"`
-	Dictionary         *[]string                     `json:"dictionary,omitempty"`
-	Locked             *bool                         `json:"locked,omitempty"`
-	Mandatory          *bool                         `json:"mandatory,omitempty"`
-	Matrix             *map[string]map[string]string `json:"matrix,omitempty"`
-	ReadOnly           *bool                         `json:"readOnly,omitempty"`
-	Values             *[]string                     `json:"values,omitempty"`
+	// Column Values for column attributes associated with the product.
+	Column *map[string]string `json:"column,omitempty"`
+
+	// Copy Flag indicating whether the attribute is a Variant Level Attribute (`VLA`).
+	//
+	// **Note**: This is only relevant for `VARIANT GROUP` products.
+	//
+	// An attribute added to a `VARIANT GROUP` product can be set as a Variant Level Attribute (`VLA`) for easier management of the same attribute for the belonging child `VARIANT` products.
+	//
+	// `"copy": true` means that the attribute is to be set as a `VLA` on the `VARIANT GROUP` product, hence it will be inherited down to any child variants.
+	//
+	// If this property is included in the request when creating an other type of product (like `SINGLE`, `VARIANT` or `BUNDLE`), a `HTTP 400` Bad Request response will be returned.
+	Copy *bool `json:"copy,omitempty"`
+
+	// DefiningAttributes Indicates that a `VLA` attribute is used to distinguish the variants from each other. E.g. for product variations like color.
+	//
+	// **Note**: This is only relevant for `VARIANT GROUP` products. Also `copy` needs to be set to `true`.
+	//
+	// If this property is included in the request when creating an other type of product (like `SINGLE`, `VARIANT` or `BUNDLE`), a `HTTP 400` Bad Request response will be returned.
+	DefiningAttributes *bool `json:"definingAttributes,omitempty"`
+
+	// DefinitionId ID of the attribute definition associated with the attribute value.
+	DefinitionId string `json:"definitionId"`
+
+	// Dictionary Values for dictionary attributes associated with the product.
+	Dictionary *[]string `json:"dictionary,omitempty"`
+
+	// Locked Flag indicating whether the `VLA` attribute is locked. A locked `VLA` will require all child variants to have the same value as specified for the variant group. Once locked, the attribute implicitly becomes mandatory on the variants, meaning that a value must be set in the attribute on all child variants
+	//
+	// **Note**: This is only relevant for `VARIANT GROUP` products. Also `copy` needs to be set to `true`.
+	//
+	// If this property is included in the request when creating an other type of product (like `SINGLE`, `VARIANT` or `BUNDLE`), a `HTTP 400` Bad Request response will be returned.
+	Locked *bool `json:"locked,omitempty"`
+
+	// Mandatory Flag indicating whether the `VLA` attribute is mandatory. A mandatory `VLA` will require that a value is specified in all child variants.
+	//
+	// **Note**: This is only relevant for `VARIANT GROUP` products. Also `copy` needs to be set to `true`.
+	//
+	// If this property is included in the request when creating an other type of product (like `SINGLE`, `VARIANT` or `BUNDLE`), a `HTTP 400` Bad Request response will be returned.
+	Mandatory *bool `json:"mandatory,omitempty"`
+
+	// Matrix Values for matrix attributes associated with the product.
+	Matrix *map[string]map[string]string `json:"matrix,omitempty"`
+
+	// ReadOnly The flag indicates whether the attribute is read-only for the currently logged in user in Bluestone PIM web application based on what policies are applied for the user.
+	//
+	// **Note**: This flag is only relevant on calls to the endpoint performed from the the Bluestone PIM web application and not for calls done to the Management API (MAPI). The endpoint will always return `readOnly: false` when calling the endpoint via the Management API (MAPI)
+	ReadOnly *bool `json:"readOnly,omitempty"`
+
+	// Values Array of attribute values associated with the product.
+	//
+	// **Note**: For a simple attribute type like `text` that only have one value, only the first string in the list will be used for the value.
+	Values *[]string `json:"values,omitempty"`
 }
 
 // AttributeValueValues defines model for AttributeValueValues.
 type AttributeValueValues struct {
+	// Values List of attribute values associated with the product.
+	//
+	// **Note**: For a simple attribute type like `text` that only have one value, only the first string in the list will be used to set the new value.
 	Values *[]string `json:"values,omitempty"`
 }
 
@@ -732,163 +832,670 @@ type AttributesFilteringViewsDto struct {
 	Type          string    `json:"type"`
 }
 
-// BundlesFilteringViewsDto <p>Views mapping</p><table><tr><th>View type</th><th>View dto</th></tr><tr><td>ASSETS</td><td>AssetsFilteringViewsDto</td></tr><tr><td>ATTRIBUTES</td><td>AttributesFilteringViewsDto</td></tr><tr><td>METADATA</td><td>MetadataFilteringViewsDto</td></tr><tr><td>CATEGORIES</td><td>CategoriesFilteringViewsDto</td></tr><tr><td>BUNDLES</td><td>BundlesFilteringViewsDto</td></tr><tr><td>LABELS</td><td>LabelsFilteringViewsDto</td></tr><tr><td>VARIANTS</td><td>VariantsFilteringViewsDto</td></tr><tr><td>RELATED_PRODUCTS</td><td>RelatedProductsFilteringViewsDto</td></tr><tr><td>RELATED_CATEGORIES</td><td>RelatedCategoriesFilteringViewsDto</td></tr></table>
+// BulkAssignGroupsRequest Represents a request to bulk assign variant group products to a variant family product.
+type BulkAssignGroupsRequest struct {
+	FamilyVariantId string   `json:"familyVariantId"`
+	ProductIds      []string `json:"productIds"`
+}
+
+// BulkAttributeDefinitionPolicyRequest defines model for BulkAttributeDefinitionPolicyRequest.
+type BulkAttributeDefinitionPolicyRequest struct {
+	AttributeDefinitionIds *[]string `json:"attributeDefinitionIds,omitempty"`
+	PolicyId               string    `json:"policyId"`
+	ReadOnly               bool      `json:"readOnly"`
+}
+
+// BulkDeleteAttributeDefinitionPolicyRequest defines model for BulkDeleteAttributeDefinitionPolicyRequest.
+type BulkDeleteAttributeDefinitionPolicyRequest struct {
+	// AttributeDefinitionIds Attribute definition IDs the policy should be removed from.
+	AttributeDefinitionIds []string `json:"attributeDefinitionIds"`
+
+	// PolicyId An identifier randomly generated by PIM. ID is unique across all policies.
+	PolicyId string `json:"policyId"`
+}
+
+// BundlesFilteringViewsDto Type of entity view, such as ASSETS, ATTRIBUTES, METADATA, CATEGORIES, BUNDLES, LABELS, VARIANTS, RELATED_PRODUCTS,
+// or RELATED_CATEGORIES.
+//
+// <table>
+//
+//	<tr>
+//	  <th>View type</th>
+//	  <th>View dto</th>
+//	</tr>
+//	<tr>
+//	  <td>ASSETS</td>
+//	  <td>AssetsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>ATTRIBUTES</td>
+//	  <td>AttributesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>METADATA</td>
+//	  <td>MetadataFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>CATEGORIES</td>
+//	  <td>CategoriesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>BUNDLES</td>
+//	  <td>BundlesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>LABELS</td>
+//	  <td>LabelsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>VARIANTS</td>
+//	  <td>VariantsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>GROUPS</td>
+//	  <td>GroupsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>RELATED_PRODUCTS</td>
+//	  <td>RelatedProductsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>RELATED_CATEGORIES</td>
+//	  <td>RelatedCategoriesFilteringViewsDto</td>
+//	</tr>
+//
+// </table>
 type BundlesFilteringViewsDto = FilteringViewsDto
 
-// CategoriesFilteringViewsDto <p>Views mapping</p><table><tr><th>View type</th><th>View dto</th></tr><tr><td>ASSETS</td><td>AssetsFilteringViewsDto</td></tr><tr><td>ATTRIBUTES</td><td>AttributesFilteringViewsDto</td></tr><tr><td>METADATA</td><td>MetadataFilteringViewsDto</td></tr><tr><td>CATEGORIES</td><td>CategoriesFilteringViewsDto</td></tr><tr><td>BUNDLES</td><td>BundlesFilteringViewsDto</td></tr><tr><td>LABELS</td><td>LabelsFilteringViewsDto</td></tr><tr><td>VARIANTS</td><td>VariantsFilteringViewsDto</td></tr><tr><td>RELATED_PRODUCTS</td><td>RelatedProductsFilteringViewsDto</td></tr><tr><td>RELATED_CATEGORIES</td><td>RelatedCategoriesFilteringViewsDto</td></tr></table>
+// CategoriesFilteringViewsDto Type of entity view, such as ASSETS, ATTRIBUTES, METADATA, CATEGORIES, BUNDLES, LABELS, VARIANTS, RELATED_PRODUCTS,
+// or RELATED_CATEGORIES.
+//
+// <table>
+//
+//	<tr>
+//	  <th>View type</th>
+//	  <th>View dto</th>
+//	</tr>
+//	<tr>
+//	  <td>ASSETS</td>
+//	  <td>AssetsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>ATTRIBUTES</td>
+//	  <td>AttributesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>METADATA</td>
+//	  <td>MetadataFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>CATEGORIES</td>
+//	  <td>CategoriesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>BUNDLES</td>
+//	  <td>BundlesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>LABELS</td>
+//	  <td>LabelsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>VARIANTS</td>
+//	  <td>VariantsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>GROUPS</td>
+//	  <td>GroupsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>RELATED_PRODUCTS</td>
+//	  <td>RelatedProductsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>RELATED_CATEGORIES</td>
+//	  <td>RelatedCategoriesFilteringViewsDto</td>
+//	</tr>
+//
+// </table>
 type CategoriesFilteringViewsDto = FilteringViewsDto
 
 // CategoryAttributeBaseMetadataResponse defines model for CategoryAttributeBaseMetadataResponse.
 type CategoryAttributeBaseMetadataResponse struct {
-	AttributeDefinitionId *string                       `json:"attributeDefinitionId,omitempty"`
-	AttributeValue        *string                       `json:"attributeValue,omitempty"`
-	CategoryId            *string                       `json:"categoryId,omitempty"`
-	Column                *map[string]string            `json:"column,omitempty"`
-	Dictionary            *[]string                     `json:"dictionary,omitempty"`
-	Matrix                *map[string]map[string]string `json:"matrix,omitempty"`
+	// AttributeDefinitionId ID of the attribute definition associated with the attribute value.
+	AttributeDefinitionId *string `json:"attributeDefinitionId,omitempty"`
+
+	// AttributeValue Value of the attribute associated with the category.
+	//
+	//  **Note**: This field is used for simple attribute types like `text`, `date`, `integer`, `decimal`, `boolean`, `single-select` and `multi-select`.
+	//
+	//  **Examples:**
+	//  ```
+	//  "attributeValue": ""
+	//  "attributeValue": "Some text"
+	//  "attributeValue": "2025-04-25"
+	//  "attributeValue": "true"
+	//  "attributeValue": "653fcdb609bb847693ae69dd"
+	//  "attributeValue": "6512cb9679d0233a632627d6,6512cb9679d0233a632627d5"
+	// ```
+	AttributeValue *string `json:"attributeValue,omitempty"`
+
+	// CategoryId ID of the category associated with the attribute value.
+	CategoryId *string `json:"categoryId,omitempty"`
+
+	// Column Values for column attributes associated with the category.
+	Column *map[string]string `json:"column,omitempty"`
+
+	// Dictionary Values for dictionary attributes associated with the category.
+	Dictionary *[]string `json:"dictionary,omitempty"`
+
+	// Matrix Values for matrix attributes associated with the category.
+	Matrix *map[string]map[string]string `json:"matrix,omitempty"`
 }
 
 // CategoryAttributeDto defines model for CategoryAttributeDto.
 type CategoryAttributeDto struct {
-	Column          *map[string]string            `json:"column,omitempty"`
-	DefinitionId    string                        `json:"definitionId"`
-	Dictionary      *[]string                     `json:"dictionary,omitempty"`
-	IsCopyAttribute *bool                         `json:"isCopyAttribute,omitempty"`
-	IsLocked        *bool                         `json:"isLocked,omitempty"`
-	IsMandatory     *bool                         `json:"isMandatory,omitempty"`
-	Matrix          *map[string]map[string]string `json:"matrix,omitempty"`
-	Select          *map[string][]string          `json:"select,omitempty"`
-	Value           *string                       `json:"value,omitempty"`
+	// Column Values for column attributes associated with the category.
+	Column *map[string]string `json:"column,omitempty"`
+
+	// DefinitionId ID of the attribute definition associated with the attribute value.
+	DefinitionId *string `json:"definitionId,omitempty"`
+
+	// Dictionary Values for dictionary attributes associated with the category.
+	Dictionary *[]string `json:"dictionary,omitempty"`
+
+	// IsCopyAttribute Flag indicating whether the attribute is a copy from another attribute.
+	IsCopyAttribute *bool `json:"isCopyAttribute,omitempty"`
+
+	// IsLocked Flag indicating whether the attribute is locked.
+	IsLocked *bool `json:"isLocked,omitempty"`
+
+	// IsMandatory Flag indicating whether the attribute is mandatory.
+	IsMandatory *bool `json:"isMandatory,omitempty"`
+
+	// Matrix Values for matrix attributes associated with the category.
+	Matrix *map[string]map[string]string `json:"matrix,omitempty"`
+
+	// Select Values for select attributes associated with the category.
+	Select *map[string][]string `json:"select,omitempty"`
+
+	// Value Value of the attribute associated with the category.
+	Value *string `json:"value,omitempty"`
 }
 
 // CategoryAttributeMetadataResponse defines model for CategoryAttributeMetadataResponse.
 type CategoryAttributeMetadataResponse struct {
-	AssignedOn              *string                       `json:"assignedOn,omitempty"`
-	AttributeDefinitionId   *string                       `json:"attributeDefinitionId,omitempty"`
-	AttributeDefinitionName *string                       `json:"attributeDefinitionName,omitempty"`
-	AttributeValue          *string                       `json:"attributeValue,omitempty"`
-	Column                  *map[string]string            `json:"column,omitempty"`
-	CopySetOn               *string                       `json:"copySetOn,omitempty"`
-	Dictionary              *[]string                     `json:"dictionary,omitempty"`
-	LockedSetOn             *string                       `json:"lockedSetOn,omitempty"`
-	MandatorySetOn          *string                       `json:"mandatorySetOn,omitempty"`
-	Matrix                  *map[string]map[string]string `json:"matrix,omitempty"`
-	ReadOnly                *bool                         `json:"readOnly,omitempty"`
+	// AssignedOn ID of the category (catalog node) that the Category Level Attribute (CLA) is assigned to.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	AssignedOn *string `json:"assignedOn,omitempty"`
+
+	// AttributeDefinitionId ID of the attribute definition used as a Category Level Attribute (CLA).
+	//
+	// **Example:** `634c26e14cedfd0001775e9e`
+	AttributeDefinitionId *string `json:"attributeDefinitionId,omitempty"`
+
+	// AttributeDefinitionName Name of the attribute definition used as a Category Level Attribute (CLA).
+	AttributeDefinitionName *string `json:"attributeDefinitionName,omitempty"`
+
+	// AttributeValue Value of attribute when used as a Category Level Attribute (CLA) associated with the category (catalog node).
+	//
+	//  **Note**: This field is used for simple attribute types like `text`, `date`, `integer`, `decimal`, `boolean`, `single-select` and `multi-select`.
+	//
+	//  **Examples:**
+	//  ```
+	//  "attributeValue": ""
+	//  "attributeValue": "Some text"
+	//  "attributeValue": "2025-04-25"
+	//  "attributeValue": "true"
+	//  "attributeValue": "653fcdb609bb847693ae69dd"
+	//  "attributeValue": "6512cb9679d0233a632627d6,6512cb9679d0233a632627d5"
+	// ```
+	AttributeValue *string `json:"attributeValue,omitempty"`
+
+	// Column Values if column attribute when used as a Category Level Attribute (CLA) associated with the category (catalog node).
+	Column *map[string]string `json:"column,omitempty"`
+
+	// CopySetOn Used only when propagation* is enabled for the Category Level Attribute (CLA). It contains the ID of the category (catalog node) that the Category Level Attribute (CLA) is assigned to.
+	//
+	// * Propagation means that all products in this category (catalog node) and any sub-categories will inherit this attribute and its value.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	CopySetOn *string `json:"copySetOn,omitempty"`
+
+	// Dictionary Values if dictionary attribute when used as a Category Level Attribute (CLA) associated with the category (catalog node).
+	Dictionary *[]string `json:"dictionary,omitempty"`
+
+	// LockedSetOn Used only when "Lock attribute value"* is enabled for the Category Level Attribute (CLA). It contains the ID of the category (catalog node) that the Category Level Attribute (CLA) is assigned to.
+	//
+	// * When activated, the attribute on products in the category must have the same value as the CLA for the products to be valid for synchronization.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	LockedSetOn *string `json:"lockedSetOn,omitempty"`
+
+	// MandatorySetOn Used only when "Make attribute value mandatory"* is enabled for the Category Level Attribute (CLA). It contains the ID of the category (catalog node) that the Category Level Attribute (CLA) is assigned to.
+	//
+	// * When activated, the attribute on products in the category must have a value for the products to be valid for synchronization.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	MandatorySetOn *string `json:"mandatorySetOn,omitempty"`
+
+	// Matrix Values for matrix attribute when used as a Category Level Attribute (CLA) associated with the category (catalog node).
+	Matrix *map[string]map[string]string `json:"matrix,omitempty"`
+
+	// ReadOnly The flag indicates whether the attribute used as a Category Level Attribute (CLA) is read-only for the currently logged in user in Bluestone PIM web application based on what policies are applied for the user.
+	//
+	// **Note**: This flag is only relevant on calls to the endpoint performed from the the Bluestone PIM web application and not for calls done to the Management API (MAPI). The endpoint will always return `readOnly: false` when calling the endpoint via the Management API (MAPI)
+	ReadOnly *bool `json:"readOnly,omitempty"`
 }
 
 // CategoryAttributeRequest defines model for CategoryAttributeRequest.
 type CategoryAttributeRequest struct {
+	// Value Value to set on the Category Level Attribute (CLA), given as text - for example `Some text`, `2025-04-25` for a
+	// date or `true` for a boolean. For single-select and multi-select definitions pass select value IDs instead,
+	// separated by commas for multi-select. Leave it out to attach the attribute without a value.
 	Value *string `json:"value,omitempty"`
 }
 
 // CategoryBasicResponse defines model for CategoryBasicResponse.
 type CategoryBasicResponse struct {
-	Assets      *[]string `json:"assets,omitempty"`
-	Description *string   `json:"description,omitempty"`
-	Id          *string   `json:"id,omitempty"`
-	Name        *string   `json:"name,omitempty"`
-	Number      *string   `json:"number,omitempty"`
-	ParentId    *string   `json:"parentId,omitempty"`
-	ReadOnly    *bool     `json:"readOnly,omitempty"`
+	// Assets List of catalog or category's asset IDs.
+	//
+	//  **Example:**
+	//  ```
+	//    "assets": [
+	//      "ff5975d7-c629-4a4c-8e11-ec3df61ec9ce"
+	//   ]
+	// ```
+	Assets *[]string `json:"assets,omitempty"`
+
+	// Description Catalog or category's description.
+	Description *string `json:"description,omitempty"`
+
+	// Id Catalog or category's ID. This value is randomly generated by PIM on creation of the catalog or category and is unique across all catalogs and categories.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	Id *string `json:"id,omitempty"`
+
+	// Name Catalog or category's name.
+	Name *string `json:"name,omitempty"`
+
+	// Number Catalog or category's number.
+	Number *string `json:"number,omitempty"`
+
+	// ParentId Category's parent ID.
+	//
+	// **Example:** `634c26e14cedfd0001775e9a`
+	ParentId *string `json:"parentId,omitempty"`
+
+	// ReadOnly The flag indicates whether the catalog or category is read-only for the currently logged in user in Bluestone PIM web application based on what policies are applied for the user.
+	//
+	// **Note**: This flag is only relevant on calls to the endpoint performed from the the Bluestone PIM web application and not for calls done to the Management API (MAPI). The endpoint will always return `readOnly: false` when calling the endpoint via the Management API (MAPI)
+	ReadOnly *bool `json:"readOnly,omitempty"`
+
+	// ToBeRemoved Indicates whether the catalog/category is under an async removal (a delete or archive is in progress).
+	ToBeRemoved *bool `json:"toBeRemoved,omitempty"`
 }
 
 // CategoryColumnAttributeRequest defines model for CategoryColumnAttributeRequest.
 type CategoryColumnAttributeRequest struct {
+	// Column Value per column, keyed by the column value ID taken from the attribute definition's restriction. Keys that are
+	// not columns of the definition are rejected; columns left out stay empty. The `column` key itself must always be
+	// present - send an empty object `{}` to attach the attribute with every column left empty.
 	Column *map[string]string `json:"column,omitempty"`
-}
-
-// CategoryConnectionResponse defines model for CategoryConnectionResponse.
-type CategoryConnectionResponse struct {
-	LeftProduct   *ProductConnectionMetadata `json:"leftProduct,omitempty"`
-	Relation      *RelationResponse          `json:"relation,omitempty"`
-	RightCategory *CategoryBasicResponse     `json:"rightCategory,omitempty"`
 }
 
 // CategoryFilter defines model for CategoryFilter.
 type CategoryFilter struct {
-	Type   *CategoryFilterType `json:"type,omitempty"`
-	Values *[]string           `json:"values,omitempty"`
+	// Type Filter type for category searches.
+	//
+	// Use `NUMBER_IN` to send in a list of category (catalog node) numbers, or use `ID_IN` to send in a list of category (catalog node) IDs.
+	Type *CategoryFilterType `json:"type,omitempty"`
+
+	// Values List of filter values for category searches.
+	//
+	// Depending on the `type` property, this should be a list of category (catalog node) numbers, or a list of category (catalog node) IDs.
+	Values *[]string `json:"values,omitempty"`
 }
 
-// CategoryFilterType defines model for CategoryFilter.Type.
+// CategoryFilterType Filter type for category searches.
+//
+// Use `NUMBER_IN` to send in a list of category (catalog node) numbers, or use `ID_IN` to send in a list of category (catalog node) IDs.
 type CategoryFilterType string
 
 // CategoryFilteringRequest defines model for CategoryFilteringRequest.
 type CategoryFilteringRequest struct {
-	Filters  *[]CategoryFilter `json:"filters,omitempty"`
-	Page     *int32            `json:"page,omitempty"`
-	PageSize *int32            `json:"pageSize,omitempty"`
+	// Filters Specifies a list of attribute definition filters.
+	Filters *[]CategoryFilter `json:"filters,omitempty"`
+
+	// Page Specifies the page number for pagination. Default value is 0.
+	Page *int32 `json:"page,omitempty"`
+
+	// PageSize Specifies the number of items to return in each page. The value must be between 1 and 1000.
+	PageSize *int32 `json:"pageSize,omitempty"`
+}
+
+// CategoryFilteringViewsDto Type of entity view, such as ASSETS, METADATA or DESCRIPTION
+//
+// | View type          | View dto                          |
+// | ---------          | --------                          |
+// | ASSETS             | AssetsFilteringViewsDto           |
+// | METADATA           | MetadataFilteringViewsDto         |
+// | DESCRIPTION        | DescriptionFilteringViewsDto      |
+type CategoryFilteringViewsDto struct {
+	Type string `json:"type"`
 }
 
 // CategoryFullResponse defines model for CategoryFullResponse.
 type CategoryFullResponse struct {
-	Assets      *[]string                  `json:"assets,omitempty"`
-	Attributes  *[]CategoryAttributeDto    `json:"attributes,omitempty"`
-	Description *string                    `json:"description,omitempty"`
-	Id          *string                    `json:"id,omitempty"`
-	Name        *string                    `json:"name,omitempty"`
-	Number      *string                    `json:"number,omitempty"`
-	ParentId    *string                    `json:"parentId,omitempty"`
-	Path        *string                    `json:"path,omitempty"`
-	PathIds     *[]string                  `json:"pathIds,omitempty"`
-	ReadOnly    *bool                      `json:"readOnly,omitempty"`
-	State       *CategoryFullResponseState `json:"state,omitempty"`
+	// Assets List of catalog or category's assets.
+	Assets *[]string `json:"assets,omitempty"`
+
+	// Attributes List of catalog or category's level attributes (CLA).
+	Attributes *[]CategoryAttributeDto `json:"attributes,omitempty"`
+
+	// Description Catalog or category's description.
+	Description *string `json:"description,omitempty"`
+
+	// Id Catalog or category's ID. This value is randomly generated by PIM on creation of the catalog or category (catalog node) and is unique across all catalogs and categories.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	Id *string `json:"id,omitempty"`
+
+	// Name Catalog or category's name.
+	Name *string `json:"name,omitempty"`
+
+	// Number Catalog or category's number.
+	Number *string `json:"number,omitempty"`
+
+	// ParentId Category's parent ID.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	ParentId *string `json:"parentId,omitempty"`
+
+	// Path Catalog or category's path.
+	//
+	//  **Example**:
+	//  ```
+	//  "path": "/650354cf5450c60cb73f38ac/650354df4bc6e505b4bdc78e"
+	// ```
+	Path *string `json:"path,omitempty"`
+
+	// PathIds List of catalog or category's path IDs.
+	//
+	//  **Example**:
+	//  ```
+	//  "pathIds": [
+	//    "650354cf5450c60cb73f38ac",
+	//    "650354df4bc6e505b4bdc78e"
+	// ]
+	// ```
+	PathIds *[]string `json:"pathIds,omitempty"`
+
+	// ReadOnly The flag indicates whether the catalog or category is read-only for the currently logged in user in Bluestone PIM web application based on what policies are applied for the user.
+	//
+	// **Note**: This flag is only relevant on calls to the endpoint performed from the the Bluestone PIM web application and not for calls done to the Management API (MAPI). The endpoint will always return `readOnly: false` when calling the endpoint via the Management API (MAPI)
+	ReadOnly *bool `json:"readOnly,omitempty"`
+
+	// State Catalog or category's state.
+	State *CategoryFullResponseState `json:"state,omitempty"`
 }
 
-// CategoryFullResponseState defines model for CategoryFullResponse.State.
+// CategoryFullResponseState Catalog or category's state.
 type CategoryFullResponseState string
 
 // CategoryMatrixAttributeRequest defines model for CategoryMatrixAttributeRequest.
 type CategoryMatrixAttributeRequest struct {
+	// Matrix Value per cell, keyed first by the column value ID and then by the row value ID, both taken from the attribute
+	// definition's restriction. IDs that do not belong to the definition are rejected; cells left out stay empty. The
+	// `matrix` key itself must always be present - send an empty object `{}` to attach the attribute with every cell
+	// left empty.
 	Matrix *map[string]map[string]string `json:"matrix,omitempty"`
+}
+
+// CategoryMetadataUpdateRequest defines model for CategoryMetadataUpdateRequest.
+type CategoryMetadataUpdateRequest struct {
+	Description *PropertyUpdateString `json:"description,omitempty"`
+	Name        *PropertyUpdateString `json:"name,omitempty"`
+	Number      *string               `json:"number,omitempty"`
 }
 
 // CategoryProductRequest defines model for CategoryProductRequest.
 type CategoryProductRequest struct {
+	// ProductId Specifies the product ID for the product to be assigned to the category.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
 	ProductId *string `json:"productId,omitempty"`
 }
 
 // CategoryProductResponse defines model for CategoryProductResponse.
 type CategoryProductResponse struct {
-	ProductId   *string `json:"productId,omitempty"`
+	// ProductId ID of product that is assigned to the catalog/category (catalog node).
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	ProductId *string `json:"productId,omitempty"`
+
+	// ProductName Name of product that is assigned to the catalog/category (catalog node).
 	ProductName *string `json:"productName,omitempty"`
 }
 
 // CategoryReferenceRequest defines model for CategoryReferenceRequest.
 type CategoryReferenceRequest struct {
-	// CategoryIds A set of category ids.
+	// CategoryIds The internal IDs of the existing catalog categories to assign the product to. Must be non-empty.
 	CategoryIds []string `json:"categoryIds"`
 }
 
 // CategoryWithChildrenResponse defines model for CategoryWithChildrenResponse.
 type CategoryWithChildrenResponse struct {
-	Assets      *[]string                       `json:"assets,omitempty"`
-	Children    *[]CategoryWithChildrenResponse `json:"children,omitempty"`
-	Description *string                         `json:"description,omitempty"`
-	Id          *string                         `json:"id,omitempty"`
-	Name        *string                         `json:"name,omitempty"`
-	Number      *string                         `json:"number,omitempty"`
-	ReadOnly    *bool                           `json:"readOnly,omitempty"`
+	// Assets List of catalog or category's assets IDs.
+	//
+	// **Example**:
+	// ```
+	//   "assets": [
+	//     "0a747b67-4062-480f-a438-5ee1370046e2"
+	//   ]
+	// ```
+	Assets *[]string `json:"assets,omitempty"`
+
+	// Children Catalog or category's children.
+	Children *[]CategoryWithChildrenResponse `json:"children,omitempty"`
+
+	// Description Catalog or category's description.
+	Description *string `json:"description,omitempty"`
+
+	// Id Catalog or category's ID.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	Id *string `json:"id,omitempty"`
+
+	// Name Catalog or category's name.
+	Name *string `json:"name,omitempty"`
+
+	// Number Catalog or category's number.
+	Number *string `json:"number,omitempty"`
+
+	// ReadOnly The flag indicates whether the catalog or category is read-only for the currently logged in user in Bluestone PIM web application based on what policies are applied for the user.
+	//
+	// **Note**: This flag is only relevant on calls to the endpoint performed from the Bluestone PIM web application and not for calls done to the Management API (MAPI). The endpoint will always return `readOnly: false` when calling the endpoint via the Management API (MAPI)
+	ReadOnly *bool `json:"readOnly,omitempty"`
+
+	// ToBeRemoved Indicates whether the catalog/category is under an async removal (a delete or archive is in progress).
+	ToBeRemoved *bool `json:"toBeRemoved,omitempty"`
+}
+
+// CategoryWithCursorAndViewRequestDto defines model for CategoryWithCursorAndViewRequestDto.
+type CategoryWithCursorAndViewRequestDto struct {
+	// Count Specifies the number of products to return in the result set. Used together with a cursor ID to fetch the next batch of results.
+	Count  *int32  `json:"count,omitempty"`
+	Cursor *string `json:"cursor,omitempty"`
+
+	// Views Specifies the list of entities views\* to be included in the response.
+	//
+	// \*A **view** is a subset of category data, like `METADATA`, `ASSETS` and `DESCRIPTION`, to be included in the response, if no views are specified in the request, only category IDs will be returned.
+	//
+	// **Note**: The `METADATA` view includes these properties in the response:
+	// ```json
+	//     "metadata": {
+	//         "name": {
+	//           "value": {
+	//             "en": "Category 11"
+	//           }
+	//         },
+	//         "number": "11",
+	//         "parentId": "69cbbb0eddb0f6ae88c55e47",
+	//         "readOnly": false
+	//       }
+	// ```
+	Views *[]CategoryWithCursorAndViewRequestDto_Views_Item `json:"views,omitempty"`
+}
+
+// CategoryWithCursorAndViewRequestDto_Views_Item defines model for CategoryWithCursorAndViewRequestDto.views.Item.
+type CategoryWithCursorAndViewRequestDto_Views_Item struct {
+	union json.RawMessage
+}
+
+// CategoryWithCursorAndViewResponse defines model for CategoryWithCursorAndViewResponse.
+type CategoryWithCursorAndViewResponse struct {
+	// Assets List of Category's assets IDs.
+	//
+	// **Example**:
+	// ```
+	//   "assets": [
+	//     "0a747b67-4062-480f-a438-5ee1370046e2"
+	//   ]
+	// ```
+	Assets      *[]string         `json:"assets,omitempty"`
+	Description *MultiLanguageDto `json:"description,omitempty"`
+
+	// Id Category's ID.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	Id       *string                         `json:"id,omitempty"`
+	Metadata *CategoryWithCursorViewMetadata `json:"metadata,omitempty"`
+}
+
+// CategoryWithCursorViewMetadata defines model for CategoryWithCursorViewMetadata.
+type CategoryWithCursorViewMetadata struct {
+	Name *MultiLanguageDto `json:"name,omitempty"`
+
+	// Number Catalog or category's number.
+	Number *string `json:"number,omitempty"`
+
+	// ParentId Catalog or category's description.
+	ParentId *string `json:"parentId,omitempty"`
+
+	// ReadOnly The flag indicates whether the catalog or category is read-only for the currently logged in user in Bluestone PIM web application based on what policies are applied for the user.
+	//
+	// **Note**: This flag is only relevant on calls to the endpoint performed from the Bluestone PIM web application and not for calls done to the Management API (MAPI). The endpoint will always return `readOnly: false` when calling the endpoint via the Management API (MAPI)
+	ReadOnly *bool `json:"readOnly,omitempty"`
 }
 
 // ColumnAttributeDefinitionDto defines model for ColumnAttributeDefinitionDto.
 type ColumnAttributeDefinitionDto struct {
-	ExternalSource *bool                 `json:"externalSource,omitempty"`
-	GroupId        *string               `json:"groupId,omitempty"`
-	Internal       *bool                 `json:"internal,omitempty"`
-	Name           string                `json:"name"`
-	Number         *string               `json:"number,omitempty"`
-	Restrictions   *ColumnRestrictionDto `json:"restrictions,omitempty"`
+	ContextAware *bool   `json:"contextAware,omitempty"`
+	Description  *string `json:"description,omitempty"`
+
+	// ExternalSource Specifies whether the origin of the attribute is managed in an external source like an ERP system or managed by a cloud function like an AWS Lambda or Azure Function and hence the attribute should be read-only for the editors in the Bluestone PIM web application UI.
+	//
+	// **Note**: The value of the attribute can still be modified via the Management API, for example by an integration or a cloud function triggered by a webhook message from Bluestone PIM.
+	ExternalSource *bool `json:"externalSource,omitempty"`
+
+	// GroupId ID of the attribute group that the attribute definition belongs to.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	GroupId *string `json:"groupId,omitempty"`
+
+	// Internal Indicates that the attribute is for internal use only within Bluestone PIM, meaning this value is not visible in the Public API (PAPI) for systems downstream of Bluestone PIM; for example, attributes for system configuration, enrichment workflows, or internal categorization.
+	Internal *bool `json:"internal,omitempty"`
+
+	// Name Name of the attribute definition.
+	Name *string `json:"name,omitempty"`
+
+	// Number Number of the attribute definition.
+	Number       *string               `json:"number,omitempty"`
+	Restrictions *ColumnRestrictionDto `json:"restrictions,omitempty"`
 }
 
 // ColumnAttributeValueAddRequest defines model for ColumnAttributeValueAddRequest.
 type ColumnAttributeValueAddRequest struct {
-	Column       *map[string]string `json:"column,omitempty"`
-	DefinitionId *string            `json:"definitionId,omitempty"`
+	// Column Column attribute values for the product.
+	//
+	// A column attribute has a number of pre-defined columns and only one attribute value per column. One can think of it as a table with pre-defined columns but only one row.
+	//
+	// Expected input format:
+	// ```json
+	// "column": {
+	//   "<column ID>": "<column value>",
+	//   "<column ID>": "<column value>",
+	//   ...
+	// }
+	// ```
+	//
+	// **Example:**
+	//
+	// Let us say that I have these columns pre-defined in the column attribute definition:
+	// "Column 1", with ID: 6356b491590801000124ef2d
+	// "Column 2", with ID: 6356b491590801000124ef2e
+	// "Column 3", with ID: 6356b491590801000124ef2f
+	//
+	// I would like to store these values ("A", "B" and "C") in the columns:
+	//
+	// |                | "Column 1" | "Column 2" | "Column 3" |
+	// | -------------- | ---------- | ---------- | ---------- |
+	// | Value (row 1): | "A"        | "B"        | "C"        |
+	//
+	// Then that would correspond to this json structure:
+	// ```json
+	// "column": {
+	//   "6356b491590801000124ef2d": "A",
+	//   "6356b491590801000124ef2e": "B",
+	//   "6356b491590801000124ef2f": "C"
+	// }
+	// ```
+	Column *map[string]string `json:"column,omitempty"`
+
+	// DefinitionId ID of the attribute definition.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	DefinitionId *string `json:"definitionId,omitempty"`
 }
 
 // ColumnAttributeValueDto defines model for ColumnAttributeValueDto.
 type ColumnAttributeValueDto struct {
+	// Column Column attribute values for the product.
+	//
+	// A column attribute have a number of pre-defined columns and only one attribute value per column. One can think of it as a table with pre-defined columns but only one row.
+	//
+	// Expected input format:
+	// ```json
+	// "column": {
+	//   "<column ID>": "<column value>",
+	//   "<column ID>": "<column value>",
+	//   ...
+	// }
+	// ```
+	//
+	// **Example**:
+	//
+	// Let us say that I have these columns pre-defined in the column attribute definition:
+	// "Column 1", with ID: 6356b491590801000124ef2d
+	// "Column 2", with ID: 6356b491590801000124ef2e
+	// "Column 3", with ID: 6356b491590801000124ef2f
+	//
+	// I would like to store these values ("A", "B" and "C") in the columns:
+	//
+	// |                | "Column 1" | "Column 2" | "Column 3" |
+	// | -------------- | ---------- | ---------- | ---------- |
+	// | Value (row 1): | "A"        | "B"        | "C"        |
+	//
+	// Then that would correspond to this json structure:
+	// ```json
+	// "column": {
+	//   "6356b491590801000124ef2d": "A",
+	//   "6356b491590801000124ef2e": "B",
+	//   "6356b491590801000124ef2f": "C"
+	// }
+	// ```
 	Column *map[string]string `json:"column,omitempty"`
 }
 
@@ -899,53 +1506,203 @@ type ColumnRestrictionDto struct {
 
 // ColumnRestrictionsDto defines model for ColumnRestrictionsDto.
 type ColumnRestrictionsDto struct {
+	// Columns Column attribute definition restrictions.
+	//
+	// **Examples**:
+	//
+	// Example for a new column attribute definition with three columns:
+	// ```json
+	// "columns": [
+	//   { "value": "Column 1" },
+	//   { "value": "Column 2" },
+	//   { "value": "Column 3" }
+	// ]
+	// ```
+	//
+	// Example for updating an existing column attribute definition (adding a fourth column):
+	// ```json
+	// "columns": [
+	//   { "id": "67f5579936016948acd8da8f", "value": "Column 1" },
+	//   { "id": "67f5579936016948acd8da90", "value": "Column 2" },
+	//   { "id": "67f5579936016948acd8da91", "value": "Column 3" },
+	//   { "value": "Column 4" }
+	// ]
+	// ```
 	Columns *[]IdentifiableValueDto `json:"columns,omitempty"`
 }
 
 // CompoundAttributeDefinitionRequest defines model for CompoundAttributeDefinitionRequest.
 type CompoundAttributeDefinitionRequest struct {
-	ExternalSource *bool                                `json:"externalSource,omitempty"`
-	Format         *[]string                            `json:"format,omitempty"`
-	GroupId        *string                              `json:"groupId,omitempty"`
-	Internal       *bool                                `json:"internal,omitempty"`
-	Name           string                               `json:"name"`
-	Number         *string                              `json:"number,omitempty"`
+	ContextAware *bool   `json:"contextAware,omitempty"`
+	Description  *string `json:"description,omitempty"`
+
+	// ExternalSource Specifies whether the origin of the attribute is managed in an external source like an ERP system or managed by a cloud function like an AWS Lambda or Azure Function and hence the attribute should be read-only for the editors in the Bluestone PIM web application UI.
+	//
+	// **Note**: The value of the attribute can still be modified via the Management API, for example by an integration or a cloud function triggered by a webhook message from Bluestone PIM.
+	//
+	// **Note**: A `Compound` attribute does not have an editable value since its value is generated dynamically on request, so in the case of `Compound` attributes, this flag only controls whether the editors in Bluestone PIM web application UI are able to add or remove the `Compound` attribute to/from a product.
+	ExternalSource *bool `json:"externalSource,omitempty"`
+
+	// Format Specifies a set of strings that, together with the subattribute values, will be concatenated to form a compound value.
+	//
+	// **Example**:
+	// Given I have a `Compound` attribute definition with only one subattribute added.
+	//
+	// Subattribute value: "RED"
+	//
+	// Format contains two strings, the string to use before the value from the subattribute the string to use after the value of the subattribute:
+	// ```json
+	//  "format": [
+	//     "This is the value of my subattribute: '",
+	//     "', and this is the end of the compound."
+	//   ]
+	// ```
+	// This would generate this dynamically generated compound attribute value when requested:
+	// `This is the value of my subattribute: 'RED', and this is the end of the compound.`
+	Format *[]string `json:"format,omitempty"`
+
+	// GroupId Specifies the group ID to which the attribute definition belongs.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	GroupId *string `json:"groupId,omitempty"`
+
+	// Internal Indicates that the attribute is for internal use only within Bluestone PIM, meaning this value is not visible in the Public API (PAPI) for systems downstream of Bluestone PIM; for example, attributes for system configuration, enrichment workflows, or internal categorization.
+	Internal *bool `json:"internal,omitempty"`
+
+	// Name Specifies the name of the attribute definition.
+	Name *string `json:"name,omitempty"`
+
+	// Number Specifies the number of the attribute definition.
+	Number *string `json:"number,omitempty"`
+
+	// SubDefinitions Specifies the ordered list of subattribute definitions in format: `id`, `compound`.
 	SubDefinitions *[]CompoundAttributeSubDefinitionDto `json:"subDefinitions,omitempty"`
 }
 
 // CompoundAttributeDefinitionResponse defines model for CompoundAttributeDefinitionResponse.
 type CompoundAttributeDefinitionResponse struct {
-	Description    *string                              `json:"description,omitempty"`
-	ExternalSource *bool                                `json:"externalSource,omitempty"`
-	Format         *[]string                            `json:"format,omitempty"`
-	GroupId        *string                              `json:"groupId,omitempty"`
-	Id             *string                              `json:"id,omitempty"`
-	Internal       *bool                                `json:"internal,omitempty"`
-	Name           string                               `json:"name"`
-	Number         *string                              `json:"number,omitempty"`
+	ContextAware *bool `json:"contextAware,omitempty"`
+
+	// Description Description of the compound attribute definition.
+	Description *string `json:"description,omitempty"`
+
+	// ExternalSource Specifies whether the origin of the attribute is managed in an external source like an ERP system or managed by a cloud function like an AWS Lambda or Azure Function and hence the attribute should be read-only for the editors in the Bluestone PIM web application UI.
+	//
+	// **Note**: The value of the attribute can still be modified via the Management API, for example by an integration or a cloud function triggered by a webhook message from Bluestone PIM.
+	//
+	// **Note**: A `Compound` attribute does not have an editable value since its value is generated dynamically on request, so in the case of `Compound` attributes, this flag only controls whether the editors in Bluestone PIM web application UI are able to add or remove the `Compound` attribute to/from a product.
+	ExternalSource *bool `json:"externalSource,omitempty"`
+
+	// Format Specifies a set of strings that, together with the subattribute values, will be concatenated to form a compound value.
+	//
+	// **Example**:
+	// Given I have a `Compound` attribute definition with only one subattribute added.
+	//
+	// Subattribute value: "RED"
+	//
+	// Format contains two strings, the string to use before the value from the subattribute the string to use after the value of the subattribute:
+	// ```json
+	//  "format": [
+	//     "This is the value of my subattribute: '",
+	//     "', and this is the end of the compound."
+	//   ]
+	// ```
+	// This would generate this dynamically generated compound attribute value when requested:
+	// `This is the value of my subattribute: 'RED', and this is the end of the compound.`
+	Format *[]string `json:"format,omitempty"`
+
+	// GroupId The attribute group ID to which the attribute definition belongs.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	GroupId *string `json:"groupId,omitempty"`
+
+	// Id Compound attribute ID. This value is randomly generated by PIM and unique across all definitions.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	Id *string `json:"id,omitempty"`
+
+	// Internal Indicates that the attribute is for internal use only within Bluestone PIM, meaning this value is not visible in the Public API (PAPI) for systems downstream of Bluestone PIM; for example, attributes for system configuration, enrichment workflows, or internal categorization.
+	Internal *bool `json:"internal,omitempty"`
+
+	// Name The name of the attribute definition.
+	Name string `json:"name"`
+
+	// Number Number of the attribute definition.
+	Number *string `json:"number,omitempty"`
+
+	// ReadOnly Specifies that the current user has read-only access to this attribute definition.
+	ReadOnly *bool `json:"readOnly,omitempty"`
+
+	// SubDefinitions Specifies the ordered list of subattribute definitions in format: `id`, `compound`.
 	SubDefinitions *[]CompoundAttributeSubDefinitionDto `json:"subDefinitions,omitempty"`
-	ToBeRemoved    *bool                                `json:"toBeRemoved,omitempty"`
+
+	// ToBeRemoved Flag indicating if the attribute is scheduled for removal.
+	ToBeRemoved *bool `json:"toBeRemoved,omitempty"`
 }
 
 // CompoundAttributeSubDefinitionDto defines model for CompoundAttributeSubDefinitionDto.
 type CompoundAttributeSubDefinitionDto struct {
-	Compound *bool   `json:"compound,omitempty"`
-	Id       *string `json:"id,omitempty"`
+	// Compound Flag defining if the attribute is a `compound` attribute definition type.
+	Compound *bool `json:"compound,omitempty"`
+
+	// Id Attribute definition ID.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	Id *string `json:"id,omitempty"`
+}
+
+// ConflictingEntity defines model for ConflictingEntity.
+type ConflictingEntity struct {
+	EntityId   *string `json:"entityId,omitempty"`
+	EntityType *string `json:"entityType,omitempty"`
 }
 
 // ConnectionDto defines model for ConnectionDto.
 type ConnectionDto struct {
-	Quantity   *float32 `json:"quantity,omitempty"`
-	RelatedId  *string  `json:"relatedId,omitempty"`
-	RelationId *string  `json:"relationId,omitempty"`
-	Reverse    *bool    `json:"reverse,omitempty"`
+	// Quantity The quantity value for a related product.
+	// - In a **two-way relation**, each side of the relation can have its own separate quantity.
+	// - In a **one-way relation**, the quantity is set only on the related product’s side, since there’s no reverse link.
+	//
+	// **Note**: To retrieve quantities of related products, you can use endpoint `GET /products/{id}` to fetch the product, the response will contain information about any related products and their quantities if set.
+	//
+	// **Note**: This property is obsolete and should not be used.
+	Quantity *float32 `json:"quantity,omitempty"`
+
+	// RelatedId ID of related product.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	RelatedId *string `json:"relatedId,omitempty"`
+
+	// RelationId ID of relation definition.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	RelationId *string `json:"relationId,omitempty"`
+
+	// Reverse Specifies whether the direction of the relationship between two products should be interpreted in reverse.
+	//
+	// When `true`, the relation is viewed from the target product back to the source, effectively flipping the usual source → target orientation.
+	//
+	// This is useful for defining inverse or complementary product relationships (e.g., if Product A is an "accessory of" Product B, the value `reverse: true` would represent that Product B "has accessory" Product A).
+	Reverse *bool `json:"reverse,omitempty"`
 }
 
 // CopyProductRequest defines model for CopyProductRequest.
 type CopyProductRequest struct {
-	Id     *string `json:"id,omitempty"`
-	Name   string  `json:"name"`
+	// Id Specifies the ID of the product to copy.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	Id *string `json:"id,omitempty"`
+
+	// Name Specifies a new product name.
+	Name string `json:"name"`
+
+	// Number Specifies a new product number. This value must be unique across all products in Bluestone PIM. If not specified, the system will use the product ID, which is a unique identifier generated by the system, as the default product number.
 	Number *string `json:"number,omitempty"`
+}
+
+// CountDto defines model for CountDto.
+type CountDto struct {
+	Count *int32 `json:"count,omitempty"`
 }
 
 // CountableLong defines model for CountableLong.
@@ -955,22 +1712,100 @@ type CountableLong struct {
 
 // CreateCategoryRequest defines model for CreateCategoryRequest.
 type CreateCategoryRequest struct {
-	Name     string  `json:"name"`
-	Number   *string `json:"number,omitempty"`
+	// Name Specifies the name of the category (catalog node).
+	Name string `json:"name"`
+
+	// Number Specifies the number of the category (catalog node). This value must be unique across all catalogs and categories in Bluestone PIM. If not specified, the system will use the category ID, which is a unique identifier generated by the system, as the default category number.
+	Number *string `json:"number,omitempty"`
+
+	// ParentId Specifies the ID of the parent category (catalog node) to which this category belongs.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
 	ParentId *string `json:"parentId,omitempty"`
 }
 
 // CreateSimpleAttributeRequest defines model for CreateSimpleAttributeRequest.
 type CreateSimpleAttributeRequest struct {
-	DefinitionId *string   `json:"definitionId,omitempty"`
-	Values       *[]string `json:"values,omitempty"`
+	// DefinitionId Specifies the ID of the attribute definition to be added to the product.
+	//
+	// **Note**: Only simple attribute types are supported by this endpoint, not `dictionary`, `column` or `matrix`.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	DefinitionId *string `json:"definitionId,omitempty"`
+
+	// Values Specifies value(s) of the attribute for the product.
+	//
+	// **Example for a decimal attribute**:
+	// ```json
+	//   "values": [
+	//     "1.5"
+	//   ]
+	// ```
+	// **Example for a boolean attribute**:
+	// ```json
+	//   "values": [
+	//     "true"
+	//   ]
+	// ```
+	// **Example for a multi-select attribute with two selected options**:
+	// ```json
+	//   "values": [
+	//     "660fdaf0e0dad11667037a0d",
+	//     "660fdaf0e0dad11667037a0e"
+	//   ]
+	// ```
+	Values *[]string `json:"values,omitempty"`
 }
 
 // CursorWithViewsRequestDto defines model for CursorWithViewsRequestDto.
 type CursorWithViewsRequestDto struct {
-	Count  *int32                                  `json:"count,omitempty"`
-	Cursor *string                                 `json:"cursor,omitempty"`
-	Views  *[]CursorWithViewsRequestDto_Views_Item `json:"views,omitempty"`
+	// Count Specifies the number of products to return in the result set. Used together with a cursor ID to fetch the next batch of results.
+	Count  *int32  `json:"count,omitempty"`
+	Cursor *string `json:"cursor,omitempty"`
+
+	// Views Specifies the list of entities views\* to be included in the response.
+	//
+	// \*A **view** is a subset of product data, like `METADATA`, `ATTRIBUTES`, `ASSETS` and `CATEGORIES`, to be included in the response, if no views are specified in the request, only product IDs will be returned.
+	//
+	// **Note**: The `METADATA` view includes these properties in the response:
+	// ```json
+	//       "metadata": {
+	//         "name": {
+	//           "value": {
+	//             "en": "My Product"
+	//           }
+	//         },
+	//         "number": "my-product",
+	//         "description": {
+	//           "value": {
+	//             "en": "A description for my product"
+	//           }
+	//         },
+	//         "archived": false,
+	//         "lastUpdate": 1744386096497,
+	//         "createDate": 1744386039893,
+	//         "type": "SINGLE",
+	//         "readOnly": false,
+	//         "relatedProductsRelationSortingOrderSource": "RELATION_DEFINITION"
+	//       }
+	// ```
+	// **Note**: The `ATTRIBUTES` view takes an optional list of attribute definition IDs to include, if omitted all attribute definitions will be included in the response.
+	//
+	// **Example:**
+	// ```json
+	// "views": [
+	//   {
+	//     "type": "ASSETS"
+	//   },
+	//   {
+	//     "type": "ATTRIBUTES",
+	//     "definitionIds": [
+	//       "664cc90da825236207yt01a7"
+	//     ]
+	//   }
+	// ]
+	// ```
+	Views *[]CursorWithViewsRequestDto_Views_Item `json:"views,omitempty"`
 }
 
 // CursorWithViewsRequestDto_Views_Item defines model for CursorWithViewsRequestDto.views.Item.
@@ -978,98 +1813,312 @@ type CursorWithViewsRequestDto_Views_Item struct {
 	union json.RawMessage
 }
 
+// DeductDictionaryValueRequest defines model for DeductDictionaryValueRequest.
+type DeductDictionaryValueRequest struct {
+	AttributeDefinitionId ObjectId   `json:"attributeDefinitionId"`
+	DictionaryValueIds    []ObjectId `json:"dictionaryValueIds"`
+	ProductIds            []ObjectId `json:"productIds"`
+}
+
+// DeductSelectValuesFromProductsAttributeRequest defines model for DeductSelectValuesFromProductsAttributeRequest.
+type DeductSelectValuesFromProductsAttributeRequest struct {
+	AttributeDefinitionId ObjectId   `json:"attributeDefinitionId"`
+	ProductIds            []ObjectId `json:"productIds"`
+	SelectValueIds        []ObjectId `json:"selectValueIds"`
+}
+
 // DeleteProductsAttributesBulkRequest defines model for DeleteProductsAttributesBulkRequest.
 type DeleteProductsAttributesBulkRequest struct {
-	AttributeDefinitionId *string  `json:"attributeDefinitionId,omitempty"`
-	ProductIds            []string `json:"productIds"`
+	// AttributeDefinitionId Specifies the ID of the attribute definition to be deleted from products.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	AttributeDefinitionId *string `json:"attributeDefinitionId,omitempty"`
+
+	// ProductIds Specifies product IDs to remove the attribute from, enabling targeted deletion of a specified attribute from multiple products.
+	ProductIds []string `json:"productIds"`
 }
+
+// DescriptionFilteringViewsDto Type of entity view, such as ASSETS, METADATA or DESCRIPTION
+//
+// | View type          | View dto                          |
+// | ---------          | --------                          |
+// | ASSETS             | AssetsFilteringViewsDto           |
+// | METADATA           | MetadataFilteringViewsDto         |
+// | DESCRIPTION        | DescriptionFilteringViewsDto      |
+type DescriptionFilteringViewsDto = CategoryFilteringViewsDto
 
 // DictionaryAttributeCreateRequest defines model for DictionaryAttributeCreateRequest.
 type DictionaryAttributeCreateRequest struct {
+	// Metadata Specifies the new metadata for the dictionary attribute value.
+	Metadata *string `json:"metadata,omitempty"`
+
+	// Number Specifies the new number of the dictionary attribute value. This value must be unique within the dictionary attribute definition. If not specified, the system will use the dictionary attribute value ID, which is a unique identifier generated by the system, as the default dictionary attribute value number.
 	Number *string `json:"number,omitempty"`
-	Value  string  `json:"value"`
+
+	// Value Specifies the new value for the dictionary attribute value (sometimes referred to as a dictionary attribute option).
+	Value string `json:"value"`
+}
+
+// DictionaryAttributeDefinitionCreateRequest defines model for DictionaryAttributeDefinitionCreateRequest.
+type DictionaryAttributeDefinitionCreateRequest struct {
+	// ContextAware Indicates whether the attribute is context aware.
+	ContextAware *bool `json:"contextAware,omitempty"`
+
+	// Description Details of the attribute definition.
+	Description *string `json:"description,omitempty"`
+
+	// DictionaryMetadataType The type of metadata associated with the dictionary attribute.
+	DictionaryMetadataType *string `json:"dictionaryMetadataType,omitempty"`
+
+	// ExternalSource Specifies whether the origin of the attribute is managed in an external source like an ERP system or managed by
+	// a cloud function like an AWS Lambda or Azure Function and hence the attribute should be read-only for the
+	// editors in the Bluestone PIM web application UI.
+	//
+	// **Note**: The value can still be modified via the Management API, for example by an integration or a cloud
+	// function triggered by a webhook message from Bluestone PIM.
+	ExternalSource *bool `json:"externalSource,omitempty"`
+
+	// GroupId The internal ID of the attribute group that the attribute definition belongs to.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	GroupId *string `json:"groupId,omitempty"`
+
+	// Internal Indicates that the attribute is for internal use only within Bluestone PIM, meaning this value is not visible in
+	// the Public API (PAPI) for systems downstream of Bluestone PIM; for example, attributes for system configuration,
+	// enrichment workflows, or internal categorization.
+	Internal *bool `json:"internal,omitempty"`
+
+	// Name Name of the attribute definition.
+	Name *string `json:"name,omitempty"`
+
+	// Number Number of the attribute definition. This value must be unique across all attribute definitions in Bluestone PIM.
+	// If not specified when creating the attribute definition, the system will use the attribute definition ID, which
+	// is a unique identifier generated by the system, as the default attribute definition number.
+	Number *string `json:"number,omitempty"`
+
+	// SelectedValuesLimit The maximum number of selected values allowed for this dictionary attribute.
+	SelectedValuesLimit *int32 `json:"selectedValuesLimit,omitempty"`
 }
 
 // DictionaryAttributeDefinitionDto defines model for DictionaryAttributeDefinitionDto.
 type DictionaryAttributeDefinitionDto struct {
-	ExternalSource *bool   `json:"externalSource,omitempty"`
-	GroupId        *string `json:"groupId,omitempty"`
-	Internal       *bool   `json:"internal,omitempty"`
-	Name           string  `json:"name"`
-	Number         *string `json:"number,omitempty"`
+	// DictionaryMetadataType The type of metadata associated with the dictionary attribute.
+	DictionaryMetadataType *string `json:"dictionaryMetadataType,omitempty"`
+
+	// ExternalSource Specifies whether the origin of the attribute is managed in an external source like an ERP system or managed by
+	// a cloud function like an AWS Lambda or Azure Function and hence the attribute should be read-only for the
+	// editors in the Bluestone PIM web application UI.
+	//
+	// **Note**: The value can still be modified via the Management API, for example by an integration or a cloud
+	// function triggered by a webhook message from Bluestone PIM.
+	ExternalSource *bool `json:"externalSource,omitempty"`
+
+	// GroupId The internal ID of the attribute group that the attribute definition belongs to.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	GroupId *string `json:"groupId,omitempty"`
+
+	// Internal Indicates that the attribute is for internal use only within Bluestone PIM, meaning this value is not visible in
+	// the Public API (PAPI) for systems downstream of Bluestone PIM; for example, attributes for system configuration,
+	// enrichment workflows, or internal categorization.
+	Internal *bool `json:"internal,omitempty"`
+
+	// Name Name of the attribute definition.
+	Name *string `json:"name,omitempty"`
+
+	// Number Number of the attribute definition. This value must be unique across all attribute definitions in Bluestone PIM.
+	// If not specified when creating the attribute definition, the system will use the attribute definition ID, which
+	// is a unique identifier generated by the system, as the default attribute definition number.
+	Number *string `json:"number,omitempty"`
+
+	// SelectedValuesLimit The maximum number of selected values allowed for this dictionary attribute.
+	SelectedValuesLimit *int32 `json:"selectedValuesLimit,omitempty"`
 }
 
 // DictionaryAttributeDefinitionUpdate defines model for DictionaryAttributeDefinitionUpdate.
 type DictionaryAttributeDefinitionUpdate struct {
-	SelectedValuesLimit *PropertyUpdateInteger `json:"selectedValuesLimit,omitempty"`
+	DictionaryValuesMetadataType *PropertyUpdateString  `json:"dictionaryValuesMetadataType,omitempty"`
+	SelectedValuesLimit          *PropertyUpdateInteger `json:"selectedValuesLimit,omitempty"`
 }
 
 // DictionaryAttributeFilterDto defines model for DictionaryAttributeFilterDto.
 type DictionaryAttributeFilterDto struct {
-	Type   *DictionaryAttributeFilterDtoType `json:"type,omitempty"`
-	Values *[]string                         `json:"values,omitempty"`
+	// Type Filter type values based on the selected filter type, either a list of dictionary attribute value IDs or a list
+	// of dictionary attribute value numbers.
+	Type *DictionaryAttributeFilterDtoType `json:"type,omitempty"`
+
+	// Values Filter type for dictionary attribute values. Either `ID_IN` or `NUMBER_IN`.
+	Values *[]string `json:"values,omitempty"`
 }
 
-// DictionaryAttributeFilterDtoType defines model for DictionaryAttributeFilterDto.Type.
+// DictionaryAttributeFilterDtoType Filter type values based on the selected filter type, either a list of dictionary attribute value IDs or a list
+// of dictionary attribute value numbers.
 type DictionaryAttributeFilterDtoType string
 
 // DictionaryAttributeFilteringRequestDto defines model for DictionaryAttributeFilteringRequestDto.
 type DictionaryAttributeFilteringRequestDto struct {
-	Filters  *[]DictionaryAttributeFilterDto `json:"filters,omitempty"`
-	Page     *int32                          `json:"page,omitempty"`
-	PageSize *int32                          `json:"pageSize,omitempty"`
+	// Filters Specifies a list of dictionary attribute value filters. This helps in optionally applying multiple filters to
+	// narrow down search results when a dictionary have many values.
+	Filters *[]DictionaryAttributeFilterDto `json:"filters,omitempty"`
+
+	// Page Specifies the number of items to return in each page. The value must be between 1 and 1000.
+	Page *int32 `json:"page,omitempty"`
+
+	// PageSize Specifies the page number for pagination. Default value is 0.
+	PageSize *int32 `json:"pageSize,omitempty"`
 }
 
 // DictionaryAttributeResponse defines model for DictionaryAttributeResponse.
 type DictionaryAttributeResponse struct {
-	CreatedDate  *int64            `json:"createdDate,omitempty"`
-	DefinitionId *string           `json:"definitionId,omitempty"`
-	Id           *string           `json:"id,omitempty"`
-	LastUpdate   *int64            `json:"lastUpdate,omitempty"`
-	Number       *string           `json:"number,omitempty"`
-	Value        *MultiLanguageDto `json:"value,omitempty"`
+	// CreatedDate Timestamp of date and time when the dictionary value was first created in Bluestone PIM. This value is displayed
+	// in Unix timestamp format in milliseconds.
+	//
+	// **Example:** `1669087072424`
+	CreatedDate *int64 `json:"createdDate,omitempty"`
+
+	// DefinitionId The internal ID of the dictionary attribute definition that this dictionary attribute value belongs to.
+	//
+	// **Example:** `634c26e14cedfd0001775e9f`
+	DefinitionId *string `json:"definitionId,omitempty"`
+
+	// Id The internal ID of the dictionary attribute value.
+	Id *string `json:"id,omitempty"`
+
+	// LastUpdate Timestamp of date and time when the dictionary value was last updated. This value is displayed in Unix timestamp
+	// format in milliseconds.
+	//
+	// **Example:** `1669087072424`
+	LastUpdate *int64 `json:"lastUpdate,omitempty"`
+
+	// Metadata Dictionary metadata (e.g. color in hex).
+	Metadata *string `json:"metadata,omitempty"`
+
+	// Number Number of the dictionary attribute value. This value must be unique across all dictionary attribute values
+	// within the same dictionary attribute definition. If not specified when creating the dictionary attribute value,
+	// the system will use the dictionary attribute value ID, which is a unique identifier generated by the system, as
+	// the default dictionary attribute value number.
+	Number *string `json:"number,omitempty"`
+
+	// ToBeRemoved Indicates whether the attribute value is scheduled for removal.
+	ToBeRemoved *bool             `json:"toBeRemoved,omitempty"`
+	Value       *MultiLanguageDto `json:"value,omitempty"`
 }
 
 // DictionaryAttributeUpdateRequest defines model for DictionaryAttributeUpdateRequest.
 type DictionaryAttributeUpdateRequest struct {
-	Number *PropertyUpdateString `json:"number,omitempty"`
-	Value  *PropertyUpdateString `json:"value,omitempty"`
+	Metadata *PropertyUpdateString `json:"metadata,omitempty"`
+	Number   *PropertyUpdateString `json:"number,omitempty"`
+	Value    *PropertyUpdateString `json:"value,omitempty"`
 }
 
 // DictionaryAttributeValueAddRequest defines model for DictionaryAttributeValueAddRequest.
 type DictionaryAttributeValueAddRequest struct {
+	// DefinitionId Specifies the internal ID of the dictionary attribute definition to be added to the product.
 	DefinitionId *string `json:"definitionId,omitempty"`
 }
 
 // DictionaryValueFilterDto defines model for DictionaryValueFilterDto.
 type DictionaryValueFilterDto struct {
-	Type     *DictionaryValueFilterDtoType `json:"type,omitempty"`
-	ValueIds *[]string                     `json:"valueIds,omitempty"`
+	// Type Filter type for dictionary attribute values for parent or child dictionaries. Either `PARENT_VALUE_ID_IN` or
+	// `CHILD_VALUE_ID_IN`.
+	Type *DictionaryValueFilterDtoType `json:"type,omitempty"`
+
+	// ValueIds Filter type values based on the selected filter type, either a list of parent dictionary attribute value IDs or
+	// a list of child dictionary attribute value IDs.
+	ValueIds *[]string `json:"valueIds,omitempty"`
 }
 
-// DictionaryValueFilterDtoType defines model for DictionaryValueFilterDto.Type.
+// DictionaryValueFilterDtoType Filter type for dictionary attribute values for parent or child dictionaries. Either `PARENT_VALUE_ID_IN` or
+// `CHILD_VALUE_ID_IN`.
 type DictionaryValueFilterDtoType string
 
 // DictionaryValueFilterResponse defines model for DictionaryValueFilterResponse.
 type DictionaryValueFilterResponse struct {
-	ChildValueId  *string `json:"childValueId,omitempty"`
+	// ChildValueId The internal ID of the child dictionary value (sometimes referred to as a dictionary attribute option).
+	ChildValueId *string `json:"childValueId,omitempty"`
+
+	// ParentValueId The internal ID of the parent dictionary value (sometimes referred to as a dictionary attribute option).
 	ParentValueId *string `json:"parentValueId,omitempty"`
 }
 
 // DictionaryValueFilteringRequest defines model for DictionaryValueFilteringRequest.
 type DictionaryValueFilteringRequest struct {
-	Filters  *[]DictionaryValueFilterDto `json:"filters,omitempty"`
-	Page     *int32                      `json:"page,omitempty"`
-	PageSize *int32                      `json:"pageSize,omitempty"`
+	// Filters The `filters` property allows you to retrieve the valid values/options for **either** a parent dictionary
+	// or a child dictionary, depending on your current use case. This is relevant when working with
+	// **filtered dictionaries**, where a child dictionary's values are dependent on selections made in a parent dictionary.
+	//
+	// **Note**: The `id` property should be the ID of the child dictionary attribute definition.
+	//
+	// The `filters` object has two required sub-properties:
+	//
+	// - `type`: Indicates whether you are filtering by a **parent value/option** or a **child value/option**.
+	//   - Allowed values:
+	//     - `"PARENT_VALUE_ID_IN"` – Use this when you have selected one or more values/options in the **parent dictionary**,
+	//       and want to fetch the **valid child values/options**.
+	//     - `"CHILD_VALUE_ID_IN"` – Use this when you have one or more values/options in the **child dictionary**,
+	//       and want to fetch the **corresponding parent values/options**.
+	// - `valueIds`: An array of selected value/option IDs, depending on the `type`.
+	//   - If `type` is `"PARENT_VALUE_ID_IN"`, this should be an array of parent dictionary value IDs.
+	//   - If `type` is `"CHILD_VALUE_ID_IN"`, this should be an array of child dictionary value IDs.
+	//
+	// ### Example Use Cases
+	//
+	// 1. **Filtering Child Values by Parent Selection**
+	//    Use this when you're working with a child dictionary and want to display only the values that match
+	//    one or more selected values in the parent dictionary.
+	//
+	// ```json
+	// "filters": [
+	//   {
+	//     "type": "PARENT_VALUE_ID_IN",
+	//     "valueIds": [
+	//       "{parent_val_1_id}",
+	//       "{parent_val_3_id}"
+	//     ]
+	//   }
+	// ]
+	// ```
+	//
+	// The response will include the subset of value IDs in the child dictionary that are allowed when
+	// `parent_val_1` and `parent_val_3` are selected.
+	//
+	// 2. **Filtering Parent Values by Child Selection**
+	//    Use this when you're in the context of the child dictionary and want to determine which parent
+	//    values are linked to one or more selected child values.
+	//
+	// ```json
+	// "filters": [
+	//   {
+	//     "type": "CHILD_VALUE_ID_IN",
+	//     "valueIds": [
+	//       "{child_val_3_id}",
+	//       "{child_val_7_id}"
+	//     ]
+	//   }
+	// ]
+	// ```
+	//
+	// The response will include the parent dictionary value IDs that are associated with the selected
+	// child values `child_val_3` and `child_val_7`.
+	Filters *[]DictionaryValueFilterDto `json:"filters,omitempty"`
+
+	// Page Specifies the number of items to return in each page. The value must be between 1 and 100.
+	Page *int32 `json:"page,omitempty"`
+
+	// PageSize Specifies the page number for pagination. Default value is 0.
+	PageSize *int32 `json:"pageSize,omitempty"`
 }
 
 // DuplicatedSelectValue defines model for DuplicatedSelectValue.
 type DuplicatedSelectValue struct {
+	// Values A list of duplicated select attribute values (sometimes referred to as select attribute options).
 	Values *[]SelectValueIdDto `json:"values,omitempty"`
 }
 
 // ErrorDetails defines model for ErrorDetails.
 type ErrorDetails struct {
+	EntityId      *string `json:"entityId,omitempty"`
+	EntityType    *string `json:"entityType,omitempty"`
 	Field         *string `json:"field,omitempty"`
 	Message       *string `json:"message,omitempty"`
 	RejectedValue *string `json:"rejectedValue,omitempty"`
@@ -1077,169 +2126,158 @@ type ErrorDetails struct {
 
 // ErrorResponse defines model for ErrorResponse.
 type ErrorResponse struct {
-	Error        *string         `json:"error,omitempty"`
-	ErrorDetails *[]ErrorDetails `json:"errorDetails,omitempty"`
-	RequestId    *string         `json:"requestId,omitempty"`
-	Status       *int32          `json:"status,omitempty"`
-	Timestamp    *int64          `json:"timestamp,omitempty"`
+	ConflictingEntities       *[]ConflictingEntity    `json:"conflictingEntities,omitempty"`
+	Error                     *string                 `json:"error,omitempty"`
+	ErrorDetails              *[]ErrorDetails         `json:"errorDetails,omitempty"`
+	QuotaLimitExceededDetails *[]LimitExceededDetails `json:"quotaLimitExceededDetails,omitempty"`
+	RequestId                 *string                 `json:"requestId,omitempty"`
+	Status                    *int32                  `json:"status,omitempty"`
+	Timestamp                 *int64                  `json:"timestamp,omitempty"`
 }
 
-// FilteringViewsDto <p>Views mapping</p><table><tr><th>View type</th><th>View dto</th></tr><tr><td>ASSETS</td><td>AssetsFilteringViewsDto</td></tr><tr><td>ATTRIBUTES</td><td>AttributesFilteringViewsDto</td></tr><tr><td>METADATA</td><td>MetadataFilteringViewsDto</td></tr><tr><td>CATEGORIES</td><td>CategoriesFilteringViewsDto</td></tr><tr><td>BUNDLES</td><td>BundlesFilteringViewsDto</td></tr><tr><td>LABELS</td><td>LabelsFilteringViewsDto</td></tr><tr><td>VARIANTS</td><td>VariantsFilteringViewsDto</td></tr><tr><td>RELATED_PRODUCTS</td><td>RelatedProductsFilteringViewsDto</td></tr><tr><td>RELATED_CATEGORIES</td><td>RelatedCategoriesFilteringViewsDto</td></tr></table>
+// FilteringViewsDto Type of entity view, such as ASSETS, ATTRIBUTES, METADATA, CATEGORIES, BUNDLES, LABELS, VARIANTS, RELATED_PRODUCTS,
+// or RELATED_CATEGORIES.
+//
+// <table>
+//
+//	<tr>
+//	  <th>View type</th>
+//	  <th>View dto</th>
+//	</tr>
+//	<tr>
+//	  <td>ASSETS</td>
+//	  <td>AssetsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>ATTRIBUTES</td>
+//	  <td>AttributesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>METADATA</td>
+//	  <td>MetadataFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>CATEGORIES</td>
+//	  <td>CategoriesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>BUNDLES</td>
+//	  <td>BundlesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>LABELS</td>
+//	  <td>LabelsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>VARIANTS</td>
+//	  <td>VariantsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>GROUPS</td>
+//	  <td>GroupsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>RELATED_PRODUCTS</td>
+//	  <td>RelatedProductsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>RELATED_CATEGORIES</td>
+//	  <td>RelatedCategoriesFilteringViewsDto</td>
+//	</tr>
+//
+// </table>
 type FilteringViewsDto struct {
 	Type string `json:"type"`
 }
 
-// GridAssetFilterDto defines model for GridAssetFilterDto.
-type GridAssetFilterDto struct {
-	AssetCount *int32                 `json:"assetCount,omitempty"`
-	AssetIds   *[]string              `json:"assetIds,omitempty"`
-	LabelsIds  *[]string              `json:"labelsIds,omitempty"`
-	Type       GridAssetFilterDtoType `json:"type"`
-}
-
-// GridAssetFilterDtoType defines model for GridAssetFilterDto.Type.
-type GridAssetFilterDtoType string
-
-// GridAttributeFilterDto defines model for GridAttributeFilterDto.
-type GridAttributeFilterDto struct {
-	AttributeDefinitionId *string                    `json:"attributeDefinitionId,omitempty"`
-	Type                  GridAttributeFilterDtoType `json:"type"`
-	Values                *[]string                  `json:"values,omitempty"`
-}
-
-// GridAttributeFilterDtoType defines model for GridAttributeFilterDto.Type.
-type GridAttributeFilterDtoType string
-
-// GridCategoryFilterDto defines model for GridCategoryFilterDto.
-type GridCategoryFilterDto struct {
-	CategoryId *string                   `json:"categoryId,omitempty"`
-	Type       GridCategoryFilterDtoType `json:"type"`
-}
-
-// GridCategoryFilterDtoType defines model for GridCategoryFilterDto.Type.
-type GridCategoryFilterDtoType string
-
-// GridFilteringBaseRequestDto defines model for GridFilteringBaseRequestDto.
-type GridFilteringBaseRequestDto struct {
-	AssetFilters                  *[]GridAssetFilterDto                  `json:"assetFilters,omitempty"`
-	AttributeFilters              *[]GridAttributeFilterDto              `json:"attributeFilters,omitempty"`
-	BaseFilters                   *[]GridProductBaseFilterDto            `json:"baseFilters,omitempty"`
-	CategoryFilters               *[]GridCategoryFilterDto               `json:"categoryFilters,omitempty"`
-	LabelFilters                  *[]GridLabelFilterDto                  `json:"labelFilters,omitempty"`
-	ProductCreateDateFilter       *[]GridProductCreateDateFilterDto      `json:"productCreateDateFilter,omitempty"`
-	ProductLastUpdateFilter       *[]GridProductLastUpdateFilterDto      `json:"productLastUpdateFilter,omitempty"`
-	PublishStateFilter            *GridPublishStateFilterDto             `json:"publishStateFilter,omitempty"`
-	RelationsFilter               *GridRelationsFilterDto                `json:"relationsFilter,omitempty"`
-	ScoreFilter                   *GridScoreFilterDto                    `json:"scoreFilter,omitempty"`
-	ScoreRequirementResultFilters *[]GridScoreRequirementResultFilterDto `json:"scoreRequirementResultFilters,omitempty"`
-	TypeFilter                    *GridProductTypeFilterDto              `json:"typeFilter,omitempty"`
-}
-
-// GridLabelFilterDto defines model for GridLabelFilterDto.
-type GridLabelFilterDto struct {
-	LabelsIds *[]string              `json:"labelsIds,omitempty"`
-	Type      GridLabelFilterDtoType `json:"type"`
-}
-
-// GridLabelFilterDtoType defines model for GridLabelFilterDto.Type.
-type GridLabelFilterDtoType string
-
-// GridProductBaseFilterDto defines model for GridProductBaseFilterDto.
-type GridProductBaseFilterDto struct {
-	Type   GridProductBaseFilterDtoType `json:"type"`
-	Values []string                     `json:"values"`
-}
-
-// GridProductBaseFilterDtoType defines model for GridProductBaseFilterDto.Type.
-type GridProductBaseFilterDtoType string
-
-// GridProductCreateDateFilterDto defines model for GridProductCreateDateFilterDto.
-type GridProductCreateDateFilterDto struct {
-	DateMilis int64                              `json:"dateMilis"`
-	Type      GridProductCreateDateFilterDtoType `json:"type"`
-}
-
-// GridProductCreateDateFilterDtoType defines model for GridProductCreateDateFilterDto.Type.
-type GridProductCreateDateFilterDtoType string
-
-// GridProductLastUpdateFilterDto defines model for GridProductLastUpdateFilterDto.
-type GridProductLastUpdateFilterDto struct {
-	DateMilis int64                              `json:"dateMilis"`
-	Type      GridProductLastUpdateFilterDtoType `json:"type"`
-}
-
-// GridProductLastUpdateFilterDtoType defines model for GridProductLastUpdateFilterDto.Type.
-type GridProductLastUpdateFilterDtoType string
-
-// GridProductTypeFilterDto defines model for GridProductTypeFilterDto.
-type GridProductTypeFilterDto struct {
-	GroupIds *[]string                    `json:"groupIds,omitempty"`
-	Type     GridProductTypeFilterDtoType `json:"type"`
-}
-
-// GridProductTypeFilterDtoType defines model for GridProductTypeFilterDto.Type.
-type GridProductTypeFilterDtoType string
-
-// GridPublishStateFilterDto defines model for GridPublishStateFilterDto.
-type GridPublishStateFilterDto struct {
-	PublishStates *[]string                     `json:"publishStates,omitempty"`
-	Type          GridPublishStateFilterDtoType `json:"type"`
-}
-
-// GridPublishStateFilterDtoType defines model for GridPublishStateFilterDto.Type.
-type GridPublishStateFilterDtoType string
-
-// GridRelationsFilterDto defines model for GridRelationsFilterDto.
-type GridRelationsFilterDto struct {
-	RelationId *string                    `json:"relationId,omitempty"`
-	Reverse    *bool                      `json:"reverse,omitempty"`
-	Type       GridRelationsFilterDtoType `json:"type"`
-}
-
-// GridRelationsFilterDtoType defines model for GridRelationsFilterDto.Type.
-type GridRelationsFilterDtoType string
-
-// GridScoreFilterDto defines model for GridScoreFilterDto.
-type GridScoreFilterDto struct {
-	Scores *[]float32             `json:"scores,omitempty"`
-	Type   GridScoreFilterDtoType `json:"type"`
-}
-
-// GridScoreFilterDtoType defines model for GridScoreFilterDto.Type.
-type GridScoreFilterDtoType string
-
-// GridScoreRequirementResultFilterDto defines model for GridScoreRequirementResultFilterDto.
-type GridScoreRequirementResultFilterDto struct {
-	RequirementIds []string                                `json:"requirementIds"`
-	Type           GridScoreRequirementResultFilterDtoType `json:"type"`
-}
-
-// GridScoreRequirementResultFilterDtoType defines model for GridScoreRequirementResultFilterDto.Type.
-type GridScoreRequirementResultFilterDtoType string
-
 // GroupedAttributeValuesDto defines model for GroupedAttributeValuesDto.
 type GroupedAttributeValuesDto struct {
+	// Attributes List of attributes within the specified attribute group.
 	Attributes *[]AttributeValueFull `json:"attributes,omitempty"`
-	GroupId    *string               `json:"groupId,omitempty"`
+
+	// GroupId The internal ID of the attribute group that the listed attributes belongs to.
+	GroupId *string `json:"groupId,omitempty"`
 }
 
-// GroupedCategoryConnectionResponse defines model for GroupedCategoryConnectionResponse.
-type GroupedCategoryConnectionResponse struct {
-	Categories *[]CategoryBasicResponse `json:"categories,omitempty"`
-	Relation   *RelationResponse        `json:"relation,omitempty"`
-}
+// GroupsFilteringViewsDto Type of entity view, such as ASSETS, ATTRIBUTES, METADATA, CATEGORIES, BUNDLES, LABELS, VARIANTS, RELATED_PRODUCTS,
+// or RELATED_CATEGORIES.
+//
+// <table>
+//
+//	<tr>
+//	  <th>View type</th>
+//	  <th>View dto</th>
+//	</tr>
+//	<tr>
+//	  <td>ASSETS</td>
+//	  <td>AssetsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>ATTRIBUTES</td>
+//	  <td>AttributesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>METADATA</td>
+//	  <td>MetadataFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>CATEGORIES</td>
+//	  <td>CategoriesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>BUNDLES</td>
+//	  <td>BundlesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>LABELS</td>
+//	  <td>LabelsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>VARIANTS</td>
+//	  <td>VariantsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>GROUPS</td>
+//	  <td>GroupsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>RELATED_PRODUCTS</td>
+//	  <td>RelatedProductsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>RELATED_CATEGORIES</td>
+//	  <td>RelatedCategoriesFilteringViewsDto</td>
+//	</tr>
+//
+// </table>
+type GroupsFilteringViewsDto = FilteringViewsDto
 
 // IdentifiableValueDto defines model for IdentifiableValueDto.
 type IdentifiableValueDto struct {
-	Id    *string `json:"id,omitempty"`
+	// Id The internal ID of the column or row. An identifier randomly generated by PIM (so you must not include any `id`
+	// property when creating columns or rows). ID is unique across all columns and rows.
+	//
+	// **Example**: `652d80e4bd32755ca11da69b`
+	Id *string `json:"id,omitempty"`
+
+	// Value Name of the column or row.
 	Value *string `json:"value,omitempty"`
 }
 
 // JobStatusResponse defines model for JobStatusResponse.
 type JobStatusResponse struct {
-	Count        *int64  `json:"count,omitempty"`
+	// Count Count of items processed in the job.
+	Count *int64 `json:"count,omitempty"`
+
+	// ErrorMessage Error message returned if the job fails.
 	ErrorMessage *string `json:"errorMessage,omitempty"`
-	Status       *string `json:"status,omitempty"`
+
+	// Status Status of the job.
+	//
+	// **Examples**:
+	// - `"WAITING"`
+	// - `"COMPLETED"`
+	Status *string `json:"status,omitempty"`
 }
 
 // LabelReferenceRequest defines model for LabelReferenceRequest.
@@ -1247,141 +2285,207 @@ type LabelReferenceRequest struct {
 	LabelIds *[]string `json:"labelIds,omitempty"`
 }
 
-// LabelsFilteringViewsDto <p>Views mapping</p><table><tr><th>View type</th><th>View dto</th></tr><tr><td>ASSETS</td><td>AssetsFilteringViewsDto</td></tr><tr><td>ATTRIBUTES</td><td>AttributesFilteringViewsDto</td></tr><tr><td>METADATA</td><td>MetadataFilteringViewsDto</td></tr><tr><td>CATEGORIES</td><td>CategoriesFilteringViewsDto</td></tr><tr><td>BUNDLES</td><td>BundlesFilteringViewsDto</td></tr><tr><td>LABELS</td><td>LabelsFilteringViewsDto</td></tr><tr><td>VARIANTS</td><td>VariantsFilteringViewsDto</td></tr><tr><td>RELATED_PRODUCTS</td><td>RelatedProductsFilteringViewsDto</td></tr><tr><td>RELATED_CATEGORIES</td><td>RelatedCategoriesFilteringViewsDto</td></tr></table>
+// LabelsFilteringViewsDto Type of entity view, such as ASSETS, ATTRIBUTES, METADATA, CATEGORIES, BUNDLES, LABELS, VARIANTS, RELATED_PRODUCTS,
+// or RELATED_CATEGORIES.
+//
+// <table>
+//
+//	<tr>
+//	  <th>View type</th>
+//	  <th>View dto</th>
+//	</tr>
+//	<tr>
+//	  <td>ASSETS</td>
+//	  <td>AssetsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>ATTRIBUTES</td>
+//	  <td>AttributesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>METADATA</td>
+//	  <td>MetadataFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>CATEGORIES</td>
+//	  <td>CategoriesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>BUNDLES</td>
+//	  <td>BundlesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>LABELS</td>
+//	  <td>LabelsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>VARIANTS</td>
+//	  <td>VariantsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>GROUPS</td>
+//	  <td>GroupsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>RELATED_PRODUCTS</td>
+//	  <td>RelatedProductsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>RELATED_CATEGORIES</td>
+//	  <td>RelatedCategoriesFilteringViewsDto</td>
+//	</tr>
+//
+// </table>
 type LabelsFilteringViewsDto = FilteringViewsDto
 
-// ListableAttributeDefinitionResponse defines model for ListableAttributeDefinitionResponse.
+// LimitExceededDetails defines model for LimitExceededDetails.
+type LimitExceededDetails struct {
+	EntityId   *string `json:"entityId,omitempty"`
+	EntityType *string `json:"entityType,omitempty"`
+	Limit      *int32  `json:"limit,omitempty"`
+	Message    *string `json:"message,omitempty"`
+	Quota      *string `json:"quota,omitempty"`
+}
+
+// ListableAttributeDefinitionResponse A common class resources returning collection of elements.
 type ListableAttributeDefinitionResponse struct {
 	Data *[]AttributeDefinitionResponse `json:"data,omitempty"`
 }
 
-// ListableAttributeGroupResponse defines model for ListableAttributeGroupResponse.
+// ListableAttributeGroupResponse A common class resources returning collection of elements.
 type ListableAttributeGroupResponse struct {
 	Data *[]AttributeGroupResponse `json:"data,omitempty"`
 }
 
-// ListableAttributeValueAll defines model for ListableAttributeValueAll.
+// ListableAttributeValueAll A common class resources returning collection of elements.
 type ListableAttributeValueAll struct {
 	Data *[]AttributeValueAll `json:"data,omitempty"`
 }
 
-// ListableCategoryAttributeBaseMetadataResponse defines model for ListableCategoryAttributeBaseMetadataResponse.
+// ListableCategoryAttributeBaseMetadataResponse A common class resources returning collection of elements.
 type ListableCategoryAttributeBaseMetadataResponse struct {
 	Data *[]CategoryAttributeBaseMetadataResponse `json:"data,omitempty"`
 }
 
-// ListableCategoryAttributeMetadataResponse defines model for ListableCategoryAttributeMetadataResponse.
+// ListableCategoryAttributeMetadataResponse A common class resources returning collection of elements.
 type ListableCategoryAttributeMetadataResponse struct {
 	Data *[]CategoryAttributeMetadataResponse `json:"data,omitempty"`
 }
 
-// ListableCategoryBasicResponse defines model for ListableCategoryBasicResponse.
+// ListableCategoryBasicResponse A common class resources returning collection of elements.
 type ListableCategoryBasicResponse struct {
 	Data *[]CategoryBasicResponse `json:"data,omitempty"`
 }
 
-// ListableCategoryConnectionResponse defines model for ListableCategoryConnectionResponse.
-type ListableCategoryConnectionResponse struct {
-	Data *[]CategoryConnectionResponse `json:"data,omitempty"`
-}
-
-// ListableCategoryFullResponse defines model for ListableCategoryFullResponse.
+// ListableCategoryFullResponse A common class resources returning collection of elements.
 type ListableCategoryFullResponse struct {
 	Data *[]CategoryFullResponse `json:"data,omitempty"`
 }
 
-// ListableCategoryProductResponse defines model for ListableCategoryProductResponse.
+// ListableCategoryProductResponse A common class resources returning collection of elements.
 type ListableCategoryProductResponse struct {
 	Data *[]CategoryProductResponse `json:"data,omitempty"`
 }
 
-// ListableCompoundAttributeDefinitionResponse defines model for ListableCompoundAttributeDefinitionResponse.
+// ListableCompoundAttributeDefinitionResponse A common class resources returning collection of elements.
 type ListableCompoundAttributeDefinitionResponse struct {
 	Data *[]CompoundAttributeDefinitionResponse `json:"data,omitempty"`
 }
 
-// ListableDictionaryAttributeResponse defines model for ListableDictionaryAttributeResponse.
+// ListableDictionaryAttributeResponse A common class resources returning collection of elements.
 type ListableDictionaryAttributeResponse struct {
 	Data *[]DictionaryAttributeResponse `json:"data,omitempty"`
 }
 
-// ListableDictionaryValueFilterResponse defines model for ListableDictionaryValueFilterResponse.
+// ListableDictionaryValueFilterResponse A common class resources returning collection of elements.
 type ListableDictionaryValueFilterResponse struct {
 	Data *[]DictionaryValueFilterResponse `json:"data,omitempty"`
 }
 
-// ListableGroupedAttributeValuesDto defines model for ListableGroupedAttributeValuesDto.
+// ListableGroupedAttributeValuesDto A common class resources returning collection of elements.
 type ListableGroupedAttributeValuesDto struct {
 	Data *[]GroupedAttributeValuesDto `json:"data,omitempty"`
 }
 
-// ListableGroupedCategoryConnectionResponse defines model for ListableGroupedCategoryConnectionResponse.
-type ListableGroupedCategoryConnectionResponse struct {
-	Data *[]GroupedCategoryConnectionResponse `json:"data,omitempty"`
+// ListableLocalCategoryAttributeDto A common class resources returning collection of elements.
+type ListableLocalCategoryAttributeDto struct {
+	Data *[]LocalCategoryAttributeDto `json:"data,omitempty"`
 }
 
-// ListablePolicyDto defines model for ListablePolicyDto.
+// ListablePolicyDto A common class resources returning collection of elements.
 type ListablePolicyDto struct {
 	Data *[]PolicyDto `json:"data,omitempty"`
 }
 
-// ListableProductAll defines model for ListableProductAll.
-type ListableProductAll struct {
-	Data *[]ProductAll `json:"data,omitempty"`
-}
-
-// ListableProductConnectionInfoResponse defines model for ListableProductConnectionInfoResponse.
+// ListableProductConnectionInfoResponse A common class resources returning collection of elements.
 type ListableProductConnectionInfoResponse struct {
 	Data *[]ProductConnectionInfoResponse `json:"data,omitempty"`
 }
 
-// ListableProductConnectionProductResponse defines model for ListableProductConnectionProductResponse.
+// ListableProductConnectionProductResponse A common class resources returning collection of elements.
 type ListableProductConnectionProductResponse struct {
 	Data *[]ProductConnectionProductResponse `json:"data,omitempty"`
 }
 
-// ListableProductConnectionResponse defines model for ListableProductConnectionResponse.
+// ListableProductConnectionResponse A common class resources returning collection of elements.
 type ListableProductConnectionResponse struct {
 	Data *[]ProductConnectionResponse `json:"data,omitempty"`
 }
 
-// ListableProductTemplateResponse defines model for ListableProductTemplateResponse.
+// ListableProductTemplateResponse A common class resources returning collection of elements.
 type ListableProductTemplateResponse struct {
 	Data *[]ProductTemplateResponse `json:"data,omitempty"`
 }
 
-// ListableProductViewDto defines model for ListableProductViewDto.
+// ListableProductViewDto A common class resources returning collection of elements.
 type ListableProductViewDto struct {
 	Data *[]ProductViewDto `json:"data,omitempty"`
 }
 
-// ListableProductWithAttributeValuesResponse defines model for ListableProductWithAttributeValuesResponse.
+// ListableProductWithAttributeValuesResponse A common class resources returning collection of elements.
 type ListableProductWithAttributeValuesResponse struct {
 	Data *[]ProductWithAttributeValuesResponse `json:"data,omitempty"`
 }
 
-// ListableRelationResponse defines model for ListableRelationResponse.
+// ListableRelationResponse A common class resources returning collection of elements.
 type ListableRelationResponse struct {
 	Data *[]RelationResponse `json:"data,omitempty"`
 }
 
-// ListableString defines model for ListableString.
+// ListableString A common class resources returning collection of elements.
 type ListableString struct {
 	Data *[]string `json:"data,omitempty"`
 }
 
-// ListableWithCursorProductViewDto defines model for ListableWithCursorProductViewDto.
+// ListableWithCursorCategoryWithCursorAndViewResponse Returns collection of elements with cursor which can be used for further scan.
+type ListableWithCursorCategoryWithCursorAndViewResponse struct {
+	Data       *[]CategoryWithCursorAndViewResponse `json:"data,omitempty"`
+	NextCursor *string                              `json:"nextCursor,omitempty"`
+}
+
+// ListableWithCursorProductViewDto Returns collection of elements with cursor which can be used for further scan.
 type ListableWithCursorProductViewDto struct {
 	Data       *[]ProductViewDto `json:"data,omitempty"`
 	NextCursor *string           `json:"nextCursor,omitempty"`
 }
 
+// LocalCategoryAttributeDto defines model for LocalCategoryAttributeDto.
+type LocalCategoryAttributeDto struct {
+	DefinitionId  *string   `json:"definitionId,omitempty"`
+	DictionaryIds *[]string `json:"dictionaryIds,omitempty"`
+	ReadOnly      *bool     `json:"readOnly,omitempty"`
+	SelectIds     *[]string `json:"selectIds,omitempty"`
+	Value         *string   `json:"value,omitempty"`
+}
+
 // MatrixAttributeDefinitionDto defines model for MatrixAttributeDefinitionDto.
 type MatrixAttributeDefinitionDto struct {
+	ContextAware   *bool                 `json:"contextAware,omitempty"`
+	Description    *string               `json:"description,omitempty"`
 	ExternalSource *bool                 `json:"externalSource,omitempty"`
 	GroupId        *string               `json:"groupId,omitempty"`
 	Internal       *bool                 `json:"internal,omitempty"`
-	Name           string                `json:"name"`
+	Name           *string               `json:"name,omitempty"`
 	Number         *string               `json:"number,omitempty"`
 	Restrictions   *MatrixRestrictionDto `json:"restrictions,omitempty"`
 }
@@ -1409,8 +2513,10 @@ type MatrixRestrictionsDto struct {
 	Rows    *[]IdentifiableValueDto `json:"rows,omitempty"`
 }
 
-// MetadataFilteringViewsDto <p>Views mapping</p><table><tr><th>View type</th><th>View dto</th></tr><tr><td>ASSETS</td><td>AssetsFilteringViewsDto</td></tr><tr><td>ATTRIBUTES</td><td>AttributesFilteringViewsDto</td></tr><tr><td>METADATA</td><td>MetadataFilteringViewsDto</td></tr><tr><td>CATEGORIES</td><td>CategoriesFilteringViewsDto</td></tr><tr><td>BUNDLES</td><td>BundlesFilteringViewsDto</td></tr><tr><td>LABELS</td><td>LabelsFilteringViewsDto</td></tr><tr><td>VARIANTS</td><td>VariantsFilteringViewsDto</td></tr><tr><td>RELATED_PRODUCTS</td><td>RelatedProductsFilteringViewsDto</td></tr><tr><td>RELATED_CATEGORIES</td><td>RelatedCategoriesFilteringViewsDto</td></tr></table>
-type MetadataFilteringViewsDto = FilteringViewsDto
+// MetadataFilteringViewsDto defines model for MetadataFilteringViewsDto.
+type MetadataFilteringViewsDto struct {
+	Type string `json:"type"`
+}
 
 // ModifyLabelInProductsRequestDto defines model for ModifyLabelInProductsRequestDto.
 type ModifyLabelInProductsRequestDto struct {
@@ -1425,6 +2531,7 @@ type MoveCategoryRequest struct {
 
 // MultiLanguageDto defines model for MultiLanguageDto.
 type MultiLanguageDto struct {
+	// Value Map of multi language values.
 	Value *map[string]string `json:"value,omitempty"`
 }
 
@@ -1432,6 +2539,9 @@ type MultiLanguageDto struct {
 type MultiLanguageListDto struct {
 	Value *map[string][]string `json:"value,omitempty"`
 }
+
+// ObjectId defines model for ObjectId.
+type ObjectId = string
 
 // PimVersion defines model for PimVersion.
 type PimVersion struct {
@@ -1447,12 +2557,9 @@ type PolicyDto struct {
 
 // PolicyRequest defines model for PolicyRequest.
 type PolicyRequest struct {
-	PolicyId *string                `json:"policyId,omitempty"`
-	ReadOnly *PolicyRequestReadOnly `json:"readOnly,omitempty"`
+	PolicyId *string `json:"policyId,omitempty"`
+	ReadOnly bool    `json:"readOnly"`
 }
-
-// PolicyRequestReadOnly defines model for PolicyRequest.ReadOnly.
-type PolicyRequestReadOnly bool
 
 // ProductAll defines model for ProductAll.
 type ProductAll struct {
@@ -1460,35 +2567,29 @@ type ProductAll struct {
 	Assets                                    *[]string                                            `json:"assets,omitempty"`
 	Attributes                                *[]AttributeValueFull                                `json:"attributes,omitempty"`
 	Categories                                *[]string                                            `json:"categories,omitempty"`
-	ContextStates                             *map[string]ProductAllContextStates                  `json:"contextStates,omitempty"`
 	CreateDate                                *int64                                               `json:"createDate,omitempty"`
-	DataSynced                                *bool                                                `json:"dataSynced,omitempty"`
 	Description                               *string                                              `json:"description,omitempty"`
+	GroupParentId                             *string                                              `json:"groupParentId,omitempty"`
 	Id                                        *string                                              `json:"id,omitempty"`
 	Labels                                    *[]string                                            `json:"labels,omitempty"`
 	LastUpdate                                *int64                                               `json:"lastUpdate,omitempty"`
 	Name                                      *string                                              `json:"name,omitempty"`
 	Number                                    *string                                              `json:"number,omitempty"`
 	ProductBundles                            *[]ProductBundleDto                                  `json:"productBundles,omitempty"`
+	ProductGroups                             *[]string                                            `json:"productGroups,omitempty"`
 	ProductVariants                           *[]string                                            `json:"productVariants,omitempty"`
 	Quantity                                  *float32                                             `json:"quantity,omitempty"`
 	ReadOnly                                  *bool                                                `json:"readOnly,omitempty"`
 	RelatedCategories                         *[]ConnectionDto                                     `json:"relatedCategories,omitempty"`
 	RelatedProducts                           *[]ConnectionDto                                     `json:"relatedProducts,omitempty"`
 	RelatedProductsRelationSortingOrderSource *ProductAllRelatedProductsRelationSortingOrderSource `json:"relatedProductsRelationSortingOrderSource,omitempty"`
-	State                                     *ProductAllState                                     `json:"state,omitempty"`
+	ToBeRemoved                               *bool                                                `json:"toBeRemoved,omitempty"`
 	Type                                      *ProductAllType                                      `json:"type,omitempty"`
 	VariantParentId                           *string                                              `json:"variantParentId,omitempty"`
 }
 
-// ProductAllContextStates defines model for ProductAll.ContextStates.
-type ProductAllContextStates string
-
 // ProductAllRelatedProductsRelationSortingOrderSource defines model for ProductAll.RelatedProductsRelationSortingOrderSource.
 type ProductAllRelatedProductsRelationSortingOrderSource string
-
-// ProductAllState defines model for ProductAll.State.
-type ProductAllState string
 
 // ProductAllType defines model for ProductAll.Type.
 type ProductAllType string
@@ -1496,6 +2597,19 @@ type ProductAllType string
 // ProductArchiveStateRequest defines model for ProductArchiveStateRequest.
 type ProductArchiveStateRequest struct {
 	Ids *[]string `json:"ids,omitempty"`
+}
+
+// ProductAttributeValue defines model for ProductAttributeValue.
+type ProductAttributeValue struct {
+	Column             *map[string]string            `json:"column,omitempty"`
+	Copy               *bool                         `json:"copy,omitempty"`
+	DefiningAttributes *bool                         `json:"definingAttributes,omitempty"`
+	DefinitionId       string                        `json:"definitionId"`
+	Dictionary         *[]string                     `json:"dictionary,omitempty"`
+	Locked             *bool                         `json:"locked,omitempty"`
+	Mandatory          *bool                         `json:"mandatory,omitempty"`
+	Matrix             *map[string]map[string]string `json:"matrix,omitempty"`
+	Values             *[]string                     `json:"values,omitempty"`
 }
 
 // ProductAttributeViewDto defines model for ProductAttributeViewDto.
@@ -1539,24 +2653,15 @@ type ProductConnectionInfoResponseDirections string
 
 // ProductConnectionMetadata defines model for ProductConnectionMetadata.
 type ProductConnectionMetadata struct {
-	Archived      *bool                                              `json:"archived,omitempty"`
-	ContextStates *map[string]ProductConnectionMetadataContextStates `json:"contextStates,omitempty"`
-	CreateDate    *int64                                             `json:"createDate,omitempty"`
-	DataSynced    *bool                                              `json:"dataSynced,omitempty"`
-	Description   *string                                            `json:"description,omitempty"`
-	Id            *string                                            `json:"id,omitempty"`
-	LastUpdate    *int64                                             `json:"lastUpdate,omitempty"`
-	Name          *string                                            `json:"name,omitempty"`
-	Number        *string                                            `json:"number,omitempty"`
-	Quantity      *float32                                           `json:"quantity,omitempty"`
-	State         *ProductConnectionMetadataState                    `json:"state,omitempty"`
+	Archived    *bool    `json:"archived,omitempty"`
+	CreateDate  *int64   `json:"createDate,omitempty"`
+	Description *string  `json:"description,omitempty"`
+	Id          *string  `json:"id,omitempty"`
+	LastUpdate  *int64   `json:"lastUpdate,omitempty"`
+	Name        *string  `json:"name,omitempty"`
+	Number      *string  `json:"number,omitempty"`
+	Quantity    *float32 `json:"quantity,omitempty"`
 }
-
-// ProductConnectionMetadataContextStates defines model for ProductConnectionMetadata.ContextStates.
-type ProductConnectionMetadataContextStates string
-
-// ProductConnectionMetadataState defines model for ProductConnectionMetadata.State.
-type ProductConnectionMetadataState string
 
 // ProductConnectionProductResponse defines model for ProductConnectionProductResponse.
 type ProductConnectionProductResponse struct {
@@ -1596,7 +2701,7 @@ type ProductConnectionsRequest struct {
 // ProductCreateRequest defines model for ProductCreateRequest.
 type ProductCreateRequest struct {
 	Assets                                    *[]string                                                      `json:"assets,omitempty"`
-	Attributes                                *[]AttributeValueFull                                          `json:"attributes,omitempty"`
+	Attributes                                *[]ProductAttributeValue                                       `json:"attributes,omitempty"`
 	Categories                                *[]string                                                      `json:"categories,omitempty"`
 	Description                               *string                                                        `json:"description,omitempty"`
 	Labels                                    *[]string                                                      `json:"labels,omitempty"`
@@ -1614,7 +2719,27 @@ type ProductCreateRequestType string
 
 // ProductIdListViewsRequestDto defines model for ProductIdListViewsRequestDto.
 type ProductIdListViewsRequestDto struct {
-	Ids   []string                                   `json:"ids"`
+	Ids []string `json:"ids"`
+
+	// Views Specifies the list of entity views\* to be included in the response.
+	//
+	// \*A view is a subset of product data, like `METADATA`, `ATTRIBUTES`, `ASSETS` and `CATEGORIES`, to be included
+	// in the response, if no views are specified in the request, only product IDs will be returned.
+	//
+	// **Example:**
+	// ```
+	// "views": [
+	//   {
+	//     "type": "ASSETS"
+	//   },
+	//   {
+	//     "type": "ATTRIBUTES",
+	//     "definitionIds": [
+	//       "664cc90da825236207yt01a7"
+	//     ]
+	//   }
+	// ]
+	// ```
 	Views *[]ProductIdListViewsRequestDto_Views_Item `json:"views,omitempty"`
 }
 
@@ -1625,6 +2750,25 @@ type ProductIdListViewsRequestDto_Views_Item struct {
 
 // ProductIdViewsRequestDto defines model for ProductIdViewsRequestDto.
 type ProductIdViewsRequestDto struct {
+	// Views Specifies the list of entity views\* to be included in the response.
+	//
+	// \*A view is a subset of product data, like `METADATA`, `ATTRIBUTES`, `ASSETS` and `CATEGORIES`, to be included
+	// in the response, if no views are specified in the request, only product IDs will be returned.
+	//
+	// **Example:**
+	// ```
+	// "views": [
+	//   {
+	//     "type": "ASSETS"
+	//   },
+	//   {
+	//     "type": "ATTRIBUTES",
+	//     "definitionIds": [
+	//       "664cc90da825236207yt01a7"
+	//     ]
+	//   }
+	// ]
+	// ```
 	Views *[]ProductIdViewsRequestDto_Views_Item `json:"views,omitempty"`
 }
 
@@ -1643,43 +2787,66 @@ type ProductMetadataUpdateRequest struct {
 // ProductMetadataViewDto defines model for ProductMetadataViewDto.
 type ProductMetadataViewDto struct {
 	Archived                                  *bool                                                            `json:"archived,omitempty"`
-	ContextStates                             *map[string]ProductMetadataViewDtoContextStates                  `json:"contextStates,omitempty"`
 	CreateDate                                *int64                                                           `json:"createDate,omitempty"`
-	DataSynced                                *bool                                                            `json:"dataSynced,omitempty"`
 	Description                               *MultiLanguageDto                                                `json:"description,omitempty"`
+	GroupParentId                             *string                                                          `json:"groupParentId,omitempty"`
 	LastUpdate                                *int64                                                           `json:"lastUpdate,omitempty"`
 	Name                                      *MultiLanguageDto                                                `json:"name,omitempty"`
 	Number                                    *string                                                          `json:"number,omitempty"`
 	ReadOnly                                  *bool                                                            `json:"readOnly,omitempty"`
 	RelatedProductsRelationSortingOrderSource *ProductMetadataViewDtoRelatedProductsRelationSortingOrderSource `json:"relatedProductsRelationSortingOrderSource,omitempty"`
-	State                                     *ProductMetadataViewDtoState                                     `json:"state,omitempty"`
+	ToBeRemoved                               *bool                                                            `json:"toBeRemoved,omitempty"`
 	Type                                      *ProductMetadataViewDtoType                                      `json:"type,omitempty"`
 	VariantParentId                           *string                                                          `json:"variantParentId,omitempty"`
 }
 
-// ProductMetadataViewDtoContextStates defines model for ProductMetadataViewDto.ContextStates.
-type ProductMetadataViewDtoContextStates string
-
 // ProductMetadataViewDtoRelatedProductsRelationSortingOrderSource defines model for ProductMetadataViewDto.RelatedProductsRelationSortingOrderSource.
 type ProductMetadataViewDtoRelatedProductsRelationSortingOrderSource string
-
-// ProductMetadataViewDtoState defines model for ProductMetadataViewDto.State.
-type ProductMetadataViewDtoState string
 
 // ProductMetadataViewDtoType defines model for ProductMetadataViewDto.Type.
 type ProductMetadataViewDtoType string
 
 // ProductNumberListViewsRequestDto defines model for ProductNumberListViewsRequestDto.
 type ProductNumberListViewsRequestDto struct {
-	Numbers  *[]string                                      `json:"numbers,omitempty"`
-	Page     *int32                                         `json:"page,omitempty"`
-	PageSize *int32                                         `json:"pageSize,omitempty"`
-	Views    *[]ProductNumberListViewsRequestDto_Views_Item `json:"views,omitempty"`
+	Numbers  *[]string `json:"numbers,omitempty"`
+	Page     *int32    `json:"page,omitempty"`
+	PageSize *int32    `json:"pageSize,omitempty"`
+
+	// Views Specifies the list of entity views\* to be included in the response.
+	//
+	// \*A view is a subset of product data, like `METADATA`, `ATTRIBUTES`, `ASSETS` and `CATEGORIES`, to be included
+	// in the response, if no views are specified in the request, only product IDs will be returned.
+	//
+	// **Example:**
+	// ```
+	// "views": [
+	//   {
+	//     "type": "ASSETS"
+	//   },
+	//   {
+	//     "type": "ATTRIBUTES",
+	//     "definitionIds": [
+	//       "664cc90da825236207yt01a7"
+	//     ]
+	//   }
+	// ]
+	// ```
+	Views *[]ProductNumberListViewsRequestDto_Views_Item `json:"views,omitempty"`
 }
 
 // ProductNumberListViewsRequestDto_Views_Item defines model for ProductNumberListViewsRequestDto.views.Item.
 type ProductNumberListViewsRequestDto_Views_Item struct {
 	union json.RawMessage
+}
+
+// ProductOverviewDto defines model for ProductOverviewDto.
+type ProductOverviewDto struct {
+	Assets          *CountDto `json:"assets,omitempty"`
+	Attributes      *CountDto `json:"attributes,omitempty"`
+	Categories      *CountDto `json:"categories,omitempty"`
+	ProductBundles  *CountDto `json:"productBundles,omitempty"`
+	ProductVariants *CountDto `json:"productVariants,omitempty"`
+	RelatedProducts *CountDto `json:"relatedProducts,omitempty"`
 }
 
 // ProductTemplateRequest defines model for ProductTemplateRequest.
@@ -1738,9 +2905,51 @@ type ProductViewDto struct {
 	Labels            *[]string                  `json:"labels,omitempty"`
 	Metadata          *ProductMetadataViewDto    `json:"metadata,omitempty"`
 	ProductBundles    *[]ProductBundleDto        `json:"productBundles,omitempty"`
+	ProductGroups     *[]string                  `json:"productGroups,omitempty"`
 	ProductVariants   *[]string                  `json:"productVariants,omitempty"`
 	RelatedCategories *[]ConnectionDto           `json:"relatedCategories,omitempty"`
 	RelatedProducts   *[]ConnectionDto           `json:"relatedProducts,omitempty"`
+}
+
+// ProductViewsByTypeRequest defines model for ProductViewsByTypeRequest.
+type ProductViewsByTypeRequest struct {
+	// Count The number of products returned.
+	Count *int32 `json:"count,omitempty"`
+
+	// Cursor The unique string of the cursor.
+	Cursor *string `json:"cursor,omitempty"`
+
+	// Types Types of products that will be returned.
+	Types []ProductViewsByTypeRequestTypes `json:"types"`
+
+	// Views Specifies the list of entity views\* to be included in the response.
+	//
+	//  \*A view is a subset of product data, like `METADATA`, `ATTRIBUTES`, `ASSETS` and `CATEGORIES`, to be included
+	//  in the response, if no views are specified in the request, only product IDs will be returned.
+	//
+	//  **Example:**
+	//  ```
+	//  "views": [
+	// {
+	//      "type": "ASSETS"
+	// },
+	// {
+	//      "type": "ATTRIBUTES",
+	//      "definitionIds": [
+	//        "664cc90da825236207yt01a7"
+	// ]
+	// }
+	// ]
+	// ```
+	Views *[]ProductViewsByTypeRequest_Views_Item `json:"views,omitempty"`
+}
+
+// ProductViewsByTypeRequestTypes defines model for ProductViewsByTypeRequest.Types.
+type ProductViewsByTypeRequestTypes string
+
+// ProductViewsByTypeRequest_Views_Item defines model for ProductViewsByTypeRequest.views.Item.
+type ProductViewsByTypeRequest_Views_Item struct {
+	union json.RawMessage
 }
 
 // ProductWithAttributeValuesResponse defines model for ProductWithAttributeValuesResponse.
@@ -1751,12 +2960,14 @@ type ProductWithAttributeValuesResponse struct {
 
 // PropertyUpdateInteger defines model for PropertyUpdateInteger.
 type PropertyUpdateInteger struct {
-	Value *int32 `json:"value,omitempty"`
+	// Value Nullable value for partial update.
+	Value *int32 `json:"value"`
 }
 
 // PropertyUpdateString defines model for PropertyUpdateString.
 type PropertyUpdateString struct {
-	Value *string `json:"value,omitempty"`
+	// Value Nullable value for partial update.
+	Value *string `json:"value"`
 }
 
 // RangeRestrictionsDto defines model for RangeRestrictionsDto.
@@ -1766,11 +2977,120 @@ type RangeRestrictionsDto struct {
 	Step *string `json:"step,omitempty"`
 }
 
-// RelatedCategoriesFilteringViewsDto <p>Views mapping</p><table><tr><th>View type</th><th>View dto</th></tr><tr><td>ASSETS</td><td>AssetsFilteringViewsDto</td></tr><tr><td>ATTRIBUTES</td><td>AttributesFilteringViewsDto</td></tr><tr><td>METADATA</td><td>MetadataFilteringViewsDto</td></tr><tr><td>CATEGORIES</td><td>CategoriesFilteringViewsDto</td></tr><tr><td>BUNDLES</td><td>BundlesFilteringViewsDto</td></tr><tr><td>LABELS</td><td>LabelsFilteringViewsDto</td></tr><tr><td>VARIANTS</td><td>VariantsFilteringViewsDto</td></tr><tr><td>RELATED_PRODUCTS</td><td>RelatedProductsFilteringViewsDto</td></tr><tr><td>RELATED_CATEGORIES</td><td>RelatedCategoriesFilteringViewsDto</td></tr></table>
+// RelatedCategoriesFilteringViewsDto Type of entity view, such as ASSETS, ATTRIBUTES, METADATA, CATEGORIES, BUNDLES, LABELS, VARIANTS, RELATED_PRODUCTS,
+// or RELATED_CATEGORIES.
+//
+// <table>
+//
+//	<tr>
+//	  <th>View type</th>
+//	  <th>View dto</th>
+//	</tr>
+//	<tr>
+//	  <td>ASSETS</td>
+//	  <td>AssetsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>ATTRIBUTES</td>
+//	  <td>AttributesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>METADATA</td>
+//	  <td>MetadataFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>CATEGORIES</td>
+//	  <td>CategoriesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>BUNDLES</td>
+//	  <td>BundlesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>LABELS</td>
+//	  <td>LabelsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>VARIANTS</td>
+//	  <td>VariantsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>GROUPS</td>
+//	  <td>GroupsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>RELATED_PRODUCTS</td>
+//	  <td>RelatedProductsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>RELATED_CATEGORIES</td>
+//	  <td>RelatedCategoriesFilteringViewsDto</td>
+//	</tr>
+//
+// </table>
 type RelatedCategoriesFilteringViewsDto = FilteringViewsDto
 
-// RelatedProductsFilteringViewsDto <p>Views mapping</p><table><tr><th>View type</th><th>View dto</th></tr><tr><td>ASSETS</td><td>AssetsFilteringViewsDto</td></tr><tr><td>ATTRIBUTES</td><td>AttributesFilteringViewsDto</td></tr><tr><td>METADATA</td><td>MetadataFilteringViewsDto</td></tr><tr><td>CATEGORIES</td><td>CategoriesFilteringViewsDto</td></tr><tr><td>BUNDLES</td><td>BundlesFilteringViewsDto</td></tr><tr><td>LABELS</td><td>LabelsFilteringViewsDto</td></tr><tr><td>VARIANTS</td><td>VariantsFilteringViewsDto</td></tr><tr><td>RELATED_PRODUCTS</td><td>RelatedProductsFilteringViewsDto</td></tr><tr><td>RELATED_CATEGORIES</td><td>RelatedCategoriesFilteringViewsDto</td></tr></table>
+// RelatedProductsFilteringViewsDto Type of entity view, such as ASSETS, ATTRIBUTES, METADATA, CATEGORIES, BUNDLES, LABELS, VARIANTS, RELATED_PRODUCTS,
+// or RELATED_CATEGORIES.
+//
+// <table>
+//
+//	<tr>
+//	  <th>View type</th>
+//	  <th>View dto</th>
+//	</tr>
+//	<tr>
+//	  <td>ASSETS</td>
+//	  <td>AssetsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>ATTRIBUTES</td>
+//	  <td>AttributesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>METADATA</td>
+//	  <td>MetadataFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>CATEGORIES</td>
+//	  <td>CategoriesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>BUNDLES</td>
+//	  <td>BundlesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>LABELS</td>
+//	  <td>LabelsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>VARIANTS</td>
+//	  <td>VariantsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>GROUPS</td>
+//	  <td>GroupsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>RELATED_PRODUCTS</td>
+//	  <td>RelatedProductsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>RELATED_CATEGORIES</td>
+//	  <td>RelatedCategoriesFilteringViewsDto</td>
+//	</tr>
+//
+// </table>
 type RelatedProductsFilteringViewsDto = FilteringViewsDto
+
+// RelationDirectionUpdateRequest defines model for RelationDirectionUpdateRequest.
+type RelationDirectionUpdateRequest struct {
+	// Direction Target direction of the relation (`ONE_WAY` or `TWO_WAY`).
+	Direction RelationDirectionUpdateRequestDirection `json:"direction"`
+}
+
+// RelationDirectionUpdateRequestDirection Target direction of the relation (`ONE_WAY` or `TWO_WAY`).
+type RelationDirectionUpdateRequestDirection string
 
 // RelationFilter defines model for RelationFilter.
 type RelationFilter struct {
@@ -1788,6 +3108,19 @@ type RelationFilteringRequest struct {
 	PageSize *int32            `json:"pageSize,omitempty"`
 }
 
+// RelationPartialUpdateRequest defines model for RelationPartialUpdateRequest.
+type RelationPartialUpdateRequest struct {
+	Description *PropertyUpdateString `json:"description,omitempty"`
+	Name        *PropertyUpdateString `json:"name,omitempty"`
+
+	// Number Number of the relation. Omit to leave the current number unchanged.
+	Number *string `json:"number,omitempty"`
+
+	// QuantityEnabled Is quantity enabled for the relation. Omit to leave it unchanged.
+	QuantityEnabled *bool                 `json:"quantityEnabled,omitempty"`
+	ReverseName     *PropertyUpdateString `json:"reverseName,omitempty"`
+}
+
 // RelationRequest defines model for RelationRequest.
 type RelationRequest struct {
 	Description     *string `json:"description,omitempty"`
@@ -1800,19 +3133,44 @@ type RelationRequest struct {
 
 // RelationResponse defines model for RelationResponse.
 type RelationResponse struct {
-	Description     *string `json:"description,omitempty"`
-	Direction       *string `json:"direction,omitempty"`
-	Id              *string `json:"id,omitempty"`
-	Name            *string `json:"name,omitempty"`
-	Number          *string `json:"number,omitempty"`
-	Order           *int32  `json:"order,omitempty"`
-	QuantityEnabled *bool   `json:"quantityEnabled,omitempty"`
-	ReverseName     *string `json:"reverseName,omitempty"`
+	// Description Text to display describing relation.
+	Description *string `json:"description,omitempty"`
+
+	// Direction Direction of relation (ONE_WAY or TWO_WAY).
+	Direction *string `json:"direction,omitempty"`
+
+	// Id An identifier randomly generated by PIM. ID is unique across all relation definitions.
+	Id *string `json:"id,omitempty"`
+
+	// Name Name of the relation.
+	Name *string `json:"name,omitempty"`
+
+	// Number Number of the relation.
+	Number *string `json:"number,omitempty"`
+
+	// Order Order of relation definition.
+	Order *int32 `json:"order,omitempty"`
+
+	// QuantityEnabled Is quantity enable for relation.
+	QuantityEnabled *bool `json:"quantityEnabled,omitempty"`
+
+	// ReadOnly The flag indicates whether the relation is read-only for the currently logged in user in Bluestone PIM web application based on what policies are applied for the user.
+	//
+	// **Note**: This flag is only relevant on calls to the endpoint performed from the Bluestone PIM web application and not for calls done to the Management API (MAPI). The endpoint will always return `readOnly: false` when calling the endpoint via the Management API (MAPI)
+	ReadOnly *bool `json:"readOnly,omitempty"`
+
+	// ReverseName Reverse name of the relation.
+	ReverseName *string `json:"reverseName,omitempty"`
+}
+
+// RemoveLabelsFromProductRequest defines model for RemoveLabelsFromProductRequest.
+type RemoveLabelsFromProductRequest struct {
+	LabelIds []string `json:"labelIds"`
 }
 
 // RenameAttributeGroupRequest defines model for RenameAttributeGroupRequest.
 type RenameAttributeGroupRequest struct {
-	Name string `json:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 // RestrictionsDto defines model for RestrictionsDto.
@@ -1824,13 +3182,6 @@ type RestrictionsDto struct {
 	Text   *TextRestrictionsDto   `json:"text,omitempty"`
 }
 
-// SaveProductsAttributesBulkRequest defines model for SaveProductsAttributesBulkRequest.
-type SaveProductsAttributesBulkRequest struct {
-	AttributeDefinitionId string    `json:"attributeDefinitionId"`
-	AttributeValues       *[]string `json:"attributeValues,omitempty"`
-	ProductIds            []string  `json:"productIds"`
-}
-
 // SaveProductsAttributesByIdsRequest defines model for SaveProductsAttributesByIdsRequest.
 type SaveProductsAttributesByIdsRequest struct {
 	AttributeDefinitionId string    `json:"attributeDefinitionId"`
@@ -1838,11 +3189,32 @@ type SaveProductsAttributesByIdsRequest struct {
 	ProductIds            *[]string `json:"productIds,omitempty"`
 }
 
+// SaveProductsVlaSettingsByIdsRequest defines model for SaveProductsVlaSettingsByIdsRequest.
+type SaveProductsVlaSettingsByIdsRequest struct {
+	// AttributeDefinitionId Internal ID of the single attribute definition whose VLA settings are being set.
+	AttributeDefinitionId string `json:"attributeDefinitionId"`
+
+	// Copy Variant copy flag. Omitted = removed.
+	Copy *bool `json:"copy,omitempty"`
+
+	// DefiningAttributes Variant defining attributes flag. Omitted = removed.
+	DefiningAttributes *bool `json:"definingAttributes,omitempty"`
+
+	// Locked Lock flag to determine that attribute is locked/unlocked. Omitted = removed.
+	Locked *bool `json:"locked,omitempty"`
+
+	// Mandatory Variant mandatory flag. Omitted = removed.
+	Mandatory *bool `json:"mandatory,omitempty"`
+
+	// ProductIds Internal IDs of the products to apply the settings to; 1 to 100 IDs. The operation fails if any of them does not exist.
+	ProductIds []string `json:"productIds"`
+}
+
 // SelectAttributeValueDto defines model for SelectAttributeValueDto.
 type SelectAttributeValueDto struct {
 	Metadata *string `json:"metadata,omitempty"`
 	Number   *string `json:"number,omitempty"`
-	Value    string  `json:"value"`
+	Value    *string `json:"value,omitempty"`
 	ValueId  *string `json:"valueId,omitempty"`
 }
 
@@ -1857,8 +3229,18 @@ type SelectValueIdDto struct {
 	SelectValueId *string `json:"selectValueId,omitempty"`
 }
 
+// SelectValueRequest defines model for SelectValueRequest.
+type SelectValueRequest struct {
+	Metadata *string `json:"metadata,omitempty"`
+	Number   *string `json:"number,omitempty"`
+	Value    string  `json:"value"`
+}
+
 // SetCategoryDictionaryAttributeValuesRequest defines model for SetCategoryDictionaryAttributeValuesRequest.
 type SetCategoryDictionaryAttributeValuesRequest struct {
+	// ValueIds IDs of the dictionary values to select. This is the complete set to keep - values not listed are unselected
+	// and an empty list clears the selection. Every ID must be a value of this attribute definition, and the
+	// definition's limit on the number of selected values applies.
 	ValueIds *[]string `json:"valueIds,omitempty"`
 }
 
@@ -1876,11 +3258,13 @@ type SetProductAssets struct {
 type SimpleAttributeDefinitionRequest struct {
 	Charset        *string                                   `json:"charset,omitempty"`
 	ContentType    *string                                   `json:"contentType,omitempty"`
+	ContextAware   *bool                                     `json:"contextAware,omitempty"`
 	DataType       *SimpleAttributeDefinitionRequestDataType `json:"dataType,omitempty"`
+	Description    *string                                   `json:"description,omitempty"`
 	ExternalSource *bool                                     `json:"externalSource,omitempty"`
 	GroupId        *string                                   `json:"groupId,omitempty"`
 	Internal       *bool                                     `json:"internal,omitempty"`
-	Name           string                                    `json:"name"`
+	Name           *string                                   `json:"name,omitempty"`
 	Number         *string                                   `json:"number,omitempty"`
 	Restrictions   *RestrictionsDto                          `json:"restrictions,omitempty"`
 	Unit           *string                                   `json:"unit,omitempty"`
@@ -1912,52 +3296,89 @@ type UpdateAttributeGroupNumberRequest struct {
 // UpdateCategoryAttributeRequest defines model for UpdateCategoryAttributeRequest.
 type UpdateCategoryAttributeRequest struct {
 	AttributeValue *PropertyUpdateString `json:"attributeValue,omitempty"`
-	CopyAttribute  *bool                 `json:"copyAttribute,omitempty"`
-	Locked         *bool                 `json:"locked,omitempty"`
-	Mandatory      *bool                 `json:"mandatory,omitempty"`
+
+	// CopyAttribute Propagation: when true, this attribute and its value are inherited by the subcategories of this category and
+	// by their products. Only the category that switched propagation on can change it.
+	CopyAttribute *bool `json:"copyAttribute,omitempty"`
+
+	// Locked Lock attribute value: when true, the attribute on products in the category must keep the CLA value for those
+	// products to be valid for synchronization. Not supported for column, matrix and compound definitions, which
+	// reject this field.
+	Locked *bool `json:"locked,omitempty"`
+
+	// Mandatory Make attribute value mandatory: when true, the attribute on products in the category must have a value for
+	// those products to be valid for synchronization.
+	Mandatory *bool `json:"mandatory,omitempty"`
 }
 
 // UpdateCategoryColumnAttributeRequest defines model for UpdateCategoryColumnAttributeRequest.
 type UpdateCategoryColumnAttributeRequest struct {
+	// Column New value per column, keyed by the column value ID taken from the attribute definition's restriction. This
+	// is the complete set to keep - columns left out are cleared.
 	Column *map[string]string `json:"column,omitempty"`
-	// Deprecated:
+
+	// CopyAttribute Propagation: when true, this attribute and its value are inherited by the subcategories of this category and
+	// by their products. Only the category that switched propagation on can change it.
 	CopyAttribute *bool `json:"copyAttribute,omitempty"`
-	// Deprecated:
+
+	// Locked Not supported for column definitions - sending this field fails the request.
 	Locked *bool `json:"locked,omitempty"`
-	// Deprecated:
+
+	// Mandatory Make attribute value mandatory: when true, the attribute on products in the category must have a value for
+	// those products to be valid for synchronization.
 	Mandatory *bool `json:"mandatory,omitempty"`
 }
 
 // UpdateCategoryMatrixAttributeRequest defines model for UpdateCategoryMatrixAttributeRequest.
 type UpdateCategoryMatrixAttributeRequest struct {
-	// Deprecated:
+	// CopyAttribute Propagation: when true, this attribute and its value are inherited by the subcategories of this category and
+	// by their products. Only the category that switched propagation on can change it.
 	CopyAttribute *bool `json:"copyAttribute,omitempty"`
-	// Deprecated:
+
+	// Locked Not supported for matrix definitions - sending this field fails the request.
 	Locked *bool `json:"locked,omitempty"`
-	// Deprecated:
-	Mandatory *bool                         `json:"mandatory,omitempty"`
-	Matrix    *map[string]map[string]string `json:"matrix,omitempty"`
+
+	// Mandatory Make attribute value mandatory: when true, the attribute on products in the category must have a value for
+	// those products to be valid for synchronization.
+	Mandatory *bool `json:"mandatory,omitempty"`
+
+	// Matrix New value per cell, keyed first by the column value ID and then by the row value ID, both taken from the
+	// attribute definition's restriction. This is the complete set to keep - cells left out are cleared.
+	Matrix *map[string]map[string]string `json:"matrix,omitempty"`
 }
 
 // UpdateCategoryRequest defines model for UpdateCategoryRequest.
 type UpdateCategoryRequest struct {
 	Description *string `json:"description,omitempty"`
-	Name        string  `json:"name"`
+	Name        *string `json:"name,omitempty"`
 	Number      *string `json:"number,omitempty"`
 }
 
-// UpdateProductStateRequest defines model for UpdateProductStateRequest.
-type UpdateProductStateRequest struct {
-	Action *UpdateProductStateRequestAction `json:"action,omitempty"`
-	Ids    *[]string                        `json:"ids,omitempty"`
+// UpdateContextAwareFlagRequest Request object for updating the context-aware flag of an attribute definition.
+type UpdateContextAwareFlagRequest struct {
+	ContextAware bool `json:"contextAware"`
 }
 
-// UpdateProductStateRequestAction defines model for UpdateProductStateRequest.Action.
-type UpdateProductStateRequestAction string
+// UpdateDictionaryCategoryAttributeValuesRequest defines model for UpdateDictionaryCategoryAttributeValuesRequest.
+type UpdateDictionaryCategoryAttributeValuesRequest struct {
+	DictionaryIds []string `json:"dictionaryIds"`
+}
 
-// UpdateProductStateResponse defines model for UpdateProductStateResponse.
-type UpdateProductStateResponse struct {
-	Data *map[string]int64 `json:"data,omitempty"`
+// UpdateSelectCategoryAttributeValuesRequest defines model for UpdateSelectCategoryAttributeValuesRequest.
+type UpdateSelectCategoryAttributeValuesRequest struct {
+	SelectIds []string `json:"selectIds"`
+}
+
+// UpdateSelectValueRequest defines model for UpdateSelectValueRequest.
+type UpdateSelectValueRequest struct {
+	Metadata *PropertyUpdateString `json:"metadata,omitempty"`
+	Number   *PropertyUpdateString `json:"number,omitempty"`
+	Value    *PropertyUpdateString `json:"value,omitempty"`
+}
+
+// UpdateSimpleCategoryAttributeValueRequest defines model for UpdateSimpleCategoryAttributeValueRequest.
+type UpdateSimpleCategoryAttributeValueRequest struct {
+	Value string `json:"value"`
 }
 
 // ValidableAttribute defines model for ValidableAttribute.
@@ -1992,132 +3413,296 @@ type ValueValidationResponse struct {
 // ValueValidationResponseStatus defines model for ValueValidationResponse.Status.
 type ValueValidationResponseStatus string
 
-// VariantsFilteringViewsDto <p>Views mapping</p><table><tr><th>View type</th><th>View dto</th></tr><tr><td>ASSETS</td><td>AssetsFilteringViewsDto</td></tr><tr><td>ATTRIBUTES</td><td>AttributesFilteringViewsDto</td></tr><tr><td>METADATA</td><td>MetadataFilteringViewsDto</td></tr><tr><td>CATEGORIES</td><td>CategoriesFilteringViewsDto</td></tr><tr><td>BUNDLES</td><td>BundlesFilteringViewsDto</td></tr><tr><td>LABELS</td><td>LabelsFilteringViewsDto</td></tr><tr><td>VARIANTS</td><td>VariantsFilteringViewsDto</td></tr><tr><td>RELATED_PRODUCTS</td><td>RelatedProductsFilteringViewsDto</td></tr><tr><td>RELATED_CATEGORIES</td><td>RelatedCategoriesFilteringViewsDto</td></tr></table>
+// VariantsFilteringViewsDto Type of entity view, such as ASSETS, ATTRIBUTES, METADATA, CATEGORIES, BUNDLES, LABELS, VARIANTS, RELATED_PRODUCTS,
+// or RELATED_CATEGORIES.
+//
+// <table>
+//
+//	<tr>
+//	  <th>View type</th>
+//	  <th>View dto</th>
+//	</tr>
+//	<tr>
+//	  <td>ASSETS</td>
+//	  <td>AssetsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>ATTRIBUTES</td>
+//	  <td>AttributesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>METADATA</td>
+//	  <td>MetadataFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>CATEGORIES</td>
+//	  <td>CategoriesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>BUNDLES</td>
+//	  <td>BundlesFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>LABELS</td>
+//	  <td>LabelsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>VARIANTS</td>
+//	  <td>VariantsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>GROUPS</td>
+//	  <td>GroupsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>RELATED_PRODUCTS</td>
+//	  <td>RelatedProductsFilteringViewsDto</td>
+//	</tr>
+//	<tr>
+//	  <td>RELATED_CATEGORIES</td>
+//	  <td>RelatedCategoriesFilteringViewsDto</td>
+//	</tr>
+//
+// </table>
 type VariantsFilteringViewsDto = FilteringViewsDto
 
 // FindAttributeGroupsParams defines parameters for FindAttributeGroups.
 type FindAttributeGroupsParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // CreateAttributeGroupParams defines parameters for CreateAttributeGroup.
 type CreateAttributeGroupParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // FindDefinitionsWithoutGroupParams defines parameters for FindDefinitionsWithoutGroup.
 type FindDefinitionsWithoutGroupParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // SetOtherDefinitionsOrderStrategyParams defines parameters for SetOtherDefinitionsOrderStrategy.
 type SetOtherDefinitionsOrderStrategyParams struct {
+	// OrderByName This parameter specifies whether the attribute definitions should be ordered by name.
+	//
+	// **Example:** `true`
 	OrderByName bool `form:"orderByName" json:"orderByName"`
 }
 
 // MoveAttributeDefinitionInGroupParams defines parameters for MoveAttributeDefinitionInGroup.
 type MoveAttributeDefinitionInGroupParams struct {
+	// TargetPosition The position to which you want to move the attribute definition.
+	//
+	// **Example:** `2`
 	TargetPosition int32 `form:"targetPosition" json:"targetPosition"`
 }
 
 // GetAttributeRootGroupParams defines parameters for GetAttributeRootGroup.
 type GetAttributeRootGroupParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // MoveGroupParams defines parameters for MoveGroup.
 type MoveGroupParams struct {
+	// TargetPosition The target position to move the attribute group to.
+	//
+	// **Example:** `3`
 	TargetPosition int32 `form:"targetPosition" json:"targetPosition"`
 }
 
 // FindDefinitionsInGroupParams defines parameters for FindDefinitionsInGroup.
 type FindDefinitionsInGroupParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // SetDefinitionsOrderStrategyInGroupParams defines parameters for SetDefinitionsOrderStrategyInGroup.
 type SetDefinitionsOrderStrategyInGroupParams struct {
+	// OrderByName Determines if the order should be by name.
+	//
+	// **Example:** `true`
 	OrderByName bool `form:"orderByName" json:"orderByName"`
 }
 
 // MoveAttributeDefinitionParams defines parameters for MoveAttributeDefinition.
 type MoveAttributeDefinitionParams struct {
+	// TargetPosition The target position to move the attribute definition to.
+	//
+	// **Example:** `3`
 	TargetPosition int32 `form:"targetPosition" json:"targetPosition"`
 }
 
 // RenameParams defines parameters for Rename.
 type RenameParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // ListCatalogsParams defines parameters for ListCatalogs.
 type ListCatalogsParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 
-	// ArchiveState Archive state.
-	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
+	ArchiveState       *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
+	ExcludeToBeRemoved *bool   `form:"excludeToBeRemoved,omitempty" json:"excludeToBeRemoved,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // CreateCategoryParams defines parameters for CreateCategory.
 type CreateCategoryParams struct {
-	Validation CreateCategoryParamsValidation `form:"validation" json:"validation"`
+	// Validation When set to `NAME`, the request fails if another node with the same name already exists.
+	// Omit it to allow duplicate names. The `number` must always be unique regardless of this setting.
+	Validation *CreateCategoryParamsValidation `form:"validation,omitempty" json:"validation,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
@@ -2126,195 +3711,504 @@ type CreateCategoryParamsValidation string
 
 // GetCategoriesByAssetIdParams defines parameters for GetCategoriesByAssetId.
 type GetCategoriesByAssetIdParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
-	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
+	PageSize           *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
+	ExcludeToBeRemoved *bool  `form:"excludeToBeRemoved,omitempty" json:"excludeToBeRemoved,omitempty"`
 }
 
 // FindByCategoryLevelAttributesParams defines parameters for FindByCategoryLevelAttributes.
 type FindByCategoryLevelAttributesParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 
-	// ArchiveState Archive state.
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
 	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // ListParams defines parameters for List.
 type ListParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 
-	// ArchiveState Archive state.
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
 	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
-	Value        *string `form:"value,omitempty" json:"value,omitempty"`
 
-	// Context Context of presented entity.
+	// Value Returns only attributes whose value contains this text, matched case-insensitively in the current
+	// context. Only simple attribute values are matched - column, matrix and dictionary values are ignored by this
+	// filter.
+	Value *string `form:"value,omitempty" json:"value,omitempty"`
+
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // GetFilteredNodesParams defines parameters for GetFilteredNodes.
 type GetFilteredNodesParams struct {
-	// Context Context of presented entity.
+	ExcludeToBeRemoved *bool `form:"excludeToBeRemoved,omitempty" json:"excludeToBeRemoved,omitempty"`
+
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // GetNodeParams defines parameters for GetNode.
 type GetNodeParams struct {
-	// ArchiveState Archive state.
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
 	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
+}
+
+// PartialUpdateCatalogNodeParams defines parameters for PartialUpdateCatalogNode.
+type PartialUpdateCatalogNodeParams struct {
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
+	Context *string `json:"context,omitempty"`
 }
 
 // UpdateCatalogNodeParams defines parameters for UpdateCatalogNode.
 type UpdateCatalogNodeParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 }
 
 // MoveCategoryAssetParams defines parameters for MoveCategoryAsset.
 type MoveCategoryAssetParams struct {
+	// TargetPosition The target position within the category where the asset will be moved. This determines the
+	// new order of the asset within the category.
 	TargetPosition int32 `form:"targetPosition" json:"targetPosition"`
 }
 
 // ListAttributesAttachedToGivenNodeParams defines parameters for ListAttributesAttachedToGivenNode.
 type ListAttributesAttachedToGivenNodeParams struct {
-	// ArchiveState Archive state.
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
 	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // UpdateNodeAttributeValueParams defines parameters for UpdateNodeAttributeValue.
 type UpdateNodeAttributeValueParams struct {
+	// ForceCla Controls what the propagation task does with the products it reaches that already have a value
+	// for this attribute:
+	//
+	// `false` = Keep the existing product values and fill in only the empty ones. This is the default when the
+	// parameter is omitted.
+	//
+	// `true` = Overwrite the existing product values with the value of this Category Level Attribute (CLA).
+	//
+	// **Warning:** `true` replaces values on every product the propagation reaches - the products in this category,
+	// and the products in all of its sub-categories as well once propagation is on for this attribute - including
+	// values entered on individual products by hand, however many products that is. The propagation runs in the
+	// background and cannot be undone: setting the flag back to `false` only changes later propagations, and
+	// restoring the replaced values means setting them again product by product. Send `true` only when replacing the
+	// existing product values is what was explicitly asked for.
 	ForceCla *bool `form:"forceCla,omitempty" json:"forceCla,omitempty"`
+
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
+	Context *string `json:"context,omitempty"`
 }
 
 // CreateCatalogNodeAttributeParams defines parameters for CreateCatalogNodeAttribute.
 type CreateCatalogNodeAttributeParams struct {
+	// ForceCla Controls what the propagation task does with the products it reaches that already have a value
+	// for this attribute:
+	//
+	// `false` = Keep the existing product values and fill in only the empty ones. This is the default when the
+	// parameter is omitted.
+	//
+	// `true` = Overwrite the existing product values with the value of this Category Level Attribute (CLA).
+	//
+	// **Warning:** `true` replaces values on every product the propagation reaches - the products in this category,
+	// and the products in all of its sub-categories as well once propagation is on for this attribute - including
+	// values entered on individual products by hand, however many products that is. The propagation runs in the
+	// background and cannot be undone: setting the flag back to `false` only changes later propagations, and
+	// restoring the replaced values means setting them again product by product. Send `true` only when replacing the
+	// existing product values is what was explicitly asked for.
 	ForceCla *bool `form:"forceCla,omitempty" json:"forceCla,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
-
-	// ContextFallback Use fallback for context
-	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // CreateCatalogNodeAttributeColumnParams defines parameters for CreateCatalogNodeAttributeColumn.
 type CreateCatalogNodeAttributeColumnParams struct {
+	// ForceCla Controls what the propagation task does with the products it reaches that already have a value
+	// for this attribute:
+	//
+	// `false` = Keep the existing product values and fill in only the empty ones. This is the default when the
+	// parameter is omitted.
+	//
+	// `true` = Overwrite the existing product values with the value of this Category Level Attribute (CLA).
+	//
+	// **Warning:** `true` replaces values on every product the propagation reaches - the products in this category,
+	// and the products in all of its sub-categories as well once propagation is on for this attribute - including
+	// values entered on individual products by hand, however many products that is. The propagation runs in the
+	// background and cannot be undone: setting the flag back to `false` only changes later propagations, and
+	// restoring the replaced values means setting them again product by product. Send `true` only when replacing the
+	// existing product values is what was explicitly asked for.
 	ForceCla *bool `form:"forceCla,omitempty" json:"forceCla,omitempty"`
+
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
+	Context *string `json:"context,omitempty"`
 }
 
 // UpdateNodeAttributeColumnValueParams defines parameters for UpdateNodeAttributeColumnValue.
 type UpdateNodeAttributeColumnValueParams struct {
+	// ForceCla Controls what the propagation task does with the products it reaches that already have a value
+	// for this attribute:
+	//
+	// `false` = Keep the existing product values and fill in only the empty ones. This is the default when the
+	// parameter is omitted.
+	//
+	// `true` = Overwrite the existing product values with the value of this Category Level Attribute (CLA).
+	//
+	// **Warning:** `true` replaces values on every product the propagation reaches - the products in this category,
+	// and the products in all of its sub-categories as well once propagation is on for this attribute - including
+	// values entered on individual products by hand, however many products that is. The propagation runs in the
+	// background and cannot be undone: setting the flag back to `false` only changes later propagations, and
+	// restoring the replaced values means setting them again product by product. Send `true` only when replacing the
+	// existing product values is what was explicitly asked for.
 	ForceCla *bool `form:"forceCla,omitempty" json:"forceCla,omitempty"`
-}
 
-// CreateCatalogNodeAttributeCompoundParams defines parameters for CreateCatalogNodeAttributeCompound.
-type CreateCatalogNodeAttributeCompoundParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
-
-	// ContextFallback Use fallback for context
-	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // CreateCatalogNodeAttributeDictionaryParams defines parameters for CreateCatalogNodeAttributeDictionary.
 type CreateCatalogNodeAttributeDictionaryParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
-
-	// ContextFallback Use fallback for context
-	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // SetDictionaryAttributeValuesForCategoryParams defines parameters for SetDictionaryAttributeValuesForCategory.
 type SetDictionaryAttributeValuesForCategoryParams struct {
+	// ForceCla Controls what the propagation task does with the products it reaches that already have a value
+	// for this attribute:
+	//
+	// `false` = Keep the existing product values and fill in only the empty ones. This is the default when the
+	// parameter is omitted.
+	//
+	// `true` = Overwrite the existing product values with the value of this Category Level Attribute (CLA).
+	//
+	// **Warning:** `true` replaces values on every product the propagation reaches - the products in this category,
+	// and the products in all of its sub-categories as well once propagation is on for this attribute - including
+	// values entered on individual products by hand, however many products that is. The propagation runs in the
+	// background and cannot be undone: setting the flag back to `false` only changes later propagations, and
+	// restoring the replaced values means setting them again product by product. Send `true` only when replacing the
+	// existing product values is what was explicitly asked for.
 	ForceCla *bool `form:"forceCla,omitempty" json:"forceCla,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
-
-	// ContextFallback Use fallback for context
-	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // CreateCatalogNodeAttributeMatrixParams defines parameters for CreateCatalogNodeAttributeMatrix.
 type CreateCatalogNodeAttributeMatrixParams struct {
+	// ForceCla Controls what the propagation task does with the products it reaches that already have a value
+	// for this attribute:
+	//
+	// `false` = Keep the existing product values and fill in only the empty ones. This is the default when the
+	// parameter is omitted.
+	//
+	// `true` = Overwrite the existing product values with the value of this Category Level Attribute (CLA).
+	//
+	// **Warning:** `true` replaces values on every product the propagation reaches - the products in this category,
+	// and the products in all of its sub-categories as well once propagation is on for this attribute - including
+	// values entered on individual products by hand, however many products that is. The propagation runs in the
+	// background and cannot be undone: setting the flag back to `false` only changes later propagations, and
+	// restoring the replaced values means setting them again product by product. Send `true` only when replacing the
+	// existing product values is what was explicitly asked for.
 	ForceCla *bool `form:"forceCla,omitempty" json:"forceCla,omitempty"`
+
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
+	Context *string `json:"context,omitempty"`
 }
 
 // UpdateNodeAttributeMatrixValueParams defines parameters for UpdateNodeAttributeMatrixValue.
 type UpdateNodeAttributeMatrixValueParams struct {
+	// ForceCla Controls what the propagation task does with the products it reaches that already have a value
+	// for this attribute:
+	//
+	// `false` = Keep the existing product values and fill in only the empty ones. This is the default when the
+	// parameter is omitted.
+	//
+	// `true` = Overwrite the existing product values with the value of this Category Level Attribute (CLA).
+	//
+	// **Warning:** `true` replaces values on every product the propagation reaches - the products in this category,
+	// and the products in all of its sub-categories as well once propagation is on for this attribute - including
+	// values entered on individual products by hand, however many products that is. The propagation runs in the
+	// background and cannot be undone: setting the flag back to `false` only changes later propagations, and
+	// restoring the replaced values means setting them again product by product. Send `true` only when replacing the
+	// existing product values is what was explicitly asked for.
 	ForceCla *bool `form:"forceCla,omitempty" json:"forceCla,omitempty"`
+
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
+	Context *string `json:"context,omitempty"`
+}
+
+// GetAttributesAssociatedToCategoryParams defines parameters for GetAttributesAssociatedToCategory.
+type GetAttributesAssociatedToCategoryParams struct {
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
+	Context *string `json:"context,omitempty"`
+
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
+	ContextFallback *bool `json:"context-fallback,omitempty"`
+}
+
+// SetDictionaryDefinitionValueParams defines parameters for SetDictionaryDefinitionValue.
+type SetDictionaryDefinitionValueParams struct {
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
+	Context *string `json:"context,omitempty"`
+}
+
+// SetSelectDefinitionValueParams defines parameters for SetSelectDefinitionValue.
+type SetSelectDefinitionValueParams struct {
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
+	Context *string `json:"context,omitempty"`
+}
+
+// SetSimpleDefinitionValueParams defines parameters for SetSimpleDefinitionValue.
+type SetSimpleDefinitionValueParams struct {
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
+	Context *string `json:"context,omitempty"`
 }
 
 // GetCatalogNodeChildrenParams defines parameters for GetCatalogNodeChildren.
 type GetCatalogNodeChildrenParams struct {
-	// ArchiveState Archive state.
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
 	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // UpdateCatalogNodeOrderParams defines parameters for UpdateCatalogNodeOrder.
 type UpdateCatalogNodeOrderParams struct {
+	// TargetPosition The target position to move the catalog node/category to. Minimum value is `0`.
 	TargetPosition int32 `form:"targetPosition" json:"targetPosition"`
 }
 
 // GetPathToNodeParams defines parameters for GetPathToNode.
 type GetPathToNodeParams struct {
-	// ArchiveState Archive state.
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
 	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 }
 
 // GetByCategoryNodeIdParams defines parameters for GetByCategoryNodeId.
 type GetByCategoryNodeIdParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
+
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
+	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 }
 
 // DeletePolicyByCategoryNodeAndPolicyIdParamsPolicyType defines parameters for DeletePolicyByCategoryNodeAndPolicyId.
@@ -2322,29 +4216,50 @@ type DeletePolicyByCategoryNodeAndPolicyIdParamsPolicyType string
 
 // GetCategoryProductsParams defines parameters for GetCategoryProducts.
 type GetCategoryProductsParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 
-	// ArchiveState Archive state.
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
 	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // GetPolicyByCategoryNodeIdParams defines parameters for GetPolicyByCategoryNodeId.
 type GetPolicyByCategoryNodeIdParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
+
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
+	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 }
 
 // DeletePolicyFromProductsForCategoryNodeIdParamsPolicyType defines parameters for DeletePolicyFromProductsForCategoryNodeId.
@@ -2352,23 +4267,63 @@ type DeletePolicyFromProductsForCategoryNodeIdParamsPolicyType string
 
 // GetCategoryTreeParams defines parameters for GetCategoryTree.
 type GetCategoryTreeParams struct {
-	// ArchiveState Archive state.
-	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
+	ArchiveState       *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
+	ExcludeToBeRemoved *bool   `form:"excludeToBeRemoved,omitempty" json:"excludeToBeRemoved,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
+	ContextFallback *bool `json:"context-fallback,omitempty"`
+}
+
+// GetCategoryViewParams defines parameters for GetCategoryView.
+type GetCategoryViewParams struct {
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
+	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
+
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
+	Context *string `json:"context,omitempty"`
+
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // GetPoliciesByCategoryIdParams defines parameters for GetPoliciesByCategoryId.
 type GetPoliciesByCategoryIdParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
+
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
+	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 }
 
 // DeletePolicyByCategoryAndPolicyIdParamsPolicyType defines parameters for DeletePolicyByCategoryAndPolicyId.
@@ -2376,11 +4331,18 @@ type DeletePolicyByCategoryAndPolicyIdParamsPolicyType string
 
 // GetPolicyByCategoryIdParams defines parameters for GetPolicyByCategoryId.
 type GetPolicyByCategoryIdParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
+
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
+	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 }
 
 // DeletePolicyFromProductsForCategoryIdParamsPolicyType defines parameters for DeletePolicyFromProductsForCategoryId.
@@ -2388,27 +4350,59 @@ type DeletePolicyFromProductsForCategoryIdParamsPolicyType string
 
 // FindAllCompoundDefinitionsParams defines parameters for FindAllCompoundDefinitions.
 type FindAllCompoundDefinitionsParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // CreateCompoundDefinitionParams defines parameters for CreateCompoundDefinition.
 type CreateCompoundDefinitionParams struct {
-	Validation CreateCompoundDefinitionParamsValidation `form:"validation" json:"validation"`
+	// Validation Validation strategy for the creation operation. Can be either `NAME` or `NONE` and defaults to
+	// `NAME`.
+	//
+	// `NAME` means that a validation check will be performed to make sure that no other attribute definition exist
+	// with the same name.
+	//
+	// `NONE` can be used to create an attribute definition with the same name as another existing attribute
+	// definition. Note: The `number` must always be unique.
+	Validation *CreateCompoundDefinitionParamsValidation `form:"validation,omitempty" json:"validation,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
@@ -2417,36 +4411,78 @@ type CreateCompoundDefinitionParamsValidation string
 
 // FindBySubDefinitionsParams defines parameters for FindBySubDefinitions.
 type FindBySubDefinitionsParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // GetCompoundDefinitionParams defines parameters for GetCompoundDefinition.
 type GetCompoundDefinitionParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // UpdateCompoundDefinitionParams defines parameters for UpdateCompoundDefinition.
 type UpdateCompoundDefinitionParams struct {
-	Validation UpdateCompoundDefinitionParamsValidation `form:"validation" json:"validation"`
+	// Validation Validation strategy for the creation operation. Can be either `NAME` or `NONE` and defaults to
+	// `NAME`.
+	//
+	// `NAME` means that a validation check will be performed to make sure that no other attribute definition exist
+	// with the same name.
+	//
+	// `NONE` can be used to create an attribute definition with the same name as another existing attribute
+	// definition. Note: The `number` must always be unique.
+	Validation *UpdateCompoundDefinitionParamsValidation `form:"validation,omitempty" json:"validation,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
@@ -2455,27 +4491,54 @@ type UpdateCompoundDefinitionParamsValidation string
 
 // FindAllAttributeDefinitionsParams defines parameters for FindAllAttributeDefinitions.
 type FindAllAttributeDefinitionsParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
-	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
+	PageSize           *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
+	ExcludeToBeRemoved *bool  `form:"excludeToBeRemoved,omitempty" json:"excludeToBeRemoved,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // CreateAttributeDefinitionParams defines parameters for CreateAttributeDefinition.
 type CreateAttributeDefinitionParams struct {
+	// Validation `NAME` (the default) rejects the request if another attribute definition already has the same
+	// name; `NONE` allows a duplicate name. The `number` must always be unique regardless of this setting.
 	Validation *CreateAttributeDefinitionParamsValidation `form:"validation,omitempty" json:"validation,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
@@ -2484,7 +4547,15 @@ type CreateAttributeDefinitionParamsValidation string
 
 // CreateColumnDefinitionParams defines parameters for CreateColumnDefinition.
 type CreateColumnDefinitionParams struct {
-	Validation CreateColumnDefinitionParamsValidation `form:"validation" json:"validation"`
+	// Validation Validation strategy for the creation operation. Can be either `NAME` or `NONE` and defaults to
+	// `NAME`.
+	//
+	// `NAME` means that a validation check will be performed to make sure that no other attribute definition exist
+	// with the same name.
+	//
+	// `NONE` can be used to create an attribute definition with the same name as an other existing attribute
+	// definition. Note: The `number` must always be unique.
+	Validation *CreateColumnDefinitionParamsValidation `form:"validation,omitempty" json:"validation,omitempty"`
 }
 
 // CreateColumnDefinitionParamsValidation defines parameters for CreateColumnDefinition.
@@ -2492,7 +4563,15 @@ type CreateColumnDefinitionParamsValidation string
 
 // UpdateColumnDefinitionParams defines parameters for UpdateColumnDefinition.
 type UpdateColumnDefinitionParams struct {
-	Validation UpdateColumnDefinitionParamsValidation `form:"validation" json:"validation"`
+	// Validation Validation strategy for the creation operation. Can be either `NAME` or `NONE` and defaults to
+	// `NAME`.
+	//
+	// `NAME` means that a validation check will be performed to make sure that no other attribute definition exist
+	// with the same name.
+	//
+	// `NONE` can be used to create an attribute definition with the same name as an other existing attribute
+	// definition. Note: The `number` must always be unique.
+	Validation *UpdateColumnDefinitionParamsValidation `form:"validation,omitempty" json:"validation,omitempty"`
 }
 
 // UpdateColumnDefinitionParamsValidation defines parameters for UpdateColumnDefinition.
@@ -2500,7 +4579,15 @@ type UpdateColumnDefinitionParamsValidation string
 
 // UpdateColumnDefinitionDryRunParams defines parameters for UpdateColumnDefinitionDryRun.
 type UpdateColumnDefinitionDryRunParams struct {
-	Validation UpdateColumnDefinitionDryRunParamsValidation `form:"validation" json:"validation"`
+	// Validation Validation strategy for the creation operation. Can be either `NAME` or `NONE` and defaults to
+	// `NAME`.
+	//
+	// `NAME` means that a validation check will be performed to make sure that no other attribute definition exist
+	// with the same name.
+	//
+	// `NONE` can be used to create an attribute definition with the same name as an other existing attribute
+	// definition. Note: The `number` must always be unique.
+	Validation *UpdateColumnDefinitionDryRunParamsValidation `form:"validation,omitempty" json:"validation,omitempty"`
 }
 
 // UpdateColumnDefinitionDryRunParamsValidation defines parameters for UpdateColumnDefinitionDryRun.
@@ -2508,9 +4595,23 @@ type UpdateColumnDefinitionDryRunParamsValidation string
 
 // CreateDictionaryDefinitionParams defines parameters for CreateDictionaryDefinition.
 type CreateDictionaryDefinitionParams struct {
-	Validation CreateDictionaryDefinitionParamsValidation `form:"validation" json:"validation"`
+	// Validation Validation strategy for the creation operation. Can be either `NAME` or `NONE` and defaults to
+	// `NAME`.
+	//
+	// `NAME` means that a validation check will be performed to make sure that no other attribute definition exist
+	// with the same name.
+	//
+	// `NONE` can be used to create an attribute definition with the same name as an other existing attribute
+	// definition. Note: The `number` must always be unique.
+	Validation *CreateDictionaryDefinitionParamsValidation `form:"validation,omitempty" json:"validation,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 }
 
@@ -2519,9 +4620,23 @@ type CreateDictionaryDefinitionParamsValidation string
 
 // UpdateDictionaryDefinitionParams defines parameters for UpdateDictionaryDefinition.
 type UpdateDictionaryDefinitionParams struct {
-	Validation UpdateDictionaryDefinitionParamsValidation `form:"validation" json:"validation"`
+	// Validation Validation strategy for the creation operation. Can be either `NAME` or `NONE` and defaults to
+	// `NAME`.
+	//
+	// `NAME` means that a validation check will be performed to make sure that no other attribute definition exist
+	// with the same name.
+	//
+	// `NONE` can be used to create an attribute definition with the same name as an other existing attribute
+	// definition. Note: The `number` must always be unique.
+	Validation *UpdateDictionaryDefinitionParamsValidation `form:"validation,omitempty" json:"validation,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 }
 
@@ -2530,61 +4645,135 @@ type UpdateDictionaryDefinitionParamsValidation string
 
 // CreateDictionaryAttributeParams defines parameters for CreateDictionaryAttribute.
 type CreateDictionaryAttributeParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 }
 
 // CountDictionaryAttributesParams defines parameters for CountDictionaryAttributes.
 type CountDictionaryAttributesParams struct {
-	// Context Context of presented entity.
+	ExcludeToBeRemoved *bool `form:"excludeToBeRemoved,omitempty" json:"excludeToBeRemoved,omitempty"`
+
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 }
 
 // FindFilteredDictionaryAttributesParams defines parameters for FindFilteredDictionaryAttributes.
 type FindFilteredDictionaryAttributesParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // FindFilteredDictionaryDefinitionsParams defines parameters for FindFilteredDictionaryDefinitions.
 type FindFilteredDictionaryDefinitionsParams struct {
-	// Context Context of presented entity.
+	ExcludeToBeRemoved *bool `form:"excludeToBeRemoved,omitempty" json:"excludeToBeRemoved,omitempty"`
+
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // GetDictionaryAttributeParams defines parameters for GetDictionaryAttribute.
 type GetDictionaryAttributeParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // UpdateDictionaryAttributeParams defines parameters for UpdateDictionaryAttribute.
 type UpdateDictionaryAttributeParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 }
 
 // FindFilteredAttributeDefinitionsParams defines parameters for FindFilteredAttributeDefinitions.
 type FindFilteredAttributeDefinitionsParams struct {
-	// Context Context of presented entity.
+	// ExcludeToBeRemoved When `true`, definitions that are marked for removal (an async delete is in progress)
+	// are omitted from the result. Defaults to `false`, which keeps them.
+	ExcludeToBeRemoved *bool `form:"excludeToBeRemoved,omitempty" json:"excludeToBeRemoved,omitempty"`
+
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // CreateMatrixDefinitionParams defines parameters for CreateMatrixDefinition.
 type CreateMatrixDefinitionParams struct {
-	Validation CreateMatrixDefinitionParamsValidation `form:"validation" json:"validation"`
+	// Validation Validation strategy for the create operation. Can be either `NAME` or `NONE` and defaults to
+	// `NAME`.
+	//
+	// `NAME` means that a validation check will be performed to make sure that no other attribute definition exist
+	// with the same name.
+	//
+	// `NONE` can be used to create an attribute definition with the same name as an other existing attribute
+	// definition. Note: The `number` must always be unique.
+	Validation *CreateMatrixDefinitionParamsValidation `form:"validation,omitempty" json:"validation,omitempty"`
 }
 
 // CreateMatrixDefinitionParamsValidation defines parameters for CreateMatrixDefinition.
@@ -2592,7 +4781,15 @@ type CreateMatrixDefinitionParamsValidation string
 
 // UpdateMatrixDefinitionParams defines parameters for UpdateMatrixDefinition.
 type UpdateMatrixDefinitionParams struct {
-	Validation UpdateMatrixDefinitionParamsValidation `form:"validation" json:"validation"`
+	// Validation Validation strategy for the create operation. Can be either `NAME` or `NONE` and defaults to
+	// `NAME`.
+	//
+	// `NAME` means that a validation check will be performed to make sure that no other attribute definition exist
+	// with the same name.
+	//
+	// `NONE` can be used to create an attribute definition with the same name as an other existing attribute
+	// definition. Note: The `number` must always be unique.
+	Validation *UpdateMatrixDefinitionParamsValidation `form:"validation,omitempty" json:"validation,omitempty"`
 }
 
 // UpdateMatrixDefinitionParamsValidation defines parameters for UpdateMatrixDefinition.
@@ -2600,44 +4797,125 @@ type UpdateMatrixDefinitionParamsValidation string
 
 // UpdateMatrixDefinitionDryRunParams defines parameters for UpdateMatrixDefinitionDryRun.
 type UpdateMatrixDefinitionDryRunParams struct {
-	Validation UpdateMatrixDefinitionDryRunParamsValidation `form:"validation" json:"validation"`
+	// Validation Validation strategy for the dryrun update operation. Can be either `NAME` or `NONE` and
+	// defaults to `NAME`.
+	//
+	// `NAME` means that a validation check will be performed to make sure that no other attribute definition exist
+	// with the same name.
+	//
+	// `NONE` can be used to create an attribute definition with the same name as an other existing attribute
+	// definition. Note: The `number` must always be unique.
+	Validation *UpdateMatrixDefinitionDryRunParamsValidation `form:"validation,omitempty" json:"validation,omitempty"`
 }
 
 // UpdateMatrixDefinitionDryRunParamsValidation defines parameters for UpdateMatrixDefinitionDryRun.
 type UpdateMatrixDefinitionDryRunParamsValidation string
 
+// CreateSelectValueParams defines parameters for CreateSelectValue.
+type CreateSelectValueParams struct {
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
+	Context *string `json:"context,omitempty"`
+}
+
+// UpdateSelectValueParams defines parameters for UpdateSelectValue.
+type UpdateSelectValueParams struct {
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
+	Context *string `json:"context,omitempty"`
+}
+
+// ReorderSelectValueParams defines parameters for ReorderSelectValue.
+type ReorderSelectValueParams struct {
+	// TargetPosition Zero-based target position for the value. Must be within bounds [0,total_values_count-1].
+	TargetPosition int32 `form:"targetPosition" json:"targetPosition"`
+}
+
 // FindSimpleParams defines parameters for FindSimple.
 type FindSimpleParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
-	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
+	PageSize           *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
+	ExcludeToBeRemoved *bool  `form:"excludeToBeRemoved,omitempty" json:"excludeToBeRemoved,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // GetAttributeDefinitionParams defines parameters for GetAttributeDefinition.
 type GetAttributeDefinitionParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // UpdateMetadataParams defines parameters for UpdateMetadata.
 type UpdateMetadataParams struct {
+	// Validation Validation strategy for the update operation. Can be either `NAME` or `NONE` and defaults to
+	// `NAME`.
+	//
+	// `NAME` means that a validation check will be performed to make sure that no other attribute definition exist
+	// with the same name.
+	//
+	// `NONE` can be used to create an attribute definition with the same name as an other existing attribute
+	// definition. Note: The `number` must always be unique.
 	Validation *UpdateMetadataParamsValidation `form:"validation,omitempty" json:"validation,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
@@ -2646,12 +4924,30 @@ type UpdateMetadataParamsValidation string
 
 // UpdateAttributeDefinitionParams defines parameters for UpdateAttributeDefinition.
 type UpdateAttributeDefinitionParams struct {
+	// Validation Validation strategy for the update operation. Can be either `NAME` or `NONE` and defaults to
+	// `NAME`.
+	//
+	// `NAME` means that a validation check will be performed to make sure that no other attribute definition exist
+	// with the same name.
+	//
+	// `NONE` can be used to create an attribute definition with the same name as an other existing attribute
+	// definition. Note: The `number` must always be unique.
 	Validation *UpdateAttributeDefinitionParamsValidation `form:"validation,omitempty" json:"validation,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
@@ -2660,12 +4956,28 @@ type UpdateAttributeDefinitionParamsValidation string
 
 // UpdateAttributeDefinitionDryRunParams defines parameters for UpdateAttributeDefinitionDryRun.
 type UpdateAttributeDefinitionDryRunParams struct {
+	// Validation Validation type for the update operation. Determines the validation rules applied to the
+	// attribute definition update.
+	//
+	// **Options:**
+	// - `NONE`: No validation
+	// - `NAME`: Validate based on the name
 	Validation *UpdateAttributeDefinitionDryRunParamsValidation `form:"validation,omitempty" json:"validation,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
@@ -2674,10 +4986,14 @@ type UpdateAttributeDefinitionDryRunParamsValidation string
 
 // GetByDefinitionIdParams defines parameters for GetByDefinitionId.
 type GetByDefinitionIdParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 }
 
@@ -2686,330 +5002,696 @@ type DeletePolicyForAttributeDefinitionParamsPolicyType string
 
 // FindProductsParams defines parameters for FindProducts.
 type FindProductsParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 
-	// ArchiveState Archive state.
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
 	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // GetCategoriesByPolicyIdParams defines parameters for GetCategoriesByPolicyId.
 type GetCategoriesByPolicyIdParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // GetCategoriesNodeByPolicyIdParams defines parameters for GetCategoriesNodeByPolicyId.
 type GetCategoriesNodeByPolicyIdParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // GetCatalogNodeByPolicyIdParams defines parameters for GetCatalogNodeByPolicyId.
 type GetCatalogNodeByPolicyIdParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // GetCatalogByPolicyIdParams defines parameters for GetCatalogByPolicyId.
 type GetCatalogByPolicyIdParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // GetAttributeDefinitionsByPolicyIdParams defines parameters for GetAttributeDefinitionsByPolicyId.
 type GetAttributeDefinitionsByPolicyIdParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // GetRelationsByPolicyIdParams defines parameters for GetRelationsByPolicyId.
 type GetRelationsByPolicyIdParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
-	ContextFallback *bool `json:"context-fallback,omitempty"`
-}
-
-// GetProductsParams defines parameters for GetProducts.
-type GetProductsParams struct {
-	// Page Number of page. default 0
-	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
-
-	// PageSize Size of page. default 1000
-	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
-
-	// PublishState Publish state
-	PublishState *[]string `form:"publishState,omitempty" json:"publishState,omitempty"`
-
-	// UpdatedAfter Products updated after given date.
-	UpdatedAfter *int64 `form:"updatedAfter,omitempty" json:"updatedAfter,omitempty"`
-
-	// DataSynced Data synced.
-	DataSynced *bool `form:"dataSynced,omitempty" json:"dataSynced,omitempty"`
-
-	// Context Context of presented entity.
-	Context *string `json:"context,omitempty"`
-
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // CreateProductParams defines parameters for CreateProduct.
 type CreateProductParams struct {
+	// Validation Validation is used for specifying whether `NUMBER`, or `NUMBER` and `NAME` must be
+	//         unique. `NUMBER` is the default validation. If `NAME` is specified, both `NUMBER` and `NAME` must be
+	//         unique. If no `number` parameter is supplied in the `body` of the request, the assigned `id` will be
+	//         used as the `number`.
 	Validation *CreateProductParamsValidation `form:"validation,omitempty" json:"validation,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 }
 
 // CreateProductParamsValidation defines parameters for CreateProduct.
 type CreateProductParamsValidation string
 
-// CreateOrUpdateParams defines parameters for CreateOrUpdate.
-type CreateOrUpdateParams struct {
-	// Context Context of presented entity.
-	Context *string `json:"context,omitempty"`
-
-	// ContextFallback Use fallback for context
-	ContextFallback *bool `json:"context-fallback,omitempty"`
-}
-
 // AddAttributesByIdsParams defines parameters for AddAttributesByIds.
 type AddAttributesByIdsParams struct {
+	// FailOnAssignedAttribute Specifies whether the request will fail if the attribute definition is already
+	// assigned to a product. If omitted, the default value `true` will be used.
 	FailOnAssignedAttribute *bool `form:"failOnAssignedAttribute,omitempty" json:"failOnAssignedAttribute,omitempty"`
-	ForceVla                *bool `form:"forceVla,omitempty" json:"forceVla,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // UpsertAttributesByIdsParams defines parameters for UpsertAttributesByIds.
 type UpsertAttributesByIdsParams struct {
+	// ForceVla Specifies whether to force the update of a variant level attribute (VLA) value down from a
+	// `VARIANT GROUP` product to all child `VARIANT` products.
+	//
+	// This flag is only taken into consideration for `VARIANT GROUP` products and only where the attribute is
+	// currently set as a VLA on the `VARIANT GROUP` product.
+	//
+	// If omitted, the default value `false` will be used which means that possible VLA values on a `VARIANT GROUP`
+	// product will not be enforced down to child `VARIANT` products.
+	//
+	// Note that `forceVla` flag is only taken into consideration when the attribute change will be an update operation
+	// but not an add value (insert) operation on a `VARIANT` product.
+	//
+	// This means that a child `VARIANT` product will get the new value if it does not have the attribute assigned or
+	// an attribute value defined even if `forceVla` is `false` while other child `VARIANT` products that already have
+	// an attribute value defined will be left unchanged.
+	//
+	// This is because a `VARIANT` product without the attribute or without an attribute value defined is treated as an
+	// add value (insert) operation while the other `VARIANT` products are treated as update operations.
+	//
+	// For more detailed information on working with VLAs in Bluestone PIM, refer to our help pages [The data model -
+	// Variant Level Attribute (VLA)](https://help.bluestonepim.com/the-data-model#VLA).
 	ForceVla *bool `form:"forceVla,omitempty" json:"forceVla,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // UpdateAttributesByIdsParams defines parameters for UpdateAttributesByIds.
 type UpdateAttributesByIdsParams struct {
+	// ForceVla Specifies whether to force the update of a variant level attribute (VLA) value down from a
+	// `VARIANT GROUP` product to all child `VARIANT` products.
+	//
+	// This flag is only taken into consideration for `VARIANT GROUP` products and only where the attribute is
+	// currently set as a VLA on the `VARIANT GROUP` product.
+	//
+	// If omitted, the default value `false` will be used which means that possible VLA values on a `VARIANT GROUP`
+	// product will not be enforced down to child `VARIANT` products.
+	//
+	// Note that `forceVla` flag is only taken into consideration when the attribute change will be an update operation
+	// but not an add value (insert) operation on a `VARIANT` product.
+	//
+	// This means that a child `VARIANT` product will get the new value if it does not have the attribute assigned or
+	// an attribute value defined even if `forceVla` is `false` while other child `VARIANT` products that already have
+	// an attribute value defined will be left unchanged.
+	//
+	// This is because a `VARIANT` product without the attribute or without an attribute value defined is treated as an
+	// add value (insert) operation while the other `VARIANT` products are treated as update operations.
+	//
+	// For more detailed information on working with VLAs in Bluestone PIM, refer to our help pages [The data model -
+	// Variant Level Attribute (VLA)](https://help.bluestonepim.com/the-data-model#VLA).
 	ForceVla *bool `form:"forceVla,omitempty" json:"forceVla,omitempty"`
 
-	// FailOnMissingAttribute A flag that determine, whether the request will fail if an attribute is missing from the product.
+	// FailOnMissingAttribute A flag that determine, whether the request will fail if the attribute is missing
+	// from any of the products.
+	//
+	// If set to `false` and a product does not have the attribute, then that product will not be updated but all other
+	// products that have the attribute will be updated.
+	//
+	// If omitted, the default value `true` will be used meaning that the request will fail if the attribute is missing
+	// from any of the products.
 	FailOnMissingAttribute *bool `form:"failOnMissingAttribute,omitempty" json:"failOnMissingAttribute,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
+}
+
+// AppendDictionaryValuesParams defines parameters for AppendDictionaryValues.
+type AppendDictionaryValuesParams struct {
+	// ForceVla Specifies whether to force the update of a variant level attribute (VLA) value down from a
+	// `VARIANT GROUP` product to all child `VARIANT` products.
+	ForceVla *bool `form:"forceVla,omitempty" json:"forceVla,omitempty"`
+
+	// FailOnMissingAttribute A flag that determines whether the request will fail if the attribute is missing
+	// from the product. Default is `true`.
+	FailOnMissingAttribute *bool `form:"failOnMissingAttribute,omitempty" json:"failOnMissingAttribute,omitempty"`
+
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
+	Context *string `json:"context,omitempty"`
+}
+
+// DeductDictionaryValuesParams defines parameters for DeductDictionaryValues.
+type DeductDictionaryValuesParams struct {
+	// ForceVla Specifies whether to force the update of a variant level attribute (VLA) value down from a
+	// `VARIANT GROUP` product to all child `VARIANT` products.
+	ForceVla *bool `form:"forceVla,omitempty" json:"forceVla,omitempty"`
+
+	// FailOnMissingAttribute A flag that determines whether the request will fail if the attribute is missing
+	// from the product. Default is `true`.
+	FailOnMissingAttribute *bool `form:"failOnMissingAttribute,omitempty" json:"failOnMissingAttribute,omitempty"`
+
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
+	Context *string `json:"context,omitempty"`
+}
+
+// AppendSelectValuesParams defines parameters for AppendSelectValues.
+type AppendSelectValuesParams struct {
+	// ForceVla Specifies whether to force the update of a variant level attribute (VLA) value down from a
+	// `VARIANT GROUP` product to all child `VARIANT` products.
+	ForceVla *bool `form:"forceVla,omitempty" json:"forceVla,omitempty"`
+
+	// FailOnMissingAttribute A flag that determines whether the request will fail if the attribute is missing
+	// from the product. Default is `true`.
+	FailOnMissingAttribute *bool `form:"failOnMissingAttribute,omitempty" json:"failOnMissingAttribute,omitempty"`
+
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
+	Context *string `json:"context,omitempty"`
+}
+
+// DeductSelectValuesParams defines parameters for DeductSelectValues.
+type DeductSelectValuesParams struct {
+	// ForceVla Specifies whether to force updating the variant-level attribute (VLA) value from a VARIANT GROUP
+	// product to all VARIANT products.
+	ForceVla *bool `form:"forceVla,omitempty" json:"forceVla,omitempty"`
+
+	// FailOnMissingAttribute Flag indicating whether the request should fail if the attribute is missing in the
+	// product. Default is true.
+	FailOnMissingAttribute *bool `form:"failOnMissingAttribute,omitempty" json:"failOnMissingAttribute,omitempty"`
+
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
+	Context *string `json:"context,omitempty"`
 }
 
 // CopyAndUpdateProductParams defines parameters for CopyAndUpdateProduct.
 type CopyAndUpdateProductParams struct {
-	// Context Context of presented entity.
-	Context *string `json:"context,omitempty"`
-}
-
-// CountFilteredProductsParams defines parameters for CountFilteredProducts.
-type CountFilteredProductsParams struct {
-	// ArchiveState Archive state.
-	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
-
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 }
 
 // GetProductsWithCursorAndViewsParams defines parameters for GetProductsWithCursorAndViews.
 type GetProductsWithCursorAndViewsParams struct {
-	// ArchiveState Archive state.
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
 	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
+}
+
+// ListProductsViewsByTypesParams defines parameters for ListProductsViewsByTypes.
+type ListProductsViewsByTypesParams struct {
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
+	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
+
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
+	Context *string `json:"context,omitempty"`
+
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
+	ContextFallback *bool `json:"context-fallback,omitempty"`
+}
+
+// AddProductGroupsParams defines parameters for AddProductGroups.
+type AddProductGroupsParams struct {
+	ForceVla *bool `form:"forceVla,omitempty" json:"forceVla,omitempty"`
+}
+
+// UpdateProductGroupsAttributeVlaSettingsParams defines parameters for UpdateProductGroupsAttributeVlaSettings.
+type UpdateProductGroupsAttributeVlaSettingsParams struct {
+	// ForceVla When propagating this Variant Level Attribute to groups, this flag controls what to do if
+	// a group already has this attribute assigned:
+	//
+	// `false` = Keep existing value, only update empty ones
+	//
+	// `true` = Override existing value
+	//
+	// If omitted, the default value `false` will be used.
+	ForceVla *bool `form:"forceVla,omitempty" json:"forceVla,omitempty"`
 }
 
 // ListProductsViewsByAssetsParams defines parameters for ListProductsViewsByAssets.
 type ListProductsViewsByAssetsParams struct {
-	// ArchiveState Archive state.
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
 	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // ListProductsViewsByIdsParams defines parameters for ListProductsViewsByIds.
 type ListProductsViewsByIdsParams struct {
-	// ArchiveState Archive state.
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
 	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // ListProductsViewsByNumbersParams defines parameters for ListProductsViewsByNumbers.
 type ListProductsViewsByNumbersParams struct {
-	// ArchiveState Archive state.
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
 	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
-}
-
-// ChangeStatusesByIdsParams defines parameters for ChangeStatusesByIds.
-type ChangeStatusesByIdsParams struct {
-	// Context Context of presented entity.
-	Context *string `json:"context,omitempty"`
 }
 
 // FindProductTemplatesParams defines parameters for FindProductTemplates.
 type FindProductTemplatesParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
+}
+
+// AddProductVariantsParams defines parameters for AddProductVariants.
+type AddProductVariantsParams struct {
+	ForceVla *bool `form:"forceVla,omitempty" json:"forceVla,omitempty"`
+}
+
+// UpdateProductVariantsAttributeVlaSettingsParams defines parameters for UpdateProductVariantsAttributeVlaSettings.
+type UpdateProductVariantsAttributeVlaSettingsParams struct {
+	// ForceVla When propagating this Variant Level Attribute to variants, this flag controls what to do
+	// if a variant already has this attribute assigned:
+	//
+	// `false` = Keep existing value, only update empty ones
+	//
+	// `true` = Override existing value
+	//
+	// If omitted, the default value `false` will be used.
+	ForceVla *bool `form:"forceVla,omitempty" json:"forceVla,omitempty"`
 }
 
 // GetProductParams defines parameters for GetProduct.
 type GetProductParams struct {
-	// ArchiveState Archive state.
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
 	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // UpdateProductParams defines parameters for UpdateProduct.
 type UpdateProductParams struct {
-	// Context Context of presented entity.
-	Context *string `json:"context,omitempty"`
-}
-
-// UpdateProductDetailsParams defines parameters for UpdateProductDetails.
-type UpdateProductDetailsParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 }
 
 // GetProductAssetsParams defines parameters for GetProductAssets.
 type GetProductAssetsParams struct {
-	// ArchiveState Archive state.
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
 	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 }
 
 // MoveProductAssetParams defines parameters for MoveProductAsset.
 type MoveProductAssetParams struct {
+	// TargetPosition The target position to which you want to move the asset. This is used to reorder
+	//         the assets associated with the product.
+	//
+	// **Example:** `1`
 	TargetPosition int32 `form:"targetPosition" json:"targetPosition"`
 }
 
 // GetProductAttributesParams defines parameters for GetProductAttributes.
 type GetProductAttributesParams struct {
-	// ArchiveState Archive state.
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
 	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // AddProductAttributeParams defines parameters for AddProductAttribute.
 type AddProductAttributeParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
@@ -3018,128 +5700,306 @@ type UpdateProductAttributesJSONBody = []UpdateAttributeDto
 
 // UpdateProductAttributesParams defines parameters for UpdateProductAttributes.
 type UpdateProductAttributesParams struct {
+	// ForceVla Specifies whether to force the update of a variant level attribute (VLA) value down from a
+	// `VARIANT GROUP` product to all child `VARIANT` products.
+	//
+	// This flag is only taken into consideration for `VARIANT GROUP` products and only where the attribute is
+	// currently set as a VLA on the `VARIANT GROUP` product.
+	//
+	// If omitted, the default value `false` will be used which means that possible VLA values on a `VARIANT GROUP`
+	// product will not be enforced down to child `VARIANT` products.
+	//
+	// Note that `forceVla` flag is only taken into consideration when the attribute change will be an update operation
+	// but not an add value (insert) operation on a `VARIANT` product.
+	//
+	// This means that a child `VARIANT` product will get the new value if it does not have the attribute assigned or
+	// an attribute value defined even if `forceVla` is `false` while other child `VARIANT` products that already have
+	// an attribute value defined will be left unchanged.
+	//
+	// This is because a `VARIANT` product without the attribute or without an attribute value defined is treated as an
+	// add value (insert) operation while the other `VARIANT` products are treated as update operations.
+	//
+	// For more detailed information on working with VLAs in Bluestone PIM, refer to our help pages [The data model -
+	// Variant Level Attribute (VLA)](https://help.bluestonepim.com/the-data-model#VLA).
 	ForceVla *bool `form:"forceVla,omitempty" json:"forceVla,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // AddColumnAttributeParams defines parameters for AddColumnAttribute.
 type AddColumnAttributeParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // UpdateColumnAttributeParams defines parameters for UpdateColumnAttribute.
 type UpdateColumnAttributeParams struct {
+	// ForceVla Specifies whether to force the update of a variant level attribute (VLA) value down from a
+	// `VARIANT GROUP` product to all child `VARIANT` products.
+	//
+	// This flag is only taken into consideration for `VARIANT GROUP` products and only where the attribute is
+	// currently set as a VLA on the `VARIANT GROUP` product.
+	//
+	// If omitted, the default value `false` will be used which means that possible VLA values on a `VARIANT GROUP`
+	// product will not be enforced down to child `VARIANT` products.
+	//
+	// Note that `forceVla` flag is only taken into consideration when the attribute change will be an update operation
+	// but not an add value (insert) operation on a `VARIANT` product.
+	//
+	// This means that a child `VARIANT` product will get the new value if it does not have the attribute assigned or
+	// an attribute value defined even if `forceVla` is `false` while other child `VARIANT` products that already have
+	// an attribute value defined will be left unchanged.
+	//
+	// This is because a `VARIANT` product without the attribute or without an attribute value defined is treated as an
+	// add value (insert) operation while the other `VARIANT` products are treated as update operations.
+	//
+	// For more detailed information on working with VLAs in Bluestone PIM, refer to our help pages [The data model -
+	// Variant Level Attribute (VLA)](https://help.bluestonepim.com/the-data-model#VLA).
 	ForceVla *bool `form:"forceVla,omitempty" json:"forceVla,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // AddDictionaryAttributeParams defines parameters for AddDictionaryAttribute.
 type AddDictionaryAttributeParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // SetDictionaryAttributeValuesForProductParams defines parameters for SetDictionaryAttributeValuesForProduct.
 type SetDictionaryAttributeValuesForProductParams struct {
+	// ForceVla Specifies whether to force the update of a variant level attribute (VLA) value down from a
+	// `VARIANT GROUP` product to all child `VARIANT` products.
+	//
+	// This flag is only taken into consideration for `VARIANT GROUP` products and only where the attribute is
+	// currently set as a VLA on the `VARIANT GROUP` product.
+	//
+	// If omitted, the default value `false` will be used which means that possible VLA values on a `VARIANT GROUP`
+	// product will not be enforced down to child `VARIANT` products.
+	//
+	// Note that `forceVla` flag is only taken into consideration when the attribute change will be an update operation
+	// but not an add value (insert) operation on a `VARIANT` product.
+	//
+	// This means that a child `VARIANT` product will get the new value if it does not have the attribute assigned or
+	// an attribute value defined even if `forceVla` is `false` while other child `VARIANT` products that already have
+	// an attribute value defined will be left unchanged.
+	//
+	// This is because a `VARIANT` product without the attribute or without an attribute value defined is treated as an
+	// add value (insert) operation while the other `VARIANT` products are treated as update operations.
+	//
+	// For more detailed information on working with VLAs in Bluestone PIM, refer to our help pages [The data model -
+	// Variant Level Attribute (VLA)](https://help.bluestonepim.com/the-data-model#VLA).
 	ForceVla *bool `form:"forceVla,omitempty" json:"forceVla,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // AddMatrixAttributeParams defines parameters for AddMatrixAttribute.
 type AddMatrixAttributeParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // UpdateMatrixAttributeParams defines parameters for UpdateMatrixAttribute.
 type UpdateMatrixAttributeParams struct {
+	// ForceVla Specifies whether to force the update of a variant level attribute (VLA) value down from a
+	// `VARIANT GROUP` product to all child `VARIANT` products.
+	//
+	// This flag is only taken into consideration for `VARIANT GROUP` products and only where the attribute is
+	// currently set as a VLA on the `VARIANT GROUP` product.
+	//
+	// If omitted, the default value `false` will be used which means that possible VLA values on a `VARIANT GROUP`
+	// product will not be enforced down to child `VARIANT` products.
+	//
+	// Note that `forceVla` flag is only taken into consideration when the attribute change will be an update operation
+	// but not an add value (insert) operation on a `VARIANT` product.
+	//
+	// This means that a child `VARIANT` product will get the new value if it does not have the attribute assigned or
+	// an attribute value defined even if `forceVla` is `false` while other child `VARIANT` products that already have
+	// an attribute value defined will be left unchanged.
+	//
+	// This is because a `VARIANT` product without the attribute or without an attribute value defined is treated as an
+	// add value (insert) operation while the other `VARIANT` products are treated as update operations.
+	//
+	// For more detailed information on working with VLAs in Bluestone PIM, refer to our help pages [The data model -
+	// Variant Level Attribute (VLA)](https://help.bluestonepim.com/the-data-model#VLA).
 	ForceVla *bool `form:"forceVla,omitempty" json:"forceVla,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // UpdateProductAttributeParams defines parameters for UpdateProductAttribute.
 type UpdateProductAttributeParams struct {
+	// ForceVla Specifies whether to force the update of a variant level attribute (VLA) value down from a
+	// `VARIANT GROUP` product to all child `VARIANT` products.
+	//
+	// This flag is only taken into consideration for `VARIANT GROUP` products and only where the attribute is
+	// currently set as a VLA on the `VARIANT GROUP` product.
+	//
+	// If omitted, the default value `false` will be used which means that possible VLA values on a `VARIANT GROUP`
+	// product will not be enforced down to child `VARIANT` products.
+	//
+	// Note that `forceVla` flag is only taken into consideration when the attribute change will be an update operation
+	// but not an add value (insert) operation on a `VARIANT` product.
+	//
+	// This means that a child `VARIANT` product will get the new value if it does not have the attribute assigned or
+	// an attribute value defined even if `forceVla` is `false` while other child `VARIANT` products that already have
+	// an attribute value defined will be left unchanged.
+	//
+	// This is because a `VARIANT` product without the attribute or without an attribute value defined is treated as an
+	// add value (insert) operation while the other `VARIANT` products are treated as update operations.
+	//
+	// For more detailed information on working with VLAs in Bluestone PIM, refer to our help pages [The data model -
+	// Variant Level Attribute (VLA)](https://help.bluestonepim.com/the-data-model#VLA).
 	ForceVla *bool `form:"forceVla,omitempty" json:"forceVla,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // MoveProductInBundleParams defines parameters for MoveProductInBundle.
 type MoveProductInBundleParams struct {
+	// TargetPosition The zero-based target position for the complementary product within the bundle.
+	//
+	// **Example:** `1`, would mean the second position
 	TargetPosition int32 `form:"targetPosition" json:"targetPosition"`
 }
 
 // GetProductsCategoriesParams defines parameters for GetProductsCategories.
 type GetProductsCategoriesParams struct {
-	// ArchiveState Archive state.
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
 	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 }
 
 // GetProductRelationsParams defines parameters for GetProductRelations.
 type GetProductRelationsParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
-}
-
-// GetCategoryConnectionsForProductParams defines parameters for GetCategoryConnectionsForProduct.
-type GetCategoryConnectionsForProductParams struct {
-	// Page Number of page. default 0
-	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
-
-	// PageSize Size of page. default 1000
-	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
-
-	// ArchiveState Archive state.
-	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
-
-	// Context Context of presented entity.
-	Context *string `json:"context,omitempty"`
-
-	// ContextFallback Use fallback for context
-	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // UpdateRelatedProductsRelationSortingOrderSourceParamsSortingOrderSource defines parameters for UpdateRelatedProductsRelationSortingOrderSource.
@@ -3147,12 +6007,17 @@ type UpdateRelatedProductsRelationSortingOrderSourceParamsSortingOrderSource str
 
 // GetProductForRelationParams defines parameters for GetProductForRelation.
 type GetProductForRelationParams struct {
+	// Direction The direction of the relation, either `DIRECT` or `REVERSE`.
 	Direction GetProductForRelationParamsDirection `form:"direction" json:"direction"`
 
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 }
 
@@ -3167,13 +6032,21 @@ type DeleteManyProductConnectionsJSONBody = []ProductConnectionsRemovalRequest
 
 // UpdateOrderProductRelationParams defines parameters for UpdateOrderProductRelation.
 type UpdateOrderProductRelationParams struct {
+	// TargetPosition The new target position for the product relation.
+	//
+	// **Example:** `0`
 	TargetPosition int32 `form:"targetPosition" json:"targetPosition"`
 }
 
 // UpdateOrderProductConnectionsParams defines parameters for UpdateOrderProductConnections.
 type UpdateOrderProductConnectionsParams struct {
-	TargetPosition int32                                        `form:"targetPosition" json:"targetPosition"`
-	Direction      UpdateOrderProductConnectionsParamsDirection `form:"direction" json:"direction"`
+	// TargetPosition The new zero-based target position for the related product.
+	//
+	// **Example:** `0`
+	TargetPosition int32 `form:"targetPosition" json:"targetPosition"`
+
+	// Direction The direction of the relation. Can be either `DIRECT` or `REVERSE`.
+	Direction UpdateOrderProductConnectionsParamsDirection `form:"direction" json:"direction"`
 }
 
 // UpdateOrderProductConnectionsParamsDirection defines parameters for UpdateOrderProductConnections.
@@ -3181,141 +6054,267 @@ type UpdateOrderProductConnectionsParamsDirection string
 
 // CopyProductParams defines parameters for CopyProduct.
 type CopyProductParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 }
 
 // FindProductViewsByIdParams defines parameters for FindProductViewsById.
 type FindProductViewsByIdParams struct {
-	// ArchiveState Archive state.
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
 	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // GetGroupedProductAttributesParams defines parameters for GetGroupedProductAttributes.
 type GetGroupedProductAttributesParams struct {
-	// ArchiveState Archive state.
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
 	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
+}
+
+// UpdateProductGroupAttributeParams defines parameters for UpdateProductGroupAttribute.
+type UpdateProductGroupAttributeParams struct {
+	// ForceVla When propagating this Variant Level Attribute to groups in this variant family, this
+	// flag controls what to do if a group already has this attribute assigned:
+	//
+	// `false` = Keep existing value, only update empty ones
+	//
+	// `true` = Override existing value
+	//
+	// If omitted, the default value `false` will be used.
+	ForceVla *bool `form:"forceVla,omitempty" json:"forceVla,omitempty"`
+}
+
+// MoveProductGroupParams defines parameters for MoveProductGroup.
+type MoveProductGroupParams struct {
+	// Position The target position for the group (0-based).
+	Position int32 `form:"position" json:"position"`
 }
 
 // GetProductsLabelsParams defines parameters for GetProductsLabels.
 type GetProductsLabelsParams struct {
-	// ArchiveState Archive state.
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
 	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
+}
+
+// ProductOverviewParams defines parameters for ProductOverview.
+type ProductOverviewParams struct {
+	// ArchiveState Specifies the archive state of the entity. The default value is `active`.
+	ArchiveState *string `form:"archiveState,omitempty" json:"archiveState,omitempty"`
 }
 
 // UpdateProductVariantAttributeParams defines parameters for UpdateProductVariantAttribute.
 type UpdateProductVariantAttributeParams struct {
+	// ForceVla When propagating this Variant Level Attribute (VLA) to variants in this variant group, this
+	// flag controls what to do if a variant already has this attribute assigned:
+	//
+	// `false` = Keep existing value, only update empty ones
+	//
+	// `true` = Override existing value
+	//
+	// If omitted, the default value `false` will be used.
+	ForceVla *bool `form:"forceVla,omitempty" json:"forceVla,omitempty"`
+}
+
+// AddProductVariantParams defines parameters for AddProductVariant.
+type AddProductVariantParams struct {
+	// ForceVla Controls how the group's variant level attributes are applied to the newly assigned variant when
+	// the variant already has a value for one of them:
+	//
+	// `false` = keep the variant's existing value, only fill in empty ones
+	//
+	// `true` = overwrite the variant's existing value with the group's
+	//
+	// If omitted, defaults to `false`.
 	ForceVla *bool `form:"forceVla,omitempty" json:"forceVla,omitempty"`
 }
 
 // MoveProductVariantParams defines parameters for MoveProductVariant.
 type MoveProductVariantParams struct {
+	// TargetPosition The target position for the variant.
 	TargetPosition int32 `form:"targetPosition" json:"targetPosition"`
 }
 
-// ChangeStatusParams defines parameters for ChangeStatus.
-type ChangeStatusParams struct {
-	// Context Context of presented entity.
-	Context *string `json:"context,omitempty"`
-}
-
-// ChangeStatusParamsAction defines parameters for ChangeStatus.
-type ChangeStatusParamsAction string
-
 // FindRelationsParams defines parameters for FindRelations.
 type FindRelationsParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // CreateRelationParams defines parameters for CreateRelation.
 type CreateRelationParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 }
 
 // GetFilteredRelationsParams defines parameters for GetFilteredRelations.
 type GetFilteredRelationsParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // DeleteParams defines parameters for Delete.
 type DeleteParams struct {
+	// Force Specifies whether to force the deletion of the relation definition even if it is in use by a product
+	// relation.
+	//
+	// If the relation definition is in use by a product relation and `force` is omitted or set to `false`, then
+	// a HTTP 400 will be returned and the deletion of the relation definition will not occur.
+	//
+	// If omitted, the default value `false` will be used.
+	//
+	// **Example:** `78y3566b5c65c1325edexx8g`
 	Force *bool `form:"force,omitempty" json:"force,omitempty"`
 }
 
 // FindOneParams defines parameters for FindOne.
 type FindOneParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
+}
+
+// PartialUpdateRelationParams defines parameters for PartialUpdateRelation.
+type PartialUpdateRelationParams struct {
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
+	Context *string `json:"context,omitempty"`
 }
 
 // UpdateRelationParams defines parameters for UpdateRelation.
 type UpdateRelationParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
-}
-
-// GetCategoryConnectionsByRelationIdParams defines parameters for GetCategoryConnectionsByRelationId.
-type GetCategoryConnectionsByRelationIdParams struct {
-	// Page Number of page. default 0
-	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
-
-	// PageSize Size of page. default 1000
-	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
-
-	// Context Context of presented entity.
-	Context *string `json:"context,omitempty"`
-
-	// ContextFallback Use fallback for context
-	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
 // UpdateOrderRelationParams defines parameters for UpdateOrderRelation.
 type UpdateOrderRelationParams struct {
+	// TargetPosition Specifies the zero-based target position for the relation definition. This parameter is
+	// used to update the order of the relation definition within the list of all relation definitions in the organization.
 	TargetPosition int32 `form:"targetPosition" json:"targetPosition"`
 }
 
 // GetByRelationIdParams defines parameters for GetByRelationId.
 type GetByRelationIdParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 }
 
@@ -3324,16 +6323,30 @@ type DeletePolicyForRelationParamsPolicyType string
 
 // GetProductConnectionsByRelationIdParams defines parameters for GetProductConnectionsByRelationId.
 type GetProductConnectionsByRelationIdParams struct {
-	// Page Number of page. default 0
+	// Page A number sequence representing a block of items to return as a result set. If omitted, the default value `0` will be used. This parameter is used for pagination to specify which page of the results to retrieve.
+	//
+	// **Default value:** `0`
 	Page *int32 `form:"page,omitempty" json:"page,omitempty"`
 
-	// PageSize Size of page. default 1000
+	// PageSize The number of items to return in each block. If omitted, the default value `1000` will be used. This parameter works with the `page` parameter to paginate the result set, allowing you to control the size of each page of results.
+	//
+	// **Default value:** `1000`
 	PageSize *int32 `form:"pageSize,omitempty" json:"pageSize,omitempty"`
 
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
@@ -3342,10 +6355,20 @@ type ValidateProductsJSONBody = []ProductValidationRequest
 
 // ValidateProductsParams defines parameters for ValidateProducts.
 type ValidateProductsParams struct {
-	// Context Context of presented entity.
+	// Context Specifies the context in which to operate. If omitted, the default context `en` is used.
+	//
+	// In Bluestone PIM, the context is generally synonymous with the language setting. The context determines how product information is tailored and presented based on language or other local specifications.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** The default context is identified by the ID `"en"`. IDs for additional contexts begin with a lowercase `"L"`, **not** with the digit `"1"`, followed by a number. This naming convention helps distinguish between default and custom contexts within Bluestone PIM.
 	Context *string `json:"context,omitempty"`
 
-	// ContextFallback Use fallback for context
+	// ContextFallback Specifies whether to enable the fallback mechanism for the context. If omitted, the default value `true` will be used. When set to `true`, the system will provide a default translation or relevant information if the requested context's specific translation is missing.
+	//
+	// For more detailed information on how context relates to language settings in Bluestone PIM, refer to the [Languages and Context documentation](https://help.bluestonepim.com/languages-and-context).
+	//
+	// **Note:** Setting the `context-fallback` parameter to `false` disables the fallback mechanism. In this configuration, if a translation or specific context information is not available, the system will not provide an alternative or default content. This ensures that only content that matches the exact context ID requested is returned, potentially leading to cases where no content is available if the specific translation is missing.
 	ContextFallback *bool `json:"context-fallback,omitempty"`
 }
 
@@ -3363,6 +6386,9 @@ type CreateCategoryJSONRequestBody = CreateCategoryRequest
 
 // GetFilteredNodesJSONRequestBody defines body for GetFilteredNodes for application/json ContentType.
 type GetFilteredNodesJSONRequestBody = CategoryFilteringRequest
+
+// PartialUpdateCatalogNodeJSONRequestBody defines body for PartialUpdateCatalogNode for application/json ContentType.
+type PartialUpdateCatalogNodeJSONRequestBody = CategoryMetadataUpdateRequest
 
 // UpdateCatalogNodeJSONRequestBody defines body for UpdateCatalogNode for application/json ContentType.
 type UpdateCatalogNodeJSONRequestBody = UpdateCategoryRequest
@@ -3388,6 +6414,15 @@ type CreateCatalogNodeAttributeMatrixJSONRequestBody = CategoryMatrixAttributeRe
 // UpdateNodeAttributeMatrixValueJSONRequestBody defines body for UpdateNodeAttributeMatrixValue for application/json ContentType.
 type UpdateNodeAttributeMatrixValueJSONRequestBody = UpdateCategoryMatrixAttributeRequest
 
+// SetDictionaryDefinitionValueJSONRequestBody defines body for SetDictionaryDefinitionValue for application/json ContentType.
+type SetDictionaryDefinitionValueJSONRequestBody = UpdateDictionaryCategoryAttributeValuesRequest
+
+// SetSelectDefinitionValueJSONRequestBody defines body for SetSelectDefinitionValue for application/json ContentType.
+type SetSelectDefinitionValueJSONRequestBody = UpdateSelectCategoryAttributeValuesRequest
+
+// SetSimpleDefinitionValueJSONRequestBody defines body for SetSimpleDefinitionValue for application/json ContentType.
+type SetSimpleDefinitionValueJSONRequestBody = UpdateSimpleCategoryAttributeValueRequest
+
 // MoveCatalogNodeJSONRequestBody defines body for MoveCatalogNode for application/json ContentType.
 type MoveCatalogNodeJSONRequestBody = MoveCategoryRequest
 
@@ -3399,6 +6434,9 @@ type AddCategoryProductsJSONRequestBody = CategoryProductRequest
 
 // AddPolicyToProductsForCategoryNodeIdJSONRequestBody defines body for AddPolicyToProductsForCategoryNodeId for application/json ContentType.
 type AddPolicyToProductsForCategoryNodeIdJSONRequestBody = PolicyRequest
+
+// GetCategoryViewJSONRequestBody defines body for GetCategoryView for application/json ContentType.
+type GetCategoryViewJSONRequestBody = CategoryWithCursorAndViewRequestDto
 
 // AddPolicyToCategoryJSONRequestBody defines body for AddPolicyToCategory for application/json ContentType.
 type AddPolicyToCategoryJSONRequestBody = PolicyRequest
@@ -3425,7 +6463,7 @@ type UpdateColumnDefinitionJSONRequestBody = ColumnAttributeDefinitionDto
 type UpdateColumnDefinitionDryRunJSONRequestBody = ColumnAttributeDefinitionDto
 
 // CreateDictionaryDefinitionJSONRequestBody defines body for CreateDictionaryDefinition for application/json ContentType.
-type CreateDictionaryDefinitionJSONRequestBody = DictionaryAttributeDefinitionDto
+type CreateDictionaryDefinitionJSONRequestBody = DictionaryAttributeDefinitionCreateRequest
 
 // PatchUpdateJSONRequestBody defines body for PatchUpdate for application/json ContentType.
 type PatchUpdateJSONRequestBody = DictionaryAttributeDefinitionUpdate
@@ -3460,11 +6498,26 @@ type UpdateMatrixDefinitionJSONRequestBody = MatrixAttributeDefinitionDto
 // UpdateMatrixDefinitionDryRunJSONRequestBody defines body for UpdateMatrixDefinitionDryRun for application/json ContentType.
 type UpdateMatrixDefinitionDryRunJSONRequestBody = MatrixAttributeDefinitionDto
 
+// BulkDeletePolicyFromAttributeDefinitionsJSONRequestBody defines body for BulkDeletePolicyFromAttributeDefinitions for application/json ContentType.
+type BulkDeletePolicyFromAttributeDefinitionsJSONRequestBody = BulkDeleteAttributeDefinitionPolicyRequest
+
+// AddPolicyToAttributeDefinitionsJSONRequestBody defines body for AddPolicyToAttributeDefinitions for application/json ContentType.
+type AddPolicyToAttributeDefinitionsJSONRequestBody = BulkAttributeDefinitionPolicyRequest
+
+// CreateSelectValueJSONRequestBody defines body for CreateSelectValue for application/json ContentType.
+type CreateSelectValueJSONRequestBody = SelectValueRequest
+
+// UpdateSelectValueJSONRequestBody defines body for UpdateSelectValue for application/json ContentType.
+type UpdateSelectValueJSONRequestBody = UpdateSelectValueRequest
+
 // UpdateMetadataJSONRequestBody defines body for UpdateMetadata for application/json ContentType.
 type UpdateMetadataJSONRequestBody = AttributeDefinitionMetadataUpdateRequest
 
 // UpdateAttributeDefinitionJSONRequestBody defines body for UpdateAttributeDefinition for application/json ContentType.
 type UpdateAttributeDefinitionJSONRequestBody = SimpleAttributeDefinitionRequest
+
+// UpdateContextAwareJSONRequestBody defines body for UpdateContextAware for application/json ContentType.
+type UpdateContextAwareJSONRequestBody = UpdateContextAwareFlagRequest
 
 // UpdateAttributeDefinitionDryRunJSONRequestBody defines body for UpdateAttributeDefinitionDryRun for application/json ContentType.
 type UpdateAttributeDefinitionDryRunJSONRequestBody = SimpleAttributeDefinitionRequest
@@ -3481,9 +6534,6 @@ type ArchiveProductsByIdsJSONRequestBody = ProductArchiveStateRequest
 // DeleteProductsAttributeJSONRequestBody defines body for DeleteProductsAttribute for application/json ContentType.
 type DeleteProductsAttributeJSONRequestBody = DeleteProductsAttributesBulkRequest
 
-// CreateOrUpdateJSONRequestBody defines body for CreateOrUpdate for application/json ContentType.
-type CreateOrUpdateJSONRequestBody = SaveProductsAttributesBulkRequest
-
 // AddAttributesByIdsJSONRequestBody defines body for AddAttributesByIds for application/json ContentType.
 type AddAttributesByIdsJSONRequestBody = SaveProductsAttributesByIdsRequest
 
@@ -3493,17 +6543,35 @@ type UpsertAttributesByIdsJSONRequestBody = SaveProductsAttributesByIdsRequest
 // UpdateAttributesByIdsJSONRequestBody defines body for UpdateAttributesByIds for application/json ContentType.
 type UpdateAttributesByIdsJSONRequestBody = SaveProductsAttributesByIdsRequest
 
+// AppendDictionaryValuesJSONRequestBody defines body for AppendDictionaryValues for application/json ContentType.
+type AppendDictionaryValuesJSONRequestBody = AppendDictionaryValueRequest
+
+// DeductDictionaryValuesJSONRequestBody defines body for DeductDictionaryValues for application/json ContentType.
+type DeductDictionaryValuesJSONRequestBody = DeductDictionaryValueRequest
+
+// AppendSelectValuesJSONRequestBody defines body for AppendSelectValues for application/json ContentType.
+type AppendSelectValuesJSONRequestBody = AppendSelectValuesToProductsAttributeRequest
+
+// DeductSelectValuesJSONRequestBody defines body for DeductSelectValues for application/json ContentType.
+type DeductSelectValuesJSONRequestBody = DeductSelectValuesFromProductsAttributeRequest
+
 // AssignProductsToCategoryJSONRequestBody defines body for AssignProductsToCategory for application/json ContentType.
 type AssignProductsToCategoryJSONRequestBody = AssignProductsToCategoryRequest
 
 // CopyAndUpdateProductJSONRequestBody defines body for CopyAndUpdateProduct for application/json ContentType.
 type CopyAndUpdateProductJSONRequestBody = CopyProductRequest
 
-// CountFilteredProductsJSONRequestBody defines body for CountFilteredProducts for application/json ContentType.
-type CountFilteredProductsJSONRequestBody = GridFilteringBaseRequestDto
-
 // GetProductsWithCursorAndViewsJSONRequestBody defines body for GetProductsWithCursorAndViews for application/json ContentType.
 type GetProductsWithCursorAndViewsJSONRequestBody = CursorWithViewsRequestDto
+
+// ListProductsViewsByTypesJSONRequestBody defines body for ListProductsViewsByTypes for application/json ContentType.
+type ListProductsViewsByTypesJSONRequestBody = ProductViewsByTypeRequest
+
+// AddProductGroupsJSONRequestBody defines body for AddProductGroups for application/json ContentType.
+type AddProductGroupsJSONRequestBody = BulkAssignGroupsRequest
+
+// UpdateProductGroupsAttributeVlaSettingsJSONRequestBody defines body for UpdateProductGroupsAttributeVlaSettings for application/json ContentType.
+type UpdateProductGroupsAttributeVlaSettingsJSONRequestBody = SaveProductsVlaSettingsByIdsRequest
 
 // RemoveLabelFromProductsJSONRequestBody defines body for RemoveLabelFromProducts for application/json ContentType.
 type RemoveLabelFromProductsJSONRequestBody = ModifyLabelInProductsRequestDto
@@ -3520,9 +6588,6 @@ type ListProductsViewsByIdsJSONRequestBody = ProductIdListViewsRequestDto
 // ListProductsViewsByNumbersJSONRequestBody defines body for ListProductsViewsByNumbers for application/json ContentType.
 type ListProductsViewsByNumbersJSONRequestBody = ProductNumberListViewsRequestDto
 
-// ChangeStatusesByIdsJSONRequestBody defines body for ChangeStatusesByIds for application/json ContentType.
-type ChangeStatusesByIdsJSONRequestBody = UpdateProductStateRequest
-
 // CreateProductTemplateJSONRequestBody defines body for CreateProductTemplate for application/json ContentType.
 type CreateProductTemplateJSONRequestBody = ProductTemplateRequest
 
@@ -3532,11 +6597,14 @@ type UpdateNameJSONRequestBody = ProductTemplateRequest
 // UnarchiveProductsByIdsJSONRequestBody defines body for UnarchiveProductsByIds for application/json ContentType.
 type UnarchiveProductsByIdsJSONRequestBody = ProductArchiveStateRequest
 
+// AddProductVariantsJSONRequestBody defines body for AddProductVariants for application/json ContentType.
+type AddProductVariantsJSONRequestBody = AddProductVariantsRequest
+
+// UpdateProductVariantsAttributeVlaSettingsJSONRequestBody defines body for UpdateProductVariantsAttributeVlaSettings for application/json ContentType.
+type UpdateProductVariantsAttributeVlaSettingsJSONRequestBody = SaveProductsVlaSettingsByIdsRequest
+
 // UpdateProductJSONRequestBody defines body for UpdateProduct for application/json ContentType.
 type UpdateProductJSONRequestBody = ProductMetadataUpdateRequest
-
-// UpdateProductDetailsJSONRequestBody defines body for UpdateProductDetails for application/json ContentType.
-type UpdateProductDetailsJSONRequestBody = AllProductMetadataUpdateRequest
 
 // AssociateAssetsJSONRequestBody defines body for AssociateAssets for application/json ContentType.
 type AssociateAssetsJSONRequestBody = AssociateProductAssetsRequest
@@ -3580,9 +6648,6 @@ type UpdateProductBundleQuantityJSONRequestBody = ProductBundleRequest
 // AddProductToCategoriesJSONRequestBody defines body for AddProductToCategories for application/json ContentType.
 type AddProductToCategoriesJSONRequestBody = CategoryReferenceRequest
 
-// CreateCategoryConnectionJSONRequestBody defines body for CreateCategoryConnection for application/json ContentType.
-type CreateCategoryConnectionJSONRequestBody = ProductConnectionRequest
-
 // CreateProductConnectionJSONRequestBody defines body for CreateProductConnection for application/json ContentType.
 type CreateProductConnectionJSONRequestBody = ProductConnectionRequest
 
@@ -3598,6 +6663,12 @@ type UpdateConnectionQuantityJSONRequestBody = ProductConnectionUpdateRequest
 // FindProductViewsByIdJSONRequestBody defines body for FindProductViewsById for application/json ContentType.
 type FindProductViewsByIdJSONRequestBody = ProductIdViewsRequestDto
 
+// UpdateProductGroupAttributeJSONRequestBody defines body for UpdateProductGroupAttribute for application/json ContentType.
+type UpdateProductGroupAttributeJSONRequestBody = ProductVariantAttributeDto
+
+// RemoveLabelsFromProductJSONRequestBody defines body for RemoveLabelsFromProduct for application/json ContentType.
+type RemoveLabelsFromProductJSONRequestBody = RemoveLabelsFromProductRequest
+
 // AddLabelsToProductJSONRequestBody defines body for AddLabelsToProduct for application/json ContentType.
 type AddLabelsToProductJSONRequestBody = LabelReferenceRequest
 
@@ -3610,8 +6681,14 @@ type CreateRelationJSONRequestBody = RelationRequest
 // GetFilteredRelationsJSONRequestBody defines body for GetFilteredRelations for application/json ContentType.
 type GetFilteredRelationsJSONRequestBody = RelationFilteringRequest
 
+// PartialUpdateRelationJSONRequestBody defines body for PartialUpdateRelation for application/json ContentType.
+type PartialUpdateRelationJSONRequestBody = RelationPartialUpdateRequest
+
 // UpdateRelationJSONRequestBody defines body for UpdateRelation for application/json ContentType.
 type UpdateRelationJSONRequestBody = RelationRequest
+
+// UpdateRelationDirectionJSONRequestBody defines body for UpdateRelationDirection for application/json ContentType.
+type UpdateRelationDirectionJSONRequestBody = RelationDirectionUpdateRequest
 
 // AddPolicyToRelationJSONRequestBody defines body for AddPolicyToRelation for application/json ContentType.
 type AddPolicyToRelationJSONRequestBody = PolicyRequest
@@ -3719,6 +6796,32 @@ func (t *AssetIdListViewsRequestDto_Views_Item) FromCategoriesFilteringViewsDto(
 
 // MergeCategoriesFilteringViewsDto performs a merge with any union data inside the AssetIdListViewsRequestDto_Views_Item, using the provided CategoriesFilteringViewsDto
 func (t *AssetIdListViewsRequestDto_Views_Item) MergeCategoriesFilteringViewsDto(v CategoriesFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsGroupsFilteringViewsDto returns the union data inside the AssetIdListViewsRequestDto_Views_Item as a GroupsFilteringViewsDto
+func (t AssetIdListViewsRequestDto_Views_Item) AsGroupsFilteringViewsDto() (GroupsFilteringViewsDto, error) {
+	var body GroupsFilteringViewsDto
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromGroupsFilteringViewsDto overwrites any union data inside the AssetIdListViewsRequestDto_Views_Item as the provided GroupsFilteringViewsDto
+func (t *AssetIdListViewsRequestDto_Views_Item) FromGroupsFilteringViewsDto(v GroupsFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeGroupsFilteringViewsDto performs a merge with any union data inside the AssetIdListViewsRequestDto_Views_Item, using the provided GroupsFilteringViewsDto
+func (t *AssetIdListViewsRequestDto_Views_Item) MergeGroupsFilteringViewsDto(v GroupsFilteringViewsDto) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -3869,6 +6972,94 @@ func (t *AssetIdListViewsRequestDto_Views_Item) UnmarshalJSON(b []byte) error {
 	return err
 }
 
+// AsAssetsFilteringViewsDto returns the union data inside the CategoryWithCursorAndViewRequestDto_Views_Item as a AssetsFilteringViewsDto
+func (t CategoryWithCursorAndViewRequestDto_Views_Item) AsAssetsFilteringViewsDto() (AssetsFilteringViewsDto, error) {
+	var body AssetsFilteringViewsDto
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromAssetsFilteringViewsDto overwrites any union data inside the CategoryWithCursorAndViewRequestDto_Views_Item as the provided AssetsFilteringViewsDto
+func (t *CategoryWithCursorAndViewRequestDto_Views_Item) FromAssetsFilteringViewsDto(v AssetsFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeAssetsFilteringViewsDto performs a merge with any union data inside the CategoryWithCursorAndViewRequestDto_Views_Item, using the provided AssetsFilteringViewsDto
+func (t *CategoryWithCursorAndViewRequestDto_Views_Item) MergeAssetsFilteringViewsDto(v AssetsFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsDescriptionFilteringViewsDto returns the union data inside the CategoryWithCursorAndViewRequestDto_Views_Item as a DescriptionFilteringViewsDto
+func (t CategoryWithCursorAndViewRequestDto_Views_Item) AsDescriptionFilteringViewsDto() (DescriptionFilteringViewsDto, error) {
+	var body DescriptionFilteringViewsDto
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromDescriptionFilteringViewsDto overwrites any union data inside the CategoryWithCursorAndViewRequestDto_Views_Item as the provided DescriptionFilteringViewsDto
+func (t *CategoryWithCursorAndViewRequestDto_Views_Item) FromDescriptionFilteringViewsDto(v DescriptionFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeDescriptionFilteringViewsDto performs a merge with any union data inside the CategoryWithCursorAndViewRequestDto_Views_Item, using the provided DescriptionFilteringViewsDto
+func (t *CategoryWithCursorAndViewRequestDto_Views_Item) MergeDescriptionFilteringViewsDto(v DescriptionFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsMetadataFilteringViewsDto returns the union data inside the CategoryWithCursorAndViewRequestDto_Views_Item as a MetadataFilteringViewsDto
+func (t CategoryWithCursorAndViewRequestDto_Views_Item) AsMetadataFilteringViewsDto() (MetadataFilteringViewsDto, error) {
+	var body MetadataFilteringViewsDto
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMetadataFilteringViewsDto overwrites any union data inside the CategoryWithCursorAndViewRequestDto_Views_Item as the provided MetadataFilteringViewsDto
+func (t *CategoryWithCursorAndViewRequestDto_Views_Item) FromMetadataFilteringViewsDto(v MetadataFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeMetadataFilteringViewsDto performs a merge with any union data inside the CategoryWithCursorAndViewRequestDto_Views_Item, using the provided MetadataFilteringViewsDto
+func (t *CategoryWithCursorAndViewRequestDto_Views_Item) MergeMetadataFilteringViewsDto(v MetadataFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CategoryWithCursorAndViewRequestDto_Views_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CategoryWithCursorAndViewRequestDto_Views_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
 // AsAssetsFilteringViewsDto returns the union data inside the CursorWithViewsRequestDto_Views_Item as a AssetsFilteringViewsDto
 func (t CursorWithViewsRequestDto_Views_Item) AsAssetsFilteringViewsDto() (AssetsFilteringViewsDto, error) {
 	var body AssetsFilteringViewsDto
@@ -3963,6 +7154,32 @@ func (t *CursorWithViewsRequestDto_Views_Item) FromCategoriesFilteringViewsDto(v
 
 // MergeCategoriesFilteringViewsDto performs a merge with any union data inside the CursorWithViewsRequestDto_Views_Item, using the provided CategoriesFilteringViewsDto
 func (t *CursorWithViewsRequestDto_Views_Item) MergeCategoriesFilteringViewsDto(v CategoriesFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsGroupsFilteringViewsDto returns the union data inside the CursorWithViewsRequestDto_Views_Item as a GroupsFilteringViewsDto
+func (t CursorWithViewsRequestDto_Views_Item) AsGroupsFilteringViewsDto() (GroupsFilteringViewsDto, error) {
+	var body GroupsFilteringViewsDto
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromGroupsFilteringViewsDto overwrites any union data inside the CursorWithViewsRequestDto_Views_Item as the provided GroupsFilteringViewsDto
+func (t *CursorWithViewsRequestDto_Views_Item) FromGroupsFilteringViewsDto(v GroupsFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeGroupsFilteringViewsDto performs a merge with any union data inside the CursorWithViewsRequestDto_Views_Item, using the provided GroupsFilteringViewsDto
+func (t *CursorWithViewsRequestDto_Views_Item) MergeGroupsFilteringViewsDto(v GroupsFilteringViewsDto) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -4217,6 +7434,32 @@ func (t *ProductIdListViewsRequestDto_Views_Item) MergeCategoriesFilteringViewsD
 	return err
 }
 
+// AsGroupsFilteringViewsDto returns the union data inside the ProductIdListViewsRequestDto_Views_Item as a GroupsFilteringViewsDto
+func (t ProductIdListViewsRequestDto_Views_Item) AsGroupsFilteringViewsDto() (GroupsFilteringViewsDto, error) {
+	var body GroupsFilteringViewsDto
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromGroupsFilteringViewsDto overwrites any union data inside the ProductIdListViewsRequestDto_Views_Item as the provided GroupsFilteringViewsDto
+func (t *ProductIdListViewsRequestDto_Views_Item) FromGroupsFilteringViewsDto(v GroupsFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeGroupsFilteringViewsDto performs a merge with any union data inside the ProductIdListViewsRequestDto_Views_Item, using the provided GroupsFilteringViewsDto
+func (t *ProductIdListViewsRequestDto_Views_Item) MergeGroupsFilteringViewsDto(v GroupsFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
 // AsLabelsFilteringViewsDto returns the union data inside the ProductIdListViewsRequestDto_Views_Item as a LabelsFilteringViewsDto
 func (t ProductIdListViewsRequestDto_Views_Item) AsLabelsFilteringViewsDto() (LabelsFilteringViewsDto, error) {
 	var body LabelsFilteringViewsDto
@@ -4451,6 +7694,32 @@ func (t *ProductIdViewsRequestDto_Views_Item) FromCategoriesFilteringViewsDto(v 
 
 // MergeCategoriesFilteringViewsDto performs a merge with any union data inside the ProductIdViewsRequestDto_Views_Item, using the provided CategoriesFilteringViewsDto
 func (t *ProductIdViewsRequestDto_Views_Item) MergeCategoriesFilteringViewsDto(v CategoriesFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsGroupsFilteringViewsDto returns the union data inside the ProductIdViewsRequestDto_Views_Item as a GroupsFilteringViewsDto
+func (t ProductIdViewsRequestDto_Views_Item) AsGroupsFilteringViewsDto() (GroupsFilteringViewsDto, error) {
+	var body GroupsFilteringViewsDto
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromGroupsFilteringViewsDto overwrites any union data inside the ProductIdViewsRequestDto_Views_Item as the provided GroupsFilteringViewsDto
+func (t *ProductIdViewsRequestDto_Views_Item) FromGroupsFilteringViewsDto(v GroupsFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeGroupsFilteringViewsDto performs a merge with any union data inside the ProductIdViewsRequestDto_Views_Item, using the provided GroupsFilteringViewsDto
+func (t *ProductIdViewsRequestDto_Views_Item) MergeGroupsFilteringViewsDto(v GroupsFilteringViewsDto) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -4705,6 +7974,32 @@ func (t *ProductNumberListViewsRequestDto_Views_Item) MergeCategoriesFilteringVi
 	return err
 }
 
+// AsGroupsFilteringViewsDto returns the union data inside the ProductNumberListViewsRequestDto_Views_Item as a GroupsFilteringViewsDto
+func (t ProductNumberListViewsRequestDto_Views_Item) AsGroupsFilteringViewsDto() (GroupsFilteringViewsDto, error) {
+	var body GroupsFilteringViewsDto
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromGroupsFilteringViewsDto overwrites any union data inside the ProductNumberListViewsRequestDto_Views_Item as the provided GroupsFilteringViewsDto
+func (t *ProductNumberListViewsRequestDto_Views_Item) FromGroupsFilteringViewsDto(v GroupsFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeGroupsFilteringViewsDto performs a merge with any union data inside the ProductNumberListViewsRequestDto_Views_Item, using the provided GroupsFilteringViewsDto
+func (t *ProductNumberListViewsRequestDto_Views_Item) MergeGroupsFilteringViewsDto(v GroupsFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
 // AsLabelsFilteringViewsDto returns the union data inside the ProductNumberListViewsRequestDto_Views_Item as a LabelsFilteringViewsDto
 func (t ProductNumberListViewsRequestDto_Views_Item) AsLabelsFilteringViewsDto() (LabelsFilteringViewsDto, error) {
 	var body LabelsFilteringViewsDto
@@ -4845,6 +8140,276 @@ func (t *ProductNumberListViewsRequestDto_Views_Item) UnmarshalJSON(b []byte) er
 	return err
 }
 
+// AsAssetsFilteringViewsDto returns the union data inside the ProductViewsByTypeRequest_Views_Item as a AssetsFilteringViewsDto
+func (t ProductViewsByTypeRequest_Views_Item) AsAssetsFilteringViewsDto() (AssetsFilteringViewsDto, error) {
+	var body AssetsFilteringViewsDto
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromAssetsFilteringViewsDto overwrites any union data inside the ProductViewsByTypeRequest_Views_Item as the provided AssetsFilteringViewsDto
+func (t *ProductViewsByTypeRequest_Views_Item) FromAssetsFilteringViewsDto(v AssetsFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeAssetsFilteringViewsDto performs a merge with any union data inside the ProductViewsByTypeRequest_Views_Item, using the provided AssetsFilteringViewsDto
+func (t *ProductViewsByTypeRequest_Views_Item) MergeAssetsFilteringViewsDto(v AssetsFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsAttributesFilteringViewsDto returns the union data inside the ProductViewsByTypeRequest_Views_Item as a AttributesFilteringViewsDto
+func (t ProductViewsByTypeRequest_Views_Item) AsAttributesFilteringViewsDto() (AttributesFilteringViewsDto, error) {
+	var body AttributesFilteringViewsDto
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromAttributesFilteringViewsDto overwrites any union data inside the ProductViewsByTypeRequest_Views_Item as the provided AttributesFilteringViewsDto
+func (t *ProductViewsByTypeRequest_Views_Item) FromAttributesFilteringViewsDto(v AttributesFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeAttributesFilteringViewsDto performs a merge with any union data inside the ProductViewsByTypeRequest_Views_Item, using the provided AttributesFilteringViewsDto
+func (t *ProductViewsByTypeRequest_Views_Item) MergeAttributesFilteringViewsDto(v AttributesFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBundlesFilteringViewsDto returns the union data inside the ProductViewsByTypeRequest_Views_Item as a BundlesFilteringViewsDto
+func (t ProductViewsByTypeRequest_Views_Item) AsBundlesFilteringViewsDto() (BundlesFilteringViewsDto, error) {
+	var body BundlesFilteringViewsDto
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBundlesFilteringViewsDto overwrites any union data inside the ProductViewsByTypeRequest_Views_Item as the provided BundlesFilteringViewsDto
+func (t *ProductViewsByTypeRequest_Views_Item) FromBundlesFilteringViewsDto(v BundlesFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBundlesFilteringViewsDto performs a merge with any union data inside the ProductViewsByTypeRequest_Views_Item, using the provided BundlesFilteringViewsDto
+func (t *ProductViewsByTypeRequest_Views_Item) MergeBundlesFilteringViewsDto(v BundlesFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCategoriesFilteringViewsDto returns the union data inside the ProductViewsByTypeRequest_Views_Item as a CategoriesFilteringViewsDto
+func (t ProductViewsByTypeRequest_Views_Item) AsCategoriesFilteringViewsDto() (CategoriesFilteringViewsDto, error) {
+	var body CategoriesFilteringViewsDto
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCategoriesFilteringViewsDto overwrites any union data inside the ProductViewsByTypeRequest_Views_Item as the provided CategoriesFilteringViewsDto
+func (t *ProductViewsByTypeRequest_Views_Item) FromCategoriesFilteringViewsDto(v CategoriesFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCategoriesFilteringViewsDto performs a merge with any union data inside the ProductViewsByTypeRequest_Views_Item, using the provided CategoriesFilteringViewsDto
+func (t *ProductViewsByTypeRequest_Views_Item) MergeCategoriesFilteringViewsDto(v CategoriesFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsGroupsFilteringViewsDto returns the union data inside the ProductViewsByTypeRequest_Views_Item as a GroupsFilteringViewsDto
+func (t ProductViewsByTypeRequest_Views_Item) AsGroupsFilteringViewsDto() (GroupsFilteringViewsDto, error) {
+	var body GroupsFilteringViewsDto
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromGroupsFilteringViewsDto overwrites any union data inside the ProductViewsByTypeRequest_Views_Item as the provided GroupsFilteringViewsDto
+func (t *ProductViewsByTypeRequest_Views_Item) FromGroupsFilteringViewsDto(v GroupsFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeGroupsFilteringViewsDto performs a merge with any union data inside the ProductViewsByTypeRequest_Views_Item, using the provided GroupsFilteringViewsDto
+func (t *ProductViewsByTypeRequest_Views_Item) MergeGroupsFilteringViewsDto(v GroupsFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsLabelsFilteringViewsDto returns the union data inside the ProductViewsByTypeRequest_Views_Item as a LabelsFilteringViewsDto
+func (t ProductViewsByTypeRequest_Views_Item) AsLabelsFilteringViewsDto() (LabelsFilteringViewsDto, error) {
+	var body LabelsFilteringViewsDto
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromLabelsFilteringViewsDto overwrites any union data inside the ProductViewsByTypeRequest_Views_Item as the provided LabelsFilteringViewsDto
+func (t *ProductViewsByTypeRequest_Views_Item) FromLabelsFilteringViewsDto(v LabelsFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeLabelsFilteringViewsDto performs a merge with any union data inside the ProductViewsByTypeRequest_Views_Item, using the provided LabelsFilteringViewsDto
+func (t *ProductViewsByTypeRequest_Views_Item) MergeLabelsFilteringViewsDto(v LabelsFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsMetadataFilteringViewsDto returns the union data inside the ProductViewsByTypeRequest_Views_Item as a MetadataFilteringViewsDto
+func (t ProductViewsByTypeRequest_Views_Item) AsMetadataFilteringViewsDto() (MetadataFilteringViewsDto, error) {
+	var body MetadataFilteringViewsDto
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMetadataFilteringViewsDto overwrites any union data inside the ProductViewsByTypeRequest_Views_Item as the provided MetadataFilteringViewsDto
+func (t *ProductViewsByTypeRequest_Views_Item) FromMetadataFilteringViewsDto(v MetadataFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeMetadataFilteringViewsDto performs a merge with any union data inside the ProductViewsByTypeRequest_Views_Item, using the provided MetadataFilteringViewsDto
+func (t *ProductViewsByTypeRequest_Views_Item) MergeMetadataFilteringViewsDto(v MetadataFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsRelatedCategoriesFilteringViewsDto returns the union data inside the ProductViewsByTypeRequest_Views_Item as a RelatedCategoriesFilteringViewsDto
+func (t ProductViewsByTypeRequest_Views_Item) AsRelatedCategoriesFilteringViewsDto() (RelatedCategoriesFilteringViewsDto, error) {
+	var body RelatedCategoriesFilteringViewsDto
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRelatedCategoriesFilteringViewsDto overwrites any union data inside the ProductViewsByTypeRequest_Views_Item as the provided RelatedCategoriesFilteringViewsDto
+func (t *ProductViewsByTypeRequest_Views_Item) FromRelatedCategoriesFilteringViewsDto(v RelatedCategoriesFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRelatedCategoriesFilteringViewsDto performs a merge with any union data inside the ProductViewsByTypeRequest_Views_Item, using the provided RelatedCategoriesFilteringViewsDto
+func (t *ProductViewsByTypeRequest_Views_Item) MergeRelatedCategoriesFilteringViewsDto(v RelatedCategoriesFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsRelatedProductsFilteringViewsDto returns the union data inside the ProductViewsByTypeRequest_Views_Item as a RelatedProductsFilteringViewsDto
+func (t ProductViewsByTypeRequest_Views_Item) AsRelatedProductsFilteringViewsDto() (RelatedProductsFilteringViewsDto, error) {
+	var body RelatedProductsFilteringViewsDto
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromRelatedProductsFilteringViewsDto overwrites any union data inside the ProductViewsByTypeRequest_Views_Item as the provided RelatedProductsFilteringViewsDto
+func (t *ProductViewsByTypeRequest_Views_Item) FromRelatedProductsFilteringViewsDto(v RelatedProductsFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeRelatedProductsFilteringViewsDto performs a merge with any union data inside the ProductViewsByTypeRequest_Views_Item, using the provided RelatedProductsFilteringViewsDto
+func (t *ProductViewsByTypeRequest_Views_Item) MergeRelatedProductsFilteringViewsDto(v RelatedProductsFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsVariantsFilteringViewsDto returns the union data inside the ProductViewsByTypeRequest_Views_Item as a VariantsFilteringViewsDto
+func (t ProductViewsByTypeRequest_Views_Item) AsVariantsFilteringViewsDto() (VariantsFilteringViewsDto, error) {
+	var body VariantsFilteringViewsDto
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromVariantsFilteringViewsDto overwrites any union data inside the ProductViewsByTypeRequest_Views_Item as the provided VariantsFilteringViewsDto
+func (t *ProductViewsByTypeRequest_Views_Item) FromVariantsFilteringViewsDto(v VariantsFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeVariantsFilteringViewsDto performs a merge with any union data inside the ProductViewsByTypeRequest_Views_Item, using the provided VariantsFilteringViewsDto
+func (t *ProductViewsByTypeRequest_Views_Item) MergeVariantsFilteringViewsDto(v VariantsFilteringViewsDto) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t ProductViewsByTypeRequest_Views_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *ProductViewsByTypeRequest_Views_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
 // RequestEditorFn  is the function signature for the RequestEditor callback function
 type RequestEditorFn func(ctx context.Context, req *http.Request) error
 
@@ -4918,9 +8483,6 @@ func WithRequestEditorFn(fn RequestEditorFn) ClientOption {
 
 // The interface specification for the client above.
 type ClientInterface interface {
-	// SynchronizeAssets request
-	SynchronizeAssets(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
-
 	// GetJobStatus request
 	GetJobStatus(ctx context.Context, taskId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
@@ -4997,6 +8559,11 @@ type ClientInterface interface {
 	// GetNode request
 	GetNode(ctx context.Context, id string, params *GetNodeParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// PartialUpdateCatalogNodeWithBody request with any body
+	PartialUpdateCatalogNodeWithBody(ctx context.Context, id string, params *PartialUpdateCatalogNodeParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	PartialUpdateCatalogNode(ctx context.Context, id string, params *PartialUpdateCatalogNodeParams, body PartialUpdateCatalogNodeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// UpdateCatalogNodeWithBody request with any body
 	UpdateCatalogNodeWithBody(ctx context.Context, id string, params *UpdateCatalogNodeParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
@@ -5041,7 +8608,7 @@ type ClientInterface interface {
 	UpdateNodeAttributeColumnValue(ctx context.Context, id string, attributeDefinitionId string, params *UpdateNodeAttributeColumnValueParams, body UpdateNodeAttributeColumnValueJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// CreateCatalogNodeAttributeCompound request
-	CreateCatalogNodeAttributeCompound(ctx context.Context, id string, attributeDefinitionId string, params *CreateCatalogNodeAttributeCompoundParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+	CreateCatalogNodeAttributeCompound(ctx context.Context, id string, attributeDefinitionId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// CreateCatalogNodeAttributeDictionary request
 	CreateCatalogNodeAttributeDictionary(ctx context.Context, id string, attributeDefinitionId string, params *CreateCatalogNodeAttributeDictionaryParams, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -5060,6 +8627,30 @@ type ClientInterface interface {
 	UpdateNodeAttributeMatrixValueWithBody(ctx context.Context, id string, attributeDefinitionId string, params *UpdateNodeAttributeMatrixValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	UpdateNodeAttributeMatrixValue(ctx context.Context, id string, attributeDefinitionId string, params *UpdateNodeAttributeMatrixValueParams, body UpdateNodeAttributeMatrixValueJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetAttributesAssociatedToCategory request
+	GetAttributesAssociatedToCategory(ctx context.Context, id string, params *GetAttributesAssociatedToCategoryParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// UnassignDefinitionFromCategory request
+	UnassignDefinitionFromCategory(ctx context.Context, id string, definitionId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// AssignDefinitionToCategory request
+	AssignDefinitionToCategory(ctx context.Context, id string, definitionId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// SetDictionaryDefinitionValueWithBody request with any body
+	SetDictionaryDefinitionValueWithBody(ctx context.Context, id string, definitionId string, params *SetDictionaryDefinitionValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	SetDictionaryDefinitionValue(ctx context.Context, id string, definitionId string, params *SetDictionaryDefinitionValueParams, body SetDictionaryDefinitionValueJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// SetSelectDefinitionValueWithBody request with any body
+	SetSelectDefinitionValueWithBody(ctx context.Context, id string, definitionId string, params *SetSelectDefinitionValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	SetSelectDefinitionValue(ctx context.Context, id string, definitionId string, params *SetSelectDefinitionValueParams, body SetSelectDefinitionValueJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// SetSimpleDefinitionValueWithBody request with any body
+	SetSimpleDefinitionValueWithBody(ctx context.Context, id string, definitionId string, params *SetSimpleDefinitionValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	SetSimpleDefinitionValue(ctx context.Context, id string, definitionId string, params *SetSimpleDefinitionValueParams, body SetSimpleDefinitionValueJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// GetCatalogNodeChildren request
 	GetCatalogNodeChildren(ctx context.Context, id string, params *GetCatalogNodeChildrenParams, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -5116,6 +8707,11 @@ type ClientInterface interface {
 
 	// GetCategoryTree request
 	GetCategoryTree(ctx context.Context, id string, params *GetCategoryTreeParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetCategoryViewWithBody request with any body
+	GetCategoryViewWithBody(ctx context.Context, id ObjectId, params *GetCategoryViewParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	GetCategoryView(ctx context.Context, id ObjectId, params *GetCategoryViewParams, body GetCategoryViewJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// GetPoliciesByCategoryId request
 	GetPoliciesByCategoryId(ctx context.Context, id string, params *GetPoliciesByCategoryIdParams, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -5188,9 +8784,6 @@ type ClientInterface interface {
 	CreateDictionaryDefinitionWithBody(ctx context.Context, params *CreateDictionaryDefinitionParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	CreateDictionaryDefinition(ctx context.Context, params *CreateDictionaryDefinitionParams, body CreateDictionaryDefinitionJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	// DeleteDictionaryDefinition request
-	DeleteDictionaryDefinition(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// PatchUpdateWithBody request with any body
 	PatchUpdateWithBody(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -5265,6 +8858,32 @@ type ClientInterface interface {
 
 	UpdateMatrixDefinitionDryRun(ctx context.Context, id string, params *UpdateMatrixDefinitionDryRunParams, body UpdateMatrixDefinitionDryRunJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// BulkDeletePolicyFromAttributeDefinitionsWithBody request with any body
+	BulkDeletePolicyFromAttributeDefinitionsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	BulkDeletePolicyFromAttributeDefinitions(ctx context.Context, body BulkDeletePolicyFromAttributeDefinitionsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// AddPolicyToAttributeDefinitionsWithBody request with any body
+	AddPolicyToAttributeDefinitionsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	AddPolicyToAttributeDefinitions(ctx context.Context, body AddPolicyToAttributeDefinitionsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CreateSelectValueWithBody request with any body
+	CreateSelectValueWithBody(ctx context.Context, id string, params *CreateSelectValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	CreateSelectValue(ctx context.Context, id string, params *CreateSelectValueParams, body CreateSelectValueJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// DeleteSelectValue request
+	DeleteSelectValue(ctx context.Context, id string, valueId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// UpdateSelectValueWithBody request with any body
+	UpdateSelectValueWithBody(ctx context.Context, id string, valueId string, params *UpdateSelectValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	UpdateSelectValue(ctx context.Context, id string, valueId string, params *UpdateSelectValueParams, body UpdateSelectValueJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ReorderSelectValue request
+	ReorderSelectValue(ctx context.Context, id string, valueId string, params *ReorderSelectValueParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// FindSimple request
 	FindSimple(ctx context.Context, params *FindSimpleParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
@@ -5283,6 +8902,11 @@ type ClientInterface interface {
 	UpdateAttributeDefinitionWithBody(ctx context.Context, id string, params *UpdateAttributeDefinitionParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	UpdateAttributeDefinition(ctx context.Context, id string, params *UpdateAttributeDefinitionParams, body UpdateAttributeDefinitionJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// UpdateContextAwareWithBody request with any body
+	UpdateContextAwareWithBody(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	UpdateContextAware(ctx context.Context, id string, body UpdateContextAwareJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// DeleteDryRun request
 	DeleteDryRun(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -5324,9 +8948,6 @@ type ClientInterface interface {
 	// GetRelationsByPolicyId request
 	GetRelationsByPolicyId(ctx context.Context, id string, params *GetRelationsByPolicyIdParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// GetProducts request
-	GetProducts(ctx context.Context, params *GetProductsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
-
 	// CreateProductWithBody request with any body
 	CreateProductWithBody(ctx context.Context, params *CreateProductParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
@@ -5341,11 +8962,6 @@ type ClientInterface interface {
 	DeleteProductsAttributeWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	DeleteProductsAttribute(ctx context.Context, body DeleteProductsAttributeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	// CreateOrUpdateWithBody request with any body
-	CreateOrUpdateWithBody(ctx context.Context, params *CreateOrUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	CreateOrUpdate(ctx context.Context, params *CreateOrUpdateParams, body CreateOrUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// AddAttributesByIdsWithBody request with any body
 	AddAttributesByIdsWithBody(ctx context.Context, params *AddAttributesByIdsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -5362,6 +8978,26 @@ type ClientInterface interface {
 
 	UpdateAttributesByIds(ctx context.Context, params *UpdateAttributesByIdsParams, body UpdateAttributesByIdsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// AppendDictionaryValuesWithBody request with any body
+	AppendDictionaryValuesWithBody(ctx context.Context, params *AppendDictionaryValuesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	AppendDictionaryValues(ctx context.Context, params *AppendDictionaryValuesParams, body AppendDictionaryValuesJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// DeductDictionaryValuesWithBody request with any body
+	DeductDictionaryValuesWithBody(ctx context.Context, params *DeductDictionaryValuesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	DeductDictionaryValues(ctx context.Context, params *DeductDictionaryValuesParams, body DeductDictionaryValuesJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// AppendSelectValuesWithBody request with any body
+	AppendSelectValuesWithBody(ctx context.Context, params *AppendSelectValuesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	AppendSelectValues(ctx context.Context, params *AppendSelectValuesParams, body AppendSelectValuesJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// DeductSelectValuesWithBody request with any body
+	DeductSelectValuesWithBody(ctx context.Context, params *DeductSelectValuesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	DeductSelectValues(ctx context.Context, params *DeductSelectValuesParams, body DeductSelectValuesJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// AssignProductsToCategoryWithBody request with any body
 	AssignProductsToCategoryWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
@@ -5372,15 +9008,25 @@ type ClientInterface interface {
 
 	CopyAndUpdateProduct(ctx context.Context, params *CopyAndUpdateProductParams, body CopyAndUpdateProductJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// CountFilteredProductsWithBody request with any body
-	CountFilteredProductsWithBody(ctx context.Context, params *CountFilteredProductsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	CountFilteredProducts(ctx context.Context, params *CountFilteredProductsParams, body CountFilteredProductsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
-
 	// GetProductsWithCursorAndViewsWithBody request with any body
 	GetProductsWithCursorAndViewsWithBody(ctx context.Context, params *GetProductsWithCursorAndViewsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	GetProductsWithCursorAndViews(ctx context.Context, params *GetProductsWithCursorAndViewsParams, body GetProductsWithCursorAndViewsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ListProductsViewsByTypesWithBody request with any body
+	ListProductsViewsByTypesWithBody(ctx context.Context, params *ListProductsViewsByTypesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	ListProductsViewsByTypes(ctx context.Context, params *ListProductsViewsByTypesParams, body ListProductsViewsByTypesJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// AddProductGroupsWithBody request with any body
+	AddProductGroupsWithBody(ctx context.Context, params *AddProductGroupsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	AddProductGroups(ctx context.Context, params *AddProductGroupsParams, body AddProductGroupsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// UpdateProductGroupsAttributeVlaSettingsWithBody request with any body
+	UpdateProductGroupsAttributeVlaSettingsWithBody(ctx context.Context, params *UpdateProductGroupsAttributeVlaSettingsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	UpdateProductGroupsAttributeVlaSettings(ctx context.Context, params *UpdateProductGroupsAttributeVlaSettingsParams, body UpdateProductGroupsAttributeVlaSettingsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// RemoveLabelFromProductsWithBody request with any body
 	RemoveLabelFromProductsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -5407,11 +9053,6 @@ type ClientInterface interface {
 
 	ListProductsViewsByNumbers(ctx context.Context, params *ListProductsViewsByNumbersParams, body ListProductsViewsByNumbersJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ChangeStatusesByIdsWithBody request with any body
-	ChangeStatusesByIdsWithBody(ctx context.Context, params *ChangeStatusesByIdsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	ChangeStatusesByIds(ctx context.Context, params *ChangeStatusesByIdsParams, body ChangeStatusesByIdsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
-
 	// FindProductTemplates request
 	FindProductTemplates(ctx context.Context, params *FindProductTemplatesParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
@@ -5436,6 +9077,16 @@ type ClientInterface interface {
 
 	UnarchiveProductsByIds(ctx context.Context, body UnarchiveProductsByIdsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// AddProductVariantsWithBody request with any body
+	AddProductVariantsWithBody(ctx context.Context, params *AddProductVariantsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	AddProductVariants(ctx context.Context, params *AddProductVariantsParams, body AddProductVariantsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// UpdateProductVariantsAttributeVlaSettingsWithBody request with any body
+	UpdateProductVariantsAttributeVlaSettingsWithBody(ctx context.Context, params *UpdateProductVariantsAttributeVlaSettingsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	UpdateProductVariantsAttributeVlaSettings(ctx context.Context, params *UpdateProductVariantsAttributeVlaSettingsParams, body UpdateProductVariantsAttributeVlaSettingsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// GetProduct request
 	GetProduct(ctx context.Context, id string, params *GetProductParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
@@ -5443,11 +9094,6 @@ type ClientInterface interface {
 	UpdateProductWithBody(ctx context.Context, id string, params *UpdateProductParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	UpdateProduct(ctx context.Context, id string, params *UpdateProductParams, body UpdateProductJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	// UpdateProductDetailsWithBody request with any body
-	UpdateProductDetailsWithBody(ctx context.Context, id string, params *UpdateProductDetailsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	UpdateProductDetails(ctx context.Context, id string, params *UpdateProductDetailsParams, body UpdateProductDetailsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// GetProductAssets request
 	GetProductAssets(ctx context.Context, id string, params *GetProductAssetsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -5555,17 +9201,6 @@ type ClientInterface interface {
 	// GetProductRelations request
 	GetProductRelations(ctx context.Context, id string, params *GetProductRelationsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// GetCategoryConnectionsForProduct request
-	GetCategoryConnectionsForProduct(ctx context.Context, id string, params *GetCategoryConnectionsForProductParams, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	// CreateCategoryConnectionWithBody request with any body
-	CreateCategoryConnectionWithBody(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	CreateCategoryConnection(ctx context.Context, id string, body CreateCategoryConnectionJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	// DeleteCategoryConnection request
-	DeleteCategoryConnection(ctx context.Context, id string, relationId string, categoryId string, reqEditors ...RequestEditorFn) (*http.Response, error)
-
 	// CreateProductConnectionWithBody request with any body
 	CreateProductConnectionWithBody(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
@@ -5615,6 +9250,28 @@ type ClientInterface interface {
 	// GetGroupedProductAttributes request
 	GetGroupedProductAttributes(ctx context.Context, id string, params *GetGroupedProductAttributesParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// ConvertToProductFamily request
+	ConvertToProductFamily(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetProductGroupAttribute request
+	GetProductGroupAttribute(ctx context.Context, id string, definitionId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// UpdateProductGroupAttributeWithBody request with any body
+	UpdateProductGroupAttributeWithBody(ctx context.Context, id string, definitionId string, params *UpdateProductGroupAttributeParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	UpdateProductGroupAttribute(ctx context.Context, id string, definitionId string, params *UpdateProductGroupAttributeParams, body UpdateProductGroupAttributeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// UnassignProductGroup request
+	UnassignProductGroup(ctx context.Context, id string, groupId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// MoveProductGroup request
+	MoveProductGroup(ctx context.Context, id string, groupId string, params *MoveProductGroupParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// RemoveLabelsFromProductWithBody request with any body
+	RemoveLabelsFromProductWithBody(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	RemoveLabelsFromProduct(ctx context.Context, id string, body RemoveLabelsFromProductJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// GetProductsLabels request
 	GetProductsLabels(ctx context.Context, id string, params *GetProductsLabelsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
@@ -5625,6 +9282,9 @@ type ClientInterface interface {
 
 	// RemoveLabelFromProduct request
 	RemoveLabelFromProduct(ctx context.Context, id string, labelId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ProductOverview request
+	ProductOverview(ctx context.Context, id string, params *ProductOverviewParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// SetProductGroup request
 	SetProductGroup(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -5641,13 +9301,10 @@ type ClientInterface interface {
 	UnassignProductVariant(ctx context.Context, id string, variantProductId string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// AddProductVariant request
-	AddProductVariant(ctx context.Context, id string, variantProductId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	AddProductVariant(ctx context.Context, id string, variantProductId string, params *AddProductVariantParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// MoveProductVariant request
 	MoveProductVariant(ctx context.Context, id string, variantProductId string, params *MoveProductVariantParams, reqEditors ...RequestEditorFn) (*http.Response, error)
-
-	// ChangeStatus request
-	ChangeStatus(ctx context.Context, id string, action ChangeStatusParamsAction, params *ChangeStatusParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// FindRelations request
 	FindRelations(ctx context.Context, params *FindRelationsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -5668,13 +9325,20 @@ type ClientInterface interface {
 	// FindOne request
 	FindOne(ctx context.Context, id string, params *FindOneParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// PartialUpdateRelationWithBody request with any body
+	PartialUpdateRelationWithBody(ctx context.Context, id string, params *PartialUpdateRelationParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	PartialUpdateRelation(ctx context.Context, id string, params *PartialUpdateRelationParams, body PartialUpdateRelationJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// UpdateRelationWithBody request with any body
 	UpdateRelationWithBody(ctx context.Context, id string, params *UpdateRelationParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	UpdateRelation(ctx context.Context, id string, params *UpdateRelationParams, body UpdateRelationJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// GetCategoryConnectionsByRelationId request
-	GetCategoryConnectionsByRelationId(ctx context.Context, id string, params *GetCategoryConnectionsByRelationIdParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+	// UpdateRelationDirectionWithBody request with any body
+	UpdateRelationDirectionWithBody(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	UpdateRelationDirection(ctx context.Context, id string, body UpdateRelationDirectionJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// UpdateOrderRelation request
 	UpdateOrderRelation(ctx context.Context, id string, params *UpdateOrderRelationParams, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -5710,18 +9374,6 @@ type ClientInterface interface {
 	ValidateValueWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	ValidateValue(ctx context.Context, body ValidateValueJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
-}
-
-func (c *Client) SynchronizeAssets(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewSynchronizeAssetsRequest(c.Server)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
 }
 
 func (c *Client) GetJobStatus(ctx context.Context, taskId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -6048,6 +9700,30 @@ func (c *Client) GetNode(ctx context.Context, id string, params *GetNodeParams, 
 	return c.Client.Do(req)
 }
 
+func (c *Client) PartialUpdateCatalogNodeWithBody(ctx context.Context, id string, params *PartialUpdateCatalogNodeParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPartialUpdateCatalogNodeRequestWithBody(c.Server, id, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) PartialUpdateCatalogNode(ctx context.Context, id string, params *PartialUpdateCatalogNodeParams, body PartialUpdateCatalogNodeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPartialUpdateCatalogNodeRequest(c.Server, id, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 func (c *Client) UpdateCatalogNodeWithBody(ctx context.Context, id string, params *UpdateCatalogNodeParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewUpdateCatalogNodeRequestWithBody(c.Server, id, params, contentType, body)
 	if err != nil {
@@ -6240,8 +9916,8 @@ func (c *Client) UpdateNodeAttributeColumnValue(ctx context.Context, id string, 
 	return c.Client.Do(req)
 }
 
-func (c *Client) CreateCatalogNodeAttributeCompound(ctx context.Context, id string, attributeDefinitionId string, params *CreateCatalogNodeAttributeCompoundParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewCreateCatalogNodeAttributeCompoundRequest(c.Server, id, attributeDefinitionId, params)
+func (c *Client) CreateCatalogNodeAttributeCompound(ctx context.Context, id string, attributeDefinitionId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCreateCatalogNodeAttributeCompoundRequest(c.Server, id, attributeDefinitionId)
 	if err != nil {
 		return nil, err
 	}
@@ -6326,6 +10002,114 @@ func (c *Client) UpdateNodeAttributeMatrixValueWithBody(ctx context.Context, id 
 
 func (c *Client) UpdateNodeAttributeMatrixValue(ctx context.Context, id string, attributeDefinitionId string, params *UpdateNodeAttributeMatrixValueParams, body UpdateNodeAttributeMatrixValueJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewUpdateNodeAttributeMatrixValueRequest(c.Server, id, attributeDefinitionId, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) GetAttributesAssociatedToCategory(ctx context.Context, id string, params *GetAttributesAssociatedToCategoryParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetAttributesAssociatedToCategoryRequest(c.Server, id, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) UnassignDefinitionFromCategory(ctx context.Context, id string, definitionId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUnassignDefinitionFromCategoryRequest(c.Server, id, definitionId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) AssignDefinitionToCategory(ctx context.Context, id string, definitionId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAssignDefinitionToCategoryRequest(c.Server, id, definitionId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) SetDictionaryDefinitionValueWithBody(ctx context.Context, id string, definitionId string, params *SetDictionaryDefinitionValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewSetDictionaryDefinitionValueRequestWithBody(c.Server, id, definitionId, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) SetDictionaryDefinitionValue(ctx context.Context, id string, definitionId string, params *SetDictionaryDefinitionValueParams, body SetDictionaryDefinitionValueJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewSetDictionaryDefinitionValueRequest(c.Server, id, definitionId, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) SetSelectDefinitionValueWithBody(ctx context.Context, id string, definitionId string, params *SetSelectDefinitionValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewSetSelectDefinitionValueRequestWithBody(c.Server, id, definitionId, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) SetSelectDefinitionValue(ctx context.Context, id string, definitionId string, params *SetSelectDefinitionValueParams, body SetSelectDefinitionValueJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewSetSelectDefinitionValueRequest(c.Server, id, definitionId, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) SetSimpleDefinitionValueWithBody(ctx context.Context, id string, definitionId string, params *SetSimpleDefinitionValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewSetSimpleDefinitionValueRequestWithBody(c.Server, id, definitionId, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) SetSimpleDefinitionValue(ctx context.Context, id string, definitionId string, params *SetSimpleDefinitionValueParams, body SetSimpleDefinitionValueJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewSetSimpleDefinitionValueRequest(c.Server, id, definitionId, params, body)
 	if err != nil {
 		return nil, err
 	}
@@ -6566,6 +10350,30 @@ func (c *Client) Unarchive(ctx context.Context, id string, reqEditors ...Request
 
 func (c *Client) GetCategoryTree(ctx context.Context, id string, params *GetCategoryTreeParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetCategoryTreeRequest(c.Server, id, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) GetCategoryViewWithBody(ctx context.Context, id ObjectId, params *GetCategoryViewParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetCategoryViewRequestWithBody(c.Server, id, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) GetCategoryView(ctx context.Context, id ObjectId, params *GetCategoryViewParams, body GetCategoryViewJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetCategoryViewRequest(c.Server, id, params, body)
 	if err != nil {
 		return nil, err
 	}
@@ -6890,18 +10698,6 @@ func (c *Client) CreateDictionaryDefinitionWithBody(ctx context.Context, params 
 
 func (c *Client) CreateDictionaryDefinition(ctx context.Context, params *CreateDictionaryDefinitionParams, body CreateDictionaryDefinitionJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewCreateDictionaryDefinitionRequest(c.Server, params, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-func (c *Client) DeleteDictionaryDefinition(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDeleteDictionaryDefinitionRequest(c.Server, id)
 	if err != nil {
 		return nil, err
 	}
@@ -7248,6 +11044,126 @@ func (c *Client) UpdateMatrixDefinitionDryRun(ctx context.Context, id string, pa
 	return c.Client.Do(req)
 }
 
+func (c *Client) BulkDeletePolicyFromAttributeDefinitionsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewBulkDeletePolicyFromAttributeDefinitionsRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) BulkDeletePolicyFromAttributeDefinitions(ctx context.Context, body BulkDeletePolicyFromAttributeDefinitionsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewBulkDeletePolicyFromAttributeDefinitionsRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) AddPolicyToAttributeDefinitionsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAddPolicyToAttributeDefinitionsRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) AddPolicyToAttributeDefinitions(ctx context.Context, body AddPolicyToAttributeDefinitionsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAddPolicyToAttributeDefinitionsRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CreateSelectValueWithBody(ctx context.Context, id string, params *CreateSelectValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCreateSelectValueRequestWithBody(c.Server, id, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CreateSelectValue(ctx context.Context, id string, params *CreateSelectValueParams, body CreateSelectValueJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCreateSelectValueRequest(c.Server, id, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) DeleteSelectValue(ctx context.Context, id string, valueId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeleteSelectValueRequest(c.Server, id, valueId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) UpdateSelectValueWithBody(ctx context.Context, id string, valueId string, params *UpdateSelectValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUpdateSelectValueRequestWithBody(c.Server, id, valueId, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) UpdateSelectValue(ctx context.Context, id string, valueId string, params *UpdateSelectValueParams, body UpdateSelectValueJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUpdateSelectValueRequest(c.Server, id, valueId, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) ReorderSelectValue(ctx context.Context, id string, valueId string, params *ReorderSelectValueParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewReorderSelectValueRequest(c.Server, id, valueId, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 func (c *Client) FindSimple(ctx context.Context, params *FindSimpleParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewFindSimpleRequest(c.Server, params)
 	if err != nil {
@@ -7322,6 +11238,30 @@ func (c *Client) UpdateAttributeDefinitionWithBody(ctx context.Context, id strin
 
 func (c *Client) UpdateAttributeDefinition(ctx context.Context, id string, params *UpdateAttributeDefinitionParams, body UpdateAttributeDefinitionJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewUpdateAttributeDefinitionRequest(c.Server, id, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) UpdateContextAwareWithBody(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUpdateContextAwareRequestWithBody(c.Server, id, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) UpdateContextAware(ctx context.Context, id string, body UpdateContextAwareJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUpdateContextAwareRequest(c.Server, id, body)
 	if err != nil {
 		return nil, err
 	}
@@ -7500,18 +11440,6 @@ func (c *Client) GetRelationsByPolicyId(ctx context.Context, id string, params *
 	return c.Client.Do(req)
 }
 
-func (c *Client) GetProducts(ctx context.Context, params *GetProductsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetProductsRequest(c.Server, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
 func (c *Client) CreateProductWithBody(ctx context.Context, params *CreateProductParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewCreateProductRequestWithBody(c.Server, params, contentType, body)
 	if err != nil {
@@ -7574,30 +11502,6 @@ func (c *Client) DeleteProductsAttributeWithBody(ctx context.Context, contentTyp
 
 func (c *Client) DeleteProductsAttribute(ctx context.Context, body DeleteProductsAttributeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewDeleteProductsAttributeRequest(c.Server, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-func (c *Client) CreateOrUpdateWithBody(ctx context.Context, params *CreateOrUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewCreateOrUpdateRequestWithBody(c.Server, params, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-func (c *Client) CreateOrUpdate(ctx context.Context, params *CreateOrUpdateParams, body CreateOrUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewCreateOrUpdateRequest(c.Server, params, body)
 	if err != nil {
 		return nil, err
 	}
@@ -7680,6 +11584,102 @@ func (c *Client) UpdateAttributesByIds(ctx context.Context, params *UpdateAttrib
 	return c.Client.Do(req)
 }
 
+func (c *Client) AppendDictionaryValuesWithBody(ctx context.Context, params *AppendDictionaryValuesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAppendDictionaryValuesRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) AppendDictionaryValues(ctx context.Context, params *AppendDictionaryValuesParams, body AppendDictionaryValuesJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAppendDictionaryValuesRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) DeductDictionaryValuesWithBody(ctx context.Context, params *DeductDictionaryValuesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeductDictionaryValuesRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) DeductDictionaryValues(ctx context.Context, params *DeductDictionaryValuesParams, body DeductDictionaryValuesJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeductDictionaryValuesRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) AppendSelectValuesWithBody(ctx context.Context, params *AppendSelectValuesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAppendSelectValuesRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) AppendSelectValues(ctx context.Context, params *AppendSelectValuesParams, body AppendSelectValuesJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAppendSelectValuesRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) DeductSelectValuesWithBody(ctx context.Context, params *DeductSelectValuesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeductSelectValuesRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) DeductSelectValues(ctx context.Context, params *DeductSelectValuesParams, body DeductSelectValuesJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeductSelectValuesRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 func (c *Client) AssignProductsToCategoryWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewAssignProductsToCategoryRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -7728,30 +11728,6 @@ func (c *Client) CopyAndUpdateProduct(ctx context.Context, params *CopyAndUpdate
 	return c.Client.Do(req)
 }
 
-func (c *Client) CountFilteredProductsWithBody(ctx context.Context, params *CountFilteredProductsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewCountFilteredProductsRequestWithBody(c.Server, params, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-func (c *Client) CountFilteredProducts(ctx context.Context, params *CountFilteredProductsParams, body CountFilteredProductsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewCountFilteredProductsRequest(c.Server, params, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
 func (c *Client) GetProductsWithCursorAndViewsWithBody(ctx context.Context, params *GetProductsWithCursorAndViewsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetProductsWithCursorAndViewsRequestWithBody(c.Server, params, contentType, body)
 	if err != nil {
@@ -7766,6 +11742,78 @@ func (c *Client) GetProductsWithCursorAndViewsWithBody(ctx context.Context, para
 
 func (c *Client) GetProductsWithCursorAndViews(ctx context.Context, params *GetProductsWithCursorAndViewsParams, body GetProductsWithCursorAndViewsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetProductsWithCursorAndViewsRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) ListProductsViewsByTypesWithBody(ctx context.Context, params *ListProductsViewsByTypesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewListProductsViewsByTypesRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) ListProductsViewsByTypes(ctx context.Context, params *ListProductsViewsByTypesParams, body ListProductsViewsByTypesJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewListProductsViewsByTypesRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) AddProductGroupsWithBody(ctx context.Context, params *AddProductGroupsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAddProductGroupsRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) AddProductGroups(ctx context.Context, params *AddProductGroupsParams, body AddProductGroupsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAddProductGroupsRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) UpdateProductGroupsAttributeVlaSettingsWithBody(ctx context.Context, params *UpdateProductGroupsAttributeVlaSettingsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUpdateProductGroupsAttributeVlaSettingsRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) UpdateProductGroupsAttributeVlaSettings(ctx context.Context, params *UpdateProductGroupsAttributeVlaSettingsParams, body UpdateProductGroupsAttributeVlaSettingsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUpdateProductGroupsAttributeVlaSettingsRequest(c.Server, params, body)
 	if err != nil {
 		return nil, err
 	}
@@ -7896,30 +11944,6 @@ func (c *Client) ListProductsViewsByNumbers(ctx context.Context, params *ListPro
 	return c.Client.Do(req)
 }
 
-func (c *Client) ChangeStatusesByIdsWithBody(ctx context.Context, params *ChangeStatusesByIdsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewChangeStatusesByIdsRequestWithBody(c.Server, params, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-func (c *Client) ChangeStatusesByIds(ctx context.Context, params *ChangeStatusesByIdsParams, body ChangeStatusesByIdsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewChangeStatusesByIdsRequest(c.Server, params, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
 func (c *Client) FindProductTemplates(ctx context.Context, params *FindProductTemplatesParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewFindProductTemplatesRequest(c.Server, params)
 	if err != nil {
@@ -8028,6 +12052,54 @@ func (c *Client) UnarchiveProductsByIds(ctx context.Context, body UnarchiveProdu
 	return c.Client.Do(req)
 }
 
+func (c *Client) AddProductVariantsWithBody(ctx context.Context, params *AddProductVariantsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAddProductVariantsRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) AddProductVariants(ctx context.Context, params *AddProductVariantsParams, body AddProductVariantsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAddProductVariantsRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) UpdateProductVariantsAttributeVlaSettingsWithBody(ctx context.Context, params *UpdateProductVariantsAttributeVlaSettingsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUpdateProductVariantsAttributeVlaSettingsRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) UpdateProductVariantsAttributeVlaSettings(ctx context.Context, params *UpdateProductVariantsAttributeVlaSettingsParams, body UpdateProductVariantsAttributeVlaSettingsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUpdateProductVariantsAttributeVlaSettingsRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 func (c *Client) GetProduct(ctx context.Context, id string, params *GetProductParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetProductRequest(c.Server, id, params)
 	if err != nil {
@@ -8054,30 +12126,6 @@ func (c *Client) UpdateProductWithBody(ctx context.Context, id string, params *U
 
 func (c *Client) UpdateProduct(ctx context.Context, id string, params *UpdateProductParams, body UpdateProductJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewUpdateProductRequest(c.Server, id, params, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-func (c *Client) UpdateProductDetailsWithBody(ctx context.Context, id string, params *UpdateProductDetailsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewUpdateProductDetailsRequestWithBody(c.Server, id, params, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-func (c *Client) UpdateProductDetails(ctx context.Context, id string, params *UpdateProductDetailsParams, body UpdateProductDetailsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewUpdateProductDetailsRequest(c.Server, id, params, body)
 	if err != nil {
 		return nil, err
 	}
@@ -8568,54 +12616,6 @@ func (c *Client) GetProductRelations(ctx context.Context, id string, params *Get
 	return c.Client.Do(req)
 }
 
-func (c *Client) GetCategoryConnectionsForProduct(ctx context.Context, id string, params *GetCategoryConnectionsForProductParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetCategoryConnectionsForProductRequest(c.Server, id, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-func (c *Client) CreateCategoryConnectionWithBody(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewCreateCategoryConnectionRequestWithBody(c.Server, id, contentType, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-func (c *Client) CreateCategoryConnection(ctx context.Context, id string, body CreateCategoryConnectionJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewCreateCategoryConnectionRequest(c.Server, id, body)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-func (c *Client) DeleteCategoryConnection(ctx context.Context, id string, relationId string, categoryId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewDeleteCategoryConnectionRequest(c.Server, id, relationId, categoryId)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
 func (c *Client) CreateProductConnectionWithBody(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewCreateProductConnectionRequestWithBody(c.Server, id, contentType, body)
 	if err != nil {
@@ -8832,6 +12832,102 @@ func (c *Client) GetGroupedProductAttributes(ctx context.Context, id string, par
 	return c.Client.Do(req)
 }
 
+func (c *Client) ConvertToProductFamily(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewConvertToProductFamilyRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) GetProductGroupAttribute(ctx context.Context, id string, definitionId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetProductGroupAttributeRequest(c.Server, id, definitionId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) UpdateProductGroupAttributeWithBody(ctx context.Context, id string, definitionId string, params *UpdateProductGroupAttributeParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUpdateProductGroupAttributeRequestWithBody(c.Server, id, definitionId, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) UpdateProductGroupAttribute(ctx context.Context, id string, definitionId string, params *UpdateProductGroupAttributeParams, body UpdateProductGroupAttributeJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUpdateProductGroupAttributeRequest(c.Server, id, definitionId, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) UnassignProductGroup(ctx context.Context, id string, groupId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUnassignProductGroupRequest(c.Server, id, groupId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) MoveProductGroup(ctx context.Context, id string, groupId string, params *MoveProductGroupParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewMoveProductGroupRequest(c.Server, id, groupId, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) RemoveLabelsFromProductWithBody(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewRemoveLabelsFromProductRequestWithBody(c.Server, id, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) RemoveLabelsFromProduct(ctx context.Context, id string, body RemoveLabelsFromProductJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewRemoveLabelsFromProductRequest(c.Server, id, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 func (c *Client) GetProductsLabels(ctx context.Context, id string, params *GetProductsLabelsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetProductsLabelsRequest(c.Server, id, params)
 	if err != nil {
@@ -8870,6 +12966,18 @@ func (c *Client) AddLabelsToProduct(ctx context.Context, id string, body AddLabe
 
 func (c *Client) RemoveLabelFromProduct(ctx context.Context, id string, labelId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewRemoveLabelFromProductRequest(c.Server, id, labelId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) ProductOverview(ctx context.Context, id string, params *ProductOverviewParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewProductOverviewRequest(c.Server, id, params)
 	if err != nil {
 		return nil, err
 	}
@@ -8940,8 +13048,8 @@ func (c *Client) UnassignProductVariant(ctx context.Context, id string, variantP
 	return c.Client.Do(req)
 }
 
-func (c *Client) AddProductVariant(ctx context.Context, id string, variantProductId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewAddProductVariantRequest(c.Server, id, variantProductId)
+func (c *Client) AddProductVariant(ctx context.Context, id string, variantProductId string, params *AddProductVariantParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAddProductVariantRequest(c.Server, id, variantProductId, params)
 	if err != nil {
 		return nil, err
 	}
@@ -8954,18 +13062,6 @@ func (c *Client) AddProductVariant(ctx context.Context, id string, variantProduc
 
 func (c *Client) MoveProductVariant(ctx context.Context, id string, variantProductId string, params *MoveProductVariantParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewMoveProductVariantRequest(c.Server, id, variantProductId, params)
-	if err != nil {
-		return nil, err
-	}
-	req = req.WithContext(ctx)
-	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
-		return nil, err
-	}
-	return c.Client.Do(req)
-}
-
-func (c *Client) ChangeStatus(ctx context.Context, id string, action ChangeStatusParamsAction, params *ChangeStatusParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewChangeStatusRequest(c.Server, id, action, params)
 	if err != nil {
 		return nil, err
 	}
@@ -9060,6 +13156,30 @@ func (c *Client) FindOne(ctx context.Context, id string, params *FindOneParams, 
 	return c.Client.Do(req)
 }
 
+func (c *Client) PartialUpdateRelationWithBody(ctx context.Context, id string, params *PartialUpdateRelationParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPartialUpdateRelationRequestWithBody(c.Server, id, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) PartialUpdateRelation(ctx context.Context, id string, params *PartialUpdateRelationParams, body PartialUpdateRelationJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPartialUpdateRelationRequest(c.Server, id, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 func (c *Client) UpdateRelationWithBody(ctx context.Context, id string, params *UpdateRelationParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewUpdateRelationRequestWithBody(c.Server, id, params, contentType, body)
 	if err != nil {
@@ -9084,8 +13204,20 @@ func (c *Client) UpdateRelation(ctx context.Context, id string, params *UpdateRe
 	return c.Client.Do(req)
 }
 
-func (c *Client) GetCategoryConnectionsByRelationId(ctx context.Context, id string, params *GetCategoryConnectionsByRelationIdParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewGetCategoryConnectionsByRelationIdRequest(c.Server, id, params)
+func (c *Client) UpdateRelationDirectionWithBody(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUpdateRelationDirectionRequestWithBody(c.Server, id, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) UpdateRelationDirection(ctx context.Context, id string, body UpdateRelationDirectionJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUpdateRelationDirectionRequest(c.Server, id, body)
 	if err != nil {
 		return nil, err
 	}
@@ -9250,33 +13382,6 @@ func (c *Client) ValidateValue(ctx context.Context, body ValidateValueJSONReques
 		return nil, err
 	}
 	return c.Client.Do(req)
-}
-
-// NewSynchronizeAssetsRequest generates requests for SynchronizeAssets
-func NewSynchronizeAssetsRequest(server string) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/assets")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
 }
 
 // NewGetJobStatusRequest generates requests for GetJobStatus
@@ -10196,6 +14301,22 @@ func NewListCatalogsRequest(server string, params *ListCatalogsParams) (*http.Re
 
 		}
 
+		if params.ExcludeToBeRemoved != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "excludeToBeRemoved", runtime.ParamLocationQuery, *params.ExcludeToBeRemoved); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
 		queryURL.RawQuery = queryValues.Encode()
 	}
 
@@ -10266,16 +14387,20 @@ func NewCreateCategoryRequestWithBody(server string, params *CreateCategoryParam
 	if params != nil {
 		queryValues := queryURL.Query()
 
-		if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, params.Validation); err != nil {
-			return nil, err
-		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-			return nil, err
-		} else {
-			for k, v := range parsed {
-				for _, v2 := range v {
-					queryValues.Add(k, v2)
+		if params.Validation != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, *params.Validation); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
 				}
 			}
+
 		}
 
 		queryURL.RawQuery = queryValues.Encode()
@@ -10365,6 +14490,22 @@ func NewGetCategoriesByAssetIdRequest(server string, id string, params *GetCateg
 		if params.PageSize != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "pageSize", runtime.ParamLocationQuery, *params.PageSize); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.ExcludeToBeRemoved != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "excludeToBeRemoved", runtime.ParamLocationQuery, *params.ExcludeToBeRemoved); err != nil {
 				return nil, err
 			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 				return nil, err
@@ -10656,6 +14797,28 @@ func NewGetFilteredNodesRequestWithBody(server string, params *GetFilteredNodesP
 		return nil, err
 	}
 
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.ExcludeToBeRemoved != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "excludeToBeRemoved", runtime.ParamLocationQuery, *params.ExcludeToBeRemoved); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
 	req, err := http.NewRequest("POST", queryURL.String(), body)
 	if err != nil {
 		return nil, err
@@ -10801,6 +14964,68 @@ func NewGetNodeRequest(server string, id string, params *GetNodeParams) (*http.R
 			}
 
 			req.Header.Set("context-fallback", headerParam1)
+		}
+
+	}
+
+	return req, nil
+}
+
+// NewPartialUpdateCatalogNodeRequest calls the generic PartialUpdateCatalogNode builder with application/json body
+func NewPartialUpdateCatalogNodeRequest(server string, id string, params *PartialUpdateCatalogNodeParams, body PartialUpdateCatalogNodeJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPartialUpdateCatalogNodeRequestWithBody(server, id, params, "application/json", bodyReader)
+}
+
+// NewPartialUpdateCatalogNodeRequestWithBody generates requests for PartialUpdateCatalogNode with any type of body
+func NewPartialUpdateCatalogNodeRequestWithBody(server string, id string, params *PartialUpdateCatalogNodeParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/catalogs/nodes/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("PATCH", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		if params.Context != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context", headerParam0)
 		}
 
 	}
@@ -11241,6 +15466,21 @@ func NewUpdateNodeAttributeValueRequestWithBody(server string, id string, attrib
 
 	req.Header.Add("Content-Type", contentType)
 
+	if params != nil {
+
+		if params.Context != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context", headerParam0)
+		}
+
+	}
+
 	return req, nil
 }
 
@@ -11330,17 +15570,6 @@ func NewCreateCatalogNodeAttributeRequestWithBody(server string, id string, attr
 			req.Header.Set("context", headerParam0)
 		}
 
-		if params.ContextFallback != nil {
-			var headerParam1 string
-
-			headerParam1, err = runtime.StyleParamWithLocation("simple", false, "context-fallback", runtime.ParamLocationHeader, *params.ContextFallback)
-			if err != nil {
-				return nil, err
-			}
-
-			req.Header.Set("context-fallback", headerParam1)
-		}
-
 	}
 
 	return req, nil
@@ -11419,6 +15648,21 @@ func NewCreateCatalogNodeAttributeColumnRequestWithBody(server string, id string
 
 	req.Header.Add("Content-Type", contentType)
 
+	if params != nil {
+
+		if params.Context != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context", headerParam0)
+		}
+
+	}
+
 	return req, nil
 }
 
@@ -11495,11 +15739,26 @@ func NewUpdateNodeAttributeColumnValueRequestWithBody(server string, id string, 
 
 	req.Header.Add("Content-Type", contentType)
 
+	if params != nil {
+
+		if params.Context != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context", headerParam0)
+		}
+
+	}
+
 	return req, nil
 }
 
 // NewCreateCatalogNodeAttributeCompoundRequest generates requests for CreateCatalogNodeAttributeCompound
-func NewCreateCatalogNodeAttributeCompoundRequest(server string, id string, attributeDefinitionId string, params *CreateCatalogNodeAttributeCompoundParams) (*http.Request, error) {
+func NewCreateCatalogNodeAttributeCompoundRequest(server string, id string, attributeDefinitionId string) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -11534,32 +15793,6 @@ func NewCreateCatalogNodeAttributeCompoundRequest(server string, id string, attr
 	req, err := http.NewRequest("POST", queryURL.String(), nil)
 	if err != nil {
 		return nil, err
-	}
-
-	if params != nil {
-
-		if params.Context != nil {
-			var headerParam0 string
-
-			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
-			if err != nil {
-				return nil, err
-			}
-
-			req.Header.Set("context", headerParam0)
-		}
-
-		if params.ContextFallback != nil {
-			var headerParam1 string
-
-			headerParam1, err = runtime.StyleParamWithLocation("simple", false, "context-fallback", runtime.ParamLocationHeader, *params.ContextFallback)
-			if err != nil {
-				return nil, err
-			}
-
-			req.Header.Set("context-fallback", headerParam1)
-		}
-
 	}
 
 	return req, nil
@@ -11614,17 +15847,6 @@ func NewCreateCatalogNodeAttributeDictionaryRequest(server string, id string, at
 			}
 
 			req.Header.Set("context", headerParam0)
-		}
-
-		if params.ContextFallback != nil {
-			var headerParam1 string
-
-			headerParam1, err = runtime.StyleParamWithLocation("simple", false, "context-fallback", runtime.ParamLocationHeader, *params.ContextFallback)
-			if err != nil {
-				return nil, err
-			}
-
-			req.Header.Set("context-fallback", headerParam1)
 		}
 
 	}
@@ -11718,17 +15940,6 @@ func NewSetDictionaryAttributeValuesForCategoryRequestWithBody(server string, id
 			req.Header.Set("context", headerParam0)
 		}
 
-		if params.ContextFallback != nil {
-			var headerParam1 string
-
-			headerParam1, err = runtime.StyleParamWithLocation("simple", false, "context-fallback", runtime.ParamLocationHeader, *params.ContextFallback)
-			if err != nil {
-				return nil, err
-			}
-
-			req.Header.Set("context-fallback", headerParam1)
-		}
-
 	}
 
 	return req, nil
@@ -11807,6 +16018,21 @@ func NewCreateCatalogNodeAttributeMatrixRequestWithBody(server string, id string
 
 	req.Header.Add("Content-Type", contentType)
 
+	if params != nil {
+
+		if params.Context != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context", headerParam0)
+		}
+
+	}
+
 	return req, nil
 }
 
@@ -11882,6 +16108,370 @@ func NewUpdateNodeAttributeMatrixValueRequestWithBody(server string, id string, 
 	}
 
 	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		if params.Context != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context", headerParam0)
+		}
+
+	}
+
+	return req, nil
+}
+
+// NewGetAttributesAssociatedToCategoryRequest generates requests for GetAttributesAssociatedToCategory
+func NewGetAttributesAssociatedToCategoryRequest(server string, id string, params *GetAttributesAssociatedToCategoryParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/catalogs/nodes/%s/category-attributes", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+
+		if params.Context != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context", headerParam0)
+		}
+
+		if params.ContextFallback != nil {
+			var headerParam1 string
+
+			headerParam1, err = runtime.StyleParamWithLocation("simple", false, "context-fallback", runtime.ParamLocationHeader, *params.ContextFallback)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context-fallback", headerParam1)
+		}
+
+	}
+
+	return req, nil
+}
+
+// NewUnassignDefinitionFromCategoryRequest generates requests for UnassignDefinitionFromCategory
+func NewUnassignDefinitionFromCategoryRequest(server string, id string, definitionId string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithLocation("simple", false, "definitionId", runtime.ParamLocationPath, definitionId)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/catalogs/nodes/%s/category-attributes/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("DELETE", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewAssignDefinitionToCategoryRequest generates requests for AssignDefinitionToCategory
+func NewAssignDefinitionToCategoryRequest(server string, id string, definitionId string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithLocation("simple", false, "definitionId", runtime.ParamLocationPath, definitionId)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/catalogs/nodes/%s/category-attributes/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewSetDictionaryDefinitionValueRequest calls the generic SetDictionaryDefinitionValue builder with application/json body
+func NewSetDictionaryDefinitionValueRequest(server string, id string, definitionId string, params *SetDictionaryDefinitionValueParams, body SetDictionaryDefinitionValueJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewSetDictionaryDefinitionValueRequestWithBody(server, id, definitionId, params, "application/json", bodyReader)
+}
+
+// NewSetDictionaryDefinitionValueRequestWithBody generates requests for SetDictionaryDefinitionValue with any type of body
+func NewSetDictionaryDefinitionValueRequestWithBody(server string, id string, definitionId string, params *SetDictionaryDefinitionValueParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithLocation("simple", false, "definitionId", runtime.ParamLocationPath, definitionId)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/catalogs/nodes/%s/category-attributes/%s/dictionary", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("PUT", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		if params.Context != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context", headerParam0)
+		}
+
+	}
+
+	return req, nil
+}
+
+// NewSetSelectDefinitionValueRequest calls the generic SetSelectDefinitionValue builder with application/json body
+func NewSetSelectDefinitionValueRequest(server string, id string, definitionId string, params *SetSelectDefinitionValueParams, body SetSelectDefinitionValueJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewSetSelectDefinitionValueRequestWithBody(server, id, definitionId, params, "application/json", bodyReader)
+}
+
+// NewSetSelectDefinitionValueRequestWithBody generates requests for SetSelectDefinitionValue with any type of body
+func NewSetSelectDefinitionValueRequestWithBody(server string, id string, definitionId string, params *SetSelectDefinitionValueParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithLocation("simple", false, "definitionId", runtime.ParamLocationPath, definitionId)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/catalogs/nodes/%s/category-attributes/%s/select", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("PUT", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		if params.Context != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context", headerParam0)
+		}
+
+	}
+
+	return req, nil
+}
+
+// NewSetSimpleDefinitionValueRequest calls the generic SetSimpleDefinitionValue builder with application/json body
+func NewSetSimpleDefinitionValueRequest(server string, id string, definitionId string, params *SetSimpleDefinitionValueParams, body SetSimpleDefinitionValueJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewSetSimpleDefinitionValueRequestWithBody(server, id, definitionId, params, "application/json", bodyReader)
+}
+
+// NewSetSimpleDefinitionValueRequestWithBody generates requests for SetSimpleDefinitionValue with any type of body
+func NewSetSimpleDefinitionValueRequestWithBody(server string, id string, definitionId string, params *SetSimpleDefinitionValueParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithLocation("simple", false, "definitionId", runtime.ParamLocationPath, definitionId)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/catalogs/nodes/%s/category-attributes/%s/simple", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("PUT", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		if params.Context != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context", headerParam0)
+		}
+
+	}
 
 	return req, nil
 }
@@ -12203,6 +16793,22 @@ func NewGetByCategoryNodeIdRequest(server string, id string, params *GetByCatego
 		if params.PageSize != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "pageSize", runtime.ParamLocationQuery, *params.PageSize); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.ArchiveState != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "archiveState", runtime.ParamLocationQuery, *params.ArchiveState); err != nil {
 				return nil, err
 			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 				return nil, err
@@ -12544,6 +17150,22 @@ func NewGetPolicyByCategoryNodeIdRequest(server string, id string, params *GetPo
 
 		}
 
+		if params.ArchiveState != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "archiveState", runtime.ParamLocationQuery, *params.ArchiveState); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
 		queryURL.RawQuery = queryValues.Encode()
 	}
 
@@ -12804,6 +17426,22 @@ func NewGetCategoryTreeRequest(server string, id string, params *GetCategoryTree
 
 		}
 
+		if params.ExcludeToBeRemoved != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "excludeToBeRemoved", runtime.ParamLocationQuery, *params.ExcludeToBeRemoved); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
 		queryURL.RawQuery = queryValues.Encode()
 	}
 
@@ -12811,6 +17449,101 @@ func NewGetCategoryTreeRequest(server string, id string, params *GetCategoryTree
 	if err != nil {
 		return nil, err
 	}
+
+	if params != nil {
+
+		if params.Context != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context", headerParam0)
+		}
+
+		if params.ContextFallback != nil {
+			var headerParam1 string
+
+			headerParam1, err = runtime.StyleParamWithLocation("simple", false, "context-fallback", runtime.ParamLocationHeader, *params.ContextFallback)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context-fallback", headerParam1)
+		}
+
+	}
+
+	return req, nil
+}
+
+// NewGetCategoryViewRequest calls the generic GetCategoryView builder with application/json body
+func NewGetCategoryViewRequest(server string, id ObjectId, params *GetCategoryViewParams, body GetCategoryViewJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewGetCategoryViewRequestWithBody(server, id, params, "application/json", bodyReader)
+}
+
+// NewGetCategoryViewRequestWithBody generates requests for GetCategoryView with any type of body
+func NewGetCategoryViewRequestWithBody(server string, id ObjectId, params *GetCategoryViewParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/catalogs/%s/nodes/cursor/view", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.ArchiveState != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "archiveState", runtime.ParamLocationQuery, *params.ArchiveState); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
 
 	if params != nil {
 
@@ -12889,6 +17622,22 @@ func NewGetPoliciesByCategoryIdRequest(server string, id string, params *GetPoli
 		if params.PageSize != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "pageSize", runtime.ParamLocationQuery, *params.PageSize); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.ArchiveState != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "archiveState", runtime.ParamLocationQuery, *params.ArchiveState); err != nil {
 				return nil, err
 			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 				return nil, err
@@ -13056,6 +17805,22 @@ func NewGetPolicyByCategoryIdRequest(server string, id string, params *GetPolicy
 		if params.PageSize != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "pageSize", runtime.ParamLocationQuery, *params.PageSize); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.ArchiveState != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "archiveState", runtime.ParamLocationQuery, *params.ArchiveState); err != nil {
 				return nil, err
 			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 				return nil, err
@@ -13299,16 +18064,20 @@ func NewCreateCompoundDefinitionRequestWithBody(server string, params *CreateCom
 	if params != nil {
 		queryValues := queryURL.Query()
 
-		if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, params.Validation); err != nil {
-			return nil, err
-		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-			return nil, err
-		} else {
-			for k, v := range parsed {
-				for _, v2 := range v {
-					queryValues.Add(k, v2)
+		if params.Validation != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, *params.Validation); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
 				}
 			}
+
 		}
 
 		queryURL.RawQuery = queryValues.Encode()
@@ -13582,16 +18351,20 @@ func NewUpdateCompoundDefinitionRequestWithBody(server string, id string, params
 	if params != nil {
 		queryValues := queryURL.Query()
 
-		if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, params.Validation); err != nil {
-			return nil, err
-		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-			return nil, err
-		} else {
-			for k, v := range parsed {
-				for _, v2 := range v {
-					queryValues.Add(k, v2)
+		if params.Validation != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, *params.Validation); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
 				}
 			}
+
 		}
 
 		queryURL.RawQuery = queryValues.Encode()
@@ -13674,6 +18447,22 @@ func NewFindAllAttributeDefinitionsRequest(server string, params *FindAllAttribu
 		if params.PageSize != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "pageSize", runtime.ParamLocationQuery, *params.PageSize); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.ExcludeToBeRemoved != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "excludeToBeRemoved", runtime.ParamLocationQuery, *params.ExcludeToBeRemoved); err != nil {
 				return nil, err
 			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 				return nil, err
@@ -13845,16 +18634,20 @@ func NewCreateColumnDefinitionRequestWithBody(server string, params *CreateColum
 	if params != nil {
 		queryValues := queryURL.Query()
 
-		if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, params.Validation); err != nil {
-			return nil, err
-		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-			return nil, err
-		} else {
-			for k, v := range parsed {
-				for _, v2 := range v {
-					queryValues.Add(k, v2)
+		if params.Validation != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, *params.Validation); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
 				}
 			}
+
 		}
 
 		queryURL.RawQuery = queryValues.Encode()
@@ -13910,16 +18703,20 @@ func NewUpdateColumnDefinitionRequestWithBody(server string, id string, params *
 	if params != nil {
 		queryValues := queryURL.Query()
 
-		if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, params.Validation); err != nil {
-			return nil, err
-		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-			return nil, err
-		} else {
-			for k, v := range parsed {
-				for _, v2 := range v {
-					queryValues.Add(k, v2)
+		if params.Validation != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, *params.Validation); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
 				}
 			}
+
 		}
 
 		queryURL.RawQuery = queryValues.Encode()
@@ -13975,16 +18772,20 @@ func NewUpdateColumnDefinitionDryRunRequestWithBody(server string, id string, pa
 	if params != nil {
 		queryValues := queryURL.Query()
 
-		if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, params.Validation); err != nil {
-			return nil, err
-		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-			return nil, err
-		} else {
-			for k, v := range parsed {
-				for _, v2 := range v {
-					queryValues.Add(k, v2)
+		if params.Validation != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, *params.Validation); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
 				}
 			}
+
 		}
 
 		queryURL.RawQuery = queryValues.Encode()
@@ -14033,16 +18834,20 @@ func NewCreateDictionaryDefinitionRequestWithBody(server string, params *CreateD
 	if params != nil {
 		queryValues := queryURL.Query()
 
-		if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, params.Validation); err != nil {
-			return nil, err
-		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-			return nil, err
-		} else {
-			for k, v := range parsed {
-				for _, v2 := range v {
-					queryValues.Add(k, v2)
+		if params.Validation != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, *params.Validation); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
 				}
 			}
+
 		}
 
 		queryURL.RawQuery = queryValues.Encode()
@@ -14068,40 +18873,6 @@ func NewCreateDictionaryDefinitionRequestWithBody(server string, params *CreateD
 			req.Header.Set("context", headerParam0)
 		}
 
-	}
-
-	return req, nil
-}
-
-// NewDeleteDictionaryDefinitionRequest generates requests for DeleteDictionaryDefinition
-func NewDeleteDictionaryDefinitionRequest(server string, id string) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/definitions/dictionary/%s", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("DELETE", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
 	}
 
 	return req, nil
@@ -14194,16 +18965,20 @@ func NewUpdateDictionaryDefinitionRequestWithBody(server string, id string, para
 	if params != nil {
 		queryValues := queryURL.Query()
 
-		if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, params.Validation); err != nil {
-			return nil, err
-		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-			return nil, err
-		} else {
-			for k, v := range parsed {
-				for _, v2 := range v {
-					queryValues.Add(k, v2)
+		if params.Validation != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, *params.Validation); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
 				}
 			}
+
 		}
 
 		queryURL.RawQuery = queryValues.Encode()
@@ -14408,6 +19183,28 @@ func NewCountDictionaryAttributesRequestWithBody(server string, id string, param
 		return nil, err
 	}
 
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.ExcludeToBeRemoved != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "excludeToBeRemoved", runtime.ParamLocationQuery, *params.ExcludeToBeRemoved); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
 	req, err := http.NewRequest("POST", queryURL.String(), body)
 	if err != nil {
 		return nil, err
@@ -14541,6 +19338,28 @@ func NewFindFilteredDictionaryDefinitionsRequestWithBody(server string, id strin
 	queryURL, err := serverURL.Parse(operationPath)
 	if err != nil {
 		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.ExcludeToBeRemoved != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "excludeToBeRemoved", runtime.ParamLocationQuery, *params.ExcludeToBeRemoved); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
 	}
 
 	req, err := http.NewRequest("POST", queryURL.String(), body)
@@ -14882,6 +19701,28 @@ func NewFindFilteredAttributeDefinitionsRequestWithBody(server string, params *F
 		return nil, err
 	}
 
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.ExcludeToBeRemoved != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "excludeToBeRemoved", runtime.ParamLocationQuery, *params.ExcludeToBeRemoved); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
 	req, err := http.NewRequest("POST", queryURL.String(), body)
 	if err != nil {
 		return nil, err
@@ -14951,16 +19792,20 @@ func NewCreateMatrixDefinitionRequestWithBody(server string, params *CreateMatri
 	if params != nil {
 		queryValues := queryURL.Query()
 
-		if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, params.Validation); err != nil {
-			return nil, err
-		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-			return nil, err
-		} else {
-			for k, v := range parsed {
-				for _, v2 := range v {
-					queryValues.Add(k, v2)
+		if params.Validation != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, *params.Validation); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
 				}
 			}
+
 		}
 
 		queryURL.RawQuery = queryValues.Encode()
@@ -15016,16 +19861,20 @@ func NewUpdateMatrixDefinitionRequestWithBody(server string, id string, params *
 	if params != nil {
 		queryValues := queryURL.Query()
 
-		if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, params.Validation); err != nil {
-			return nil, err
-		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-			return nil, err
-		} else {
-			for k, v := range parsed {
-				for _, v2 := range v {
-					queryValues.Add(k, v2)
+		if params.Validation != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, *params.Validation); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
 				}
 			}
+
 		}
 
 		queryURL.RawQuery = queryValues.Encode()
@@ -15081,7 +19930,324 @@ func NewUpdateMatrixDefinitionDryRunRequestWithBody(server string, id string, pa
 	if params != nil {
 		queryValues := queryURL.Query()
 
-		if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, params.Validation); err != nil {
+		if params.Validation != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "validation", runtime.ParamLocationQuery, *params.Validation); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("PUT", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewBulkDeletePolicyFromAttributeDefinitionsRequest calls the generic BulkDeletePolicyFromAttributeDefinitions builder with application/json body
+func NewBulkDeletePolicyFromAttributeDefinitionsRequest(server string, body BulkDeletePolicyFromAttributeDefinitionsJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewBulkDeletePolicyFromAttributeDefinitionsRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewBulkDeletePolicyFromAttributeDefinitionsRequestWithBody generates requests for BulkDeletePolicyFromAttributeDefinitions with any type of body
+func NewBulkDeletePolicyFromAttributeDefinitionsRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/definitions/policy/by-ids")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("DELETE", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewAddPolicyToAttributeDefinitionsRequest calls the generic AddPolicyToAttributeDefinitions builder with application/json body
+func NewAddPolicyToAttributeDefinitionsRequest(server string, body AddPolicyToAttributeDefinitionsJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewAddPolicyToAttributeDefinitionsRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewAddPolicyToAttributeDefinitionsRequestWithBody generates requests for AddPolicyToAttributeDefinitions with any type of body
+func NewAddPolicyToAttributeDefinitionsRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/definitions/policy/by-ids")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewCreateSelectValueRequest calls the generic CreateSelectValue builder with application/json body
+func NewCreateSelectValueRequest(server string, id string, params *CreateSelectValueParams, body CreateSelectValueJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCreateSelectValueRequestWithBody(server, id, params, "application/json", bodyReader)
+}
+
+// NewCreateSelectValueRequestWithBody generates requests for CreateSelectValue with any type of body
+func NewCreateSelectValueRequestWithBody(server string, id string, params *CreateSelectValueParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/definitions/select/%s/values", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		if params.Context != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context", headerParam0)
+		}
+
+	}
+
+	return req, nil
+}
+
+// NewDeleteSelectValueRequest generates requests for DeleteSelectValue
+func NewDeleteSelectValueRequest(server string, id string, valueId string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithLocation("simple", false, "valueId", runtime.ParamLocationPath, valueId)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/definitions/select/%s/values/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("DELETE", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewUpdateSelectValueRequest calls the generic UpdateSelectValue builder with application/json body
+func NewUpdateSelectValueRequest(server string, id string, valueId string, params *UpdateSelectValueParams, body UpdateSelectValueJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewUpdateSelectValueRequestWithBody(server, id, valueId, params, "application/json", bodyReader)
+}
+
+// NewUpdateSelectValueRequestWithBody generates requests for UpdateSelectValue with any type of body
+func NewUpdateSelectValueRequestWithBody(server string, id string, valueId string, params *UpdateSelectValueParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithLocation("simple", false, "valueId", runtime.ParamLocationPath, valueId)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/definitions/select/%s/values/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("PATCH", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		if params.Context != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context", headerParam0)
+		}
+
+	}
+
+	return req, nil
+}
+
+// NewReorderSelectValueRequest generates requests for ReorderSelectValue
+func NewReorderSelectValueRequest(server string, id string, valueId string, params *ReorderSelectValueParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithLocation("simple", false, "valueId", runtime.ParamLocationPath, valueId)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/definitions/select/%s/values/%s/order", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if queryFrag, err := runtime.StyleParamWithLocation("form", true, "targetPosition", runtime.ParamLocationQuery, params.TargetPosition); err != nil {
 			return nil, err
 		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 			return nil, err
@@ -15096,12 +20262,10 @@ func NewUpdateMatrixDefinitionDryRunRequestWithBody(server string, id string, pa
 		queryURL.RawQuery = queryValues.Encode()
 	}
 
-	req, err := http.NewRequest("PUT", queryURL.String(), body)
+	req, err := http.NewRequest("PUT", queryURL.String(), nil)
 	if err != nil {
 		return nil, err
 	}
-
-	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
 }
@@ -15147,6 +20311,22 @@ func NewFindSimpleRequest(server string, params *FindSimpleParams) (*http.Reques
 		if params.PageSize != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "pageSize", runtime.ParamLocationQuery, *params.PageSize); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.ExcludeToBeRemoved != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "excludeToBeRemoved", runtime.ParamLocationQuery, *params.ExcludeToBeRemoved); err != nil {
 				return nil, err
 			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 				return nil, err
@@ -15477,6 +20657,53 @@ func NewUpdateAttributeDefinitionRequestWithBody(server string, id string, param
 		}
 
 	}
+
+	return req, nil
+}
+
+// NewUpdateContextAwareRequest calls the generic UpdateContextAware builder with application/json body
+func NewUpdateContextAwareRequest(server string, id string, body UpdateContextAwareJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewUpdateContextAwareRequestWithBody(server, id, "application/json", bodyReader)
+}
+
+// NewUpdateContextAwareRequestWithBody generates requests for UpdateContextAware with any type of body
+func NewUpdateContextAwareRequestWithBody(server string, id string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/definitions/%s/context-aware", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("PUT", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
 }
@@ -16479,145 +21706,6 @@ func NewGetRelationsByPolicyIdRequest(server string, id string, params *GetRelat
 	return req, nil
 }
 
-// NewGetProductsRequest generates requests for GetProducts
-func NewGetProductsRequest(server string, params *GetProductsParams) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/products")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		queryValues := queryURL.Query()
-
-		if params.Page != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "page", runtime.ParamLocationQuery, *params.Page); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		if params.PageSize != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "pageSize", runtime.ParamLocationQuery, *params.PageSize); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		if params.PublishState != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "publishState", runtime.ParamLocationQuery, *params.PublishState); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		if params.UpdatedAfter != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "updatedAfter", runtime.ParamLocationQuery, *params.UpdatedAfter); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		if params.DataSynced != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "dataSynced", runtime.ParamLocationQuery, *params.DataSynced); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		queryURL.RawQuery = queryValues.Encode()
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-
-		if params.Context != nil {
-			var headerParam0 string
-
-			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
-			if err != nil {
-				return nil, err
-			}
-
-			req.Header.Set("context", headerParam0)
-		}
-
-		if params.ContextFallback != nil {
-			var headerParam1 string
-
-			headerParam1, err = runtime.StyleParamWithLocation("simple", false, "context-fallback", runtime.ParamLocationHeader, *params.ContextFallback)
-			if err != nil {
-				return nil, err
-			}
-
-			req.Header.Set("context-fallback", headerParam1)
-		}
-
-	}
-
-	return req, nil
-}
-
 // NewCreateProductRequest calls the generic CreateProduct builder with application/json body
 func NewCreateProductRequest(server string, params *CreateProductParams, body CreateProductJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
@@ -16775,72 +21863,6 @@ func NewDeleteProductsAttributeRequestWithBody(server string, contentType string
 	return req, nil
 }
 
-// NewCreateOrUpdateRequest calls the generic CreateOrUpdate builder with application/json body
-func NewCreateOrUpdateRequest(server string, params *CreateOrUpdateParams, body CreateOrUpdateJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewCreateOrUpdateRequestWithBody(server, params, "application/json", bodyReader)
-}
-
-// NewCreateOrUpdateRequestWithBody generates requests for CreateOrUpdate with any type of body
-func NewCreateOrUpdateRequestWithBody(server string, params *CreateOrUpdateParams, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/products/attributes")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	if params != nil {
-
-		if params.Context != nil {
-			var headerParam0 string
-
-			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
-			if err != nil {
-				return nil, err
-			}
-
-			req.Header.Set("context", headerParam0)
-		}
-
-		if params.ContextFallback != nil {
-			var headerParam1 string
-
-			headerParam1, err = runtime.StyleParamWithLocation("simple", false, "context-fallback", runtime.ParamLocationHeader, *params.ContextFallback)
-			if err != nil {
-				return nil, err
-			}
-
-			req.Header.Set("context-fallback", headerParam1)
-		}
-
-	}
-
-	return req, nil
-}
-
 // NewAddAttributesByIdsRequest calls the generic AddAttributesByIds builder with application/json body
 func NewAddAttributesByIdsRequest(server string, params *AddAttributesByIdsParams, body AddAttributesByIdsJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
@@ -16877,22 +21899,6 @@ func NewAddAttributesByIdsRequestWithBody(server string, params *AddAttributesBy
 		if params.FailOnAssignedAttribute != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "failOnAssignedAttribute", runtime.ParamLocationQuery, *params.FailOnAssignedAttribute); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		if params.ForceVla != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "forceVla", runtime.ParamLocationQuery, *params.ForceVla); err != nil {
 				return nil, err
 			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 				return nil, err
@@ -17137,6 +22143,378 @@ func NewUpdateAttributesByIdsRequestWithBody(server string, params *UpdateAttrib
 	return req, nil
 }
 
+// NewAppendDictionaryValuesRequest calls the generic AppendDictionaryValues builder with application/json body
+func NewAppendDictionaryValuesRequest(server string, params *AppendDictionaryValuesParams, body AppendDictionaryValuesJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewAppendDictionaryValuesRequestWithBody(server, params, "application/json", bodyReader)
+}
+
+// NewAppendDictionaryValuesRequestWithBody generates requests for AppendDictionaryValues with any type of body
+func NewAppendDictionaryValuesRequestWithBody(server string, params *AppendDictionaryValuesParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/products/attributes/dictionary/append/by-ids")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.ForceVla != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "forceVla", runtime.ParamLocationQuery, *params.ForceVla); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.FailOnMissingAttribute != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "failOnMissingAttribute", runtime.ParamLocationQuery, *params.FailOnMissingAttribute); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		if params.Context != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context", headerParam0)
+		}
+
+	}
+
+	return req, nil
+}
+
+// NewDeductDictionaryValuesRequest calls the generic DeductDictionaryValues builder with application/json body
+func NewDeductDictionaryValuesRequest(server string, params *DeductDictionaryValuesParams, body DeductDictionaryValuesJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewDeductDictionaryValuesRequestWithBody(server, params, "application/json", bodyReader)
+}
+
+// NewDeductDictionaryValuesRequestWithBody generates requests for DeductDictionaryValues with any type of body
+func NewDeductDictionaryValuesRequestWithBody(server string, params *DeductDictionaryValuesParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/products/attributes/dictionary/deduct/by-ids")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.ForceVla != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "forceVla", runtime.ParamLocationQuery, *params.ForceVla); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.FailOnMissingAttribute != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "failOnMissingAttribute", runtime.ParamLocationQuery, *params.FailOnMissingAttribute); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		if params.Context != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context", headerParam0)
+		}
+
+	}
+
+	return req, nil
+}
+
+// NewAppendSelectValuesRequest calls the generic AppendSelectValues builder with application/json body
+func NewAppendSelectValuesRequest(server string, params *AppendSelectValuesParams, body AppendSelectValuesJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewAppendSelectValuesRequestWithBody(server, params, "application/json", bodyReader)
+}
+
+// NewAppendSelectValuesRequestWithBody generates requests for AppendSelectValues with any type of body
+func NewAppendSelectValuesRequestWithBody(server string, params *AppendSelectValuesParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/products/attributes/select/append/by-ids")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.ForceVla != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "forceVla", runtime.ParamLocationQuery, *params.ForceVla); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.FailOnMissingAttribute != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "failOnMissingAttribute", runtime.ParamLocationQuery, *params.FailOnMissingAttribute); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		if params.Context != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context", headerParam0)
+		}
+
+	}
+
+	return req, nil
+}
+
+// NewDeductSelectValuesRequest calls the generic DeductSelectValues builder with application/json body
+func NewDeductSelectValuesRequest(server string, params *DeductSelectValuesParams, body DeductSelectValuesJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewDeductSelectValuesRequestWithBody(server, params, "application/json", bodyReader)
+}
+
+// NewDeductSelectValuesRequestWithBody generates requests for DeductSelectValues with any type of body
+func NewDeductSelectValuesRequestWithBody(server string, params *DeductSelectValuesParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/products/attributes/select/deduct/by-ids")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.ForceVla != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "forceVla", runtime.ParamLocationQuery, *params.ForceVla); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.FailOnMissingAttribute != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "failOnMissingAttribute", runtime.ParamLocationQuery, *params.FailOnMissingAttribute); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		if params.Context != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context", headerParam0)
+		}
+
+	}
+
+	return req, nil
+}
+
 // NewAssignProductsToCategoryRequest calls the generic AssignProductsToCategory builder with application/json body
 func NewAssignProductsToCategoryRequest(server string, body AssignProductsToCategoryJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
@@ -17205,83 +22583,6 @@ func NewCopyAndUpdateProductRequestWithBody(server string, params *CopyAndUpdate
 	queryURL, err := serverURL.Parse(operationPath)
 	if err != nil {
 		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	if params != nil {
-
-		if params.Context != nil {
-			var headerParam0 string
-
-			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
-			if err != nil {
-				return nil, err
-			}
-
-			req.Header.Set("context", headerParam0)
-		}
-
-	}
-
-	return req, nil
-}
-
-// NewCountFilteredProductsRequest calls the generic CountFilteredProducts builder with application/json body
-func NewCountFilteredProductsRequest(server string, params *CountFilteredProductsParams, body CountFilteredProductsJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewCountFilteredProductsRequestWithBody(server, params, "application/json", bodyReader)
-}
-
-// NewCountFilteredProductsRequestWithBody generates requests for CountFilteredProducts with any type of body
-func NewCountFilteredProductsRequestWithBody(server string, params *CountFilteredProductsParams, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/products/count")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		queryValues := queryURL.Query()
-
-		if params.ArchiveState != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "archiveState", runtime.ParamLocationQuery, *params.ArchiveState); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		queryURL.RawQuery = queryValues.Encode()
 	}
 
 	req, err := http.NewRequest("POST", queryURL.String(), body)
@@ -17393,6 +22694,218 @@ func NewGetProductsWithCursorAndViewsRequestWithBody(server string, params *GetP
 		}
 
 	}
+
+	return req, nil
+}
+
+// NewListProductsViewsByTypesRequest calls the generic ListProductsViewsByTypes builder with application/json body
+func NewListProductsViewsByTypesRequest(server string, params *ListProductsViewsByTypesParams, body ListProductsViewsByTypesJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewListProductsViewsByTypesRequestWithBody(server, params, "application/json", bodyReader)
+}
+
+// NewListProductsViewsByTypesRequestWithBody generates requests for ListProductsViewsByTypes with any type of body
+func NewListProductsViewsByTypesRequestWithBody(server string, params *ListProductsViewsByTypesParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/products/cursor/views/by-types")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.ArchiveState != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "archiveState", runtime.ParamLocationQuery, *params.ArchiveState); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		if params.Context != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context", headerParam0)
+		}
+
+		if params.ContextFallback != nil {
+			var headerParam1 string
+
+			headerParam1, err = runtime.StyleParamWithLocation("simple", false, "context-fallback", runtime.ParamLocationHeader, *params.ContextFallback)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context-fallback", headerParam1)
+		}
+
+	}
+
+	return req, nil
+}
+
+// NewAddProductGroupsRequest calls the generic AddProductGroups builder with application/json body
+func NewAddProductGroupsRequest(server string, params *AddProductGroupsParams, body AddProductGroupsJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewAddProductGroupsRequestWithBody(server, params, "application/json", bodyReader)
+}
+
+// NewAddProductGroupsRequestWithBody generates requests for AddProductGroups with any type of body
+func NewAddProductGroupsRequestWithBody(server string, params *AddProductGroupsParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/products/groups/append/by-ids")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.ForceVla != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "forceVla", runtime.ParamLocationQuery, *params.ForceVla); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewUpdateProductGroupsAttributeVlaSettingsRequest calls the generic UpdateProductGroupsAttributeVlaSettings builder with application/json body
+func NewUpdateProductGroupsAttributeVlaSettingsRequest(server string, params *UpdateProductGroupsAttributeVlaSettingsParams, body UpdateProductGroupsAttributeVlaSettingsJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewUpdateProductGroupsAttributeVlaSettingsRequestWithBody(server, params, "application/json", bodyReader)
+}
+
+// NewUpdateProductGroupsAttributeVlaSettingsRequestWithBody generates requests for UpdateProductGroupsAttributeVlaSettings with any type of body
+func NewUpdateProductGroupsAttributeVlaSettingsRequestWithBody(server string, params *UpdateProductGroupsAttributeVlaSettingsParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/products/groups/attributes/vla/by-ids")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.ForceVla != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "forceVla", runtime.ParamLocationQuery, *params.ForceVla); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("PUT", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
 }
@@ -17741,61 +23254,6 @@ func NewListProductsViewsByNumbersRequestWithBody(server string, params *ListPro
 	return req, nil
 }
 
-// NewChangeStatusesByIdsRequest calls the generic ChangeStatusesByIds builder with application/json body
-func NewChangeStatusesByIdsRequest(server string, params *ChangeStatusesByIdsParams, body ChangeStatusesByIdsJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewChangeStatusesByIdsRequestWithBody(server, params, "application/json", bodyReader)
-}
-
-// NewChangeStatusesByIdsRequestWithBody generates requests for ChangeStatusesByIds with any type of body
-func NewChangeStatusesByIdsRequestWithBody(server string, params *ChangeStatusesByIdsParams, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/products/states/by-ids")
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	if params != nil {
-
-		if params.Context != nil {
-			var headerParam0 string
-
-			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
-			if err != nil {
-				return nil, err
-			}
-
-			req.Header.Set("context", headerParam0)
-		}
-
-	}
-
-	return req, nil
-}
-
 // NewFindProductTemplatesRequest generates requests for FindProductTemplates
 func NewFindProductTemplatesRequest(server string, params *FindProductTemplatesParams) (*http.Request, error) {
 	var err error
@@ -18063,6 +23521,130 @@ func NewUnarchiveProductsByIdsRequestWithBody(server string, contentType string,
 	return req, nil
 }
 
+// NewAddProductVariantsRequest calls the generic AddProductVariants builder with application/json body
+func NewAddProductVariantsRequest(server string, params *AddProductVariantsParams, body AddProductVariantsJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewAddProductVariantsRequestWithBody(server, params, "application/json", bodyReader)
+}
+
+// NewAddProductVariantsRequestWithBody generates requests for AddProductVariants with any type of body
+func NewAddProductVariantsRequestWithBody(server string, params *AddProductVariantsParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/products/variants/append/by-ids")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.ForceVla != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "forceVla", runtime.ParamLocationQuery, *params.ForceVla); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewUpdateProductVariantsAttributeVlaSettingsRequest calls the generic UpdateProductVariantsAttributeVlaSettings builder with application/json body
+func NewUpdateProductVariantsAttributeVlaSettingsRequest(server string, params *UpdateProductVariantsAttributeVlaSettingsParams, body UpdateProductVariantsAttributeVlaSettingsJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewUpdateProductVariantsAttributeVlaSettingsRequestWithBody(server, params, "application/json", bodyReader)
+}
+
+// NewUpdateProductVariantsAttributeVlaSettingsRequestWithBody generates requests for UpdateProductVariantsAttributeVlaSettings with any type of body
+func NewUpdateProductVariantsAttributeVlaSettingsRequestWithBody(server string, params *UpdateProductVariantsAttributeVlaSettingsParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/products/variants/attributes/vla/by-ids")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.ForceVla != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "forceVla", runtime.ParamLocationQuery, *params.ForceVla); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("PUT", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
 // NewGetProductRequest generates requests for GetProduct
 func NewGetProductRequest(server string, id string, params *GetProductParams) (*http.Request, error) {
 	var err error
@@ -18183,68 +23765,6 @@ func NewUpdateProductRequestWithBody(server string, id string, params *UpdatePro
 	}
 
 	req, err := http.NewRequest("PATCH", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	if params != nil {
-
-		if params.Context != nil {
-			var headerParam0 string
-
-			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
-			if err != nil {
-				return nil, err
-			}
-
-			req.Header.Set("context", headerParam0)
-		}
-
-	}
-
-	return req, nil
-}
-
-// NewUpdateProductDetailsRequest calls the generic UpdateProductDetails builder with application/json body
-func NewUpdateProductDetailsRequest(server string, id string, params *UpdateProductDetailsParams, body UpdateProductDetailsJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewUpdateProductDetailsRequestWithBody(server, id, params, "application/json", bodyReader)
-}
-
-// NewUpdateProductDetailsRequestWithBody generates requests for UpdateProductDetails with any type of body
-func NewUpdateProductDetailsRequestWithBody(server string, id string, params *UpdateProductDetailsParams, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/products/%s", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("PUT", queryURL.String(), body)
 	if err != nil {
 		return nil, err
 	}
@@ -20000,215 +25520,6 @@ func NewGetProductRelationsRequest(server string, id string, params *GetProductR
 	return req, nil
 }
 
-// NewGetCategoryConnectionsForProductRequest generates requests for GetCategoryConnectionsForProduct
-func NewGetCategoryConnectionsForProductRequest(server string, id string, params *GetCategoryConnectionsForProductParams) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/products/%s/connections/categories", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-		queryValues := queryURL.Query()
-
-		if params.Page != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "page", runtime.ParamLocationQuery, *params.Page); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		if params.PageSize != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "pageSize", runtime.ParamLocationQuery, *params.PageSize); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		if params.ArchiveState != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "archiveState", runtime.ParamLocationQuery, *params.ArchiveState); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		queryURL.RawQuery = queryValues.Encode()
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-
-		if params.Context != nil {
-			var headerParam0 string
-
-			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
-			if err != nil {
-				return nil, err
-			}
-
-			req.Header.Set("context", headerParam0)
-		}
-
-		if params.ContextFallback != nil {
-			var headerParam1 string
-
-			headerParam1, err = runtime.StyleParamWithLocation("simple", false, "context-fallback", runtime.ParamLocationHeader, *params.ContextFallback)
-			if err != nil {
-				return nil, err
-			}
-
-			req.Header.Set("context-fallback", headerParam1)
-		}
-
-	}
-
-	return req, nil
-}
-
-// NewCreateCategoryConnectionRequest calls the generic CreateCategoryConnection builder with application/json body
-func NewCreateCategoryConnectionRequest(server string, id string, body CreateCategoryConnectionJSONRequestBody) (*http.Request, error) {
-	var bodyReader io.Reader
-	buf, err := json.Marshal(body)
-	if err != nil {
-		return nil, err
-	}
-	bodyReader = bytes.NewReader(buf)
-	return NewCreateCategoryConnectionRequestWithBody(server, id, "application/json", bodyReader)
-}
-
-// NewCreateCategoryConnectionRequestWithBody generates requests for CreateCategoryConnection with any type of body
-func NewCreateCategoryConnectionRequestWithBody(server string, id string, contentType string, body io.Reader) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/products/%s/connections/categories", pathParam0)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), body)
-	if err != nil {
-		return nil, err
-	}
-
-	req.Header.Add("Content-Type", contentType)
-
-	return req, nil
-}
-
-// NewDeleteCategoryConnectionRequest generates requests for DeleteCategoryConnection
-func NewDeleteCategoryConnectionRequest(server string, id string, relationId string, categoryId string) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithLocation("simple", false, "relationId", runtime.ParamLocationPath, relationId)
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam2 string
-
-	pathParam2, err = runtime.StyleParamWithLocation("simple", false, "categoryId", runtime.ParamLocationPath, categoryId)
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/products/%s/connections/categories/%s/%s", pathParam0, pathParam1, pathParam2)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("DELETE", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return req, nil
-}
-
 // NewCreateProductConnectionRequest calls the generic CreateProductConnection builder with application/json body
 func NewCreateProductConnectionRequest(server string, id string, body CreateProductConnectionJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
@@ -21009,6 +26320,304 @@ func NewGetGroupedProductAttributesRequest(server string, id string, params *Get
 	return req, nil
 }
 
+// NewConvertToProductFamilyRequest generates requests for ConvertToProductFamily
+func NewConvertToProductFamilyRequest(server string, id string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/products/%s/groups", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetProductGroupAttributeRequest generates requests for GetProductGroupAttribute
+func NewGetProductGroupAttributeRequest(server string, id string, definitionId string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithLocation("simple", false, "definitionId", runtime.ParamLocationPath, definitionId)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/products/%s/groups/attributes/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewUpdateProductGroupAttributeRequest calls the generic UpdateProductGroupAttribute builder with application/json body
+func NewUpdateProductGroupAttributeRequest(server string, id string, definitionId string, params *UpdateProductGroupAttributeParams, body UpdateProductGroupAttributeJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewUpdateProductGroupAttributeRequestWithBody(server, id, definitionId, params, "application/json", bodyReader)
+}
+
+// NewUpdateProductGroupAttributeRequestWithBody generates requests for UpdateProductGroupAttribute with any type of body
+func NewUpdateProductGroupAttributeRequestWithBody(server string, id string, definitionId string, params *UpdateProductGroupAttributeParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithLocation("simple", false, "definitionId", runtime.ParamLocationPath, definitionId)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/products/%s/groups/attributes/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.ForceVla != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "forceVla", runtime.ParamLocationQuery, *params.ForceVla); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("PUT", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewUnassignProductGroupRequest generates requests for UnassignProductGroup
+func NewUnassignProductGroupRequest(server string, id string, groupId string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithLocation("simple", false, "groupId", runtime.ParamLocationPath, groupId)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/products/%s/groups/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("DELETE", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewMoveProductGroupRequest generates requests for MoveProductGroup
+func NewMoveProductGroupRequest(server string, id string, groupId string, params *MoveProductGroupParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithLocation("simple", false, "groupId", runtime.ParamLocationPath, groupId)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/products/%s/groups/%s/order", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if queryFrag, err := runtime.StyleParamWithLocation("form", true, "position", runtime.ParamLocationQuery, params.Position); err != nil {
+			return nil, err
+		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+			return nil, err
+		} else {
+			for k, v := range parsed {
+				for _, v2 := range v {
+					queryValues.Add(k, v2)
+				}
+			}
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("PUT", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewRemoveLabelsFromProductRequest calls the generic RemoveLabelsFromProduct builder with application/json body
+func NewRemoveLabelsFromProductRequest(server string, id string, body RemoveLabelsFromProductJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewRemoveLabelsFromProductRequestWithBody(server, id, "application/json", bodyReader)
+}
+
+// NewRemoveLabelsFromProductRequestWithBody generates requests for RemoveLabelsFromProduct with any type of body
+func NewRemoveLabelsFromProductRequestWithBody(server string, id string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/products/%s/labels", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("DELETE", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
 // NewGetProductsLabelsRequest generates requests for GetProductsLabels
 func NewGetProductsLabelsRequest(server string, id string, params *GetProductsLabelsParams) (*http.Request, error) {
 	var err error
@@ -21178,6 +26787,62 @@ func NewRemoveLabelFromProductRequest(server string, id string, labelId string) 
 	}
 
 	req, err := http.NewRequest("DELETE", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewProductOverviewRequest generates requests for ProductOverview
+func NewProductOverviewRequest(server string, id string, params *ProductOverviewParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/products/%s/overview", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.ArchiveState != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "archiveState", runtime.ParamLocationQuery, *params.ArchiveState); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
 	if err != nil {
 		return nil, err
 	}
@@ -21378,7 +27043,7 @@ func NewUnassignProductVariantRequest(server string, id string, variantProductId
 }
 
 // NewAddProductVariantRequest generates requests for AddProductVariant
-func NewAddProductVariantRequest(server string, id string, variantProductId string) (*http.Request, error) {
+func NewAddProductVariantRequest(server string, id string, variantProductId string, params *AddProductVariantParams) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -21408,6 +27073,28 @@ func NewAddProductVariantRequest(server string, id string, variantProductId stri
 	queryURL, err := serverURL.Parse(operationPath)
 	if err != nil {
 		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.ForceVla != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "forceVla", runtime.ParamLocationQuery, *params.ForceVla); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
 	}
 
 	req, err := http.NewRequest("PUT", queryURL.String(), nil)
@@ -21472,62 +27159,6 @@ func NewMoveProductVariantRequest(server string, id string, variantProductId str
 	req, err := http.NewRequest("PUT", queryURL.String(), nil)
 	if err != nil {
 		return nil, err
-	}
-
-	return req, nil
-}
-
-// NewChangeStatusRequest generates requests for ChangeStatus
-func NewChangeStatusRequest(server string, id string, action ChangeStatusParamsAction, params *ChangeStatusParams) (*http.Request, error) {
-	var err error
-
-	var pathParam0 string
-
-	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
-	if err != nil {
-		return nil, err
-	}
-
-	var pathParam1 string
-
-	pathParam1, err = runtime.StyleParamWithLocation("simple", false, "action", runtime.ParamLocationPath, action)
-	if err != nil {
-		return nil, err
-	}
-
-	serverURL, err := url.Parse(server)
-	if err != nil {
-		return nil, err
-	}
-
-	operationPath := fmt.Sprintf("/products/%s/%s", pathParam0, pathParam1)
-	if operationPath[0] == '/' {
-		operationPath = "." + operationPath
-	}
-
-	queryURL, err := serverURL.Parse(operationPath)
-	if err != nil {
-		return nil, err
-	}
-
-	req, err := http.NewRequest("POST", queryURL.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	if params != nil {
-
-		if params.Context != nil {
-			var headerParam0 string
-
-			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
-			if err != nil {
-				return nil, err
-			}
-
-			req.Header.Set("context", headerParam0)
-		}
-
 	}
 
 	return req, nil
@@ -21861,6 +27492,68 @@ func NewFindOneRequest(server string, id string, params *FindOneParams) (*http.R
 	return req, nil
 }
 
+// NewPartialUpdateRelationRequest calls the generic PartialUpdateRelation builder with application/json body
+func NewPartialUpdateRelationRequest(server string, id string, params *PartialUpdateRelationParams, body PartialUpdateRelationJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPartialUpdateRelationRequestWithBody(server, id, params, "application/json", bodyReader)
+}
+
+// NewPartialUpdateRelationRequestWithBody generates requests for PartialUpdateRelation with any type of body
+func NewPartialUpdateRelationRequestWithBody(server string, id string, params *PartialUpdateRelationParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/relations/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("PATCH", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		if params.Context != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("context", headerParam0)
+		}
+
+	}
+
+	return req, nil
+}
+
 // NewUpdateRelationRequest calls the generic UpdateRelation builder with application/json body
 func NewUpdateRelationRequest(server string, id string, params *UpdateRelationParams, body UpdateRelationJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
@@ -21923,8 +27616,19 @@ func NewUpdateRelationRequestWithBody(server string, id string, params *UpdateRe
 	return req, nil
 }
 
-// NewGetCategoryConnectionsByRelationIdRequest generates requests for GetCategoryConnectionsByRelationId
-func NewGetCategoryConnectionsByRelationIdRequest(server string, id string, params *GetCategoryConnectionsByRelationIdParams) (*http.Request, error) {
+// NewUpdateRelationDirectionRequest calls the generic UpdateRelationDirection builder with application/json body
+func NewUpdateRelationDirectionRequest(server string, id string, body UpdateRelationDirectionJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewUpdateRelationDirectionRequestWithBody(server, id, "application/json", bodyReader)
+}
+
+// NewUpdateRelationDirectionRequestWithBody generates requests for UpdateRelationDirection with any type of body
+func NewUpdateRelationDirectionRequestWithBody(server string, id string, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
@@ -21939,7 +27643,7 @@ func NewGetCategoryConnectionsByRelationIdRequest(server string, id string, para
 		return nil, err
 	}
 
-	operationPath := fmt.Sprintf("/relations/%s/categories/connections", pathParam0)
+	operationPath := fmt.Sprintf("/relations/%s/direction", pathParam0)
 	if operationPath[0] == '/' {
 		operationPath = "." + operationPath
 	}
@@ -21949,74 +27653,12 @@ func NewGetCategoryConnectionsByRelationIdRequest(server string, id string, para
 		return nil, err
 	}
 
-	if params != nil {
-		queryValues := queryURL.Query()
-
-		if params.Page != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "page", runtime.ParamLocationQuery, *params.Page); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		if params.PageSize != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "pageSize", runtime.ParamLocationQuery, *params.PageSize); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		queryURL.RawQuery = queryValues.Encode()
-	}
-
-	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	req, err := http.NewRequest("POST", queryURL.String(), body)
 	if err != nil {
 		return nil, err
 	}
 
-	if params != nil {
-
-		if params.Context != nil {
-			var headerParam0 string
-
-			headerParam0, err = runtime.StyleParamWithLocation("simple", false, "context", runtime.ParamLocationHeader, *params.Context)
-			if err != nil {
-				return nil, err
-			}
-
-			req.Header.Set("context", headerParam0)
-		}
-
-		if params.ContextFallback != nil {
-			var headerParam1 string
-
-			headerParam1, err = runtime.StyleParamWithLocation("simple", false, "context-fallback", runtime.ParamLocationHeader, *params.ContextFallback)
-			if err != nil {
-				return nil, err
-			}
-
-			req.Header.Set("context-fallback", headerParam1)
-		}
-
-	}
+	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
 }
@@ -22554,9 +28196,6 @@ func WithBaseURL(baseURL string) ClientOption {
 
 // ClientWithResponsesInterface is the interface specification for the client with responses above.
 type ClientWithResponsesInterface interface {
-	// SynchronizeAssetsWithResponse request
-	SynchronizeAssetsWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*SynchronizeAssetsResponse, error)
-
 	// GetJobStatusWithResponse request
 	GetJobStatusWithResponse(ctx context.Context, taskId string, reqEditors ...RequestEditorFn) (*GetJobStatusResponse, error)
 
@@ -22633,6 +28272,11 @@ type ClientWithResponsesInterface interface {
 	// GetNodeWithResponse request
 	GetNodeWithResponse(ctx context.Context, id string, params *GetNodeParams, reqEditors ...RequestEditorFn) (*GetNodeResponse, error)
 
+	// PartialUpdateCatalogNodeWithBodyWithResponse request with any body
+	PartialUpdateCatalogNodeWithBodyWithResponse(ctx context.Context, id string, params *PartialUpdateCatalogNodeParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PartialUpdateCatalogNodeResponse, error)
+
+	PartialUpdateCatalogNodeWithResponse(ctx context.Context, id string, params *PartialUpdateCatalogNodeParams, body PartialUpdateCatalogNodeJSONRequestBody, reqEditors ...RequestEditorFn) (*PartialUpdateCatalogNodeResponse, error)
+
 	// UpdateCatalogNodeWithBodyWithResponse request with any body
 	UpdateCatalogNodeWithBodyWithResponse(ctx context.Context, id string, params *UpdateCatalogNodeParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateCatalogNodeResponse, error)
 
@@ -22677,7 +28321,7 @@ type ClientWithResponsesInterface interface {
 	UpdateNodeAttributeColumnValueWithResponse(ctx context.Context, id string, attributeDefinitionId string, params *UpdateNodeAttributeColumnValueParams, body UpdateNodeAttributeColumnValueJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateNodeAttributeColumnValueResponse, error)
 
 	// CreateCatalogNodeAttributeCompoundWithResponse request
-	CreateCatalogNodeAttributeCompoundWithResponse(ctx context.Context, id string, attributeDefinitionId string, params *CreateCatalogNodeAttributeCompoundParams, reqEditors ...RequestEditorFn) (*CreateCatalogNodeAttributeCompoundResponse, error)
+	CreateCatalogNodeAttributeCompoundWithResponse(ctx context.Context, id string, attributeDefinitionId string, reqEditors ...RequestEditorFn) (*CreateCatalogNodeAttributeCompoundResponse, error)
 
 	// CreateCatalogNodeAttributeDictionaryWithResponse request
 	CreateCatalogNodeAttributeDictionaryWithResponse(ctx context.Context, id string, attributeDefinitionId string, params *CreateCatalogNodeAttributeDictionaryParams, reqEditors ...RequestEditorFn) (*CreateCatalogNodeAttributeDictionaryResponse, error)
@@ -22696,6 +28340,30 @@ type ClientWithResponsesInterface interface {
 	UpdateNodeAttributeMatrixValueWithBodyWithResponse(ctx context.Context, id string, attributeDefinitionId string, params *UpdateNodeAttributeMatrixValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateNodeAttributeMatrixValueResponse, error)
 
 	UpdateNodeAttributeMatrixValueWithResponse(ctx context.Context, id string, attributeDefinitionId string, params *UpdateNodeAttributeMatrixValueParams, body UpdateNodeAttributeMatrixValueJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateNodeAttributeMatrixValueResponse, error)
+
+	// GetAttributesAssociatedToCategoryWithResponse request
+	GetAttributesAssociatedToCategoryWithResponse(ctx context.Context, id string, params *GetAttributesAssociatedToCategoryParams, reqEditors ...RequestEditorFn) (*GetAttributesAssociatedToCategoryResponse, error)
+
+	// UnassignDefinitionFromCategoryWithResponse request
+	UnassignDefinitionFromCategoryWithResponse(ctx context.Context, id string, definitionId string, reqEditors ...RequestEditorFn) (*UnassignDefinitionFromCategoryResponse, error)
+
+	// AssignDefinitionToCategoryWithResponse request
+	AssignDefinitionToCategoryWithResponse(ctx context.Context, id string, definitionId string, reqEditors ...RequestEditorFn) (*AssignDefinitionToCategoryResponse, error)
+
+	// SetDictionaryDefinitionValueWithBodyWithResponse request with any body
+	SetDictionaryDefinitionValueWithBodyWithResponse(ctx context.Context, id string, definitionId string, params *SetDictionaryDefinitionValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*SetDictionaryDefinitionValueResponse, error)
+
+	SetDictionaryDefinitionValueWithResponse(ctx context.Context, id string, definitionId string, params *SetDictionaryDefinitionValueParams, body SetDictionaryDefinitionValueJSONRequestBody, reqEditors ...RequestEditorFn) (*SetDictionaryDefinitionValueResponse, error)
+
+	// SetSelectDefinitionValueWithBodyWithResponse request with any body
+	SetSelectDefinitionValueWithBodyWithResponse(ctx context.Context, id string, definitionId string, params *SetSelectDefinitionValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*SetSelectDefinitionValueResponse, error)
+
+	SetSelectDefinitionValueWithResponse(ctx context.Context, id string, definitionId string, params *SetSelectDefinitionValueParams, body SetSelectDefinitionValueJSONRequestBody, reqEditors ...RequestEditorFn) (*SetSelectDefinitionValueResponse, error)
+
+	// SetSimpleDefinitionValueWithBodyWithResponse request with any body
+	SetSimpleDefinitionValueWithBodyWithResponse(ctx context.Context, id string, definitionId string, params *SetSimpleDefinitionValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*SetSimpleDefinitionValueResponse, error)
+
+	SetSimpleDefinitionValueWithResponse(ctx context.Context, id string, definitionId string, params *SetSimpleDefinitionValueParams, body SetSimpleDefinitionValueJSONRequestBody, reqEditors ...RequestEditorFn) (*SetSimpleDefinitionValueResponse, error)
 
 	// GetCatalogNodeChildrenWithResponse request
 	GetCatalogNodeChildrenWithResponse(ctx context.Context, id string, params *GetCatalogNodeChildrenParams, reqEditors ...RequestEditorFn) (*GetCatalogNodeChildrenResponse, error)
@@ -22752,6 +28420,11 @@ type ClientWithResponsesInterface interface {
 
 	// GetCategoryTreeWithResponse request
 	GetCategoryTreeWithResponse(ctx context.Context, id string, params *GetCategoryTreeParams, reqEditors ...RequestEditorFn) (*GetCategoryTreeResponse, error)
+
+	// GetCategoryViewWithBodyWithResponse request with any body
+	GetCategoryViewWithBodyWithResponse(ctx context.Context, id ObjectId, params *GetCategoryViewParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*GetCategoryViewResponse, error)
+
+	GetCategoryViewWithResponse(ctx context.Context, id ObjectId, params *GetCategoryViewParams, body GetCategoryViewJSONRequestBody, reqEditors ...RequestEditorFn) (*GetCategoryViewResponse, error)
 
 	// GetPoliciesByCategoryIdWithResponse request
 	GetPoliciesByCategoryIdWithResponse(ctx context.Context, id string, params *GetPoliciesByCategoryIdParams, reqEditors ...RequestEditorFn) (*GetPoliciesByCategoryIdResponse, error)
@@ -22824,9 +28497,6 @@ type ClientWithResponsesInterface interface {
 	CreateDictionaryDefinitionWithBodyWithResponse(ctx context.Context, params *CreateDictionaryDefinitionParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateDictionaryDefinitionResponse, error)
 
 	CreateDictionaryDefinitionWithResponse(ctx context.Context, params *CreateDictionaryDefinitionParams, body CreateDictionaryDefinitionJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateDictionaryDefinitionResponse, error)
-
-	// DeleteDictionaryDefinitionWithResponse request
-	DeleteDictionaryDefinitionWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*DeleteDictionaryDefinitionResponse, error)
 
 	// PatchUpdateWithBodyWithResponse request with any body
 	PatchUpdateWithBodyWithResponse(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PatchUpdateResponse, error)
@@ -22901,6 +28571,32 @@ type ClientWithResponsesInterface interface {
 
 	UpdateMatrixDefinitionDryRunWithResponse(ctx context.Context, id string, params *UpdateMatrixDefinitionDryRunParams, body UpdateMatrixDefinitionDryRunJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateMatrixDefinitionDryRunResponse, error)
 
+	// BulkDeletePolicyFromAttributeDefinitionsWithBodyWithResponse request with any body
+	BulkDeletePolicyFromAttributeDefinitionsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*BulkDeletePolicyFromAttributeDefinitionsResponse, error)
+
+	BulkDeletePolicyFromAttributeDefinitionsWithResponse(ctx context.Context, body BulkDeletePolicyFromAttributeDefinitionsJSONRequestBody, reqEditors ...RequestEditorFn) (*BulkDeletePolicyFromAttributeDefinitionsResponse, error)
+
+	// AddPolicyToAttributeDefinitionsWithBodyWithResponse request with any body
+	AddPolicyToAttributeDefinitionsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AddPolicyToAttributeDefinitionsResponse, error)
+
+	AddPolicyToAttributeDefinitionsWithResponse(ctx context.Context, body AddPolicyToAttributeDefinitionsJSONRequestBody, reqEditors ...RequestEditorFn) (*AddPolicyToAttributeDefinitionsResponse, error)
+
+	// CreateSelectValueWithBodyWithResponse request with any body
+	CreateSelectValueWithBodyWithResponse(ctx context.Context, id string, params *CreateSelectValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateSelectValueResponse, error)
+
+	CreateSelectValueWithResponse(ctx context.Context, id string, params *CreateSelectValueParams, body CreateSelectValueJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateSelectValueResponse, error)
+
+	// DeleteSelectValueWithResponse request
+	DeleteSelectValueWithResponse(ctx context.Context, id string, valueId string, reqEditors ...RequestEditorFn) (*DeleteSelectValueResponse, error)
+
+	// UpdateSelectValueWithBodyWithResponse request with any body
+	UpdateSelectValueWithBodyWithResponse(ctx context.Context, id string, valueId string, params *UpdateSelectValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateSelectValueResponse, error)
+
+	UpdateSelectValueWithResponse(ctx context.Context, id string, valueId string, params *UpdateSelectValueParams, body UpdateSelectValueJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateSelectValueResponse, error)
+
+	// ReorderSelectValueWithResponse request
+	ReorderSelectValueWithResponse(ctx context.Context, id string, valueId string, params *ReorderSelectValueParams, reqEditors ...RequestEditorFn) (*ReorderSelectValueResponse, error)
+
 	// FindSimpleWithResponse request
 	FindSimpleWithResponse(ctx context.Context, params *FindSimpleParams, reqEditors ...RequestEditorFn) (*FindSimpleResponse, error)
 
@@ -22919,6 +28615,11 @@ type ClientWithResponsesInterface interface {
 	UpdateAttributeDefinitionWithBodyWithResponse(ctx context.Context, id string, params *UpdateAttributeDefinitionParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateAttributeDefinitionResponse, error)
 
 	UpdateAttributeDefinitionWithResponse(ctx context.Context, id string, params *UpdateAttributeDefinitionParams, body UpdateAttributeDefinitionJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateAttributeDefinitionResponse, error)
+
+	// UpdateContextAwareWithBodyWithResponse request with any body
+	UpdateContextAwareWithBodyWithResponse(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateContextAwareResponse, error)
+
+	UpdateContextAwareWithResponse(ctx context.Context, id string, body UpdateContextAwareJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateContextAwareResponse, error)
 
 	// DeleteDryRunWithResponse request
 	DeleteDryRunWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*DeleteDryRunResponse, error)
@@ -22960,9 +28661,6 @@ type ClientWithResponsesInterface interface {
 	// GetRelationsByPolicyIdWithResponse request
 	GetRelationsByPolicyIdWithResponse(ctx context.Context, id string, params *GetRelationsByPolicyIdParams, reqEditors ...RequestEditorFn) (*GetRelationsByPolicyIdResponse, error)
 
-	// GetProductsWithResponse request
-	GetProductsWithResponse(ctx context.Context, params *GetProductsParams, reqEditors ...RequestEditorFn) (*GetProductsResponse, error)
-
 	// CreateProductWithBodyWithResponse request with any body
 	CreateProductWithBodyWithResponse(ctx context.Context, params *CreateProductParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateProductResponse, error)
 
@@ -22977,11 +28675,6 @@ type ClientWithResponsesInterface interface {
 	DeleteProductsAttributeWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DeleteProductsAttributeResponse, error)
 
 	DeleteProductsAttributeWithResponse(ctx context.Context, body DeleteProductsAttributeJSONRequestBody, reqEditors ...RequestEditorFn) (*DeleteProductsAttributeResponse, error)
-
-	// CreateOrUpdateWithBodyWithResponse request with any body
-	CreateOrUpdateWithBodyWithResponse(ctx context.Context, params *CreateOrUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateOrUpdateResponse, error)
-
-	CreateOrUpdateWithResponse(ctx context.Context, params *CreateOrUpdateParams, body CreateOrUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateOrUpdateResponse, error)
 
 	// AddAttributesByIdsWithBodyWithResponse request with any body
 	AddAttributesByIdsWithBodyWithResponse(ctx context.Context, params *AddAttributesByIdsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AddAttributesByIdsResponse, error)
@@ -22998,6 +28691,26 @@ type ClientWithResponsesInterface interface {
 
 	UpdateAttributesByIdsWithResponse(ctx context.Context, params *UpdateAttributesByIdsParams, body UpdateAttributesByIdsJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateAttributesByIdsResponse, error)
 
+	// AppendDictionaryValuesWithBodyWithResponse request with any body
+	AppendDictionaryValuesWithBodyWithResponse(ctx context.Context, params *AppendDictionaryValuesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AppendDictionaryValuesResponse, error)
+
+	AppendDictionaryValuesWithResponse(ctx context.Context, params *AppendDictionaryValuesParams, body AppendDictionaryValuesJSONRequestBody, reqEditors ...RequestEditorFn) (*AppendDictionaryValuesResponse, error)
+
+	// DeductDictionaryValuesWithBodyWithResponse request with any body
+	DeductDictionaryValuesWithBodyWithResponse(ctx context.Context, params *DeductDictionaryValuesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DeductDictionaryValuesResponse, error)
+
+	DeductDictionaryValuesWithResponse(ctx context.Context, params *DeductDictionaryValuesParams, body DeductDictionaryValuesJSONRequestBody, reqEditors ...RequestEditorFn) (*DeductDictionaryValuesResponse, error)
+
+	// AppendSelectValuesWithBodyWithResponse request with any body
+	AppendSelectValuesWithBodyWithResponse(ctx context.Context, params *AppendSelectValuesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AppendSelectValuesResponse, error)
+
+	AppendSelectValuesWithResponse(ctx context.Context, params *AppendSelectValuesParams, body AppendSelectValuesJSONRequestBody, reqEditors ...RequestEditorFn) (*AppendSelectValuesResponse, error)
+
+	// DeductSelectValuesWithBodyWithResponse request with any body
+	DeductSelectValuesWithBodyWithResponse(ctx context.Context, params *DeductSelectValuesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DeductSelectValuesResponse, error)
+
+	DeductSelectValuesWithResponse(ctx context.Context, params *DeductSelectValuesParams, body DeductSelectValuesJSONRequestBody, reqEditors ...RequestEditorFn) (*DeductSelectValuesResponse, error)
+
 	// AssignProductsToCategoryWithBodyWithResponse request with any body
 	AssignProductsToCategoryWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AssignProductsToCategoryResponse, error)
 
@@ -23008,15 +28721,25 @@ type ClientWithResponsesInterface interface {
 
 	CopyAndUpdateProductWithResponse(ctx context.Context, params *CopyAndUpdateProductParams, body CopyAndUpdateProductJSONRequestBody, reqEditors ...RequestEditorFn) (*CopyAndUpdateProductResponse, error)
 
-	// CountFilteredProductsWithBodyWithResponse request with any body
-	CountFilteredProductsWithBodyWithResponse(ctx context.Context, params *CountFilteredProductsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CountFilteredProductsResponse, error)
-
-	CountFilteredProductsWithResponse(ctx context.Context, params *CountFilteredProductsParams, body CountFilteredProductsJSONRequestBody, reqEditors ...RequestEditorFn) (*CountFilteredProductsResponse, error)
-
 	// GetProductsWithCursorAndViewsWithBodyWithResponse request with any body
 	GetProductsWithCursorAndViewsWithBodyWithResponse(ctx context.Context, params *GetProductsWithCursorAndViewsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*GetProductsWithCursorAndViewsResponse, error)
 
 	GetProductsWithCursorAndViewsWithResponse(ctx context.Context, params *GetProductsWithCursorAndViewsParams, body GetProductsWithCursorAndViewsJSONRequestBody, reqEditors ...RequestEditorFn) (*GetProductsWithCursorAndViewsResponse, error)
+
+	// ListProductsViewsByTypesWithBodyWithResponse request with any body
+	ListProductsViewsByTypesWithBodyWithResponse(ctx context.Context, params *ListProductsViewsByTypesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ListProductsViewsByTypesResponse, error)
+
+	ListProductsViewsByTypesWithResponse(ctx context.Context, params *ListProductsViewsByTypesParams, body ListProductsViewsByTypesJSONRequestBody, reqEditors ...RequestEditorFn) (*ListProductsViewsByTypesResponse, error)
+
+	// AddProductGroupsWithBodyWithResponse request with any body
+	AddProductGroupsWithBodyWithResponse(ctx context.Context, params *AddProductGroupsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AddProductGroupsResponse, error)
+
+	AddProductGroupsWithResponse(ctx context.Context, params *AddProductGroupsParams, body AddProductGroupsJSONRequestBody, reqEditors ...RequestEditorFn) (*AddProductGroupsResponse, error)
+
+	// UpdateProductGroupsAttributeVlaSettingsWithBodyWithResponse request with any body
+	UpdateProductGroupsAttributeVlaSettingsWithBodyWithResponse(ctx context.Context, params *UpdateProductGroupsAttributeVlaSettingsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateProductGroupsAttributeVlaSettingsResponse, error)
+
+	UpdateProductGroupsAttributeVlaSettingsWithResponse(ctx context.Context, params *UpdateProductGroupsAttributeVlaSettingsParams, body UpdateProductGroupsAttributeVlaSettingsJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateProductGroupsAttributeVlaSettingsResponse, error)
 
 	// RemoveLabelFromProductsWithBodyWithResponse request with any body
 	RemoveLabelFromProductsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*RemoveLabelFromProductsResponse, error)
@@ -23043,11 +28766,6 @@ type ClientWithResponsesInterface interface {
 
 	ListProductsViewsByNumbersWithResponse(ctx context.Context, params *ListProductsViewsByNumbersParams, body ListProductsViewsByNumbersJSONRequestBody, reqEditors ...RequestEditorFn) (*ListProductsViewsByNumbersResponse, error)
 
-	// ChangeStatusesByIdsWithBodyWithResponse request with any body
-	ChangeStatusesByIdsWithBodyWithResponse(ctx context.Context, params *ChangeStatusesByIdsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ChangeStatusesByIdsResponse, error)
-
-	ChangeStatusesByIdsWithResponse(ctx context.Context, params *ChangeStatusesByIdsParams, body ChangeStatusesByIdsJSONRequestBody, reqEditors ...RequestEditorFn) (*ChangeStatusesByIdsResponse, error)
-
 	// FindProductTemplatesWithResponse request
 	FindProductTemplatesWithResponse(ctx context.Context, params *FindProductTemplatesParams, reqEditors ...RequestEditorFn) (*FindProductTemplatesResponse, error)
 
@@ -23072,6 +28790,16 @@ type ClientWithResponsesInterface interface {
 
 	UnarchiveProductsByIdsWithResponse(ctx context.Context, body UnarchiveProductsByIdsJSONRequestBody, reqEditors ...RequestEditorFn) (*UnarchiveProductsByIdsResponse, error)
 
+	// AddProductVariantsWithBodyWithResponse request with any body
+	AddProductVariantsWithBodyWithResponse(ctx context.Context, params *AddProductVariantsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AddProductVariantsResponse, error)
+
+	AddProductVariantsWithResponse(ctx context.Context, params *AddProductVariantsParams, body AddProductVariantsJSONRequestBody, reqEditors ...RequestEditorFn) (*AddProductVariantsResponse, error)
+
+	// UpdateProductVariantsAttributeVlaSettingsWithBodyWithResponse request with any body
+	UpdateProductVariantsAttributeVlaSettingsWithBodyWithResponse(ctx context.Context, params *UpdateProductVariantsAttributeVlaSettingsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateProductVariantsAttributeVlaSettingsResponse, error)
+
+	UpdateProductVariantsAttributeVlaSettingsWithResponse(ctx context.Context, params *UpdateProductVariantsAttributeVlaSettingsParams, body UpdateProductVariantsAttributeVlaSettingsJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateProductVariantsAttributeVlaSettingsResponse, error)
+
 	// GetProductWithResponse request
 	GetProductWithResponse(ctx context.Context, id string, params *GetProductParams, reqEditors ...RequestEditorFn) (*GetProductResponse, error)
 
@@ -23079,11 +28807,6 @@ type ClientWithResponsesInterface interface {
 	UpdateProductWithBodyWithResponse(ctx context.Context, id string, params *UpdateProductParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateProductResponse, error)
 
 	UpdateProductWithResponse(ctx context.Context, id string, params *UpdateProductParams, body UpdateProductJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateProductResponse, error)
-
-	// UpdateProductDetailsWithBodyWithResponse request with any body
-	UpdateProductDetailsWithBodyWithResponse(ctx context.Context, id string, params *UpdateProductDetailsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateProductDetailsResponse, error)
-
-	UpdateProductDetailsWithResponse(ctx context.Context, id string, params *UpdateProductDetailsParams, body UpdateProductDetailsJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateProductDetailsResponse, error)
 
 	// GetProductAssetsWithResponse request
 	GetProductAssetsWithResponse(ctx context.Context, id string, params *GetProductAssetsParams, reqEditors ...RequestEditorFn) (*GetProductAssetsResponse, error)
@@ -23191,17 +28914,6 @@ type ClientWithResponsesInterface interface {
 	// GetProductRelationsWithResponse request
 	GetProductRelationsWithResponse(ctx context.Context, id string, params *GetProductRelationsParams, reqEditors ...RequestEditorFn) (*GetProductRelationsResponse, error)
 
-	// GetCategoryConnectionsForProductWithResponse request
-	GetCategoryConnectionsForProductWithResponse(ctx context.Context, id string, params *GetCategoryConnectionsForProductParams, reqEditors ...RequestEditorFn) (*GetCategoryConnectionsForProductResponse, error)
-
-	// CreateCategoryConnectionWithBodyWithResponse request with any body
-	CreateCategoryConnectionWithBodyWithResponse(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateCategoryConnectionResponse, error)
-
-	CreateCategoryConnectionWithResponse(ctx context.Context, id string, body CreateCategoryConnectionJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateCategoryConnectionResponse, error)
-
-	// DeleteCategoryConnectionWithResponse request
-	DeleteCategoryConnectionWithResponse(ctx context.Context, id string, relationId string, categoryId string, reqEditors ...RequestEditorFn) (*DeleteCategoryConnectionResponse, error)
-
 	// CreateProductConnectionWithBodyWithResponse request with any body
 	CreateProductConnectionWithBodyWithResponse(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateProductConnectionResponse, error)
 
@@ -23251,6 +28963,28 @@ type ClientWithResponsesInterface interface {
 	// GetGroupedProductAttributesWithResponse request
 	GetGroupedProductAttributesWithResponse(ctx context.Context, id string, params *GetGroupedProductAttributesParams, reqEditors ...RequestEditorFn) (*GetGroupedProductAttributesResponse, error)
 
+	// ConvertToProductFamilyWithResponse request
+	ConvertToProductFamilyWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*ConvertToProductFamilyResponse, error)
+
+	// GetProductGroupAttributeWithResponse request
+	GetProductGroupAttributeWithResponse(ctx context.Context, id string, definitionId string, reqEditors ...RequestEditorFn) (*GetProductGroupAttributeResponse, error)
+
+	// UpdateProductGroupAttributeWithBodyWithResponse request with any body
+	UpdateProductGroupAttributeWithBodyWithResponse(ctx context.Context, id string, definitionId string, params *UpdateProductGroupAttributeParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateProductGroupAttributeResponse, error)
+
+	UpdateProductGroupAttributeWithResponse(ctx context.Context, id string, definitionId string, params *UpdateProductGroupAttributeParams, body UpdateProductGroupAttributeJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateProductGroupAttributeResponse, error)
+
+	// UnassignProductGroupWithResponse request
+	UnassignProductGroupWithResponse(ctx context.Context, id string, groupId string, reqEditors ...RequestEditorFn) (*UnassignProductGroupResponse, error)
+
+	// MoveProductGroupWithResponse request
+	MoveProductGroupWithResponse(ctx context.Context, id string, groupId string, params *MoveProductGroupParams, reqEditors ...RequestEditorFn) (*MoveProductGroupResponse, error)
+
+	// RemoveLabelsFromProductWithBodyWithResponse request with any body
+	RemoveLabelsFromProductWithBodyWithResponse(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*RemoveLabelsFromProductResponse, error)
+
+	RemoveLabelsFromProductWithResponse(ctx context.Context, id string, body RemoveLabelsFromProductJSONRequestBody, reqEditors ...RequestEditorFn) (*RemoveLabelsFromProductResponse, error)
+
 	// GetProductsLabelsWithResponse request
 	GetProductsLabelsWithResponse(ctx context.Context, id string, params *GetProductsLabelsParams, reqEditors ...RequestEditorFn) (*GetProductsLabelsResponse, error)
 
@@ -23261,6 +28995,9 @@ type ClientWithResponsesInterface interface {
 
 	// RemoveLabelFromProductWithResponse request
 	RemoveLabelFromProductWithResponse(ctx context.Context, id string, labelId string, reqEditors ...RequestEditorFn) (*RemoveLabelFromProductResponse, error)
+
+	// ProductOverviewWithResponse request
+	ProductOverviewWithResponse(ctx context.Context, id string, params *ProductOverviewParams, reqEditors ...RequestEditorFn) (*ProductOverviewResponse, error)
 
 	// SetProductGroupWithResponse request
 	SetProductGroupWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*SetProductGroupResponse, error)
@@ -23277,13 +29014,10 @@ type ClientWithResponsesInterface interface {
 	UnassignProductVariantWithResponse(ctx context.Context, id string, variantProductId string, reqEditors ...RequestEditorFn) (*UnassignProductVariantResponse, error)
 
 	// AddProductVariantWithResponse request
-	AddProductVariantWithResponse(ctx context.Context, id string, variantProductId string, reqEditors ...RequestEditorFn) (*AddProductVariantResponse, error)
+	AddProductVariantWithResponse(ctx context.Context, id string, variantProductId string, params *AddProductVariantParams, reqEditors ...RequestEditorFn) (*AddProductVariantResponse, error)
 
 	// MoveProductVariantWithResponse request
 	MoveProductVariantWithResponse(ctx context.Context, id string, variantProductId string, params *MoveProductVariantParams, reqEditors ...RequestEditorFn) (*MoveProductVariantResponse, error)
-
-	// ChangeStatusWithResponse request
-	ChangeStatusWithResponse(ctx context.Context, id string, action ChangeStatusParamsAction, params *ChangeStatusParams, reqEditors ...RequestEditorFn) (*ChangeStatusResponse, error)
 
 	// FindRelationsWithResponse request
 	FindRelationsWithResponse(ctx context.Context, params *FindRelationsParams, reqEditors ...RequestEditorFn) (*FindRelationsResponse, error)
@@ -23304,13 +29038,20 @@ type ClientWithResponsesInterface interface {
 	// FindOneWithResponse request
 	FindOneWithResponse(ctx context.Context, id string, params *FindOneParams, reqEditors ...RequestEditorFn) (*FindOneResponse, error)
 
+	// PartialUpdateRelationWithBodyWithResponse request with any body
+	PartialUpdateRelationWithBodyWithResponse(ctx context.Context, id string, params *PartialUpdateRelationParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PartialUpdateRelationResponse, error)
+
+	PartialUpdateRelationWithResponse(ctx context.Context, id string, params *PartialUpdateRelationParams, body PartialUpdateRelationJSONRequestBody, reqEditors ...RequestEditorFn) (*PartialUpdateRelationResponse, error)
+
 	// UpdateRelationWithBodyWithResponse request with any body
 	UpdateRelationWithBodyWithResponse(ctx context.Context, id string, params *UpdateRelationParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateRelationResponse, error)
 
 	UpdateRelationWithResponse(ctx context.Context, id string, params *UpdateRelationParams, body UpdateRelationJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateRelationResponse, error)
 
-	// GetCategoryConnectionsByRelationIdWithResponse request
-	GetCategoryConnectionsByRelationIdWithResponse(ctx context.Context, id string, params *GetCategoryConnectionsByRelationIdParams, reqEditors ...RequestEditorFn) (*GetCategoryConnectionsByRelationIdResponse, error)
+	// UpdateRelationDirectionWithBodyWithResponse request with any body
+	UpdateRelationDirectionWithBodyWithResponse(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateRelationDirectionResponse, error)
+
+	UpdateRelationDirectionWithResponse(ctx context.Context, id string, body UpdateRelationDirectionJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateRelationDirectionResponse, error)
 
 	// UpdateOrderRelationWithResponse request
 	UpdateOrderRelationWithResponse(ctx context.Context, id string, params *UpdateOrderRelationParams, reqEditors ...RequestEditorFn) (*UpdateOrderRelationResponse, error)
@@ -23348,33 +29089,12 @@ type ClientWithResponsesInterface interface {
 	ValidateValueWithResponse(ctx context.Context, body ValidateValueJSONRequestBody, reqEditors ...RequestEditorFn) (*ValidateValueResponse, error)
 }
 
-type SynchronizeAssetsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON400      *ErrorResponse
-}
-
-// Status returns HTTPResponse.Status
-func (r SynchronizeAssetsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r SynchronizeAssetsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
 type GetJobStatusResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	JSON200      *JobStatusResponse
 	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
 }
 
 // Status returns HTTPResponse.Status
@@ -23671,6 +29391,7 @@ type UpdateNumberResponse struct {
 	HTTPResponse *http.Response
 	JSON400      *ErrorResponse
 	JSON404      *ErrorResponse
+	JSON409      *ErrorResponse
 }
 
 // Status returns HTTPResponse.Status
@@ -23875,6 +29596,30 @@ func (r GetNodeResponse) StatusCode() int {
 	return 0
 }
 
+type PartialUpdateCatalogNodeResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+	JSON409      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r PartialUpdateCatalogNodeResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r PartialUpdateCatalogNodeResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type UpdateCatalogNodeResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -24067,7 +29812,6 @@ type CreateCatalogNodeAttributeResponse struct {
 	HTTPResponse *http.Response
 	JSON400      *ErrorResponse
 	JSON404      *ErrorResponse
-	JSON409      *ErrorResponse
 }
 
 // Status returns HTTPResponse.Status
@@ -24091,7 +29835,6 @@ type CreateCatalogNodeAttributeColumnResponse struct {
 	HTTPResponse *http.Response
 	JSON400      *ErrorResponse
 	JSON404      *ErrorResponse
-	JSON409      *ErrorResponse
 }
 
 // Status returns HTTPResponse.Status
@@ -24138,7 +29881,6 @@ type CreateCatalogNodeAttributeCompoundResponse struct {
 	HTTPResponse *http.Response
 	JSON400      *ErrorResponse
 	JSON404      *ErrorResponse
-	JSON409      *ErrorResponse
 }
 
 // Status returns HTTPResponse.Status
@@ -24162,7 +29904,6 @@ type CreateCatalogNodeAttributeDictionaryResponse struct {
 	HTTPResponse *http.Response
 	JSON400      *ErrorResponse
 	JSON404      *ErrorResponse
-	JSON409      *ErrorResponse
 }
 
 // Status returns HTTPResponse.Status
@@ -24209,7 +29950,6 @@ type CreateCatalogNodeAttributeMatrixResponse struct {
 	HTTPResponse *http.Response
 	JSON400      *ErrorResponse
 	JSON404      *ErrorResponse
-	JSON409      *ErrorResponse
 }
 
 // Status returns HTTPResponse.Status
@@ -24245,6 +29985,148 @@ func (r UpdateNodeAttributeMatrixValueResponse) Status() string {
 
 // StatusCode returns HTTPResponse.StatusCode
 func (r UpdateNodeAttributeMatrixValueResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type GetAttributesAssociatedToCategoryResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *ListableLocalCategoryAttributeDto
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r GetAttributesAssociatedToCategoryResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetAttributesAssociatedToCategoryResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type UnassignDefinitionFromCategoryResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r UnassignDefinitionFromCategoryResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r UnassignDefinitionFromCategoryResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type AssignDefinitionToCategoryResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+	JSON409      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r AssignDefinitionToCategoryResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r AssignDefinitionToCategoryResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type SetDictionaryDefinitionValueResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+	JSON409      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r SetDictionaryDefinitionValueResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r SetDictionaryDefinitionValueResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type SetSelectDefinitionValueResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+	JSON409      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r SetSelectDefinitionValueResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r SetSelectDefinitionValueResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type SetSimpleDefinitionValueResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r SetSimpleDefinitionValueResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r SetSimpleDefinitionValueResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -24624,6 +30506,30 @@ func (r GetCategoryTreeResponse) StatusCode() int {
 	return 0
 }
 
+type GetCategoryViewResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *ListableWithCursorCategoryWithCursorAndViewResponse
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r GetCategoryViewResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetCategoryViewResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type GetPoliciesByCategoryIdResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -24955,6 +30861,7 @@ type CreateColumnDefinitionResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	JSON400      *ErrorResponse
+	JSON409      *ErrorResponse
 }
 
 // Status returns HTTPResponse.Status
@@ -25039,28 +30946,6 @@ func (r CreateDictionaryDefinitionResponse) Status() string {
 
 // StatusCode returns HTTPResponse.StatusCode
 func (r CreateDictionaryDefinitionResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DeleteDictionaryDefinitionResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON400      *ErrorResponse
-}
-
-// Status returns HTTPResponse.Status
-func (r DeleteDictionaryDefinitionResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DeleteDictionaryDefinitionResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -25425,6 +31310,7 @@ type UpdateMatrixDefinitionResponse struct {
 	JSON200      *AttributeDefinitionUpdateResponse
 	JSON400      *ErrorResponse
 	JSON404      *ErrorResponse
+	JSON409      *ErrorResponse
 }
 
 // Status returns HTTPResponse.Status
@@ -25461,6 +31347,144 @@ func (r UpdateMatrixDefinitionDryRunResponse) Status() string {
 
 // StatusCode returns HTTPResponse.StatusCode
 func (r UpdateMatrixDefinitionDryRunResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type BulkDeletePolicyFromAttributeDefinitionsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r BulkDeletePolicyFromAttributeDefinitionsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r BulkDeletePolicyFromAttributeDefinitionsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type AddPolicyToAttributeDefinitionsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r AddPolicyToAttributeDefinitionsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r AddPolicyToAttributeDefinitionsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CreateSelectValueResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+	JSON409      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r CreateSelectValueResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CreateSelectValueResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type DeleteSelectValueResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r DeleteSelectValueResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r DeleteSelectValueResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type UpdateSelectValueResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+	JSON409      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r UpdateSelectValueResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r UpdateSelectValueResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type ReorderSelectValueResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r ReorderSelectValueResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ReorderSelectValueResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -25580,6 +31604,29 @@ func (r UpdateAttributeDefinitionResponse) Status() string {
 
 // StatusCode returns HTTPResponse.StatusCode
 func (r UpdateAttributeDefinitionResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type UpdateContextAwareResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r UpdateContextAwareResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r UpdateContextAwareResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -25873,30 +31920,6 @@ func (r GetRelationsByPolicyIdResponse) StatusCode() int {
 	return 0
 }
 
-type GetProductsResponse struct {
-	Body                   []byte
-	HTTPResponse           *http.Response
-	ApplicationfullJSON200 *ListableProductAll
-	JSON200                *ListableProductAll
-	JSON400                *ErrorResponse
-}
-
-// Status returns HTTPResponse.Status
-func (r GetProductsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r GetProductsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
 type CreateProductResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -25958,28 +31981,6 @@ func (r DeleteProductsAttributeResponse) Status() string {
 
 // StatusCode returns HTTPResponse.StatusCode
 func (r DeleteProductsAttributeResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type CreateOrUpdateResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON400      *ErrorResponse
-}
-
-// Status returns HTTPResponse.Status
-func (r CreateOrUpdateResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r CreateOrUpdateResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -26052,6 +32053,98 @@ func (r UpdateAttributesByIdsResponse) StatusCode() int {
 	return 0
 }
 
+type AppendDictionaryValuesResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r AppendDictionaryValuesResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r AppendDictionaryValuesResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type DeductDictionaryValuesResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r DeductDictionaryValuesResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r DeductDictionaryValuesResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type AppendSelectValuesResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r AppendSelectValuesResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r AppendSelectValuesResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type DeductSelectValuesResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r DeductSelectValuesResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r DeductSelectValuesResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type AssignProductsToCategoryResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -26097,29 +32190,6 @@ func (r CopyAndUpdateProductResponse) StatusCode() int {
 	return 0
 }
 
-type CountFilteredProductsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *CountableLong
-	JSON400      *ErrorResponse
-}
-
-// Status returns HTTPResponse.Status
-func (r CountFilteredProductsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r CountFilteredProductsResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
 type GetProductsWithCursorAndViewsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -26137,6 +32207,75 @@ func (r GetProductsWithCursorAndViewsResponse) Status() string {
 
 // StatusCode returns HTTPResponse.StatusCode
 func (r GetProductsWithCursorAndViewsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type ListProductsViewsByTypesResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *ListableWithCursorProductViewDto
+	JSON400      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r ListProductsViewsByTypesResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ListProductsViewsByTypesResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type AddProductGroupsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r AddProductGroupsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r AddProductGroupsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type UpdateProductGroupsAttributeVlaSettingsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r UpdateProductGroupsAttributeVlaSettingsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r UpdateProductGroupsAttributeVlaSettingsResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -26251,30 +32390,6 @@ func (r ListProductsViewsByNumbersResponse) Status() string {
 
 // StatusCode returns HTTPResponse.StatusCode
 func (r ListProductsViewsByNumbersResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ChangeStatusesByIdsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON400      *ErrorResponse
-	JSON403      *UpdateProductStateResponse
-	JSON409      *ErrorResponse
-}
-
-// Status returns HTTPResponse.Status
-func (r ChangeStatusesByIdsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ChangeStatusesByIdsResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -26422,6 +32537,52 @@ func (r UnarchiveProductsByIdsResponse) StatusCode() int {
 	return 0
 }
 
+type AddProductVariantsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r AddProductVariantsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r AddProductVariantsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type UpdateProductVariantsAttributeVlaSettingsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r UpdateProductVariantsAttributeVlaSettingsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r UpdateProductVariantsAttributeVlaSettingsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type GetProductResponse struct {
 	Body                   []byte
 	HTTPResponse           *http.Response
@@ -26465,30 +32626,6 @@ func (r UpdateProductResponse) Status() string {
 
 // StatusCode returns HTTPResponse.StatusCode
 func (r UpdateProductResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type UpdateProductDetailsResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON400      *ErrorResponse
-	JSON404      *ErrorResponse
-	JSON409      *ErrorResponse
-}
-
-// Status returns HTTPResponse.Status
-func (r UpdateProductDetailsResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r UpdateProductDetailsResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -27087,76 +33224,6 @@ func (r GetProductRelationsResponse) StatusCode() int {
 	return 0
 }
 
-type GetCategoryConnectionsForProductResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON200      *ListableGroupedCategoryConnectionResponse
-	JSON400      *ErrorResponse
-	JSON404      *ErrorResponse
-}
-
-// Status returns HTTPResponse.Status
-func (r GetCategoryConnectionsForProductResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r GetCategoryConnectionsForProductResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type CreateCategoryConnectionResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON400      *ErrorResponse
-	JSON404      *ErrorResponse
-}
-
-// Status returns HTTPResponse.Status
-func (r CreateCategoryConnectionResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r CreateCategoryConnectionResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type DeleteCategoryConnectionResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON400      *ErrorResponse
-	JSON404      *ErrorResponse
-}
-
-// Status returns HTTPResponse.Status
-func (r DeleteCategoryConnectionResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r DeleteCategoryConnectionResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
 type CreateProductConnectionResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -27459,6 +33526,145 @@ func (r GetGroupedProductAttributesResponse) StatusCode() int {
 	return 0
 }
 
+type ConvertToProductFamilyResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+	JSON409      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r ConvertToProductFamilyResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ConvertToProductFamilyResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type GetProductGroupAttributeResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *ProductVariantAttributeDto
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r GetProductGroupAttributeResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetProductGroupAttributeResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type UpdateProductGroupAttributeResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r UpdateProductGroupAttributeResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r UpdateProductGroupAttributeResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type UnassignProductGroupResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r UnassignProductGroupResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r UnassignProductGroupResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type MoveProductGroupResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r MoveProductGroupResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r MoveProductGroupResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type RemoveLabelsFromProductResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r RemoveLabelsFromProductResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r RemoveLabelsFromProductResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type GetProductsLabelsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -27529,11 +33735,36 @@ func (r RemoveLabelFromProductResponse) StatusCode() int {
 	return 0
 }
 
+type ProductOverviewResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *ProductOverviewDto
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r ProductOverviewResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ProductOverviewResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type SetProductGroupResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	JSON400      *ErrorResponse
 	JSON404      *ErrorResponse
+	JSON409      *ErrorResponse
 }
 
 // Status returns HTTPResponse.Status
@@ -27627,6 +33858,7 @@ type AddProductVariantResponse struct {
 	HTTPResponse *http.Response
 	JSON400      *ErrorResponse
 	JSON404      *ErrorResponse
+	JSON409      *ErrorResponse
 }
 
 // Status returns HTTPResponse.Status
@@ -27662,30 +33894,6 @@ func (r MoveProductVariantResponse) Status() string {
 
 // StatusCode returns HTTPResponse.StatusCode
 func (r MoveProductVariantResponse) StatusCode() int {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.StatusCode
-	}
-	return 0
-}
-
-type ChangeStatusResponse struct {
-	Body         []byte
-	HTTPResponse *http.Response
-	JSON400      *ErrorResponse
-	JSON404      *ErrorResponse
-	JSON409      *ErrorResponse
-}
-
-// Status returns HTTPResponse.Status
-func (r ChangeStatusResponse) Status() string {
-	if r.HTTPResponse != nil {
-		return r.HTTPResponse.Status
-	}
-	return http.StatusText(0)
-}
-
-// StatusCode returns HTTPResponse.StatusCode
-func (r ChangeStatusResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -27808,6 +34016,30 @@ func (r FindOneResponse) StatusCode() int {
 	return 0
 }
 
+type PartialUpdateRelationResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+	JSON409      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r PartialUpdateRelationResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r PartialUpdateRelationResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type UpdateRelationResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -27832,15 +34064,16 @@ func (r UpdateRelationResponse) StatusCode() int {
 	return 0
 }
 
-type GetCategoryConnectionsByRelationIdResponse struct {
+type UpdateRelationDirectionResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON200      *ListableCategoryConnectionResponse
 	JSON400      *ErrorResponse
+	JSON404      *ErrorResponse
+	JSON409      *ErrorResponse
 }
 
 // Status returns HTTPResponse.Status
-func (r GetCategoryConnectionsByRelationIdResponse) Status() string {
+func (r UpdateRelationDirectionResponse) Status() string {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.Status
 	}
@@ -27848,7 +34081,7 @@ func (r GetCategoryConnectionsByRelationIdResponse) Status() string {
 }
 
 // StatusCode returns HTTPResponse.StatusCode
-func (r GetCategoryConnectionsByRelationIdResponse) StatusCode() int {
+func (r UpdateRelationDirectionResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -28061,15 +34294,6 @@ func (r ValidateValueResponse) StatusCode() int {
 		return r.HTTPResponse.StatusCode
 	}
 	return 0
-}
-
-// SynchronizeAssetsWithResponse request returning *SynchronizeAssetsResponse
-func (c *ClientWithResponses) SynchronizeAssetsWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*SynchronizeAssetsResponse, error) {
-	rsp, err := c.SynchronizeAssets(ctx, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseSynchronizeAssetsResponse(rsp)
 }
 
 // GetJobStatusWithResponse request returning *GetJobStatusResponse
@@ -28310,6 +34534,23 @@ func (c *ClientWithResponses) GetNodeWithResponse(ctx context.Context, id string
 	return ParseGetNodeResponse(rsp)
 }
 
+// PartialUpdateCatalogNodeWithBodyWithResponse request with arbitrary body returning *PartialUpdateCatalogNodeResponse
+func (c *ClientWithResponses) PartialUpdateCatalogNodeWithBodyWithResponse(ctx context.Context, id string, params *PartialUpdateCatalogNodeParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PartialUpdateCatalogNodeResponse, error) {
+	rsp, err := c.PartialUpdateCatalogNodeWithBody(ctx, id, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePartialUpdateCatalogNodeResponse(rsp)
+}
+
+func (c *ClientWithResponses) PartialUpdateCatalogNodeWithResponse(ctx context.Context, id string, params *PartialUpdateCatalogNodeParams, body PartialUpdateCatalogNodeJSONRequestBody, reqEditors ...RequestEditorFn) (*PartialUpdateCatalogNodeResponse, error) {
+	rsp, err := c.PartialUpdateCatalogNode(ctx, id, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePartialUpdateCatalogNodeResponse(rsp)
+}
+
 // UpdateCatalogNodeWithBodyWithResponse request with arbitrary body returning *UpdateCatalogNodeResponse
 func (c *ClientWithResponses) UpdateCatalogNodeWithBodyWithResponse(ctx context.Context, id string, params *UpdateCatalogNodeParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateCatalogNodeResponse, error) {
 	rsp, err := c.UpdateCatalogNodeWithBody(ctx, id, params, contentType, body, reqEditors...)
@@ -28450,8 +34691,8 @@ func (c *ClientWithResponses) UpdateNodeAttributeColumnValueWithResponse(ctx con
 }
 
 // CreateCatalogNodeAttributeCompoundWithResponse request returning *CreateCatalogNodeAttributeCompoundResponse
-func (c *ClientWithResponses) CreateCatalogNodeAttributeCompoundWithResponse(ctx context.Context, id string, attributeDefinitionId string, params *CreateCatalogNodeAttributeCompoundParams, reqEditors ...RequestEditorFn) (*CreateCatalogNodeAttributeCompoundResponse, error) {
-	rsp, err := c.CreateCatalogNodeAttributeCompound(ctx, id, attributeDefinitionId, params, reqEditors...)
+func (c *ClientWithResponses) CreateCatalogNodeAttributeCompoundWithResponse(ctx context.Context, id string, attributeDefinitionId string, reqEditors ...RequestEditorFn) (*CreateCatalogNodeAttributeCompoundResponse, error) {
+	rsp, err := c.CreateCatalogNodeAttributeCompound(ctx, id, attributeDefinitionId, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
@@ -28516,6 +34757,84 @@ func (c *ClientWithResponses) UpdateNodeAttributeMatrixValueWithResponse(ctx con
 		return nil, err
 	}
 	return ParseUpdateNodeAttributeMatrixValueResponse(rsp)
+}
+
+// GetAttributesAssociatedToCategoryWithResponse request returning *GetAttributesAssociatedToCategoryResponse
+func (c *ClientWithResponses) GetAttributesAssociatedToCategoryWithResponse(ctx context.Context, id string, params *GetAttributesAssociatedToCategoryParams, reqEditors ...RequestEditorFn) (*GetAttributesAssociatedToCategoryResponse, error) {
+	rsp, err := c.GetAttributesAssociatedToCategory(ctx, id, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetAttributesAssociatedToCategoryResponse(rsp)
+}
+
+// UnassignDefinitionFromCategoryWithResponse request returning *UnassignDefinitionFromCategoryResponse
+func (c *ClientWithResponses) UnassignDefinitionFromCategoryWithResponse(ctx context.Context, id string, definitionId string, reqEditors ...RequestEditorFn) (*UnassignDefinitionFromCategoryResponse, error) {
+	rsp, err := c.UnassignDefinitionFromCategory(ctx, id, definitionId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUnassignDefinitionFromCategoryResponse(rsp)
+}
+
+// AssignDefinitionToCategoryWithResponse request returning *AssignDefinitionToCategoryResponse
+func (c *ClientWithResponses) AssignDefinitionToCategoryWithResponse(ctx context.Context, id string, definitionId string, reqEditors ...RequestEditorFn) (*AssignDefinitionToCategoryResponse, error) {
+	rsp, err := c.AssignDefinitionToCategory(ctx, id, definitionId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAssignDefinitionToCategoryResponse(rsp)
+}
+
+// SetDictionaryDefinitionValueWithBodyWithResponse request with arbitrary body returning *SetDictionaryDefinitionValueResponse
+func (c *ClientWithResponses) SetDictionaryDefinitionValueWithBodyWithResponse(ctx context.Context, id string, definitionId string, params *SetDictionaryDefinitionValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*SetDictionaryDefinitionValueResponse, error) {
+	rsp, err := c.SetDictionaryDefinitionValueWithBody(ctx, id, definitionId, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseSetDictionaryDefinitionValueResponse(rsp)
+}
+
+func (c *ClientWithResponses) SetDictionaryDefinitionValueWithResponse(ctx context.Context, id string, definitionId string, params *SetDictionaryDefinitionValueParams, body SetDictionaryDefinitionValueJSONRequestBody, reqEditors ...RequestEditorFn) (*SetDictionaryDefinitionValueResponse, error) {
+	rsp, err := c.SetDictionaryDefinitionValue(ctx, id, definitionId, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseSetDictionaryDefinitionValueResponse(rsp)
+}
+
+// SetSelectDefinitionValueWithBodyWithResponse request with arbitrary body returning *SetSelectDefinitionValueResponse
+func (c *ClientWithResponses) SetSelectDefinitionValueWithBodyWithResponse(ctx context.Context, id string, definitionId string, params *SetSelectDefinitionValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*SetSelectDefinitionValueResponse, error) {
+	rsp, err := c.SetSelectDefinitionValueWithBody(ctx, id, definitionId, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseSetSelectDefinitionValueResponse(rsp)
+}
+
+func (c *ClientWithResponses) SetSelectDefinitionValueWithResponse(ctx context.Context, id string, definitionId string, params *SetSelectDefinitionValueParams, body SetSelectDefinitionValueJSONRequestBody, reqEditors ...RequestEditorFn) (*SetSelectDefinitionValueResponse, error) {
+	rsp, err := c.SetSelectDefinitionValue(ctx, id, definitionId, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseSetSelectDefinitionValueResponse(rsp)
+}
+
+// SetSimpleDefinitionValueWithBodyWithResponse request with arbitrary body returning *SetSimpleDefinitionValueResponse
+func (c *ClientWithResponses) SetSimpleDefinitionValueWithBodyWithResponse(ctx context.Context, id string, definitionId string, params *SetSimpleDefinitionValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*SetSimpleDefinitionValueResponse, error) {
+	rsp, err := c.SetSimpleDefinitionValueWithBody(ctx, id, definitionId, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseSetSimpleDefinitionValueResponse(rsp)
+}
+
+func (c *ClientWithResponses) SetSimpleDefinitionValueWithResponse(ctx context.Context, id string, definitionId string, params *SetSimpleDefinitionValueParams, body SetSimpleDefinitionValueJSONRequestBody, reqEditors ...RequestEditorFn) (*SetSimpleDefinitionValueResponse, error) {
+	rsp, err := c.SetSimpleDefinitionValue(ctx, id, definitionId, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseSetSimpleDefinitionValueResponse(rsp)
 }
 
 // GetCatalogNodeChildrenWithResponse request returning *GetCatalogNodeChildrenResponse
@@ -28692,6 +35011,23 @@ func (c *ClientWithResponses) GetCategoryTreeWithResponse(ctx context.Context, i
 		return nil, err
 	}
 	return ParseGetCategoryTreeResponse(rsp)
+}
+
+// GetCategoryViewWithBodyWithResponse request with arbitrary body returning *GetCategoryViewResponse
+func (c *ClientWithResponses) GetCategoryViewWithBodyWithResponse(ctx context.Context, id ObjectId, params *GetCategoryViewParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*GetCategoryViewResponse, error) {
+	rsp, err := c.GetCategoryViewWithBody(ctx, id, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetCategoryViewResponse(rsp)
+}
+
+func (c *ClientWithResponses) GetCategoryViewWithResponse(ctx context.Context, id ObjectId, params *GetCategoryViewParams, body GetCategoryViewJSONRequestBody, reqEditors ...RequestEditorFn) (*GetCategoryViewResponse, error) {
+	rsp, err := c.GetCategoryView(ctx, id, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetCategoryViewResponse(rsp)
 }
 
 // GetPoliciesByCategoryIdWithResponse request returning *GetPoliciesByCategoryIdResponse
@@ -28926,15 +35262,6 @@ func (c *ClientWithResponses) CreateDictionaryDefinitionWithResponse(ctx context
 		return nil, err
 	}
 	return ParseCreateDictionaryDefinitionResponse(rsp)
-}
-
-// DeleteDictionaryDefinitionWithResponse request returning *DeleteDictionaryDefinitionResponse
-func (c *ClientWithResponses) DeleteDictionaryDefinitionWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*DeleteDictionaryDefinitionResponse, error) {
-	rsp, err := c.DeleteDictionaryDefinition(ctx, id, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDeleteDictionaryDefinitionResponse(rsp)
 }
 
 // PatchUpdateWithBodyWithResponse request with arbitrary body returning *PatchUpdateResponse
@@ -29178,6 +35505,92 @@ func (c *ClientWithResponses) UpdateMatrixDefinitionDryRunWithResponse(ctx conte
 	return ParseUpdateMatrixDefinitionDryRunResponse(rsp)
 }
 
+// BulkDeletePolicyFromAttributeDefinitionsWithBodyWithResponse request with arbitrary body returning *BulkDeletePolicyFromAttributeDefinitionsResponse
+func (c *ClientWithResponses) BulkDeletePolicyFromAttributeDefinitionsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*BulkDeletePolicyFromAttributeDefinitionsResponse, error) {
+	rsp, err := c.BulkDeletePolicyFromAttributeDefinitionsWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseBulkDeletePolicyFromAttributeDefinitionsResponse(rsp)
+}
+
+func (c *ClientWithResponses) BulkDeletePolicyFromAttributeDefinitionsWithResponse(ctx context.Context, body BulkDeletePolicyFromAttributeDefinitionsJSONRequestBody, reqEditors ...RequestEditorFn) (*BulkDeletePolicyFromAttributeDefinitionsResponse, error) {
+	rsp, err := c.BulkDeletePolicyFromAttributeDefinitions(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseBulkDeletePolicyFromAttributeDefinitionsResponse(rsp)
+}
+
+// AddPolicyToAttributeDefinitionsWithBodyWithResponse request with arbitrary body returning *AddPolicyToAttributeDefinitionsResponse
+func (c *ClientWithResponses) AddPolicyToAttributeDefinitionsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AddPolicyToAttributeDefinitionsResponse, error) {
+	rsp, err := c.AddPolicyToAttributeDefinitionsWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAddPolicyToAttributeDefinitionsResponse(rsp)
+}
+
+func (c *ClientWithResponses) AddPolicyToAttributeDefinitionsWithResponse(ctx context.Context, body AddPolicyToAttributeDefinitionsJSONRequestBody, reqEditors ...RequestEditorFn) (*AddPolicyToAttributeDefinitionsResponse, error) {
+	rsp, err := c.AddPolicyToAttributeDefinitions(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAddPolicyToAttributeDefinitionsResponse(rsp)
+}
+
+// CreateSelectValueWithBodyWithResponse request with arbitrary body returning *CreateSelectValueResponse
+func (c *ClientWithResponses) CreateSelectValueWithBodyWithResponse(ctx context.Context, id string, params *CreateSelectValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateSelectValueResponse, error) {
+	rsp, err := c.CreateSelectValueWithBody(ctx, id, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCreateSelectValueResponse(rsp)
+}
+
+func (c *ClientWithResponses) CreateSelectValueWithResponse(ctx context.Context, id string, params *CreateSelectValueParams, body CreateSelectValueJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateSelectValueResponse, error) {
+	rsp, err := c.CreateSelectValue(ctx, id, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCreateSelectValueResponse(rsp)
+}
+
+// DeleteSelectValueWithResponse request returning *DeleteSelectValueResponse
+func (c *ClientWithResponses) DeleteSelectValueWithResponse(ctx context.Context, id string, valueId string, reqEditors ...RequestEditorFn) (*DeleteSelectValueResponse, error) {
+	rsp, err := c.DeleteSelectValue(ctx, id, valueId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeleteSelectValueResponse(rsp)
+}
+
+// UpdateSelectValueWithBodyWithResponse request with arbitrary body returning *UpdateSelectValueResponse
+func (c *ClientWithResponses) UpdateSelectValueWithBodyWithResponse(ctx context.Context, id string, valueId string, params *UpdateSelectValueParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateSelectValueResponse, error) {
+	rsp, err := c.UpdateSelectValueWithBody(ctx, id, valueId, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUpdateSelectValueResponse(rsp)
+}
+
+func (c *ClientWithResponses) UpdateSelectValueWithResponse(ctx context.Context, id string, valueId string, params *UpdateSelectValueParams, body UpdateSelectValueJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateSelectValueResponse, error) {
+	rsp, err := c.UpdateSelectValue(ctx, id, valueId, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUpdateSelectValueResponse(rsp)
+}
+
+// ReorderSelectValueWithResponse request returning *ReorderSelectValueResponse
+func (c *ClientWithResponses) ReorderSelectValueWithResponse(ctx context.Context, id string, valueId string, params *ReorderSelectValueParams, reqEditors ...RequestEditorFn) (*ReorderSelectValueResponse, error) {
+	rsp, err := c.ReorderSelectValue(ctx, id, valueId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseReorderSelectValueResponse(rsp)
+}
+
 // FindSimpleWithResponse request returning *FindSimpleResponse
 func (c *ClientWithResponses) FindSimpleWithResponse(ctx context.Context, params *FindSimpleParams, reqEditors ...RequestEditorFn) (*FindSimpleResponse, error) {
 	rsp, err := c.FindSimple(ctx, params, reqEditors...)
@@ -29237,6 +35650,23 @@ func (c *ClientWithResponses) UpdateAttributeDefinitionWithResponse(ctx context.
 		return nil, err
 	}
 	return ParseUpdateAttributeDefinitionResponse(rsp)
+}
+
+// UpdateContextAwareWithBodyWithResponse request with arbitrary body returning *UpdateContextAwareResponse
+func (c *ClientWithResponses) UpdateContextAwareWithBodyWithResponse(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateContextAwareResponse, error) {
+	rsp, err := c.UpdateContextAwareWithBody(ctx, id, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUpdateContextAwareResponse(rsp)
+}
+
+func (c *ClientWithResponses) UpdateContextAwareWithResponse(ctx context.Context, id string, body UpdateContextAwareJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateContextAwareResponse, error) {
+	rsp, err := c.UpdateContextAware(ctx, id, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUpdateContextAwareResponse(rsp)
 }
 
 // DeleteDryRunWithResponse request returning *DeleteDryRunResponse
@@ -29363,15 +35793,6 @@ func (c *ClientWithResponses) GetRelationsByPolicyIdWithResponse(ctx context.Con
 	return ParseGetRelationsByPolicyIdResponse(rsp)
 }
 
-// GetProductsWithResponse request returning *GetProductsResponse
-func (c *ClientWithResponses) GetProductsWithResponse(ctx context.Context, params *GetProductsParams, reqEditors ...RequestEditorFn) (*GetProductsResponse, error) {
-	rsp, err := c.GetProducts(ctx, params, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseGetProductsResponse(rsp)
-}
-
 // CreateProductWithBodyWithResponse request with arbitrary body returning *CreateProductResponse
 func (c *ClientWithResponses) CreateProductWithBodyWithResponse(ctx context.Context, params *CreateProductParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateProductResponse, error) {
 	rsp, err := c.CreateProductWithBody(ctx, params, contentType, body, reqEditors...)
@@ -29421,23 +35842,6 @@ func (c *ClientWithResponses) DeleteProductsAttributeWithResponse(ctx context.Co
 		return nil, err
 	}
 	return ParseDeleteProductsAttributeResponse(rsp)
-}
-
-// CreateOrUpdateWithBodyWithResponse request with arbitrary body returning *CreateOrUpdateResponse
-func (c *ClientWithResponses) CreateOrUpdateWithBodyWithResponse(ctx context.Context, params *CreateOrUpdateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateOrUpdateResponse, error) {
-	rsp, err := c.CreateOrUpdateWithBody(ctx, params, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseCreateOrUpdateResponse(rsp)
-}
-
-func (c *ClientWithResponses) CreateOrUpdateWithResponse(ctx context.Context, params *CreateOrUpdateParams, body CreateOrUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateOrUpdateResponse, error) {
-	rsp, err := c.CreateOrUpdate(ctx, params, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseCreateOrUpdateResponse(rsp)
 }
 
 // AddAttributesByIdsWithBodyWithResponse request with arbitrary body returning *AddAttributesByIdsResponse
@@ -29491,6 +35895,74 @@ func (c *ClientWithResponses) UpdateAttributesByIdsWithResponse(ctx context.Cont
 	return ParseUpdateAttributesByIdsResponse(rsp)
 }
 
+// AppendDictionaryValuesWithBodyWithResponse request with arbitrary body returning *AppendDictionaryValuesResponse
+func (c *ClientWithResponses) AppendDictionaryValuesWithBodyWithResponse(ctx context.Context, params *AppendDictionaryValuesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AppendDictionaryValuesResponse, error) {
+	rsp, err := c.AppendDictionaryValuesWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAppendDictionaryValuesResponse(rsp)
+}
+
+func (c *ClientWithResponses) AppendDictionaryValuesWithResponse(ctx context.Context, params *AppendDictionaryValuesParams, body AppendDictionaryValuesJSONRequestBody, reqEditors ...RequestEditorFn) (*AppendDictionaryValuesResponse, error) {
+	rsp, err := c.AppendDictionaryValues(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAppendDictionaryValuesResponse(rsp)
+}
+
+// DeductDictionaryValuesWithBodyWithResponse request with arbitrary body returning *DeductDictionaryValuesResponse
+func (c *ClientWithResponses) DeductDictionaryValuesWithBodyWithResponse(ctx context.Context, params *DeductDictionaryValuesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DeductDictionaryValuesResponse, error) {
+	rsp, err := c.DeductDictionaryValuesWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeductDictionaryValuesResponse(rsp)
+}
+
+func (c *ClientWithResponses) DeductDictionaryValuesWithResponse(ctx context.Context, params *DeductDictionaryValuesParams, body DeductDictionaryValuesJSONRequestBody, reqEditors ...RequestEditorFn) (*DeductDictionaryValuesResponse, error) {
+	rsp, err := c.DeductDictionaryValues(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeductDictionaryValuesResponse(rsp)
+}
+
+// AppendSelectValuesWithBodyWithResponse request with arbitrary body returning *AppendSelectValuesResponse
+func (c *ClientWithResponses) AppendSelectValuesWithBodyWithResponse(ctx context.Context, params *AppendSelectValuesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AppendSelectValuesResponse, error) {
+	rsp, err := c.AppendSelectValuesWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAppendSelectValuesResponse(rsp)
+}
+
+func (c *ClientWithResponses) AppendSelectValuesWithResponse(ctx context.Context, params *AppendSelectValuesParams, body AppendSelectValuesJSONRequestBody, reqEditors ...RequestEditorFn) (*AppendSelectValuesResponse, error) {
+	rsp, err := c.AppendSelectValues(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAppendSelectValuesResponse(rsp)
+}
+
+// DeductSelectValuesWithBodyWithResponse request with arbitrary body returning *DeductSelectValuesResponse
+func (c *ClientWithResponses) DeductSelectValuesWithBodyWithResponse(ctx context.Context, params *DeductSelectValuesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DeductSelectValuesResponse, error) {
+	rsp, err := c.DeductSelectValuesWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeductSelectValuesResponse(rsp)
+}
+
+func (c *ClientWithResponses) DeductSelectValuesWithResponse(ctx context.Context, params *DeductSelectValuesParams, body DeductSelectValuesJSONRequestBody, reqEditors ...RequestEditorFn) (*DeductSelectValuesResponse, error) {
+	rsp, err := c.DeductSelectValues(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeductSelectValuesResponse(rsp)
+}
+
 // AssignProductsToCategoryWithBodyWithResponse request with arbitrary body returning *AssignProductsToCategoryResponse
 func (c *ClientWithResponses) AssignProductsToCategoryWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AssignProductsToCategoryResponse, error) {
 	rsp, err := c.AssignProductsToCategoryWithBody(ctx, contentType, body, reqEditors...)
@@ -29525,23 +35997,6 @@ func (c *ClientWithResponses) CopyAndUpdateProductWithResponse(ctx context.Conte
 	return ParseCopyAndUpdateProductResponse(rsp)
 }
 
-// CountFilteredProductsWithBodyWithResponse request with arbitrary body returning *CountFilteredProductsResponse
-func (c *ClientWithResponses) CountFilteredProductsWithBodyWithResponse(ctx context.Context, params *CountFilteredProductsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CountFilteredProductsResponse, error) {
-	rsp, err := c.CountFilteredProductsWithBody(ctx, params, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseCountFilteredProductsResponse(rsp)
-}
-
-func (c *ClientWithResponses) CountFilteredProductsWithResponse(ctx context.Context, params *CountFilteredProductsParams, body CountFilteredProductsJSONRequestBody, reqEditors ...RequestEditorFn) (*CountFilteredProductsResponse, error) {
-	rsp, err := c.CountFilteredProducts(ctx, params, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseCountFilteredProductsResponse(rsp)
-}
-
 // GetProductsWithCursorAndViewsWithBodyWithResponse request with arbitrary body returning *GetProductsWithCursorAndViewsResponse
 func (c *ClientWithResponses) GetProductsWithCursorAndViewsWithBodyWithResponse(ctx context.Context, params *GetProductsWithCursorAndViewsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*GetProductsWithCursorAndViewsResponse, error) {
 	rsp, err := c.GetProductsWithCursorAndViewsWithBody(ctx, params, contentType, body, reqEditors...)
@@ -29557,6 +36012,57 @@ func (c *ClientWithResponses) GetProductsWithCursorAndViewsWithResponse(ctx cont
 		return nil, err
 	}
 	return ParseGetProductsWithCursorAndViewsResponse(rsp)
+}
+
+// ListProductsViewsByTypesWithBodyWithResponse request with arbitrary body returning *ListProductsViewsByTypesResponse
+func (c *ClientWithResponses) ListProductsViewsByTypesWithBodyWithResponse(ctx context.Context, params *ListProductsViewsByTypesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ListProductsViewsByTypesResponse, error) {
+	rsp, err := c.ListProductsViewsByTypesWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseListProductsViewsByTypesResponse(rsp)
+}
+
+func (c *ClientWithResponses) ListProductsViewsByTypesWithResponse(ctx context.Context, params *ListProductsViewsByTypesParams, body ListProductsViewsByTypesJSONRequestBody, reqEditors ...RequestEditorFn) (*ListProductsViewsByTypesResponse, error) {
+	rsp, err := c.ListProductsViewsByTypes(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseListProductsViewsByTypesResponse(rsp)
+}
+
+// AddProductGroupsWithBodyWithResponse request with arbitrary body returning *AddProductGroupsResponse
+func (c *ClientWithResponses) AddProductGroupsWithBodyWithResponse(ctx context.Context, params *AddProductGroupsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AddProductGroupsResponse, error) {
+	rsp, err := c.AddProductGroupsWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAddProductGroupsResponse(rsp)
+}
+
+func (c *ClientWithResponses) AddProductGroupsWithResponse(ctx context.Context, params *AddProductGroupsParams, body AddProductGroupsJSONRequestBody, reqEditors ...RequestEditorFn) (*AddProductGroupsResponse, error) {
+	rsp, err := c.AddProductGroups(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAddProductGroupsResponse(rsp)
+}
+
+// UpdateProductGroupsAttributeVlaSettingsWithBodyWithResponse request with arbitrary body returning *UpdateProductGroupsAttributeVlaSettingsResponse
+func (c *ClientWithResponses) UpdateProductGroupsAttributeVlaSettingsWithBodyWithResponse(ctx context.Context, params *UpdateProductGroupsAttributeVlaSettingsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateProductGroupsAttributeVlaSettingsResponse, error) {
+	rsp, err := c.UpdateProductGroupsAttributeVlaSettingsWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUpdateProductGroupsAttributeVlaSettingsResponse(rsp)
+}
+
+func (c *ClientWithResponses) UpdateProductGroupsAttributeVlaSettingsWithResponse(ctx context.Context, params *UpdateProductGroupsAttributeVlaSettingsParams, body UpdateProductGroupsAttributeVlaSettingsJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateProductGroupsAttributeVlaSettingsResponse, error) {
+	rsp, err := c.UpdateProductGroupsAttributeVlaSettings(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUpdateProductGroupsAttributeVlaSettingsResponse(rsp)
 }
 
 // RemoveLabelFromProductsWithBodyWithResponse request with arbitrary body returning *RemoveLabelFromProductsResponse
@@ -29644,23 +36150,6 @@ func (c *ClientWithResponses) ListProductsViewsByNumbersWithResponse(ctx context
 	return ParseListProductsViewsByNumbersResponse(rsp)
 }
 
-// ChangeStatusesByIdsWithBodyWithResponse request with arbitrary body returning *ChangeStatusesByIdsResponse
-func (c *ClientWithResponses) ChangeStatusesByIdsWithBodyWithResponse(ctx context.Context, params *ChangeStatusesByIdsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ChangeStatusesByIdsResponse, error) {
-	rsp, err := c.ChangeStatusesByIdsWithBody(ctx, params, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseChangeStatusesByIdsResponse(rsp)
-}
-
-func (c *ClientWithResponses) ChangeStatusesByIdsWithResponse(ctx context.Context, params *ChangeStatusesByIdsParams, body ChangeStatusesByIdsJSONRequestBody, reqEditors ...RequestEditorFn) (*ChangeStatusesByIdsResponse, error) {
-	rsp, err := c.ChangeStatusesByIds(ctx, params, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseChangeStatusesByIdsResponse(rsp)
-}
-
 // FindProductTemplatesWithResponse request returning *FindProductTemplatesResponse
 func (c *ClientWithResponses) FindProductTemplatesWithResponse(ctx context.Context, params *FindProductTemplatesParams, reqEditors ...RequestEditorFn) (*FindProductTemplatesResponse, error) {
 	rsp, err := c.FindProductTemplates(ctx, params, reqEditors...)
@@ -29739,6 +36228,40 @@ func (c *ClientWithResponses) UnarchiveProductsByIdsWithResponse(ctx context.Con
 	return ParseUnarchiveProductsByIdsResponse(rsp)
 }
 
+// AddProductVariantsWithBodyWithResponse request with arbitrary body returning *AddProductVariantsResponse
+func (c *ClientWithResponses) AddProductVariantsWithBodyWithResponse(ctx context.Context, params *AddProductVariantsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AddProductVariantsResponse, error) {
+	rsp, err := c.AddProductVariantsWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAddProductVariantsResponse(rsp)
+}
+
+func (c *ClientWithResponses) AddProductVariantsWithResponse(ctx context.Context, params *AddProductVariantsParams, body AddProductVariantsJSONRequestBody, reqEditors ...RequestEditorFn) (*AddProductVariantsResponse, error) {
+	rsp, err := c.AddProductVariants(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAddProductVariantsResponse(rsp)
+}
+
+// UpdateProductVariantsAttributeVlaSettingsWithBodyWithResponse request with arbitrary body returning *UpdateProductVariantsAttributeVlaSettingsResponse
+func (c *ClientWithResponses) UpdateProductVariantsAttributeVlaSettingsWithBodyWithResponse(ctx context.Context, params *UpdateProductVariantsAttributeVlaSettingsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateProductVariantsAttributeVlaSettingsResponse, error) {
+	rsp, err := c.UpdateProductVariantsAttributeVlaSettingsWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUpdateProductVariantsAttributeVlaSettingsResponse(rsp)
+}
+
+func (c *ClientWithResponses) UpdateProductVariantsAttributeVlaSettingsWithResponse(ctx context.Context, params *UpdateProductVariantsAttributeVlaSettingsParams, body UpdateProductVariantsAttributeVlaSettingsJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateProductVariantsAttributeVlaSettingsResponse, error) {
+	rsp, err := c.UpdateProductVariantsAttributeVlaSettings(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUpdateProductVariantsAttributeVlaSettingsResponse(rsp)
+}
+
 // GetProductWithResponse request returning *GetProductResponse
 func (c *ClientWithResponses) GetProductWithResponse(ctx context.Context, id string, params *GetProductParams, reqEditors ...RequestEditorFn) (*GetProductResponse, error) {
 	rsp, err := c.GetProduct(ctx, id, params, reqEditors...)
@@ -29763,23 +36286,6 @@ func (c *ClientWithResponses) UpdateProductWithResponse(ctx context.Context, id 
 		return nil, err
 	}
 	return ParseUpdateProductResponse(rsp)
-}
-
-// UpdateProductDetailsWithBodyWithResponse request with arbitrary body returning *UpdateProductDetailsResponse
-func (c *ClientWithResponses) UpdateProductDetailsWithBodyWithResponse(ctx context.Context, id string, params *UpdateProductDetailsParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateProductDetailsResponse, error) {
-	rsp, err := c.UpdateProductDetailsWithBody(ctx, id, params, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseUpdateProductDetailsResponse(rsp)
-}
-
-func (c *ClientWithResponses) UpdateProductDetailsWithResponse(ctx context.Context, id string, params *UpdateProductDetailsParams, body UpdateProductDetailsJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateProductDetailsResponse, error) {
-	rsp, err := c.UpdateProductDetails(ctx, id, params, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseUpdateProductDetailsResponse(rsp)
 }
 
 // GetProductAssetsWithResponse request returning *GetProductAssetsResponse
@@ -30128,41 +36634,6 @@ func (c *ClientWithResponses) GetProductRelationsWithResponse(ctx context.Contex
 	return ParseGetProductRelationsResponse(rsp)
 }
 
-// GetCategoryConnectionsForProductWithResponse request returning *GetCategoryConnectionsForProductResponse
-func (c *ClientWithResponses) GetCategoryConnectionsForProductWithResponse(ctx context.Context, id string, params *GetCategoryConnectionsForProductParams, reqEditors ...RequestEditorFn) (*GetCategoryConnectionsForProductResponse, error) {
-	rsp, err := c.GetCategoryConnectionsForProduct(ctx, id, params, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseGetCategoryConnectionsForProductResponse(rsp)
-}
-
-// CreateCategoryConnectionWithBodyWithResponse request with arbitrary body returning *CreateCategoryConnectionResponse
-func (c *ClientWithResponses) CreateCategoryConnectionWithBodyWithResponse(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateCategoryConnectionResponse, error) {
-	rsp, err := c.CreateCategoryConnectionWithBody(ctx, id, contentType, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseCreateCategoryConnectionResponse(rsp)
-}
-
-func (c *ClientWithResponses) CreateCategoryConnectionWithResponse(ctx context.Context, id string, body CreateCategoryConnectionJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateCategoryConnectionResponse, error) {
-	rsp, err := c.CreateCategoryConnection(ctx, id, body, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseCreateCategoryConnectionResponse(rsp)
-}
-
-// DeleteCategoryConnectionWithResponse request returning *DeleteCategoryConnectionResponse
-func (c *ClientWithResponses) DeleteCategoryConnectionWithResponse(ctx context.Context, id string, relationId string, categoryId string, reqEditors ...RequestEditorFn) (*DeleteCategoryConnectionResponse, error) {
-	rsp, err := c.DeleteCategoryConnection(ctx, id, relationId, categoryId, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseDeleteCategoryConnectionResponse(rsp)
-}
-
 // CreateProductConnectionWithBodyWithResponse request with arbitrary body returning *CreateProductConnectionResponse
 func (c *ClientWithResponses) CreateProductConnectionWithBodyWithResponse(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateProductConnectionResponse, error) {
 	rsp, err := c.CreateProductConnectionWithBody(ctx, id, contentType, body, reqEditors...)
@@ -30320,6 +36791,76 @@ func (c *ClientWithResponses) GetGroupedProductAttributesWithResponse(ctx contex
 	return ParseGetGroupedProductAttributesResponse(rsp)
 }
 
+// ConvertToProductFamilyWithResponse request returning *ConvertToProductFamilyResponse
+func (c *ClientWithResponses) ConvertToProductFamilyWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*ConvertToProductFamilyResponse, error) {
+	rsp, err := c.ConvertToProductFamily(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseConvertToProductFamilyResponse(rsp)
+}
+
+// GetProductGroupAttributeWithResponse request returning *GetProductGroupAttributeResponse
+func (c *ClientWithResponses) GetProductGroupAttributeWithResponse(ctx context.Context, id string, definitionId string, reqEditors ...RequestEditorFn) (*GetProductGroupAttributeResponse, error) {
+	rsp, err := c.GetProductGroupAttribute(ctx, id, definitionId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetProductGroupAttributeResponse(rsp)
+}
+
+// UpdateProductGroupAttributeWithBodyWithResponse request with arbitrary body returning *UpdateProductGroupAttributeResponse
+func (c *ClientWithResponses) UpdateProductGroupAttributeWithBodyWithResponse(ctx context.Context, id string, definitionId string, params *UpdateProductGroupAttributeParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateProductGroupAttributeResponse, error) {
+	rsp, err := c.UpdateProductGroupAttributeWithBody(ctx, id, definitionId, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUpdateProductGroupAttributeResponse(rsp)
+}
+
+func (c *ClientWithResponses) UpdateProductGroupAttributeWithResponse(ctx context.Context, id string, definitionId string, params *UpdateProductGroupAttributeParams, body UpdateProductGroupAttributeJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateProductGroupAttributeResponse, error) {
+	rsp, err := c.UpdateProductGroupAttribute(ctx, id, definitionId, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUpdateProductGroupAttributeResponse(rsp)
+}
+
+// UnassignProductGroupWithResponse request returning *UnassignProductGroupResponse
+func (c *ClientWithResponses) UnassignProductGroupWithResponse(ctx context.Context, id string, groupId string, reqEditors ...RequestEditorFn) (*UnassignProductGroupResponse, error) {
+	rsp, err := c.UnassignProductGroup(ctx, id, groupId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUnassignProductGroupResponse(rsp)
+}
+
+// MoveProductGroupWithResponse request returning *MoveProductGroupResponse
+func (c *ClientWithResponses) MoveProductGroupWithResponse(ctx context.Context, id string, groupId string, params *MoveProductGroupParams, reqEditors ...RequestEditorFn) (*MoveProductGroupResponse, error) {
+	rsp, err := c.MoveProductGroup(ctx, id, groupId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseMoveProductGroupResponse(rsp)
+}
+
+// RemoveLabelsFromProductWithBodyWithResponse request with arbitrary body returning *RemoveLabelsFromProductResponse
+func (c *ClientWithResponses) RemoveLabelsFromProductWithBodyWithResponse(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*RemoveLabelsFromProductResponse, error) {
+	rsp, err := c.RemoveLabelsFromProductWithBody(ctx, id, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseRemoveLabelsFromProductResponse(rsp)
+}
+
+func (c *ClientWithResponses) RemoveLabelsFromProductWithResponse(ctx context.Context, id string, body RemoveLabelsFromProductJSONRequestBody, reqEditors ...RequestEditorFn) (*RemoveLabelsFromProductResponse, error) {
+	rsp, err := c.RemoveLabelsFromProduct(ctx, id, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseRemoveLabelsFromProductResponse(rsp)
+}
+
 // GetProductsLabelsWithResponse request returning *GetProductsLabelsResponse
 func (c *ClientWithResponses) GetProductsLabelsWithResponse(ctx context.Context, id string, params *GetProductsLabelsParams, reqEditors ...RequestEditorFn) (*GetProductsLabelsResponse, error) {
 	rsp, err := c.GetProductsLabels(ctx, id, params, reqEditors...)
@@ -30353,6 +36894,15 @@ func (c *ClientWithResponses) RemoveLabelFromProductWithResponse(ctx context.Con
 		return nil, err
 	}
 	return ParseRemoveLabelFromProductResponse(rsp)
+}
+
+// ProductOverviewWithResponse request returning *ProductOverviewResponse
+func (c *ClientWithResponses) ProductOverviewWithResponse(ctx context.Context, id string, params *ProductOverviewParams, reqEditors ...RequestEditorFn) (*ProductOverviewResponse, error) {
+	rsp, err := c.ProductOverview(ctx, id, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseProductOverviewResponse(rsp)
 }
 
 // SetProductGroupWithResponse request returning *SetProductGroupResponse
@@ -30400,8 +36950,8 @@ func (c *ClientWithResponses) UnassignProductVariantWithResponse(ctx context.Con
 }
 
 // AddProductVariantWithResponse request returning *AddProductVariantResponse
-func (c *ClientWithResponses) AddProductVariantWithResponse(ctx context.Context, id string, variantProductId string, reqEditors ...RequestEditorFn) (*AddProductVariantResponse, error) {
-	rsp, err := c.AddProductVariant(ctx, id, variantProductId, reqEditors...)
+func (c *ClientWithResponses) AddProductVariantWithResponse(ctx context.Context, id string, variantProductId string, params *AddProductVariantParams, reqEditors ...RequestEditorFn) (*AddProductVariantResponse, error) {
+	rsp, err := c.AddProductVariant(ctx, id, variantProductId, params, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
@@ -30415,15 +36965,6 @@ func (c *ClientWithResponses) MoveProductVariantWithResponse(ctx context.Context
 		return nil, err
 	}
 	return ParseMoveProductVariantResponse(rsp)
-}
-
-// ChangeStatusWithResponse request returning *ChangeStatusResponse
-func (c *ClientWithResponses) ChangeStatusWithResponse(ctx context.Context, id string, action ChangeStatusParamsAction, params *ChangeStatusParams, reqEditors ...RequestEditorFn) (*ChangeStatusResponse, error) {
-	rsp, err := c.ChangeStatus(ctx, id, action, params, reqEditors...)
-	if err != nil {
-		return nil, err
-	}
-	return ParseChangeStatusResponse(rsp)
 }
 
 // FindRelationsWithResponse request returning *FindRelationsResponse
@@ -30487,6 +37028,23 @@ func (c *ClientWithResponses) FindOneWithResponse(ctx context.Context, id string
 	return ParseFindOneResponse(rsp)
 }
 
+// PartialUpdateRelationWithBodyWithResponse request with arbitrary body returning *PartialUpdateRelationResponse
+func (c *ClientWithResponses) PartialUpdateRelationWithBodyWithResponse(ctx context.Context, id string, params *PartialUpdateRelationParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PartialUpdateRelationResponse, error) {
+	rsp, err := c.PartialUpdateRelationWithBody(ctx, id, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePartialUpdateRelationResponse(rsp)
+}
+
+func (c *ClientWithResponses) PartialUpdateRelationWithResponse(ctx context.Context, id string, params *PartialUpdateRelationParams, body PartialUpdateRelationJSONRequestBody, reqEditors ...RequestEditorFn) (*PartialUpdateRelationResponse, error) {
+	rsp, err := c.PartialUpdateRelation(ctx, id, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePartialUpdateRelationResponse(rsp)
+}
+
 // UpdateRelationWithBodyWithResponse request with arbitrary body returning *UpdateRelationResponse
 func (c *ClientWithResponses) UpdateRelationWithBodyWithResponse(ctx context.Context, id string, params *UpdateRelationParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateRelationResponse, error) {
 	rsp, err := c.UpdateRelationWithBody(ctx, id, params, contentType, body, reqEditors...)
@@ -30504,13 +37062,21 @@ func (c *ClientWithResponses) UpdateRelationWithResponse(ctx context.Context, id
 	return ParseUpdateRelationResponse(rsp)
 }
 
-// GetCategoryConnectionsByRelationIdWithResponse request returning *GetCategoryConnectionsByRelationIdResponse
-func (c *ClientWithResponses) GetCategoryConnectionsByRelationIdWithResponse(ctx context.Context, id string, params *GetCategoryConnectionsByRelationIdParams, reqEditors ...RequestEditorFn) (*GetCategoryConnectionsByRelationIdResponse, error) {
-	rsp, err := c.GetCategoryConnectionsByRelationId(ctx, id, params, reqEditors...)
+// UpdateRelationDirectionWithBodyWithResponse request with arbitrary body returning *UpdateRelationDirectionResponse
+func (c *ClientWithResponses) UpdateRelationDirectionWithBodyWithResponse(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateRelationDirectionResponse, error) {
+	rsp, err := c.UpdateRelationDirectionWithBody(ctx, id, contentType, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
-	return ParseGetCategoryConnectionsByRelationIdResponse(rsp)
+	return ParseUpdateRelationDirectionResponse(rsp)
+}
+
+func (c *ClientWithResponses) UpdateRelationDirectionWithResponse(ctx context.Context, id string, body UpdateRelationDirectionJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateRelationDirectionResponse, error) {
+	rsp, err := c.UpdateRelationDirection(ctx, id, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUpdateRelationDirectionResponse(rsp)
 }
 
 // UpdateOrderRelationWithResponse request returning *UpdateOrderRelationResponse
@@ -30626,32 +37192,6 @@ func (c *ClientWithResponses) ValidateValueWithResponse(ctx context.Context, bod
 	return ParseValidateValueResponse(rsp)
 }
 
-// ParseSynchronizeAssetsResponse parses an HTTP response from a SynchronizeAssetsWithResponse call
-func ParseSynchronizeAssetsResponse(rsp *http.Response) (*SynchronizeAssetsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &SynchronizeAssetsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON400 = &dest
-
-	}
-
-	return response, nil
-}
-
 // ParseGetJobStatusResponse parses an HTTP response from a GetJobStatusWithResponse call
 func ParseGetJobStatusResponse(rsp *http.Response) (*GetJobStatusResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -30679,6 +37219,13 @@ func ParseGetJobStatusResponse(rsp *http.Response) (*GetJobStatusResponse, error
 			return nil, err
 		}
 		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
 
 	}
 
@@ -31088,6 +37635,13 @@ func ParseUpdateNumberResponse(rsp *http.Response) (*UpdateNumberResponse, error
 		}
 		response.JSON404 = &dest
 
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
+
 	}
 
 	return response, nil
@@ -31365,6 +37919,46 @@ func ParseGetNodeResponse(rsp *http.Response) (*GetNodeResponse, error) {
 			return nil, err
 		}
 		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParsePartialUpdateCatalogNodeResponse parses an HTTP response from a PartialUpdateCatalogNodeWithResponse call
+func ParsePartialUpdateCatalogNodeResponse(rsp *http.Response) (*PartialUpdateCatalogNodeResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PartialUpdateCatalogNodeResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
 
 	}
 
@@ -31684,13 +38278,6 @@ func ParseCreateCatalogNodeAttributeResponse(rsp *http.Response) (*CreateCatalog
 		}
 		response.JSON404 = &dest
 
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON409 = &dest
-
 	}
 
 	return response, nil
@@ -31723,13 +38310,6 @@ func ParseCreateCatalogNodeAttributeColumnResponse(rsp *http.Response) (*CreateC
 			return nil, err
 		}
 		response.JSON404 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON409 = &dest
 
 	}
 
@@ -31797,13 +38377,6 @@ func ParseCreateCatalogNodeAttributeCompoundResponse(rsp *http.Response) (*Creat
 		}
 		response.JSON404 = &dest
 
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON409 = &dest
-
 	}
 
 	return response, nil
@@ -31836,13 +38409,6 @@ func ParseCreateCatalogNodeAttributeDictionaryResponse(rsp *http.Response) (*Cre
 			return nil, err
 		}
 		response.JSON404 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON409 = &dest
 
 	}
 
@@ -31910,13 +38476,6 @@ func ParseCreateCatalogNodeAttributeMatrixResponse(rsp *http.Response) (*CreateC
 		}
 		response.JSON404 = &dest
 
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON409 = &dest
-
 	}
 
 	return response, nil
@@ -31931,6 +38490,232 @@ func ParseUpdateNodeAttributeMatrixValueResponse(rsp *http.Response) (*UpdateNod
 	}
 
 	response := &UpdateNodeAttributeMatrixValueResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetAttributesAssociatedToCategoryResponse parses an HTTP response from a GetAttributesAssociatedToCategoryWithResponse call
+func ParseGetAttributesAssociatedToCategoryResponse(rsp *http.Response) (*GetAttributesAssociatedToCategoryResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetAttributesAssociatedToCategoryResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ListableLocalCategoryAttributeDto
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseUnassignDefinitionFromCategoryResponse parses an HTTP response from a UnassignDefinitionFromCategoryWithResponse call
+func ParseUnassignDefinitionFromCategoryResponse(rsp *http.Response) (*UnassignDefinitionFromCategoryResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &UnassignDefinitionFromCategoryResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseAssignDefinitionToCategoryResponse parses an HTTP response from a AssignDefinitionToCategoryWithResponse call
+func ParseAssignDefinitionToCategoryResponse(rsp *http.Response) (*AssignDefinitionToCategoryResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &AssignDefinitionToCategoryResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseSetDictionaryDefinitionValueResponse parses an HTTP response from a SetDictionaryDefinitionValueWithResponse call
+func ParseSetDictionaryDefinitionValueResponse(rsp *http.Response) (*SetDictionaryDefinitionValueResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &SetDictionaryDefinitionValueResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseSetSelectDefinitionValueResponse parses an HTTP response from a SetSelectDefinitionValueWithResponse call
+func ParseSetSelectDefinitionValueResponse(rsp *http.Response) (*SetSelectDefinitionValueResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &SetSelectDefinitionValueResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseSetSimpleDefinitionValueResponse parses an HTTP response from a SetSimpleDefinitionValueWithResponse call
+func ParseSetSimpleDefinitionValueResponse(rsp *http.Response) (*SetSimpleDefinitionValueResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &SetSimpleDefinitionValueResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -32518,6 +39303,46 @@ func ParseGetCategoryTreeResponse(rsp *http.Response) (*GetCategoryTreeResponse,
 	return response, nil
 }
 
+// ParseGetCategoryViewResponse parses an HTTP response from a GetCategoryViewWithResponse call
+func ParseGetCategoryViewResponse(rsp *http.Response) (*GetCategoryViewResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetCategoryViewResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ListableWithCursorCategoryWithCursorAndViewResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseGetPoliciesByCategoryIdResponse parses an HTTP response from a GetPoliciesByCategoryIdWithResponse call
 func ParseGetPoliciesByCategoryIdResponse(rsp *http.Response) (*GetPoliciesByCategoryIdResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -33036,6 +39861,13 @@ func ParseCreateColumnDefinitionResponse(rsp *http.Response) (*CreateColumnDefin
 		}
 		response.JSON400 = &dest
 
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
+
 	}
 
 	return response, nil
@@ -33155,32 +39987,6 @@ func ParseCreateDictionaryDefinitionResponse(rsp *http.Response) (*CreateDiction
 			return nil, err
 		}
 		response.JSON409 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeleteDictionaryDefinitionResponse parses an HTTP response from a DeleteDictionaryDefinitionWithResponse call
-func ParseDeleteDictionaryDefinitionResponse(rsp *http.Response) (*DeleteDictionaryDefinitionResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeleteDictionaryDefinitionResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON400 = &dest
 
 	}
 
@@ -33766,6 +40572,13 @@ func ParseUpdateMatrixDefinitionResponse(rsp *http.Response) (*UpdateMatrixDefin
 		}
 		response.JSON404 = &dest
 
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
+
 	}
 
 	return response, nil
@@ -33792,6 +40605,204 @@ func ParseUpdateMatrixDefinitionDryRunResponse(rsp *http.Response) (*UpdateMatri
 		}
 		response.JSON200 = &dest
 
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseBulkDeletePolicyFromAttributeDefinitionsResponse parses an HTTP response from a BulkDeletePolicyFromAttributeDefinitionsWithResponse call
+func ParseBulkDeletePolicyFromAttributeDefinitionsResponse(rsp *http.Response) (*BulkDeletePolicyFromAttributeDefinitionsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &BulkDeletePolicyFromAttributeDefinitionsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseAddPolicyToAttributeDefinitionsResponse parses an HTTP response from a AddPolicyToAttributeDefinitionsWithResponse call
+func ParseAddPolicyToAttributeDefinitionsResponse(rsp *http.Response) (*AddPolicyToAttributeDefinitionsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &AddPolicyToAttributeDefinitionsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCreateSelectValueResponse parses an HTTP response from a CreateSelectValueWithResponse call
+func ParseCreateSelectValueResponse(rsp *http.Response) (*CreateSelectValueResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CreateSelectValueResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeleteSelectValueResponse parses an HTTP response from a DeleteSelectValueWithResponse call
+func ParseDeleteSelectValueResponse(rsp *http.Response) (*DeleteSelectValueResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeleteSelectValueResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseUpdateSelectValueResponse parses an HTTP response from a UpdateSelectValueWithResponse call
+func ParseUpdateSelectValueResponse(rsp *http.Response) (*UpdateSelectValueResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &UpdateSelectValueResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseReorderSelectValueResponse parses an HTTP response from a ReorderSelectValueWithResponse call
+func ParseReorderSelectValueResponse(rsp *http.Response) (*ReorderSelectValueResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ReorderSelectValueResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -33998,6 +41009,39 @@ func ParseUpdateAttributeDefinitionResponse(rsp *http.Response) (*UpdateAttribut
 			return nil, err
 		}
 		response.JSON409 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseUpdateContextAwareResponse parses an HTTP response from a UpdateContextAwareWithResponse call
+func ParseUpdateContextAwareResponse(rsp *http.Response) (*UpdateContextAwareResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &UpdateContextAwareResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
 
 	}
 
@@ -34477,46 +41521,6 @@ func ParseGetRelationsByPolicyIdResponse(rsp *http.Response) (*GetRelationsByPol
 	return response, nil
 }
 
-// ParseGetProductsResponse parses an HTTP response from a GetProductsWithResponse call
-func ParseGetProductsResponse(rsp *http.Response) (*GetProductsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetProductsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case rsp.Header.Get("Content-Type") == "application/full+json" && rsp.StatusCode == 200:
-		var dest ListableProductAll
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.ApplicationfullJSON200 = &dest
-
-	case rsp.Header.Get("Content-Type") == "application/json" && rsp.StatusCode == 200:
-		var dest ListableProductAll
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON400 = &dest
-
-	}
-
-	return response, nil
-}
-
 // ParseCreateProductResponse parses an HTTP response from a CreateProductWithResponse call
 func ParseCreateProductResponse(rsp *http.Response) (*CreateProductResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -34585,32 +41589,6 @@ func ParseDeleteProductsAttributeResponse(rsp *http.Response) (*DeleteProductsAt
 	}
 
 	response := &DeleteProductsAttributeResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON400 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseCreateOrUpdateResponse parses an HTTP response from a CreateOrUpdateWithResponse call
-func ParseCreateOrUpdateResponse(rsp *http.Response) (*CreateOrUpdateResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &CreateOrUpdateResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -34706,6 +41684,138 @@ func ParseUpdateAttributesByIdsResponse(rsp *http.Response) (*UpdateAttributesBy
 	return response, nil
 }
 
+// ParseAppendDictionaryValuesResponse parses an HTTP response from a AppendDictionaryValuesWithResponse call
+func ParseAppendDictionaryValuesResponse(rsp *http.Response) (*AppendDictionaryValuesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &AppendDictionaryValuesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeductDictionaryValuesResponse parses an HTTP response from a DeductDictionaryValuesWithResponse call
+func ParseDeductDictionaryValuesResponse(rsp *http.Response) (*DeductDictionaryValuesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeductDictionaryValuesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseAppendSelectValuesResponse parses an HTTP response from a AppendSelectValuesWithResponse call
+func ParseAppendSelectValuesResponse(rsp *http.Response) (*AppendSelectValuesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &AppendSelectValuesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeductSelectValuesResponse parses an HTTP response from a DeductSelectValuesWithResponse call
+func ParseDeductSelectValuesResponse(rsp *http.Response) (*DeductSelectValuesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeductSelectValuesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseAssignProductsToCategoryResponse parses an HTTP response from a AssignProductsToCategoryWithResponse call
 func ParseAssignProductsToCategoryResponse(rsp *http.Response) (*AssignProductsToCategoryResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -34765,39 +41875,6 @@ func ParseCopyAndUpdateProductResponse(rsp *http.Response) (*CopyAndUpdateProduc
 	return response, nil
 }
 
-// ParseCountFilteredProductsResponse parses an HTTP response from a CountFilteredProductsWithResponse call
-func ParseCountFilteredProductsResponse(rsp *http.Response) (*CountFilteredProductsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &CountFilteredProductsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest CountableLong
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON400 = &dest
-
-	}
-
-	return response, nil
-}
-
 // ParseGetProductsWithCursorAndViewsResponse parses an HTTP response from a GetProductsWithCursorAndViewsWithResponse call
 func ParseGetProductsWithCursorAndViewsResponse(rsp *http.Response) (*GetProductsWithCursorAndViewsResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -34825,6 +41902,105 @@ func ParseGetProductsWithCursorAndViewsResponse(rsp *http.Response) (*GetProduct
 			return nil, err
 		}
 		response.JSON400 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseListProductsViewsByTypesResponse parses an HTTP response from a ListProductsViewsByTypesWithResponse call
+func ParseListProductsViewsByTypesResponse(rsp *http.Response) (*ListProductsViewsByTypesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ListProductsViewsByTypesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ListableWithCursorProductViewDto
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseAddProductGroupsResponse parses an HTTP response from a AddProductGroupsWithResponse call
+func ParseAddProductGroupsResponse(rsp *http.Response) (*AddProductGroupsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &AddProductGroupsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseUpdateProductGroupsAttributeVlaSettingsResponse parses an HTTP response from a UpdateProductGroupsAttributeVlaSettingsWithResponse call
+func ParseUpdateProductGroupsAttributeVlaSettingsResponse(rsp *http.Response) (*UpdateProductGroupsAttributeVlaSettingsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &UpdateProductGroupsAttributeVlaSettingsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
 
 	}
 
@@ -34983,46 +42159,6 @@ func ParseListProductsViewsByNumbersResponse(rsp *http.Response) (*ListProductsV
 			return nil, err
 		}
 		response.JSON400 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseChangeStatusesByIdsResponse parses an HTTP response from a ChangeStatusesByIdsWithResponse call
-func ParseChangeStatusesByIdsResponse(rsp *http.Response) (*ChangeStatusesByIdsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &ChangeStatusesByIdsResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON400 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
-		var dest UpdateProductStateResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON403 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON409 = &dest
 
 	}
 
@@ -35248,6 +42384,72 @@ func ParseUnarchiveProductsByIdsResponse(rsp *http.Response) (*UnarchiveProducts
 	return response, nil
 }
 
+// ParseAddProductVariantsResponse parses an HTTP response from a AddProductVariantsWithResponse call
+func ParseAddProductVariantsResponse(rsp *http.Response) (*AddProductVariantsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &AddProductVariantsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseUpdateProductVariantsAttributeVlaSettingsResponse parses an HTTP response from a UpdateProductVariantsAttributeVlaSettingsWithResponse call
+func ParseUpdateProductVariantsAttributeVlaSettingsResponse(rsp *http.Response) (*UpdateProductVariantsAttributeVlaSettingsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &UpdateProductVariantsAttributeVlaSettingsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseGetProductResponse parses an HTTP response from a GetProductWithResponse call
 func ParseGetProductResponse(rsp *http.Response) (*GetProductResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -35304,46 +42506,6 @@ func ParseUpdateProductResponse(rsp *http.Response) (*UpdateProductResponse, err
 	}
 
 	response := &UpdateProductResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON400 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON404 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON409 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseUpdateProductDetailsResponse parses an HTTP response from a UpdateProductDetailsWithResponse call
-func ParseUpdateProductDetailsResponse(rsp *http.Response) (*UpdateProductDetailsResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &UpdateProductDetailsResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
@@ -36191,112 +43353,6 @@ func ParseGetProductRelationsResponse(rsp *http.Response) (*GetProductRelationsR
 	return response, nil
 }
 
-// ParseGetCategoryConnectionsForProductResponse parses an HTTP response from a GetCategoryConnectionsForProductWithResponse call
-func ParseGetCategoryConnectionsForProductResponse(rsp *http.Response) (*GetCategoryConnectionsForProductResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &GetCategoryConnectionsForProductResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ListableGroupedCategoryConnectionResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON400 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON404 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseCreateCategoryConnectionResponse parses an HTTP response from a CreateCategoryConnectionWithResponse call
-func ParseCreateCategoryConnectionResponse(rsp *http.Response) (*CreateCategoryConnectionResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &CreateCategoryConnectionResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON400 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON404 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseDeleteCategoryConnectionResponse parses an HTTP response from a DeleteCategoryConnectionWithResponse call
-func ParseDeleteCategoryConnectionResponse(rsp *http.Response) (*DeleteCategoryConnectionResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &DeleteCategoryConnectionResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON400 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON404 = &dest
-
-	}
-
-	return response, nil
-}
-
 // ParseCreateProductConnectionResponse parses an HTTP response from a CreateProductConnectionWithResponse call
 func ParseCreateProductConnectionResponse(rsp *http.Response) (*CreateProductConnectionResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -36747,6 +43803,211 @@ func ParseGetGroupedProductAttributesResponse(rsp *http.Response) (*GetGroupedPr
 	return response, nil
 }
 
+// ParseConvertToProductFamilyResponse parses an HTTP response from a ConvertToProductFamilyWithResponse call
+func ParseConvertToProductFamilyResponse(rsp *http.Response) (*ConvertToProductFamilyResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ConvertToProductFamilyResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetProductGroupAttributeResponse parses an HTTP response from a GetProductGroupAttributeWithResponse call
+func ParseGetProductGroupAttributeResponse(rsp *http.Response) (*GetProductGroupAttributeResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetProductGroupAttributeResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ProductVariantAttributeDto
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseUpdateProductGroupAttributeResponse parses an HTTP response from a UpdateProductGroupAttributeWithResponse call
+func ParseUpdateProductGroupAttributeResponse(rsp *http.Response) (*UpdateProductGroupAttributeResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &UpdateProductGroupAttributeResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseUnassignProductGroupResponse parses an HTTP response from a UnassignProductGroupWithResponse call
+func ParseUnassignProductGroupResponse(rsp *http.Response) (*UnassignProductGroupResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &UnassignProductGroupResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseMoveProductGroupResponse parses an HTTP response from a MoveProductGroupWithResponse call
+func ParseMoveProductGroupResponse(rsp *http.Response) (*MoveProductGroupResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &MoveProductGroupResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseRemoveLabelsFromProductResponse parses an HTTP response from a RemoveLabelsFromProductWithResponse call
+func ParseRemoveLabelsFromProductResponse(rsp *http.Response) (*RemoveLabelsFromProductResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &RemoveLabelsFromProductResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseGetProductsLabelsResponse parses an HTTP response from a GetProductsLabelsWithResponse call
 func ParseGetProductsLabelsResponse(rsp *http.Response) (*GetProductsLabelsResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -36853,6 +44114,46 @@ func ParseRemoveLabelFromProductResponse(rsp *http.Response) (*RemoveLabelFromPr
 	return response, nil
 }
 
+// ParseProductOverviewResponse parses an HTTP response from a ProductOverviewWithResponse call
+func ParseProductOverviewResponse(rsp *http.Response) (*ProductOverviewResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ProductOverviewResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ProductOverviewDto
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseSetProductGroupResponse parses an HTTP response from a SetProductGroupWithResponse call
 func ParseSetProductGroupResponse(rsp *http.Response) (*SetProductGroupResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -36880,6 +44181,13 @@ func ParseSetProductGroupResponse(rsp *http.Response) (*SetProductGroupResponse,
 			return nil, err
 		}
 		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
 
 	}
 
@@ -37020,6 +44328,13 @@ func ParseAddProductVariantResponse(rsp *http.Response) (*AddProductVariantRespo
 		}
 		response.JSON404 = &dest
 
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
+
 	}
 
 	return response, nil
@@ -37052,46 +44367,6 @@ func ParseMoveProductVariantResponse(rsp *http.Response) (*MoveProductVariantRes
 			return nil, err
 		}
 		response.JSON404 = &dest
-
-	}
-
-	return response, nil
-}
-
-// ParseChangeStatusResponse parses an HTTP response from a ChangeStatusWithResponse call
-func ParseChangeStatusResponse(rsp *http.Response) (*ChangeStatusResponse, error) {
-	bodyBytes, err := io.ReadAll(rsp.Body)
-	defer func() { _ = rsp.Body.Close() }()
-	if err != nil {
-		return nil, err
-	}
-
-	response := &ChangeStatusResponse{
-		Body:         bodyBytes,
-		HTTPResponse: rsp,
-	}
-
-	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON400 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON404 = &dest
-
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
-		var dest ErrorResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON409 = &dest
 
 	}
 
@@ -37270,6 +44545,46 @@ func ParseFindOneResponse(rsp *http.Response) (*FindOneResponse, error) {
 	return response, nil
 }
 
+// ParsePartialUpdateRelationResponse parses an HTTP response from a PartialUpdateRelationWithResponse call
+func ParsePartialUpdateRelationResponse(rsp *http.Response) (*PartialUpdateRelationResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PartialUpdateRelationResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseUpdateRelationResponse parses an HTTP response from a UpdateRelationWithResponse call
 func ParseUpdateRelationResponse(rsp *http.Response) (*UpdateRelationResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -37310,33 +44625,40 @@ func ParseUpdateRelationResponse(rsp *http.Response) (*UpdateRelationResponse, e
 	return response, nil
 }
 
-// ParseGetCategoryConnectionsByRelationIdResponse parses an HTTP response from a GetCategoryConnectionsByRelationIdWithResponse call
-func ParseGetCategoryConnectionsByRelationIdResponse(rsp *http.Response) (*GetCategoryConnectionsByRelationIdResponse, error) {
+// ParseUpdateRelationDirectionResponse parses an HTTP response from a UpdateRelationDirectionWithResponse call
+func ParseUpdateRelationDirectionResponse(rsp *http.Response) (*UpdateRelationDirectionResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
 	defer func() { _ = rsp.Body.Close() }()
 	if err != nil {
 		return nil, err
 	}
 
-	response := &GetCategoryConnectionsByRelationIdResponse{
+	response := &UpdateRelationDirectionResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest ListableCategoryConnectionResponse
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
 		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
 
 	}
 
