@@ -1,7 +1,20 @@
 version: '3'
 
+vars:
+  SPEC_URL: https://readme-cdn.tools.bluestonepim.com
+
 tasks:
+  download-specs:
+    desc: Download the OpenAPI specs into specs/ (not committed)
+    cmds:
+      - mkdir -p specs
+      - go run ./tools/fixspec {{ .SPEC_URL }}/pim.docs-api-bspim.swagger-api-gw.json specs/pim.json
+      - go run ./tools/fixspec {{ .SPEC_URL }}/notification-external.docs-api-bspim.swagger-api-gw.json specs/notification-external.json
+      - go run ./tools/fixspec {{ .SPEC_URL }}/settings.docs-api-bspim.swagger-api-gw.json specs/global-settings.json
+
   generate:
+    desc: Download the specs and generate the clients
+    deps: [download-specs]
     cmds:
       - go generate generate.go
 

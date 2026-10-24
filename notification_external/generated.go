@@ -12,13 +12,12 @@ import (
 	"net/http"
 	"net/url"
 	"strings"
-	"time"
 
 	"github.com/oapi-codegen/runtime"
 )
 
 const (
-	MapiKeyScopes = "mapiKey.Scopes"
+	Oauth2Scopes = "oauth2.Scopes"
 )
 
 // Defines values for AggregationFrequencyRequestDayOfWeek.
@@ -39,40 +38,6 @@ const (
 	AggregationFrequencyRequestFrequencyTypeWEEKLY AggregationFrequencyRequestFrequencyType = "WEEKLY"
 )
 
-// Defines values for AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesDayOfWeek.
-const (
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesDayOfWeekFRIDAY    AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesDayOfWeek = "FRIDAY"
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesDayOfWeekMONDAY    AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesDayOfWeek = "MONDAY"
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesDayOfWeekSATURDAY  AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesDayOfWeek = "SATURDAY"
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesDayOfWeekSUNDAY    AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesDayOfWeek = "SUNDAY"
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesDayOfWeekTHURSDAY  AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesDayOfWeek = "THURSDAY"
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesDayOfWeekTUESDAY   AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesDayOfWeek = "TUESDAY"
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesDayOfWeekWEDNESDAY AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesDayOfWeek = "WEDNESDAY"
-)
-
-// Defines values for AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonth.
-const (
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonthAPRIL     AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonth = "APRIL"
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonthAUGUST    AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonth = "AUGUST"
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonthDECEMBER  AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonth = "DECEMBER"
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonthFEBRUARY  AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonth = "FEBRUARY"
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonthJANUARY   AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonth = "JANUARY"
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonthJULY      AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonth = "JULY"
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonthJUNE      AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonth = "JUNE"
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonthMARCH     AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonth = "MARCH"
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonthMAY       AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonth = "MAY"
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonthNOVEMBER  AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonth = "NOVEMBER"
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonthOCTOBER   AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonth = "OCTOBER"
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonthSEPTEMBER AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonth = "SEPTEMBER"
-)
-
-// Defines values for AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesTimeDefinition.
-const (
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesTimeDefinitionSTANDARD AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesTimeDefinition = "STANDARD"
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesTimeDefinitionUTC      AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesTimeDefinition = "UTC"
-	AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesTimeDefinitionWALL     AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesTimeDefinition = "WALL"
-)
-
 // Defines values for AggregationFrequencyResponseDayOfWeek.
 const (
 	AggregationFrequencyResponseDayOfWeekFRIDAY    AggregationFrequencyResponseDayOfWeek = "FRIDAY"
@@ -89,40 +54,6 @@ const (
 	AggregationFrequencyResponseFrequencyTypeDAILY  AggregationFrequencyResponseFrequencyType = "DAILY"
 	AggregationFrequencyResponseFrequencyTypeHOURLY AggregationFrequencyResponseFrequencyType = "HOURLY"
 	AggregationFrequencyResponseFrequencyTypeWEEKLY AggregationFrequencyResponseFrequencyType = "WEEKLY"
-)
-
-// Defines values for AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesDayOfWeek.
-const (
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesDayOfWeekFRIDAY    AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesDayOfWeek = "FRIDAY"
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesDayOfWeekMONDAY    AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesDayOfWeek = "MONDAY"
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesDayOfWeekSATURDAY  AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesDayOfWeek = "SATURDAY"
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesDayOfWeekSUNDAY    AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesDayOfWeek = "SUNDAY"
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesDayOfWeekTHURSDAY  AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesDayOfWeek = "THURSDAY"
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesDayOfWeekTUESDAY   AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesDayOfWeek = "TUESDAY"
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesDayOfWeekWEDNESDAY AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesDayOfWeek = "WEDNESDAY"
-)
-
-// Defines values for AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonth.
-const (
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonthAPRIL     AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonth = "APRIL"
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonthAUGUST    AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonth = "AUGUST"
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonthDECEMBER  AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonth = "DECEMBER"
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonthFEBRUARY  AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonth = "FEBRUARY"
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonthJANUARY   AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonth = "JANUARY"
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonthJULY      AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonth = "JULY"
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonthJUNE      AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonth = "JUNE"
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonthMARCH     AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonth = "MARCH"
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonthMAY       AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonth = "MAY"
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonthNOVEMBER  AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonth = "NOVEMBER"
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonthOCTOBER   AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonth = "OCTOBER"
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonthSEPTEMBER AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonth = "SEPTEMBER"
-)
-
-// Defines values for AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesTimeDefinition.
-const (
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesTimeDefinitionSTANDARD AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesTimeDefinition = "STANDARD"
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesTimeDefinitionUTC      AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesTimeDefinition = "UTC"
-	AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesTimeDefinitionWALL     AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesTimeDefinition = "WALL"
 )
 
 // Defines values for EmailMessageResponseDeliveryStatus.
@@ -153,42 +84,57 @@ const (
 
 // Defines values for SubscriptionResponseEventTypes.
 const (
-	SubscriptionResponseEventTypesCATEGORYCREATED                     SubscriptionResponseEventTypes = "CATEGORY_CREATED"
-	SubscriptionResponseEventTypesCATEGORYREMOVED                     SubscriptionResponseEventTypes = "CATEGORY_REMOVED"
-	SubscriptionResponseEventTypesCATEGORYWATCH                       SubscriptionResponseEventTypes = "CATEGORY_WATCH"
-	SubscriptionResponseEventTypesCATEGORYWATCHARCHIVESTATE           SubscriptionResponseEventTypes = "CATEGORY_WATCH_ARCHIVE_STATE"
-	SubscriptionResponseEventTypesCATEGORYWATCHATTRIBUTE              SubscriptionResponseEventTypes = "CATEGORY_WATCH_ATTRIBUTE"
-	SubscriptionResponseEventTypesCATEGORYWATCHMETADATADESCRIPTION    SubscriptionResponseEventTypes = "CATEGORY_WATCH_METADATA_DESCRIPTION"
-	SubscriptionResponseEventTypesCATEGORYWATCHMETADATANAME           SubscriptionResponseEventTypes = "CATEGORY_WATCH_METADATA_NAME"
-	SubscriptionResponseEventTypesCATEGORYWATCHMETADATANUMBER         SubscriptionResponseEventTypes = "CATEGORY_WATCH_METADATA_NUMBER"
-	SubscriptionResponseEventTypesCATEGORYWATCHMOVE                   SubscriptionResponseEventTypes = "CATEGORY_WATCH_MOVE"
-	SubscriptionResponseEventTypesCATEGORYWATCHORDER                  SubscriptionResponseEventTypes = "CATEGORY_WATCH_ORDER"
-	SubscriptionResponseEventTypesNEWCOMMENTASSIGNEDTOTASK            SubscriptionResponseEventTypes = "NEW_COMMENT_ASSIGNED_TO_TASK"
-	SubscriptionResponseEventTypesPRODUCTCREATED                      SubscriptionResponseEventTypes = "PRODUCT_CREATED"
-	SubscriptionResponseEventTypesPRODUCTSYNCDONE                     SubscriptionResponseEventTypes = "PRODUCT_SYNC_DONE"
-	SubscriptionResponseEventTypesPRODUCTWATCH                        SubscriptionResponseEventTypes = "PRODUCT_WATCH"
-	SubscriptionResponseEventTypesPRODUCTWATCHASSET                   SubscriptionResponseEventTypes = "PRODUCT_WATCH_ASSET"
-	SubscriptionResponseEventTypesPRODUCTWATCHATTRIBUTE               SubscriptionResponseEventTypes = "PRODUCT_WATCH_ATTRIBUTE"
-	SubscriptionResponseEventTypesPRODUCTWATCHATTRIBUTEASSOCIATION    SubscriptionResponseEventTypes = "PRODUCT_WATCH_ATTRIBUTE_ASSOCIATION"
-	SubscriptionResponseEventTypesPRODUCTWATCHATTRIBUTEDISASSOCIATION SubscriptionResponseEventTypes = "PRODUCT_WATCH_ATTRIBUTE_DISASSOCIATION"
-	SubscriptionResponseEventTypesPRODUCTWATCHATTRIBUTEUPDATEVALUE    SubscriptionResponseEventTypes = "PRODUCT_WATCH_ATTRIBUTE_UPDATE_VALUE"
-	SubscriptionResponseEventTypesPRODUCTWATCHBUNDLE                  SubscriptionResponseEventTypes = "PRODUCT_WATCH_BUNDLE"
-	SubscriptionResponseEventTypesPRODUCTWATCHBUNDLEQUANTITY          SubscriptionResponseEventTypes = "PRODUCT_WATCH_BUNDLE_QUANTITY"
-	SubscriptionResponseEventTypesPRODUCTWATCHCATEGORY                SubscriptionResponseEventTypes = "PRODUCT_WATCH_CATEGORY"
-	SubscriptionResponseEventTypesPRODUCTWATCHLABEL                   SubscriptionResponseEventTypes = "PRODUCT_WATCH_LABEL"
-	SubscriptionResponseEventTypesPRODUCTWATCHMETADATADESCRIPTION     SubscriptionResponseEventTypes = "PRODUCT_WATCH_METADATA_DESCRIPTION"
-	SubscriptionResponseEventTypesPRODUCTWATCHMETADATANAME            SubscriptionResponseEventTypes = "PRODUCT_WATCH_METADATA_NAME"
-	SubscriptionResponseEventTypesPRODUCTWATCHMETADATANUMBER          SubscriptionResponseEventTypes = "PRODUCT_WATCH_METADATA_NUMBER"
-	SubscriptionResponseEventTypesPRODUCTWATCHRELATION                SubscriptionResponseEventTypes = "PRODUCT_WATCH_RELATION"
-	SubscriptionResponseEventTypesPRODUCTWATCHSTATE                   SubscriptionResponseEventTypes = "PRODUCT_WATCH_STATE"
-	SubscriptionResponseEventTypesPRODUCTWATCHVARIANT                 SubscriptionResponseEventTypes = "PRODUCT_WATCH_VARIANT"
-	SubscriptionResponseEventTypesTASKDEADLINEREACHED                 SubscriptionResponseEventTypes = "TASK_DEADLINE_REACHED"
-	SubscriptionResponseEventTypesTASKDEADLINEREMINDER                SubscriptionResponseEventTypes = "TASK_DEADLINE_REMINDER"
-	SubscriptionResponseEventTypesTASKDUEDATEUPDATED                  SubscriptionResponseEventTypes = "TASK_DUE_DATE_UPDATED"
-	SubscriptionResponseEventTypesTASKISASSIGNEDTOUSER                SubscriptionResponseEventTypes = "TASK_IS_ASSIGNED_TO_USER"
-	SubscriptionResponseEventTypesTASKMETADATAISUPDATED               SubscriptionResponseEventTypes = "TASK_METADATA_IS_UPDATED"
-	SubscriptionResponseEventTypesTASKREPORTEDBYMEISCLOSED            SubscriptionResponseEventTypes = "TASK_REPORTED_BY_ME_IS_CLOSED"
-	SubscriptionResponseEventTypesTASKSCOPEISUPDATED                  SubscriptionResponseEventTypes = "TASK_SCOPE_IS_UPDATED"
+	SubscriptionResponseEventTypesASSETCREATED                              SubscriptionResponseEventTypes = "ASSET_CREATED"
+	SubscriptionResponseEventTypesASSETWATCHATTRIBUTEASSOCIATION            SubscriptionResponseEventTypes = "ASSET_WATCH_ATTRIBUTE_ASSOCIATION"
+	SubscriptionResponseEventTypesASSETWATCHATTRIBUTEDISASSOCIATION         SubscriptionResponseEventTypes = "ASSET_WATCH_ATTRIBUTE_DISASSOCIATION"
+	SubscriptionResponseEventTypesASSETWATCHATTRIBUTEUPDATEVALUE            SubscriptionResponseEventTypes = "ASSET_WATCH_ATTRIBUTE_UPDATE_VALUE"
+	SubscriptionResponseEventTypesASSETWATCHMETADATADESCRIPTION             SubscriptionResponseEventTypes = "ASSET_WATCH_METADATA_DESCRIPTION"
+	SubscriptionResponseEventTypesASSETWATCHMETADATANAME                    SubscriptionResponseEventTypes = "ASSET_WATCH_METADATA_NAME"
+	SubscriptionResponseEventTypesASSETWATCHMETADATANUMBER                  SubscriptionResponseEventTypes = "ASSET_WATCH_METADATA_NUMBER"
+	SubscriptionResponseEventTypesCATEGORYCREATED                           SubscriptionResponseEventTypes = "CATEGORY_CREATED"
+	SubscriptionResponseEventTypesCATEGORYLOCALWATCHATTRIBUTE               SubscriptionResponseEventTypes = "CATEGORY_LOCAL_WATCH_ATTRIBUTE"
+	SubscriptionResponseEventTypesCATEGORYLOCALWATCHATTRIBUTEASSOCIATION    SubscriptionResponseEventTypes = "CATEGORY_LOCAL_WATCH_ATTRIBUTE_ASSOCIATION"
+	SubscriptionResponseEventTypesCATEGORYLOCALWATCHATTRIBUTEDISASSOCIATION SubscriptionResponseEventTypes = "CATEGORY_LOCAL_WATCH_ATTRIBUTE_DISASSOCIATION"
+	SubscriptionResponseEventTypesCATEGORYLOCALWATCHATTRIBUTEUPDATEVALUE    SubscriptionResponseEventTypes = "CATEGORY_LOCAL_WATCH_ATTRIBUTE_UPDATE_VALUE"
+	SubscriptionResponseEventTypesCATEGORYREMOVED                           SubscriptionResponseEventTypes = "CATEGORY_REMOVED"
+	SubscriptionResponseEventTypesCATEGORYWATCH                             SubscriptionResponseEventTypes = "CATEGORY_WATCH"
+	SubscriptionResponseEventTypesCATEGORYWATCHARCHIVESTATE                 SubscriptionResponseEventTypes = "CATEGORY_WATCH_ARCHIVE_STATE"
+	SubscriptionResponseEventTypesCATEGORYWATCHASSET                        SubscriptionResponseEventTypes = "CATEGORY_WATCH_ASSET"
+	SubscriptionResponseEventTypesCATEGORYWATCHATTRIBUTE                    SubscriptionResponseEventTypes = "CATEGORY_WATCH_ATTRIBUTE"
+	SubscriptionResponseEventTypesCATEGORYWATCHMETADATADESCRIPTION          SubscriptionResponseEventTypes = "CATEGORY_WATCH_METADATA_DESCRIPTION"
+	SubscriptionResponseEventTypesCATEGORYWATCHMETADATANAME                 SubscriptionResponseEventTypes = "CATEGORY_WATCH_METADATA_NAME"
+	SubscriptionResponseEventTypesCATEGORYWATCHMETADATANUMBER               SubscriptionResponseEventTypes = "CATEGORY_WATCH_METADATA_NUMBER"
+	SubscriptionResponseEventTypesCATEGORYWATCHMOVE                         SubscriptionResponseEventTypes = "CATEGORY_WATCH_MOVE"
+	SubscriptionResponseEventTypesCATEGORYWATCHORDER                        SubscriptionResponseEventTypes = "CATEGORY_WATCH_ORDER"
+	SubscriptionResponseEventTypesNEWCOMMENTASSIGNEDTOTASK                  SubscriptionResponseEventTypes = "NEW_COMMENT_ASSIGNED_TO_TASK"
+	SubscriptionResponseEventTypesPRODUCTCREATED                            SubscriptionResponseEventTypes = "PRODUCT_CREATED"
+	SubscriptionResponseEventTypesPRODUCTSYNCDONE                           SubscriptionResponseEventTypes = "PRODUCT_SYNC_DONE"
+	SubscriptionResponseEventTypesPRODUCTWATCH                              SubscriptionResponseEventTypes = "PRODUCT_WATCH"
+	SubscriptionResponseEventTypesPRODUCTWATCHASSET                         SubscriptionResponseEventTypes = "PRODUCT_WATCH_ASSET"
+	SubscriptionResponseEventTypesPRODUCTWATCHASSETORDER                    SubscriptionResponseEventTypes = "PRODUCT_WATCH_ASSET_ORDER"
+	SubscriptionResponseEventTypesPRODUCTWATCHATTRIBUTE                     SubscriptionResponseEventTypes = "PRODUCT_WATCH_ATTRIBUTE"
+	SubscriptionResponseEventTypesPRODUCTWATCHATTRIBUTEASSOCIATION          SubscriptionResponseEventTypes = "PRODUCT_WATCH_ATTRIBUTE_ASSOCIATION"
+	SubscriptionResponseEventTypesPRODUCTWATCHATTRIBUTEDISASSOCIATION       SubscriptionResponseEventTypes = "PRODUCT_WATCH_ATTRIBUTE_DISASSOCIATION"
+	SubscriptionResponseEventTypesPRODUCTWATCHATTRIBUTEUPDATEVALUE          SubscriptionResponseEventTypes = "PRODUCT_WATCH_ATTRIBUTE_UPDATE_VALUE"
+	SubscriptionResponseEventTypesPRODUCTWATCHBUNDLE                        SubscriptionResponseEventTypes = "PRODUCT_WATCH_BUNDLE"
+	SubscriptionResponseEventTypesPRODUCTWATCHBUNDLEQUANTITY                SubscriptionResponseEventTypes = "PRODUCT_WATCH_BUNDLE_QUANTITY"
+	SubscriptionResponseEventTypesPRODUCTWATCHCATEGORY                      SubscriptionResponseEventTypes = "PRODUCT_WATCH_CATEGORY"
+	SubscriptionResponseEventTypesPRODUCTWATCHGROUP                         SubscriptionResponseEventTypes = "PRODUCT_WATCH_GROUP"
+	SubscriptionResponseEventTypesPRODUCTWATCHLABEL                         SubscriptionResponseEventTypes = "PRODUCT_WATCH_LABEL"
+	SubscriptionResponseEventTypesPRODUCTWATCHMETADATADESCRIPTION           SubscriptionResponseEventTypes = "PRODUCT_WATCH_METADATA_DESCRIPTION"
+	SubscriptionResponseEventTypesPRODUCTWATCHMETADATANAME                  SubscriptionResponseEventTypes = "PRODUCT_WATCH_METADATA_NAME"
+	SubscriptionResponseEventTypesPRODUCTWATCHMETADATANUMBER                SubscriptionResponseEventTypes = "PRODUCT_WATCH_METADATA_NUMBER"
+	SubscriptionResponseEventTypesPRODUCTWATCHRELATION                      SubscriptionResponseEventTypes = "PRODUCT_WATCH_RELATION"
+	SubscriptionResponseEventTypesPRODUCTWATCHSTATE                         SubscriptionResponseEventTypes = "PRODUCT_WATCH_STATE"
+	SubscriptionResponseEventTypesPRODUCTWATCHVARIANT                       SubscriptionResponseEventTypes = "PRODUCT_WATCH_VARIANT"
+	SubscriptionResponseEventTypesTASKDEADLINEREACHED                       SubscriptionResponseEventTypes = "TASK_DEADLINE_REACHED"
+	SubscriptionResponseEventTypesTASKDEADLINEREMINDER                      SubscriptionResponseEventTypes = "TASK_DEADLINE_REMINDER"
+	SubscriptionResponseEventTypesTASKDUEDATEUPDATED                        SubscriptionResponseEventTypes = "TASK_DUE_DATE_UPDATED"
+	SubscriptionResponseEventTypesTASKISASSIGNEDTOUSER                      SubscriptionResponseEventTypes = "TASK_IS_ASSIGNED_TO_USER"
+	SubscriptionResponseEventTypesTASKISREASSIGNED                          SubscriptionResponseEventTypes = "TASK_IS_REASSIGNED"
+	SubscriptionResponseEventTypesTASKMETADATAISUPDATED                     SubscriptionResponseEventTypes = "TASK_METADATA_IS_UPDATED"
+	SubscriptionResponseEventTypesTASKREPORTEDBYMEISCLOSED                  SubscriptionResponseEventTypes = "TASK_REPORTED_BY_ME_IS_CLOSED"
+	SubscriptionResponseEventTypesTASKSCOPEISUPDATED                        SubscriptionResponseEventTypes = "TASK_SCOPE_IS_UPDATED"
 )
 
 // Defines values for UserEventTypeListRequestEventTypes.
@@ -199,6 +145,7 @@ const (
 	UserEventTypeListRequestEventTypesTASKDEADLINEREMINDER     UserEventTypeListRequestEventTypes = "TASK_DEADLINE_REMINDER"
 	UserEventTypeListRequestEventTypesTASKDUEDATEUPDATED       UserEventTypeListRequestEventTypes = "TASK_DUE_DATE_UPDATED"
 	UserEventTypeListRequestEventTypesTASKISASSIGNEDTOUSER     UserEventTypeListRequestEventTypes = "TASK_IS_ASSIGNED_TO_USER"
+	UserEventTypeListRequestEventTypesTASKISREASSIGNED         UserEventTypeListRequestEventTypes = "TASK_IS_REASSIGNED"
 	UserEventTypeListRequestEventTypesTASKMETADATAISUPDATED    UserEventTypeListRequestEventTypes = "TASK_METADATA_IS_UPDATED"
 	UserEventTypeListRequestEventTypesTASKREPORTEDBYMEISCLOSED UserEventTypeListRequestEventTypes = "TASK_REPORTED_BY_ME_IS_CLOSED"
 	UserEventTypeListRequestEventTypesTASKSCOPEISUPDATED       UserEventTypeListRequestEventTypes = "TASK_SCOPE_IS_UPDATED"
@@ -206,72 +153,100 @@ const (
 
 // Defines values for WebhookEventTypeListRequestEventTypes.
 const (
-	WebhookEventTypeListRequestEventTypesCATEGORYCREATED                     WebhookEventTypeListRequestEventTypes = "CATEGORY_CREATED"
-	WebhookEventTypeListRequestEventTypesCATEGORYREMOVED                     WebhookEventTypeListRequestEventTypes = "CATEGORY_REMOVED"
-	WebhookEventTypeListRequestEventTypesCATEGORYWATCHARCHIVESTATE           WebhookEventTypeListRequestEventTypes = "CATEGORY_WATCH_ARCHIVE_STATE"
-	WebhookEventTypeListRequestEventTypesCATEGORYWATCHATTRIBUTE              WebhookEventTypeListRequestEventTypes = "CATEGORY_WATCH_ATTRIBUTE"
-	WebhookEventTypeListRequestEventTypesCATEGORYWATCHMETADATADESCRIPTION    WebhookEventTypeListRequestEventTypes = "CATEGORY_WATCH_METADATA_DESCRIPTION"
-	WebhookEventTypeListRequestEventTypesCATEGORYWATCHMETADATANAME           WebhookEventTypeListRequestEventTypes = "CATEGORY_WATCH_METADATA_NAME"
-	WebhookEventTypeListRequestEventTypesCATEGORYWATCHMETADATANUMBER         WebhookEventTypeListRequestEventTypes = "CATEGORY_WATCH_METADATA_NUMBER"
-	WebhookEventTypeListRequestEventTypesCATEGORYWATCHMOVE                   WebhookEventTypeListRequestEventTypes = "CATEGORY_WATCH_MOVE"
-	WebhookEventTypeListRequestEventTypesCATEGORYWATCHORDER                  WebhookEventTypeListRequestEventTypes = "CATEGORY_WATCH_ORDER"
-	WebhookEventTypeListRequestEventTypesPRODUCTCREATED                      WebhookEventTypeListRequestEventTypes = "PRODUCT_CREATED"
-	WebhookEventTypeListRequestEventTypesPRODUCTSYNCDONE                     WebhookEventTypeListRequestEventTypes = "PRODUCT_SYNC_DONE"
-	WebhookEventTypeListRequestEventTypesPRODUCTWATCHASSET                   WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_ASSET"
-	WebhookEventTypeListRequestEventTypesPRODUCTWATCHATTRIBUTE               WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_ATTRIBUTE"
-	WebhookEventTypeListRequestEventTypesPRODUCTWATCHATTRIBUTEASSOCIATION    WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_ATTRIBUTE_ASSOCIATION"
-	WebhookEventTypeListRequestEventTypesPRODUCTWATCHATTRIBUTEDISASSOCIATION WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_ATTRIBUTE_DISASSOCIATION"
-	WebhookEventTypeListRequestEventTypesPRODUCTWATCHATTRIBUTEUPDATEVALUE    WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_ATTRIBUTE_UPDATE_VALUE"
-	WebhookEventTypeListRequestEventTypesPRODUCTWATCHBUNDLE                  WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_BUNDLE"
-	WebhookEventTypeListRequestEventTypesPRODUCTWATCHBUNDLEQUANTITY          WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_BUNDLE_QUANTITY"
-	WebhookEventTypeListRequestEventTypesPRODUCTWATCHCATEGORY                WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_CATEGORY"
-	WebhookEventTypeListRequestEventTypesPRODUCTWATCHLABEL                   WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_LABEL"
-	WebhookEventTypeListRequestEventTypesPRODUCTWATCHMETADATADESCRIPTION     WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_METADATA_DESCRIPTION"
-	WebhookEventTypeListRequestEventTypesPRODUCTWATCHMETADATANAME            WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_METADATA_NAME"
-	WebhookEventTypeListRequestEventTypesPRODUCTWATCHMETADATANUMBER          WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_METADATA_NUMBER"
-	WebhookEventTypeListRequestEventTypesPRODUCTWATCHRELATION                WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_RELATION"
-	WebhookEventTypeListRequestEventTypesPRODUCTWATCHSTATE                   WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_STATE"
-	WebhookEventTypeListRequestEventTypesPRODUCTWATCHVARIANT                 WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_VARIANT"
+	WebhookEventTypeListRequestEventTypesASSETCREATED                              WebhookEventTypeListRequestEventTypes = "ASSET_CREATED"
+	WebhookEventTypeListRequestEventTypesASSETWATCHATTRIBUTEASSOCIATION            WebhookEventTypeListRequestEventTypes = "ASSET_WATCH_ATTRIBUTE_ASSOCIATION"
+	WebhookEventTypeListRequestEventTypesASSETWATCHATTRIBUTEDISASSOCIATION         WebhookEventTypeListRequestEventTypes = "ASSET_WATCH_ATTRIBUTE_DISASSOCIATION"
+	WebhookEventTypeListRequestEventTypesASSETWATCHATTRIBUTEUPDATEVALUE            WebhookEventTypeListRequestEventTypes = "ASSET_WATCH_ATTRIBUTE_UPDATE_VALUE"
+	WebhookEventTypeListRequestEventTypesASSETWATCHMETADATADESCRIPTION             WebhookEventTypeListRequestEventTypes = "ASSET_WATCH_METADATA_DESCRIPTION"
+	WebhookEventTypeListRequestEventTypesASSETWATCHMETADATANAME                    WebhookEventTypeListRequestEventTypes = "ASSET_WATCH_METADATA_NAME"
+	WebhookEventTypeListRequestEventTypesASSETWATCHMETADATANUMBER                  WebhookEventTypeListRequestEventTypes = "ASSET_WATCH_METADATA_NUMBER"
+	WebhookEventTypeListRequestEventTypesCATEGORYCREATED                           WebhookEventTypeListRequestEventTypes = "CATEGORY_CREATED"
+	WebhookEventTypeListRequestEventTypesCATEGORYLOCALWATCHATTRIBUTEASSOCIATION    WebhookEventTypeListRequestEventTypes = "CATEGORY_LOCAL_WATCH_ATTRIBUTE_ASSOCIATION"
+	WebhookEventTypeListRequestEventTypesCATEGORYLOCALWATCHATTRIBUTEDISASSOCIATION WebhookEventTypeListRequestEventTypes = "CATEGORY_LOCAL_WATCH_ATTRIBUTE_DISASSOCIATION"
+	WebhookEventTypeListRequestEventTypesCATEGORYLOCALWATCHATTRIBUTEUPDATEVALUE    WebhookEventTypeListRequestEventTypes = "CATEGORY_LOCAL_WATCH_ATTRIBUTE_UPDATE_VALUE"
+	WebhookEventTypeListRequestEventTypesCATEGORYREMOVED                           WebhookEventTypeListRequestEventTypes = "CATEGORY_REMOVED"
+	WebhookEventTypeListRequestEventTypesCATEGORYWATCHARCHIVESTATE                 WebhookEventTypeListRequestEventTypes = "CATEGORY_WATCH_ARCHIVE_STATE"
+	WebhookEventTypeListRequestEventTypesCATEGORYWATCHASSET                        WebhookEventTypeListRequestEventTypes = "CATEGORY_WATCH_ASSET"
+	WebhookEventTypeListRequestEventTypesCATEGORYWATCHATTRIBUTE                    WebhookEventTypeListRequestEventTypes = "CATEGORY_WATCH_ATTRIBUTE"
+	WebhookEventTypeListRequestEventTypesCATEGORYWATCHMETADATADESCRIPTION          WebhookEventTypeListRequestEventTypes = "CATEGORY_WATCH_METADATA_DESCRIPTION"
+	WebhookEventTypeListRequestEventTypesCATEGORYWATCHMETADATANAME                 WebhookEventTypeListRequestEventTypes = "CATEGORY_WATCH_METADATA_NAME"
+	WebhookEventTypeListRequestEventTypesCATEGORYWATCHMETADATANUMBER               WebhookEventTypeListRequestEventTypes = "CATEGORY_WATCH_METADATA_NUMBER"
+	WebhookEventTypeListRequestEventTypesCATEGORYWATCHMOVE                         WebhookEventTypeListRequestEventTypes = "CATEGORY_WATCH_MOVE"
+	WebhookEventTypeListRequestEventTypesCATEGORYWATCHORDER                        WebhookEventTypeListRequestEventTypes = "CATEGORY_WATCH_ORDER"
+	WebhookEventTypeListRequestEventTypesPRODUCTCREATED                            WebhookEventTypeListRequestEventTypes = "PRODUCT_CREATED"
+	WebhookEventTypeListRequestEventTypesPRODUCTSYNCDONE                           WebhookEventTypeListRequestEventTypes = "PRODUCT_SYNC_DONE"
+	WebhookEventTypeListRequestEventTypesPRODUCTWATCHASSET                         WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_ASSET"
+	WebhookEventTypeListRequestEventTypesPRODUCTWATCHASSETORDER                    WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_ASSET_ORDER"
+	WebhookEventTypeListRequestEventTypesPRODUCTWATCHATTRIBUTE                     WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_ATTRIBUTE"
+	WebhookEventTypeListRequestEventTypesPRODUCTWATCHATTRIBUTEASSOCIATION          WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_ATTRIBUTE_ASSOCIATION"
+	WebhookEventTypeListRequestEventTypesPRODUCTWATCHATTRIBUTEDISASSOCIATION       WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_ATTRIBUTE_DISASSOCIATION"
+	WebhookEventTypeListRequestEventTypesPRODUCTWATCHATTRIBUTEUPDATEVALUE          WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_ATTRIBUTE_UPDATE_VALUE"
+	WebhookEventTypeListRequestEventTypesPRODUCTWATCHBUNDLE                        WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_BUNDLE"
+	WebhookEventTypeListRequestEventTypesPRODUCTWATCHBUNDLEQUANTITY                WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_BUNDLE_QUANTITY"
+	WebhookEventTypeListRequestEventTypesPRODUCTWATCHCATEGORY                      WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_CATEGORY"
+	WebhookEventTypeListRequestEventTypesPRODUCTWATCHGROUP                         WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_GROUP"
+	WebhookEventTypeListRequestEventTypesPRODUCTWATCHLABEL                         WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_LABEL"
+	WebhookEventTypeListRequestEventTypesPRODUCTWATCHMETADATADESCRIPTION           WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_METADATA_DESCRIPTION"
+	WebhookEventTypeListRequestEventTypesPRODUCTWATCHMETADATANAME                  WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_METADATA_NAME"
+	WebhookEventTypeListRequestEventTypesPRODUCTWATCHMETADATANUMBER                WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_METADATA_NUMBER"
+	WebhookEventTypeListRequestEventTypesPRODUCTWATCHRELATION                      WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_RELATION"
+	WebhookEventTypeListRequestEventTypesPRODUCTWATCHSTATE                         WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_STATE"
+	WebhookEventTypeListRequestEventTypesPRODUCTWATCHVARIANT                       WebhookEventTypeListRequestEventTypes = "PRODUCT_WATCH_VARIANT"
 )
 
 // Defines values for WebhookMessageResponseEventType.
 const (
-	WebhookMessageResponseEventTypeCATEGORYCREATED                     WebhookMessageResponseEventType = "CATEGORY_CREATED"
-	WebhookMessageResponseEventTypeCATEGORYREMOVED                     WebhookMessageResponseEventType = "CATEGORY_REMOVED"
-	WebhookMessageResponseEventTypeCATEGORYWATCH                       WebhookMessageResponseEventType = "CATEGORY_WATCH"
-	WebhookMessageResponseEventTypeCATEGORYWATCHARCHIVESTATE           WebhookMessageResponseEventType = "CATEGORY_WATCH_ARCHIVE_STATE"
-	WebhookMessageResponseEventTypeCATEGORYWATCHATTRIBUTE              WebhookMessageResponseEventType = "CATEGORY_WATCH_ATTRIBUTE"
-	WebhookMessageResponseEventTypeCATEGORYWATCHMETADATADESCRIPTION    WebhookMessageResponseEventType = "CATEGORY_WATCH_METADATA_DESCRIPTION"
-	WebhookMessageResponseEventTypeCATEGORYWATCHMETADATANAME           WebhookMessageResponseEventType = "CATEGORY_WATCH_METADATA_NAME"
-	WebhookMessageResponseEventTypeCATEGORYWATCHMETADATANUMBER         WebhookMessageResponseEventType = "CATEGORY_WATCH_METADATA_NUMBER"
-	WebhookMessageResponseEventTypeCATEGORYWATCHMOVE                   WebhookMessageResponseEventType = "CATEGORY_WATCH_MOVE"
-	WebhookMessageResponseEventTypeCATEGORYWATCHORDER                  WebhookMessageResponseEventType = "CATEGORY_WATCH_ORDER"
-	WebhookMessageResponseEventTypeNEWCOMMENTASSIGNEDTOTASK            WebhookMessageResponseEventType = "NEW_COMMENT_ASSIGNED_TO_TASK"
-	WebhookMessageResponseEventTypePRODUCTCREATED                      WebhookMessageResponseEventType = "PRODUCT_CREATED"
-	WebhookMessageResponseEventTypePRODUCTSYNCDONE                     WebhookMessageResponseEventType = "PRODUCT_SYNC_DONE"
-	WebhookMessageResponseEventTypePRODUCTWATCH                        WebhookMessageResponseEventType = "PRODUCT_WATCH"
-	WebhookMessageResponseEventTypePRODUCTWATCHASSET                   WebhookMessageResponseEventType = "PRODUCT_WATCH_ASSET"
-	WebhookMessageResponseEventTypePRODUCTWATCHATTRIBUTE               WebhookMessageResponseEventType = "PRODUCT_WATCH_ATTRIBUTE"
-	WebhookMessageResponseEventTypePRODUCTWATCHATTRIBUTEASSOCIATION    WebhookMessageResponseEventType = "PRODUCT_WATCH_ATTRIBUTE_ASSOCIATION"
-	WebhookMessageResponseEventTypePRODUCTWATCHATTRIBUTEDISASSOCIATION WebhookMessageResponseEventType = "PRODUCT_WATCH_ATTRIBUTE_DISASSOCIATION"
-	WebhookMessageResponseEventTypePRODUCTWATCHATTRIBUTEUPDATEVALUE    WebhookMessageResponseEventType = "PRODUCT_WATCH_ATTRIBUTE_UPDATE_VALUE"
-	WebhookMessageResponseEventTypePRODUCTWATCHBUNDLE                  WebhookMessageResponseEventType = "PRODUCT_WATCH_BUNDLE"
-	WebhookMessageResponseEventTypePRODUCTWATCHBUNDLEQUANTITY          WebhookMessageResponseEventType = "PRODUCT_WATCH_BUNDLE_QUANTITY"
-	WebhookMessageResponseEventTypePRODUCTWATCHCATEGORY                WebhookMessageResponseEventType = "PRODUCT_WATCH_CATEGORY"
-	WebhookMessageResponseEventTypePRODUCTWATCHLABEL                   WebhookMessageResponseEventType = "PRODUCT_WATCH_LABEL"
-	WebhookMessageResponseEventTypePRODUCTWATCHMETADATADESCRIPTION     WebhookMessageResponseEventType = "PRODUCT_WATCH_METADATA_DESCRIPTION"
-	WebhookMessageResponseEventTypePRODUCTWATCHMETADATANAME            WebhookMessageResponseEventType = "PRODUCT_WATCH_METADATA_NAME"
-	WebhookMessageResponseEventTypePRODUCTWATCHMETADATANUMBER          WebhookMessageResponseEventType = "PRODUCT_WATCH_METADATA_NUMBER"
-	WebhookMessageResponseEventTypePRODUCTWATCHRELATION                WebhookMessageResponseEventType = "PRODUCT_WATCH_RELATION"
-	WebhookMessageResponseEventTypePRODUCTWATCHSTATE                   WebhookMessageResponseEventType = "PRODUCT_WATCH_STATE"
-	WebhookMessageResponseEventTypePRODUCTWATCHVARIANT                 WebhookMessageResponseEventType = "PRODUCT_WATCH_VARIANT"
-	WebhookMessageResponseEventTypeTASKDEADLINEREACHED                 WebhookMessageResponseEventType = "TASK_DEADLINE_REACHED"
-	WebhookMessageResponseEventTypeTASKDEADLINEREMINDER                WebhookMessageResponseEventType = "TASK_DEADLINE_REMINDER"
-	WebhookMessageResponseEventTypeTASKDUEDATEUPDATED                  WebhookMessageResponseEventType = "TASK_DUE_DATE_UPDATED"
-	WebhookMessageResponseEventTypeTASKISASSIGNEDTOUSER                WebhookMessageResponseEventType = "TASK_IS_ASSIGNED_TO_USER"
-	WebhookMessageResponseEventTypeTASKMETADATAISUPDATED               WebhookMessageResponseEventType = "TASK_METADATA_IS_UPDATED"
-	WebhookMessageResponseEventTypeTASKREPORTEDBYMEISCLOSED            WebhookMessageResponseEventType = "TASK_REPORTED_BY_ME_IS_CLOSED"
-	WebhookMessageResponseEventTypeTASKSCOPEISUPDATED                  WebhookMessageResponseEventType = "TASK_SCOPE_IS_UPDATED"
+	WebhookMessageResponseEventTypeASSETCREATED                              WebhookMessageResponseEventType = "ASSET_CREATED"
+	WebhookMessageResponseEventTypeASSETWATCHATTRIBUTEASSOCIATION            WebhookMessageResponseEventType = "ASSET_WATCH_ATTRIBUTE_ASSOCIATION"
+	WebhookMessageResponseEventTypeASSETWATCHATTRIBUTEDISASSOCIATION         WebhookMessageResponseEventType = "ASSET_WATCH_ATTRIBUTE_DISASSOCIATION"
+	WebhookMessageResponseEventTypeASSETWATCHATTRIBUTEUPDATEVALUE            WebhookMessageResponseEventType = "ASSET_WATCH_ATTRIBUTE_UPDATE_VALUE"
+	WebhookMessageResponseEventTypeASSETWATCHMETADATADESCRIPTION             WebhookMessageResponseEventType = "ASSET_WATCH_METADATA_DESCRIPTION"
+	WebhookMessageResponseEventTypeASSETWATCHMETADATANAME                    WebhookMessageResponseEventType = "ASSET_WATCH_METADATA_NAME"
+	WebhookMessageResponseEventTypeASSETWATCHMETADATANUMBER                  WebhookMessageResponseEventType = "ASSET_WATCH_METADATA_NUMBER"
+	WebhookMessageResponseEventTypeCATEGORYCREATED                           WebhookMessageResponseEventType = "CATEGORY_CREATED"
+	WebhookMessageResponseEventTypeCATEGORYLOCALWATCHATTRIBUTE               WebhookMessageResponseEventType = "CATEGORY_LOCAL_WATCH_ATTRIBUTE"
+	WebhookMessageResponseEventTypeCATEGORYLOCALWATCHATTRIBUTEASSOCIATION    WebhookMessageResponseEventType = "CATEGORY_LOCAL_WATCH_ATTRIBUTE_ASSOCIATION"
+	WebhookMessageResponseEventTypeCATEGORYLOCALWATCHATTRIBUTEDISASSOCIATION WebhookMessageResponseEventType = "CATEGORY_LOCAL_WATCH_ATTRIBUTE_DISASSOCIATION"
+	WebhookMessageResponseEventTypeCATEGORYLOCALWATCHATTRIBUTEUPDATEVALUE    WebhookMessageResponseEventType = "CATEGORY_LOCAL_WATCH_ATTRIBUTE_UPDATE_VALUE"
+	WebhookMessageResponseEventTypeCATEGORYREMOVED                           WebhookMessageResponseEventType = "CATEGORY_REMOVED"
+	WebhookMessageResponseEventTypeCATEGORYWATCH                             WebhookMessageResponseEventType = "CATEGORY_WATCH"
+	WebhookMessageResponseEventTypeCATEGORYWATCHARCHIVESTATE                 WebhookMessageResponseEventType = "CATEGORY_WATCH_ARCHIVE_STATE"
+	WebhookMessageResponseEventTypeCATEGORYWATCHASSET                        WebhookMessageResponseEventType = "CATEGORY_WATCH_ASSET"
+	WebhookMessageResponseEventTypeCATEGORYWATCHATTRIBUTE                    WebhookMessageResponseEventType = "CATEGORY_WATCH_ATTRIBUTE"
+	WebhookMessageResponseEventTypeCATEGORYWATCHMETADATADESCRIPTION          WebhookMessageResponseEventType = "CATEGORY_WATCH_METADATA_DESCRIPTION"
+	WebhookMessageResponseEventTypeCATEGORYWATCHMETADATANAME                 WebhookMessageResponseEventType = "CATEGORY_WATCH_METADATA_NAME"
+	WebhookMessageResponseEventTypeCATEGORYWATCHMETADATANUMBER               WebhookMessageResponseEventType = "CATEGORY_WATCH_METADATA_NUMBER"
+	WebhookMessageResponseEventTypeCATEGORYWATCHMOVE                         WebhookMessageResponseEventType = "CATEGORY_WATCH_MOVE"
+	WebhookMessageResponseEventTypeCATEGORYWATCHORDER                        WebhookMessageResponseEventType = "CATEGORY_WATCH_ORDER"
+	WebhookMessageResponseEventTypeNEWCOMMENTASSIGNEDTOTASK                  WebhookMessageResponseEventType = "NEW_COMMENT_ASSIGNED_TO_TASK"
+	WebhookMessageResponseEventTypePRODUCTCREATED                            WebhookMessageResponseEventType = "PRODUCT_CREATED"
+	WebhookMessageResponseEventTypePRODUCTSYNCDONE                           WebhookMessageResponseEventType = "PRODUCT_SYNC_DONE"
+	WebhookMessageResponseEventTypePRODUCTWATCH                              WebhookMessageResponseEventType = "PRODUCT_WATCH"
+	WebhookMessageResponseEventTypePRODUCTWATCHASSET                         WebhookMessageResponseEventType = "PRODUCT_WATCH_ASSET"
+	WebhookMessageResponseEventTypePRODUCTWATCHASSETORDER                    WebhookMessageResponseEventType = "PRODUCT_WATCH_ASSET_ORDER"
+	WebhookMessageResponseEventTypePRODUCTWATCHATTRIBUTE                     WebhookMessageResponseEventType = "PRODUCT_WATCH_ATTRIBUTE"
+	WebhookMessageResponseEventTypePRODUCTWATCHATTRIBUTEASSOCIATION          WebhookMessageResponseEventType = "PRODUCT_WATCH_ATTRIBUTE_ASSOCIATION"
+	WebhookMessageResponseEventTypePRODUCTWATCHATTRIBUTEDISASSOCIATION       WebhookMessageResponseEventType = "PRODUCT_WATCH_ATTRIBUTE_DISASSOCIATION"
+	WebhookMessageResponseEventTypePRODUCTWATCHATTRIBUTEUPDATEVALUE          WebhookMessageResponseEventType = "PRODUCT_WATCH_ATTRIBUTE_UPDATE_VALUE"
+	WebhookMessageResponseEventTypePRODUCTWATCHBUNDLE                        WebhookMessageResponseEventType = "PRODUCT_WATCH_BUNDLE"
+	WebhookMessageResponseEventTypePRODUCTWATCHBUNDLEQUANTITY                WebhookMessageResponseEventType = "PRODUCT_WATCH_BUNDLE_QUANTITY"
+	WebhookMessageResponseEventTypePRODUCTWATCHCATEGORY                      WebhookMessageResponseEventType = "PRODUCT_WATCH_CATEGORY"
+	WebhookMessageResponseEventTypePRODUCTWATCHGROUP                         WebhookMessageResponseEventType = "PRODUCT_WATCH_GROUP"
+	WebhookMessageResponseEventTypePRODUCTWATCHLABEL                         WebhookMessageResponseEventType = "PRODUCT_WATCH_LABEL"
+	WebhookMessageResponseEventTypePRODUCTWATCHMETADATADESCRIPTION           WebhookMessageResponseEventType = "PRODUCT_WATCH_METADATA_DESCRIPTION"
+	WebhookMessageResponseEventTypePRODUCTWATCHMETADATANAME                  WebhookMessageResponseEventType = "PRODUCT_WATCH_METADATA_NAME"
+	WebhookMessageResponseEventTypePRODUCTWATCHMETADATANUMBER                WebhookMessageResponseEventType = "PRODUCT_WATCH_METADATA_NUMBER"
+	WebhookMessageResponseEventTypePRODUCTWATCHRELATION                      WebhookMessageResponseEventType = "PRODUCT_WATCH_RELATION"
+	WebhookMessageResponseEventTypePRODUCTWATCHSTATE                         WebhookMessageResponseEventType = "PRODUCT_WATCH_STATE"
+	WebhookMessageResponseEventTypePRODUCTWATCHVARIANT                       WebhookMessageResponseEventType = "PRODUCT_WATCH_VARIANT"
+	WebhookMessageResponseEventTypeTASKDEADLINEREACHED                       WebhookMessageResponseEventType = "TASK_DEADLINE_REACHED"
+	WebhookMessageResponseEventTypeTASKDEADLINEREMINDER                      WebhookMessageResponseEventType = "TASK_DEADLINE_REMINDER"
+	WebhookMessageResponseEventTypeTASKDUEDATEUPDATED                        WebhookMessageResponseEventType = "TASK_DUE_DATE_UPDATED"
+	WebhookMessageResponseEventTypeTASKISASSIGNEDTOUSER                      WebhookMessageResponseEventType = "TASK_IS_ASSIGNED_TO_USER"
+	WebhookMessageResponseEventTypeTASKISREASSIGNED                          WebhookMessageResponseEventType = "TASK_IS_REASSIGNED"
+	WebhookMessageResponseEventTypeTASKMETADATAISUPDATED                     WebhookMessageResponseEventType = "TASK_METADATA_IS_UPDATED"
+	WebhookMessageResponseEventTypeTASKREPORTEDBYMEISCLOSED                  WebhookMessageResponseEventType = "TASK_REPORTED_BY_ME_IS_CLOSED"
+	WebhookMessageResponseEventTypeTASKSCOPEISUPDATED                        WebhookMessageResponseEventType = "TASK_SCOPE_IS_UPDATED"
 )
 
 // Defines values for WebhookMessageResponseStatus.
@@ -294,6 +269,7 @@ const (
 
 // Defines values for FindConfigurationParamsEntityType.
 const (
+	FindConfigurationParamsEntityTypeASSET    FindConfigurationParamsEntityType = "ASSET"
 	FindConfigurationParamsEntityTypeCATEGORY FindConfigurationParamsEntityType = "CATEGORY"
 	FindConfigurationParamsEntityTypePRODUCT  FindConfigurationParamsEntityType = "PRODUCT"
 	FindConfigurationParamsEntityTypeTASK     FindConfigurationParamsEntityType = "TASK"
@@ -301,6 +277,7 @@ const (
 
 // Defines values for UpdateEmailFrequencyParamsEntityType.
 const (
+	UpdateEmailFrequencyParamsEntityTypeASSET    UpdateEmailFrequencyParamsEntityType = "ASSET"
 	UpdateEmailFrequencyParamsEntityTypeCATEGORY UpdateEmailFrequencyParamsEntityType = "CATEGORY"
 	UpdateEmailFrequencyParamsEntityTypePRODUCT  UpdateEmailFrequencyParamsEntityType = "PRODUCT"
 	UpdateEmailFrequencyParamsEntityTypeTASK     UpdateEmailFrequencyParamsEntityType = "TASK"
@@ -326,58 +303,7 @@ type AggregationFrequencyRequest struct {
 	DayOfWeek     AggregationFrequencyRequestDayOfWeek     `json:"dayOfWeek"`
 	FrequencyType AggregationFrequencyRequestFrequencyType `json:"frequencyType"`
 	Hour          int32                                    `json:"hour"`
-	TimeZoneId    struct {
-		Id    *string `json:"id,omitempty"`
-		Rules *struct {
-			FixedOffset     *bool `json:"fixedOffset,omitempty"`
-			TransitionRules *[]struct {
-				DayOfMonthIndicator *int32                                                              `json:"dayOfMonthIndicator,omitempty"`
-				DayOfWeek           *AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesDayOfWeek `json:"dayOfWeek,omitempty"`
-				LocalTime           *LocalTime                                                          `json:"localTime,omitempty"`
-				MidnightEndOfDay    *bool                                                               `json:"midnightEndOfDay,omitempty"`
-				Month               *AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonth     `json:"month,omitempty"`
-				OffsetAfter         *struct {
-					Id           *string `json:"id,omitempty"`
-					TotalSeconds *int32  `json:"totalSeconds,omitempty"`
-				} `json:"offsetAfter,omitempty"`
-				OffsetBefore *struct {
-					Id           *string `json:"id,omitempty"`
-					TotalSeconds *int32  `json:"totalSeconds,omitempty"`
-				} `json:"offsetBefore,omitempty"`
-				StandardOffset *struct {
-					Id           *string `json:"id,omitempty"`
-					TotalSeconds *int32  `json:"totalSeconds,omitempty"`
-				} `json:"standardOffset,omitempty"`
-				TimeDefinition *AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesTimeDefinition `json:"timeDefinition,omitempty"`
-			} `json:"transitionRules,omitempty"`
-			Transitions *[]struct {
-				DateTimeAfter  *time.Time `json:"dateTimeAfter,omitempty"`
-				DateTimeBefore *time.Time `json:"dateTimeBefore,omitempty"`
-				Duration       *struct {
-					Nano     *int32 `json:"nano,omitempty"`
-					Negative *bool  `json:"negative,omitempty"`
-					Seconds  *int64 `json:"seconds,omitempty"`
-					Units    *[]struct {
-						DateBased         *bool `json:"dateBased,omitempty"`
-						DurationEstimated *bool `json:"durationEstimated,omitempty"`
-						TimeBased         *bool `json:"timeBased,omitempty"`
-					} `json:"units,omitempty"`
-					Zero *bool `json:"zero,omitempty"`
-				} `json:"duration,omitempty"`
-				Gap         *bool      `json:"gap,omitempty"`
-				Instant     *time.Time `json:"instant,omitempty"`
-				OffsetAfter *struct {
-					Id           *string `json:"id,omitempty"`
-					TotalSeconds *int32  `json:"totalSeconds,omitempty"`
-				} `json:"offsetAfter,omitempty"`
-				OffsetBefore *struct {
-					Id           *string `json:"id,omitempty"`
-					TotalSeconds *int32  `json:"totalSeconds,omitempty"`
-				} `json:"offsetBefore,omitempty"`
-				Overlap *bool `json:"overlap,omitempty"`
-			} `json:"transitions,omitempty"`
-		} `json:"rules,omitempty"`
-	} `json:"timeZoneId"`
+	TimeZoneId    string                                   `json:"timeZoneId"`
 }
 
 // AggregationFrequencyRequestDayOfWeek defines model for AggregationFrequencyRequest.DayOfWeek.
@@ -386,72 +312,12 @@ type AggregationFrequencyRequestDayOfWeek string
 // AggregationFrequencyRequestFrequencyType defines model for AggregationFrequencyRequest.FrequencyType.
 type AggregationFrequencyRequestFrequencyType string
 
-// AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesDayOfWeek defines model for AggregationFrequencyRequest.TimeZoneId.Rules.TransitionRules.DayOfWeek.
-type AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesDayOfWeek string
-
-// AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonth defines model for AggregationFrequencyRequest.TimeZoneId.Rules.TransitionRules.Month.
-type AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesMonth string
-
-// AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesTimeDefinition defines model for AggregationFrequencyRequest.TimeZoneId.Rules.TransitionRules.TimeDefinition.
-type AggregationFrequencyRequestTimeZoneIdRulesTransitionRulesTimeDefinition string
-
 // AggregationFrequencyResponse defines model for AggregationFrequencyResponse.
 type AggregationFrequencyResponse struct {
 	DayOfWeek     AggregationFrequencyResponseDayOfWeek     `json:"dayOfWeek"`
 	FrequencyType AggregationFrequencyResponseFrequencyType `json:"frequencyType"`
 	Hour          int32                                     `json:"hour"`
-	TimeZoneId    struct {
-		Id    *string `json:"id,omitempty"`
-		Rules *struct {
-			FixedOffset     *bool `json:"fixedOffset,omitempty"`
-			TransitionRules *[]struct {
-				DayOfMonthIndicator *int32                                                               `json:"dayOfMonthIndicator,omitempty"`
-				DayOfWeek           *AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesDayOfWeek `json:"dayOfWeek,omitempty"`
-				LocalTime           *LocalTime                                                           `json:"localTime,omitempty"`
-				MidnightEndOfDay    *bool                                                                `json:"midnightEndOfDay,omitempty"`
-				Month               *AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonth     `json:"month,omitempty"`
-				OffsetAfter         *struct {
-					Id           *string `json:"id,omitempty"`
-					TotalSeconds *int32  `json:"totalSeconds,omitempty"`
-				} `json:"offsetAfter,omitempty"`
-				OffsetBefore *struct {
-					Id           *string `json:"id,omitempty"`
-					TotalSeconds *int32  `json:"totalSeconds,omitempty"`
-				} `json:"offsetBefore,omitempty"`
-				StandardOffset *struct {
-					Id           *string `json:"id,omitempty"`
-					TotalSeconds *int32  `json:"totalSeconds,omitempty"`
-				} `json:"standardOffset,omitempty"`
-				TimeDefinition *AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesTimeDefinition `json:"timeDefinition,omitempty"`
-			} `json:"transitionRules,omitempty"`
-			Transitions *[]struct {
-				DateTimeAfter  *time.Time `json:"dateTimeAfter,omitempty"`
-				DateTimeBefore *time.Time `json:"dateTimeBefore,omitempty"`
-				Duration       *struct {
-					Nano     *int32 `json:"nano,omitempty"`
-					Negative *bool  `json:"negative,omitempty"`
-					Seconds  *int64 `json:"seconds,omitempty"`
-					Units    *[]struct {
-						DateBased         *bool `json:"dateBased,omitempty"`
-						DurationEstimated *bool `json:"durationEstimated,omitempty"`
-						TimeBased         *bool `json:"timeBased,omitempty"`
-					} `json:"units,omitempty"`
-					Zero *bool `json:"zero,omitempty"`
-				} `json:"duration,omitempty"`
-				Gap         *bool      `json:"gap,omitempty"`
-				Instant     *time.Time `json:"instant,omitempty"`
-				OffsetAfter *struct {
-					Id           *string `json:"id,omitempty"`
-					TotalSeconds *int32  `json:"totalSeconds,omitempty"`
-				} `json:"offsetAfter,omitempty"`
-				OffsetBefore *struct {
-					Id           *string `json:"id,omitempty"`
-					TotalSeconds *int32  `json:"totalSeconds,omitempty"`
-				} `json:"offsetBefore,omitempty"`
-				Overlap *bool `json:"overlap,omitempty"`
-			} `json:"transitions,omitempty"`
-		} `json:"rules,omitempty"`
-	} `json:"timeZoneId"`
+	TimeZoneId    string                                    `json:"timeZoneId"`
 }
 
 // AggregationFrequencyResponseDayOfWeek defines model for AggregationFrequencyResponse.DayOfWeek.
@@ -460,14 +326,10 @@ type AggregationFrequencyResponseDayOfWeek string
 // AggregationFrequencyResponseFrequencyType defines model for AggregationFrequencyResponse.FrequencyType.
 type AggregationFrequencyResponseFrequencyType string
 
-// AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesDayOfWeek defines model for AggregationFrequencyResponse.TimeZoneId.Rules.TransitionRules.DayOfWeek.
-type AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesDayOfWeek string
-
-// AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonth defines model for AggregationFrequencyResponse.TimeZoneId.Rules.TransitionRules.Month.
-type AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesMonth string
-
-// AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesTimeDefinition defines model for AggregationFrequencyResponse.TimeZoneId.Rules.TransitionRules.TimeDefinition.
-type AggregationFrequencyResponseTimeZoneIdRulesTransitionRulesTimeDefinition string
+// ConflictingEntity defines model for ConflictingEntity.
+type ConflictingEntity struct {
+	EntityId *string `json:"entityId,omitempty"`
+}
 
 // EmailMessageListResponse defines model for EmailMessageListResponse.
 type EmailMessageListResponse struct {
@@ -521,11 +383,13 @@ type ErrorDetails struct {
 
 // ErrorResponse defines model for ErrorResponse.
 type ErrorResponse struct {
-	Error        *string         `json:"error,omitempty"`
-	ErrorDetails *[]ErrorDetails `json:"errorDetails,omitempty"`
-	RequestId    *string         `json:"requestId,omitempty"`
-	Status       *int32          `json:"status,omitempty"`
-	Timestamp    *int64          `json:"timestamp,omitempty"`
+	ConflictingEntities       *[]ConflictingEntity    `json:"conflictingEntities,omitempty"`
+	Error                     *string                 `json:"error,omitempty"`
+	ErrorDetails              *[]ErrorDetails         `json:"errorDetails,omitempty"`
+	QuotaLimitExceededDetails *[]LimitExceededDetails `json:"quotaLimitExceededDetails,omitempty"`
+	RequestId                 *string                 `json:"requestId,omitempty"`
+	Status                    *int32                  `json:"status,omitempty"`
+	Timestamp                 *int64                  `json:"timestamp,omitempty"`
 }
 
 // FrequencyConfigRequest defines model for FrequencyConfigRequest.
@@ -595,17 +459,18 @@ type InAppUserMessageResponse struct {
 // InAppUserMessageResponseStatus defines model for InAppUserMessageResponse.Status.
 type InAppUserMessageResponseStatus string
 
-// LocalTime defines model for LocalTime.
-type LocalTime struct {
-	Hour   *int32 `json:"hour,omitempty"`
-	Minute *int32 `json:"minute,omitempty"`
-	Nano   *int32 `json:"nano,omitempty"`
-	Second *int32 `json:"second,omitempty"`
+// LimitExceededDetails defines model for LimitExceededDetails.
+type LimitExceededDetails struct {
+	EntityId   *string `json:"entityId,omitempty"`
+	EntityType *string `json:"entityType,omitempty"`
+	Limit      *int32  `json:"limit,omitempty"`
+	Message    *string `json:"message,omitempty"`
+	Quota      *string `json:"quota,omitempty"`
 }
 
 // PropertyUpdateString defines model for PropertyUpdateString.
 type PropertyUpdateString struct {
-	Value *string `json:"value,omitempty"`
+	Value *string `json:"value"`
 }
 
 // SubscriptionResponse defines model for SubscriptionResponse.
@@ -615,9 +480,6 @@ type SubscriptionResponse struct {
 
 // SubscriptionResponseEventTypes defines model for SubscriptionResponse.EventTypes.
 type SubscriptionResponseEventTypes string
-
-// Unit defines model for Unit.
-type Unit = map[string]interface{}
 
 // UserConfigurationRequest defines model for UserConfigurationRequest.
 type UserConfigurationRequest struct {
@@ -3125,7 +2987,6 @@ func (r GetInAppUserMessageResponse) StatusCode() int {
 type MarkAllMessagesAsReadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON200      *Unit
 	JSON400      *ErrorResponse
 }
 
@@ -3148,7 +3009,6 @@ func (r MarkAllMessagesAsReadResponse) StatusCode() int {
 type MarkMessageAsReadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON200      *Unit
 	JSON400      *ErrorResponse
 	JSON404      *ErrorResponse
 }
@@ -3172,7 +3032,6 @@ func (r MarkMessageAsReadResponse) StatusCode() int {
 type MarkMessageAsUnreadResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON200      *Unit
 	JSON400      *ErrorResponse
 	JSON404      *ErrorResponse
 }
@@ -3265,7 +3124,6 @@ func (r FindUserConfigResponse) StatusCode() int {
 type UpsertResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON202      *Unit
 	JSON400      *ErrorResponse
 }
 
@@ -3311,7 +3169,6 @@ func (r FindConfigurationResponse) StatusCode() int {
 type UpdateEmailFrequencyResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON202      *Unit
 	JSON400      *ErrorResponse
 }
 
@@ -3334,7 +3191,6 @@ func (r UpdateEmailFrequencyResponse) StatusCode() int {
 type UnsubscribeEmailResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON204      *Unit
 	JSON400      *ErrorResponse
 }
 
@@ -3380,7 +3236,6 @@ func (r FindEmailResponse) StatusCode() int {
 type SubscribeEmailResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON200      *Unit
 	JSON400      *ErrorResponse
 }
 
@@ -3403,7 +3258,6 @@ func (r SubscribeEmailResponse) StatusCode() int {
 type UnsubscribeInAppResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON204      *Unit
 	JSON400      *ErrorResponse
 }
 
@@ -3449,7 +3303,6 @@ func (r FindInAppResponse) StatusCode() int {
 type SubscribeInAppResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON200      *Unit
 	JSON400      *ErrorResponse
 }
 
@@ -3472,7 +3325,6 @@ func (r SubscribeInAppResponse) StatusCode() int {
 type UnsubscribeFromEntityResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON204      *Unit
 	JSON400      *ErrorResponse
 }
 
@@ -3518,7 +3370,6 @@ func (r FindWatchedEntitiesResponse) StatusCode() int {
 type SubscribeToEntityResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON200      *Unit
 	JSON400      *ErrorResponse
 }
 
@@ -3655,7 +3506,6 @@ func (r SubscribeResponse) StatusCode() int {
 type CreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON201      *Unit
 	JSON400      *ErrorResponse
 	JSON409      *ErrorResponse
 }
@@ -3702,7 +3552,6 @@ func (r SearchResponse) StatusCode() int {
 type DeleteResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON200      *Unit
 	JSON400      *ErrorResponse
 	JSON404      *ErrorResponse
 }
@@ -3750,7 +3599,6 @@ func (r GetResponse) StatusCode() int {
 type UpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON200      *Unit
 	JSON400      *ErrorResponse
 	JSON404      *ErrorResponse
 }
@@ -4356,13 +4204,6 @@ func ParseMarkAllMessagesAsReadResponse(rsp *http.Response) (*MarkAllMessagesAsR
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -4389,13 +4230,6 @@ func ParseMarkMessageAsReadResponse(rsp *http.Response) (*MarkMessageAsReadRespo
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -4429,13 +4263,6 @@ func ParseMarkMessageAsUnreadResponse(rsp *http.Response) (*MarkMessageAsUnreadR
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -4568,13 +4395,6 @@ func ParseUpsertResponse(rsp *http.Response) (*UpsertResponse, error) {
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -4634,13 +4454,6 @@ func ParseUpdateEmailFrequencyResponse(rsp *http.Response) (*UpdateEmailFrequenc
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON202 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -4667,13 +4480,6 @@ func ParseUnsubscribeEmailResponse(rsp *http.Response) (*UnsubscribeEmailRespons
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 204:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON204 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -4733,13 +4539,6 @@ func ParseSubscribeEmailResponse(rsp *http.Response) (*SubscribeEmailResponse, e
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -4766,13 +4565,6 @@ func ParseUnsubscribeInAppResponse(rsp *http.Response) (*UnsubscribeInAppRespons
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 204:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON204 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -4832,13 +4624,6 @@ func ParseSubscribeInAppResponse(rsp *http.Response) (*SubscribeInAppResponse, e
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -4865,13 +4650,6 @@ func ParseUnsubscribeFromEntityResponse(rsp *http.Response) (*UnsubscribeFromEnt
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 204:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON204 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -4931,13 +4709,6 @@ func ParseSubscribeToEntityResponse(rsp *http.Response) (*SubscribeToEntityRespo
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -5122,13 +4893,6 @@ func ParseCreateResponse(rsp *http.Response) (*CreateResponse, error) {
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -5195,13 +4959,6 @@ func ParseDeleteResponse(rsp *http.Response) (*DeleteResponse, error) {
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -5275,13 +5032,6 @@ func ParseUpdateResponse(rsp *http.Response) (*UpdateResponse, error) {
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON200 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {

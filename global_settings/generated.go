@@ -34,35 +34,49 @@ const (
 
 // Defines values for FindParamsContextState.
 const (
-	ACTIVE  FindParamsContextState = "ACTIVE"
-	ARCHIVE FindParamsContextState = "ARCHIVE"
+	FindParamsContextStateACTIVE  FindParamsContextState = "ACTIVE"
+	FindParamsContextStateARCHIVE FindParamsContextState = "ARCHIVE"
 )
+
+// Defines values for FindByNamesParamsContextState.
+const (
+	FindByNamesParamsContextStateACTIVE  FindByNamesParamsContextState = "ACTIVE"
+	FindByNamesParamsContextStateARCHIVE FindByNamesParamsContextState = "ARCHIVE"
+)
+
+// ConflictingEntity defines model for ConflictingEntity.
+type ConflictingEntity struct {
+	EntityId   *string `json:"entityId,omitempty"`
+	EntityType *string `json:"entityType,omitempty"`
+}
 
 // ContextRequestDto defines model for ContextRequestDto.
 type ContextRequestDto struct {
 	Fallback *string `json:"fallback,omitempty"`
-	Locale   string  `json:"locale"`
-	Name     string  `json:"name"`
+	Locale   *string `json:"locale,omitempty"`
+	Name     *string `json:"name,omitempty"`
 }
 
 // ContextResponseDto defines model for ContextResponseDto.
 type ContextResponseDto struct {
-	Archived   bool    `json:"archived"`
+	Archived   *bool   `json:"archived,omitempty"`
 	Fallback   *string `json:"fallback,omitempty"`
-	Id         string  `json:"id"`
+	Id         *string `json:"id,omitempty"`
 	Initial    *bool   `json:"initial,omitempty"`
-	InternalId string  `json:"internalId"`
-	Locale     string  `json:"locale"`
-	Name       string  `json:"name"`
+	InternalId *string `json:"internalId,omitempty"`
+	Locale     *string `json:"locale,omitempty"`
+	Name       *string `json:"name,omitempty"`
 }
 
 // ContextResponseListDto defines model for ContextResponseListDto.
 type ContextResponseListDto struct {
-	Data []ContextResponseDto `json:"data"`
+	Data *[]ContextResponseDto `json:"data,omitempty"`
 }
 
 // ErrorDetails defines model for ErrorDetails.
 type ErrorDetails struct {
+	EntityId      *string `json:"entityId,omitempty"`
+	EntityType    *string `json:"entityType,omitempty"`
 	Field         *string `json:"field,omitempty"`
 	Message       *string `json:"message,omitempty"`
 	RejectedValue *string `json:"rejectedValue,omitempty"`
@@ -70,27 +84,29 @@ type ErrorDetails struct {
 
 // ErrorResponse defines model for ErrorResponse.
 type ErrorResponse struct {
-	Error        *string         `json:"error,omitempty"`
-	ErrorDetails *[]ErrorDetails `json:"errorDetails,omitempty"`
-	RequestId    *string         `json:"requestId,omitempty"`
-	Status       *int32          `json:"status,omitempty"`
-	Timestamp    *int64          `json:"timestamp,omitempty"`
+	ConflictingEntities       *[]ConflictingEntity    `json:"conflictingEntities,omitempty"`
+	Error                     *string                 `json:"error,omitempty"`
+	ErrorDetails              *[]ErrorDetails         `json:"errorDetails,omitempty"`
+	QuotaLimitExceededDetails *[]LimitExceededDetails `json:"quotaLimitExceededDetails,omitempty"`
+	RequestId                 *string                 `json:"requestId,omitempty"`
+	Status                    *int32                  `json:"status,omitempty"`
+	Timestamp                 *int64                  `json:"timestamp,omitempty"`
 }
 
 // FilterCreateRequestDto defines model for FilterCreateRequestDto.
 type FilterCreateRequestDto struct {
-	Entity  string                            `json:"entity"`
-	Filter  map[string]map[string]interface{} `json:"filter"`
-	Name    string                            `json:"name"`
-	Public  bool                              `json:"public"`
-	Service string                            `json:"service"`
-	Valid   *bool                             `json:"valid,omitempty"`
+	Entity  *string                            `json:"entity,omitempty"`
+	Filter  *map[string]map[string]interface{} `json:"filter,omitempty"`
+	Name    *string                            `json:"name,omitempty"`
+	Public  *bool                              `json:"public,omitempty"`
+	Service *string                            `json:"service,omitempty"`
+	Valid   *bool                              `json:"valid,omitempty"`
 }
 
 // FilterPermissionResponseDto defines model for FilterPermissionResponseDto.
 type FilterPermissionResponseDto struct {
-	PermissionType FilterPermissionResponseDtoPermissionType `json:"permissionType"`
-	UserId         string                                    `json:"userId"`
+	PermissionType *FilterPermissionResponseDtoPermissionType `json:"permissionType,omitempty"`
+	UserId         *string                                    `json:"userId,omitempty"`
 }
 
 // FilterPermissionResponseDtoPermissionType defines model for FilterPermissionResponseDto.PermissionType.
@@ -98,12 +114,12 @@ type FilterPermissionResponseDtoPermissionType string
 
 // FilterPermissionResponseListDto defines model for FilterPermissionResponseListDto.
 type FilterPermissionResponseListDto struct {
-	Data []FilterPermissionResponseDto `json:"data"`
+	Data *[]FilterPermissionResponseDto `json:"data,omitempty"`
 }
 
 // FilterPermissionUpdateRequestDto defines model for FilterPermissionUpdateRequestDto.
 type FilterPermissionUpdateRequestDto struct {
-	PermissionType FilterPermissionUpdateRequestDtoPermissionType `json:"permissionType"`
+	PermissionType *FilterPermissionUpdateRequestDtoPermissionType `json:"permissionType,omitempty"`
 }
 
 // FilterPermissionUpdateRequestDtoPermissionType defines model for FilterPermissionUpdateRequestDto.PermissionType.
@@ -111,21 +127,21 @@ type FilterPermissionUpdateRequestDtoPermissionType string
 
 // FilterResponseDto defines model for FilterResponseDto.
 type FilterResponseDto struct {
-	Entity    string                            `json:"entity"`
-	Filter    map[string]map[string]interface{} `json:"filter"`
-	Id        string                            `json:"id"`
-	Name      string                            `json:"name"`
-	OwnerId   string                            `json:"ownerId"`
-	Public    bool                              `json:"public"`
-	Readonly  bool                              `json:"readonly"`
-	Service   string                            `json:"service"`
-	UpdatedAt int64                             `json:"updatedAt"`
-	Valid     *bool                             `json:"valid,omitempty"`
+	Entity    *string                            `json:"entity,omitempty"`
+	Filter    *map[string]map[string]interface{} `json:"filter,omitempty"`
+	Id        *string                            `json:"id,omitempty"`
+	Name      *string                            `json:"name,omitempty"`
+	OwnerId   *string                            `json:"ownerId,omitempty"`
+	Public    *bool                              `json:"public,omitempty"`
+	Readonly  *bool                              `json:"readonly,omitempty"`
+	Service   *string                            `json:"service,omitempty"`
+	UpdatedAt *int64                             `json:"updatedAt,omitempty"`
+	Valid     *bool                              `json:"valid,omitempty"`
 }
 
 // FilterResponseListDto defines model for FilterResponseListDto.
 type FilterResponseListDto struct {
-	Data []FilterResponseDto `json:"data"`
+	Data *[]FilterResponseDto `json:"data,omitempty"`
 }
 
 // FilterSearchRequest defines model for FilterSearchRequest.
@@ -134,35 +150,58 @@ type FilterSearchRequest struct {
 	Ids      *[]string `json:"ids,omitempty"`
 	Name     *string   `json:"name,omitempty"`
 	OwnerId  *string   `json:"ownerId,omitempty"`
-	Page     int32     `json:"page"`
-	PageSize int32     `json:"pageSize"`
+	Page     *int32    `json:"page,omitempty"`
+	PageSize *int32    `json:"pageSize,omitempty"`
 	Public   *bool     `json:"public,omitempty"`
 	Service  *string   `json:"service,omitempty"`
 }
 
 // FilterUpdateRequestDto defines model for FilterUpdateRequestDto.
 type FilterUpdateRequestDto struct {
-	Entity  string                             `json:"entity"`
+	Entity  *string                            `json:"entity,omitempty"`
 	Filter  *map[string]map[string]interface{} `json:"filter,omitempty"`
-	Name    string                             `json:"name"`
+	Name    *string                            `json:"name,omitempty"`
 	Public  *bool                              `json:"public,omitempty"`
-	Service string                             `json:"service"`
+	Service *string                            `json:"service,omitempty"`
 	Valid   *bool                              `json:"valid,omitempty"`
 }
 
-// Unit defines model for Unit.
-type Unit = map[string]interface{}
+// FindContextsByNamesRequest defines model for FindContextsByNamesRequest.
+type FindContextsByNamesRequest struct {
+	Names *[]string `json:"names,omitempty"`
+}
+
+// LimitExceededDetails defines model for LimitExceededDetails.
+type LimitExceededDetails struct {
+	EntityId   *string `json:"entityId,omitempty"`
+	EntityType *string `json:"entityType,omitempty"`
+	Limit      *int32  `json:"limit,omitempty"`
+	Message    *string `json:"message,omitempty"`
+	Quota      *string `json:"quota,omitempty"`
+}
 
 // FindParams defines parameters for Find.
 type FindParams struct {
+	// ContextState Filters by lifecycle state: ACTIVE (default) excludes archived contexts, ARCHIVE returns only archived ones.
 	ContextState *FindParamsContextState `form:"contextState,omitempty" json:"contextState,omitempty"`
 }
 
 // FindParamsContextState defines parameters for Find.
 type FindParamsContextState string
 
+// FindByNamesParams defines parameters for FindByNames.
+type FindByNamesParams struct {
+	ContextState *FindByNamesParamsContextState `form:"contextState,omitempty" json:"contextState,omitempty"`
+}
+
+// FindByNamesParamsContextState defines parameters for FindByNames.
+type FindByNamesParamsContextState string
+
 // CreateJSONRequestBody defines body for Create for application/json ContentType.
 type CreateJSONRequestBody = ContextRequestDto
+
+// FindByNamesJSONRequestBody defines body for FindByNames for application/json ContentType.
+type FindByNamesJSONRequestBody = FindContextsByNamesRequest
 
 // UpdateJSONRequestBody defines body for Update for application/json ContentType.
 type UpdateJSONRequestBody = ContextRequestDto
@@ -266,6 +305,11 @@ type ClientInterface interface {
 
 	Create(ctx context.Context, body CreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// FindByNamesWithBody request with any body
+	FindByNamesWithBody(ctx context.Context, params *FindByNamesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	FindByNames(ctx context.Context, params *FindByNamesParams, body FindByNamesJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// Archive request
 	Archive(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
@@ -349,6 +393,30 @@ func (c *Client) CreateWithBody(ctx context.Context, contentType string, body io
 
 func (c *Client) Create(ctx context.Context, body CreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewCreateRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) FindByNamesWithBody(ctx context.Context, params *FindByNamesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewFindByNamesRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) FindByNames(ctx context.Context, params *FindByNamesParams, body FindByNamesJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewFindByNamesRequest(c.Server, params, body)
 	if err != nil {
 		return nil, err
 	}
@@ -688,6 +756,68 @@ func NewCreateRequestWithBody(server string, contentType string, body io.Reader)
 	queryURL, err := serverURL.Parse(operationPath)
 	if err != nil {
 		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewFindByNamesRequest calls the generic FindByNames builder with application/json body
+func NewFindByNamesRequest(server string, params *FindByNamesParams, body FindByNamesJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewFindByNamesRequestWithBody(server, params, "application/json", bodyReader)
+}
+
+// NewFindByNamesRequestWithBody generates requests for FindByNames with any type of body
+func NewFindByNamesRequestWithBody(server string, params *FindByNamesParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/context/list/by-names")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.ContextState != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "contextState", runtime.ParamLocationQuery, *params.ContextState); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
 	}
 
 	req, err := http.NewRequest("POST", queryURL.String(), body)
@@ -1311,6 +1441,11 @@ type ClientWithResponsesInterface interface {
 
 	CreateWithResponse(ctx context.Context, body CreateJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateResponse, error)
 
+	// FindByNamesWithBodyWithResponse request with any body
+	FindByNamesWithBodyWithResponse(ctx context.Context, params *FindByNamesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*FindByNamesResponse, error)
+
+	FindByNamesWithResponse(ctx context.Context, params *FindByNamesParams, body FindByNamesJSONRequestBody, reqEditors ...RequestEditorFn) (*FindByNamesResponse, error)
+
 	// ArchiveWithResponse request
 	ArchiveWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*ArchiveResponse, error)
 
@@ -1394,7 +1529,6 @@ func (r FindResponse) StatusCode() int {
 type CreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON201      *Unit
 	JSON400      *ErrorResponse
 	JSON409      *ErrorResponse
 }
@@ -1415,10 +1549,32 @@ func (r CreateResponse) StatusCode() int {
 	return 0
 }
 
+type FindByNamesResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *ContextResponseListDto
+	JSON400      *ErrorResponse
+}
+
+// Status returns HTTPResponse.Status
+func (r FindByNamesResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r FindByNamesResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type ArchiveResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON204      *Unit
 	JSON400      *ErrorResponse
 	JSON404      *ErrorResponse
 }
@@ -1466,7 +1622,6 @@ func (r GetResponse) StatusCode() int {
 type UpdateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON204      *Unit
 	JSON400      *ErrorResponse
 	JSON404      *ErrorResponse
 	JSON409      *ErrorResponse
@@ -1491,7 +1646,6 @@ func (r UpdateResponse) StatusCode() int {
 type CreateFilterResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON201      *Unit
 	JSON400      *ErrorResponse
 	JSON409      *ErrorResponse
 }
@@ -1515,7 +1669,6 @@ func (r CreateFilterResponse) StatusCode() int {
 type DeleteFilterFromAllResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON204      *Unit
 	JSON400      *ErrorResponse
 	JSON404      *ErrorResponse
 }
@@ -1539,7 +1692,6 @@ func (r DeleteFilterFromAllResponse) StatusCode() int {
 type UpdatePublicFilterResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON204      *Unit
 	JSON400      *ErrorResponse
 	JSON404      *ErrorResponse
 	JSON409      *ErrorResponse
@@ -1610,7 +1762,6 @@ func (r FindAllResponse) StatusCode() int {
 type DeleteFilterResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON204      *Unit
 	JSON400      *ErrorResponse
 	JSON404      *ErrorResponse
 }
@@ -1658,7 +1809,6 @@ func (r GetFilterResponse) StatusCode() int {
 type UpdateFilterResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON204      *Unit
 	JSON400      *ErrorResponse
 	JSON404      *ErrorResponse
 	JSON409      *ErrorResponse
@@ -1707,7 +1857,6 @@ func (r GetPermissionsResponse) StatusCode() int {
 type RevokePermissionResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON204      *Unit
 	JSON400      *ErrorResponse
 	JSON404      *ErrorResponse
 }
@@ -1731,7 +1880,6 @@ func (r RevokePermissionResponse) StatusCode() int {
 type GrantPermissionResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON204      *Unit
 	JSON400      *ErrorResponse
 	JSON404      *ErrorResponse
 }
@@ -1776,6 +1924,23 @@ func (c *ClientWithResponses) CreateWithResponse(ctx context.Context, body Creat
 		return nil, err
 	}
 	return ParseCreateResponse(rsp)
+}
+
+// FindByNamesWithBodyWithResponse request with arbitrary body returning *FindByNamesResponse
+func (c *ClientWithResponses) FindByNamesWithBodyWithResponse(ctx context.Context, params *FindByNamesParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*FindByNamesResponse, error) {
+	rsp, err := c.FindByNamesWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseFindByNamesResponse(rsp)
+}
+
+func (c *ClientWithResponses) FindByNamesWithResponse(ctx context.Context, params *FindByNamesParams, body FindByNamesJSONRequestBody, reqEditors ...RequestEditorFn) (*FindByNamesResponse, error) {
+	rsp, err := c.FindByNames(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseFindByNamesResponse(rsp)
 }
 
 // ArchiveWithResponse request returning *ArchiveResponse
@@ -2007,13 +2172,6 @@ func ParseCreateResponse(rsp *http.Response) (*CreateResponse, error) {
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -2027,6 +2185,39 @@ func ParseCreateResponse(rsp *http.Response) (*CreateResponse, error) {
 			return nil, err
 		}
 		response.JSON409 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseFindByNamesResponse parses an HTTP response from a FindByNamesWithResponse call
+func ParseFindByNamesResponse(rsp *http.Response) (*FindByNamesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &FindByNamesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ContextResponseListDto
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
 
 	}
 
@@ -2047,13 +2238,6 @@ func ParseArchiveResponse(rsp *http.Response) (*ArchiveResponse, error) {
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 204:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON204 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -2127,13 +2311,6 @@ func ParseUpdateResponse(rsp *http.Response) (*UpdateResponse, error) {
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 204:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON204 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -2174,13 +2351,6 @@ func ParseCreateFilterResponse(rsp *http.Response) (*CreateFilterResponse, error
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON201 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -2214,13 +2384,6 @@ func ParseDeleteFilterFromAllResponse(rsp *http.Response) (*DeleteFilterFromAllR
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 204:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON204 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -2254,13 +2417,6 @@ func ParseUpdatePublicFilterResponse(rsp *http.Response) (*UpdatePublicFilterRes
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 204:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON204 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -2367,13 +2523,6 @@ func ParseDeleteFilterResponse(rsp *http.Response) (*DeleteFilterResponse, error
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 204:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON204 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -2447,13 +2596,6 @@ func ParseUpdateFilterResponse(rsp *http.Response) (*UpdateFilterResponse, error
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 204:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON204 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -2534,13 +2676,6 @@ func ParseRevokePermissionResponse(rsp *http.Response) (*RevokePermissionRespons
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 204:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON204 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -2574,13 +2709,6 @@ func ParseGrantPermissionResponse(rsp *http.Response) (*GrantPermissionResponse,
 	}
 
 	switch {
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 204:
-		var dest Unit
-		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
-			return nil, err
-		}
-		response.JSON204 = &dest
-
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
 		var dest ErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
