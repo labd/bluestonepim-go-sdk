@@ -1,0 +1,3 @@
+kind: Security
+body: Update oapi-codegen to v2.8.1 and kin-openapi to v0.152.0 to resolve security advisories. The minimum Go version is raised to 1.25 (breaking)
+time: 2026-10-25T12:00:00.000000+02:00
