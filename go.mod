@@ -1,6 +1,6 @@
 module github.com/labd/bluestonepim-go-sdk
 
-go 1.25.0
+go 1.27
 
 require (
 	github.com/oapi-codegen/oapi-codegen/v2 v2.8.1
