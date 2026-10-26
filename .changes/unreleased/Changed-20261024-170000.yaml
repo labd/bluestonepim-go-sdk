@@ -1,3 +1,0 @@
-kind: Changed
-body: Regenerate the clients from the current Bluestone OpenAPI specs. The specs are downloaded with `task download-specs` and prepared by `tools/fixspec`
-time: 2026-10-24T17:00:00.000000+02:00
